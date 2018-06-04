@@ -1,0 +1,161 @@
+%% Use the option review to obtain double line spacing 
+%% \documentclass[preprint,review,12pt]{elsarticle} 
+%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn 
+%% for a journal layout: 
+%% \documentclass[final,1p,times]{elsarticle} 
+%% \documentclass[final,1p,times,twocolumn]{elsarticle} 
+%% \documentclass[final,3p,times]{elsarticle} 
+%%\documentclass[final,3p,times,twocolumn]{elsarticle} 
+%% \documentclass[final,5p,times]{elsarticle} 
+ \documentclass[final,5p,times,twocolumn]{elsarticle} 
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{comment}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc} % allows using accents directly in text, like ÔøΩ
+\usepackage{subfig}
+\usepackage{xspace}
+
+
+\captionsetup{justification=raggedright,
+singlelinecheck=false
+}
+
+\newcommand{\pygbe}{\texttt{PyGBe}\xspace}
+\newcommand{\gb}{{\small G\,B1\,D4$^\prime$}\xspace}
+\newcommand{\gmres}{\textsc{gmres}\xspace}
+\newcommand{\bem}{\textsc{bem}\xspace}
+\newcommand{\ses}{\textsc{ses}\xspace}
+\newcommand{\sam}{\textsc{sam}}
+\newcommand{\gpu}{\textsc{gpu}}
+\newcommand{\cpu}{\textsc{cpu}}
+\newcommand{\apbs}{\textsc{apbs}\xspace}
+\newcommand{\nvidia}{\textsc{nvidia}\xspace}
+\newcommand{\msms}{\texttt{\textsc{msms}}\xspace}
+\newcommand{\amber}{\texttt{\textsc{amber}}\xspace}
+\newcommand{\ccby}{\textsc{cc-by}\xspace}
+
+\graphicspath{{figs/}} %  PATH to figure files-- change to ./ for submission
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%% \usepackage{lineno}
+
+%% natbib.sty is loaded by default. However, natbib options can be
+%% provided with \biboptions{...} command. Following options are
+%% valid:
+
+%%   round  -  round parentheses are used (default)
+%%   square -  square brackets are used   [option]
+%%   curly  -  curly braces are used      {option}
+%%   angle  -  angle brackets are used    <option>
+%%   semicolon  -  multiple citations separated by semi-colon
+%%   colon  - same as semicolon, an earlier confusion
+%%   comma  -  separated by comma
+%%   numbers-  selects numerical citations
+%%   super  -  numerical citations as superscripts
+%%   sort   -  sorts multiple citations according to order in ref. list
+%%   sort&compress   -  like sort, but also compresses numerical citations
+%%   compress - compresses without sorting
+%%
+%% \biboptions{comma,round}
+
+% \biboptions{}
+
+
+\journal{Computer Physics Communications}
+
+\begin{document}
+
+\begin{frontmatter}
+
+%% Title, authors and addresses
+
+%% use the tnoteref command within \title for footnotes;
+%% use the tnotetext command for the associated footnote;
+%% use the fnref command within \author or \address for footnotes;
+%% use the fntext command for the associated footnote;
+%% use the corref command within \author for corresponding author footnotes;
+%% use the cortext command for the associated footnote;
+%% use the ead command for the email address,
+%% and the form \ead[url] for the home page:
+%%
+%% \title{Title\tnoteref{label1}}
+%% \tnotetext[label1]{}
+%% \author{Name\corref{cor1}\fnref{label2}}
+%% \ead{email address}
+%% \ead[url]{home page}
+%% \fntext[label2]{}
+%% \cortext[cor1]{}
+%% \address{Address\fnref{label3}}
+%% \fntext[label3]{}
+
+\title{TB}
+
+\author[gwu]{Natalia C. Clementi\corref{ncc}}
+
+\author[usm]{Christopher D. Cooper\corref{cdc}}
+\ead{christopher.cooper@usm.cl}
+
+\author[gwu]{Lorena A.~Barba\corref{lab}}
+\ead{labarba@gwu.edu}
+
+
+\address[usm]{Department of Mechanical Engineering, Universidad T\'ecnica Federico Santa Mar\'ia, Valpara\'iso, Chile.}
+\address[gwu]{Department of Mechanical \& Aerospace Engineering, The George Washington University, Washington, D.C.}
+\cortext[lab]{\href{mailto:labarba@gwu.edu}{labarba@gwu.edu}}
+
+%\date{\today}
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{keyword}
+biomolecular electrostatics  \sep implicit solvent \sep Poisson-Boltzmann \sep boundary element method  \sep Python 
+
+%% MSC codes here, in the form: \MSC code \sep code
+%% or \MSC[2008] code \sep code (2000 is the default)
+
+\end{keyword}
+
+\end{frontmatter}
+
+% Body of paper.
+
+\section{Introduction}\label{sec:intro}
+% \input{introduction}
+
+%=============
+\section{Methods}\label{sec:methods}
+%\input{methods} 
+
+%=============
+\section{Results} \label{sec:results}
+%\input{results}
+
+%=============
+\section{Discussion} \label{sec:discussion}
+%\input{discussion}
+
+\section{Conclusion}
+%\input{conclusion}
+
+
+
+
+%\section*{Acknowledgments}
+
+
+% Create the reference section using BibTeX:
+\bibliographystyle{elsarticle-num}
+\bibliography{compbio,bem,scicomp,fastmethods,biosensors}
+
+\end{document}
