@@ -1,0 +1,9 @@
+#Ignore LaTeX generated files
+*/*.aux
+*/*.log
+*/*.out
+*/*.blg
+
+tex/ClementiCooperBarba2018.pdf
+tex/ClementiCooperBarba2018.spl
+
