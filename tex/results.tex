@@ -33,12 +33,12 @@ sphere under a constant electric field, like presented in Fig. \ref{fig:np_elec_
 \end{figure}
 
 Figure \ref{fig:error_sphere_Ag} shows a grid convergence study of the extinction
-cross-section of a silver spherical nanoparticle of radius $8 \, nm$ inmersed in water
+cross-section of a silver spherical nanoparticle of radius $8 \, nm$ immersed in water
 under a z-polarized electric field with a wavelength of $380 nm$ and intensity of 
 $-0.0037 e/({\AA}^2 \, \epsilon_0)$. Under these conditions water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
 $-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. In these simulations we used $K=4$ 
-Gauss quadrature points per far-away elements, $K_fine = 37$ Gauss quadrature points
+Gauss quadrature points per far-away elements, $K_{fine} = 37$ Gauss quadrature points
 per elements for near singular integrals, $Nk = 9$ Gauss quadrature points per 
 triangle edge for semi-analytical integration in the singular elements, and a GMRES
 tolerance of $10^{-5}$. We performed the simulation for meshes of 512, 
@@ -53,11 +53,11 @@ $C_{ext} = 1854.4765 \; nm^2$ obtained using equation \eqref{eq:an_sol}.
    \label{fig:error_sphere_Ag}
 \end{figure}
 
-The computed order of converge is $0.98$ and the $1/N$ slope in Fig. \ref{fig:error_sphere_Ag}
+The computed order of convergence is $0.98$ and the $1/N$ slope in Fig. \ref{fig:error_sphere_Ag}
 show that the numerical solutions computed with \pygbe for isolated spheres are
 correctly resolved by the meshes.
 
-The percentage errors for the different meshes are presented in the following table:
+The percentage errors for the different meshes are presented in Table. \cite{table:err_iso_sphere}.
 
 \begin{table}[h]
     \centering
@@ -75,33 +75,55 @@ The percentage errors for the different meshes are presented in the following ta
 \end{table}
 
 
+To complete the process of verification we perform simulations of the extinction 
+cross-section of the isolated sphere for a spectrum of wavelengths. To ensure 
+errors $<2\%$ we use the mesh of $N=32768$ elements. 
+
+Figure \ref{fig:verif_sphere} shows the extinction cross-section of the isolated
+sphere of Fig.\ref{fig:np_elec_field} as a function of wavelength. The values of 
+the dielectric constants for each wavelength were obtained by interpolation of 
+experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
+
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{silver_NP_verification.pdf} 
-   \caption{Verification performed by comparing our numerical calculations of 
-            the extinction cross-section with analytical solutions, available 
-            for spherical geometries. We compare our results against the analytical
-            solution provided by Mishenko \cite{Mishchenko2007} which applies for all mediums.
-            In our case the medium is water and treated as a lossy medium. We can
-            see good agreement between simulations and analytical results, proving
-            that we are achieving an accurate numerical solution of the mathematical
-            model.}
+   \caption{Extinction cross-section as a function of wavelength fo a $8 \, nm$
+            silver sphere immersed in water}
    \label{fig:verif_sphere}
 \end{figure}
 
-\subsection{Silver nanoparticle response to BSA} \label{sec:verification}
+We can see good agreement between simulations and analytical results, proving
+that we are achieving an accurate numerical solution of the mathematical model. The 
+peak in the extinction cross-section indicates that the plasmons of the metallic
+nanoparticle are resonating with the incoming electric field.
+
+
+\subsection{LSPR response to BSA} \label{sec:lspr_response}
+
+Localized Surface Plasmon Resonance biosensors detect a target molecule by monitoring
+plasmon resoncance frequency changes due to the proximity of the target to the metallic
+nanoparticle. In this section we perform simulations that show how our BEM approach
+can be used to model the response of LSPR biosensors.
+
+To ensure that we are achieving an accurate numerical solution, we performed a 
+convergence analysis of the system showed in Figure \ref{fig:setup_conv}. Where
+we use as analyte a Bovine Serum Albumina (PDB code 4FS5) protein. The BSA mesh
+was generated using the open source software Nanoshaper (missing how to cite - not
+reported in their webpage). Nanoshaper takes as input the coordinates and radius
+of the atoms in the crystal structure, whcih were extracted from the the van der
+Waals radii and charges of the atoms file (\texttt{pqr}) generated using 
+\texttt{pdb2pqr} \cite{Dolinsky04}
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.15\textwidth]{protein_sphere_sketch.pdf} 
-   \caption{Setup for convergence analysis of the response calculation}
+   \caption{Setup for convergence analysis of the response calculation.}
    \label{fig:setup_conv}
 \end{figure}
 
 
-Convergence analysis for system sensor-BSA
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -137,7 +159,6 @@ numerical solutions computed with \pygbe are correctly resolved by the meshes.
 \end{figure*}
 
 
-Fig result of 2pz based on distance
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -147,8 +168,6 @@ Fig result of 2pz based on distance
 \end{figure}
 
 
-
-Fig result of 2pz
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
