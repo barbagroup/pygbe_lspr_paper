@@ -194,13 +194,7 @@ position was located there by performing a solid rotation respect to y-axis of t
 $+z$ BSA. 
 
 
-\begin{figure*}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
-   \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the 
-            nanoparticle in the z-direction}
-   \label{fig:display_z}
-\end{figure*}
+
 
 Figure \ref{fig:2pz_response} shows the variation of the extinction cross-section
 with respect to wavelength in a near-range around the resonance peak. We can observe
@@ -234,43 +228,19 @@ of the surface along x-axis, and the other along the y-axis. See Figure \ref{fig
 to visualize displays.
 
 
-\begin{figure*}[h]
+Figure \ref{fig:2pxy_response} show the results obtained for x-axis and
+y-axis display respectively. 
 
+\begin{figure}[!h] %  figure placement: here, top, bottom, or page
    \centering
-   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} 
-%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-%            x-direction}
-   %\label{fig:display_x}
-    \,
-   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_y_R8nm.pdf}} 
-%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-%            y-direction}
-    \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the nanoparticle in the
-            x-direction (top) and y-direction (bottom)}
-    \label{fig:display_xy}
-\end{figure*}
-
-Figures \ref{fig:2px_response} and \ref{fig:2py_response} show the results 
-obtained for x-axis and y-axis display respectively. 
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.45\textwidth]{{2px_00_ef-0.0037_R8nm}.pdf} 
+   \subfloat{\includegraphics[width=0.45\textwidth]{{2px_00_ef-0.0037_R8nm}.pdf}}
+   \quad 
+   \subfloat{\includegraphics[width=0.45\textwidth]{{2py_00_ef-0.0037_R8nm}.pdf}} 
    \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
             silver sphere immersed in water with two BSA proteins placed at
-            $\pm 1 \; nm$ away from the surface in the x-direction, and at
-            infinity (no protein).}
-   \label{fig:2px_response}
-\end{figure}
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.45\textwidth]{{2py_00_ef-0.0037_R8nm}.pdf} 
-   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
-            silver sphere immersed in water with two BSA proteins placed at
-            $\pm 1 \; nm$ away from the surface in the y-direction, and at
-            infinity (no protein).}
-   \label{fig:2py_response}
+            $\pm 1 \; nm$ away from the surface in the x-direction (top) and
+             y-direction (bottom), and at infinity (no protein).}
+   \label{fig:2pxy_response}
 \end{figure}
 
 In both cases we can observed that the shift is negligible. According to 
@@ -305,5 +275,26 @@ analytes are placed at $d=0.5 \, nm$. This result shows the potential of \pygbe
 and the electrostaic approach to reproduce the characteristic resonance frequency
 shift in LSPR biosensors.
 
+\begin{figure*}[] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
+   \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the 
+            nanoparticle in the z-direction}
+   \label{fig:display_z}
+\end{figure*}
 
+\begin{figure*}[]
 
+   \centering
+   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} 
+%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+%            x-direction}
+   %\label{fig:display_x}
+    \vfill
+   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_y_R8nm.pdf}} 
+%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+%            y-direction}
+    \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the nanoparticle in the
+            x-direction (top) and y-direction (bottom)}
+    \label{fig:display_xy}
+\end{figure*}
