@@ -90,7 +90,7 @@ experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
    \centering
    \includegraphics[width=0.45\textwidth]{silver_NP_verification.pdf} 
    \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
-            silver sphere immersed in water}
+            silver sphere immersed in water.}
    \label{fig:verif_sphere}
 \end{figure}
 
@@ -134,7 +134,8 @@ We repeated the conditions and parameters for the simulations used in the isolat
 sphere presented in Section \ref{sec:verification}. In this case we added the 
 dielectric constant for the protein $2.7514 + 0.2860i$ extracted from the 
 functional relationship provided by Pahn, et al. \cite{PahnETal2013}, and the 
-distance between the sensor and the analyte is $d=1 \, nm$. The error calculation
+distance between the sensor and the analyte is $d=1 \, nm$.  The dipole moment 
+of the protein is aligned with the y-axis. The error calculation
 uses the Richardson extrapolation value of the extinction cross-section as a
 reference, $C_{ext}= 1778.7259 \, nm^2$
 
@@ -182,25 +183,33 @@ tolerance of $10^{-3}$. These choices result in a percentage error of $\sim\%0.6
 and the time of each computation is approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
 card. 
 
+We study the LSPR response as a function of the wavelength in the presence 
+of the BSA. We performed simulations on the system presented in Figure 
+\ref{fig:display_z}. We decided to use two BSA located at $d=1 \, nm$ of distance
+along the z-axis to appreciate better the effect of the BSA. The location of $+z$
+protein is the same used for converge analysis, while the protein in the $-z$ 
+position was located there by performing a solid rotation respect to y-axis of the 
+$+z$ BSA.
 
 
 \begin{figure*}[h] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.5\textwidth]{2prot_1nm_z_R8nm.pdf} 
-   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-            z-direction}
+   \includegraphics[width=0.7\textwidth]{2prot_1nm_z_R8nm.pdf} 
+   \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the 
+            nanoparticle in the z-direction}
    \label{fig:display_z}
 \end{figure*}
 
-
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.45\textwidth]{2pz_lspr_response.pdf} 
-   \caption{}
-   \label{fig:dist_response}
-\end{figure}
-
+Figure \ref{fig:2pz_response} shows the variation of the extinction cross-section
+with respect to wavelength in a near-range around the resonance peak. We can observe
+that there is a red-shift ($0.5 \, nm$) in the resonance frequency due to the
+presence of the BSA analytes. This result agrees with experimental observations
+\cite{TangETal2010, RaphaelETal2013}. Particularly, we observed a decrement of 
+the peak which is also present in the results of Tang, et al. \cite{TangETal2010}.
+Both the red-shift and the decrement of the peak in the presence of the protein 
+obtained in our simulation, indicate that our boundary element method approach, 
+using electrostatic approximation, is capable of reproducing the characteristic 
+resonance frequency shift in LSPR biosensors.
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -208,44 +217,34 @@ card.
     %since we have dots in the names we need to enclose what is before the 
     %extension in { }
    \includegraphics[width=0.45\textwidth]{{2pz_00_ef-0.0037_R8nm}.pdf} 
-   \caption{}
+   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
+            silver sphere immersed in water with two BSA proteins placed at
+            $\pm 1 \; nm$ away from the surface in the z-direction, and at
+            infinity (no protein).}
    \label{fig:2pz_response}
 \end{figure}
+
 
 
 
 \begin{figure*}[h]
 
    \centering
-   \subfloat{\includegraphics[width=0.49\textwidth]{2prot_1nm_x_R8nm.pdf}} 
+   \subfloat{\includegraphics[width=0.7\textwidth]{2prot_1nm_x_R8nm.pdf}} 
 %   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
 %            x-direction}
    %\label{fig:display_x}
     \quad
-   \subfloat{\includegraphics[width=0.49\textwidth]{2prot_1nm_y_R8nm.pdf}} 
+   \subfloat{\includegraphics[width=0.7\textwidth]{2prot_1nm_y_R8nm.pdf}} 
 %   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
 %            y-direction}
-   \label{fig:display_y}
     \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-            x-direction (left) and y-direction (right)}
-
+            x-direction (top) and y-direction (bottom)}
+    \label{fig:display_xy}
 \end{figure*}
 
 
-the variation of the extinction cross-section with respect to the wavelength, for each of the distances shown above. The red shift in the resonance frequency and the decrement of the peak in the presence of the analyte agrees with the behavior observed in experiments perform by Tang et al. \cite{TangETal2010}. This indicates that our boundary element method approach, using electrostatic approximation, is capable of reproducing characteristic resonance frequency shift in LSPR biosensors.
 
-
-
-
-Experiments suggests that the distance between the nanoparticle and the analyte affects the sensitivity of the sensor \cite{HaesETal2004}, and these proof-of-concept calculations show that our approach can be use to study sensitivity versus distance, using electrostatics.
-
-
-
-
-Generate distance variation plot. 
-
-
-Fig result of 2px and 2py
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -260,6 +259,30 @@ Fig result of 2px and 2py
    \caption{}
    \label{fig:2py_response}
 \end{figure}
+
+Experiments suggests that the distance between the nanoparticle and the analyte 
+affects the sensitivity of the sensor \cite{HaesETal2004}. The sensitivity of 
+the biosensor is the relation between the size of the shift and the number of 
+analytes bound to the ligand molecule. Figure \ref{fig:dist_response} shows how
+the peak varies with the distance at which the analytes are placed.  
+
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.45\textwidth]{2pz_lspr_response.pdf} 
+   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
+            silver sphere immersed in water with two BSA proteins placed at
+            $2, \, 1 \, \text{and} \, 0.5 \, nm$ away from the surface in the 
+            z-direction, and at infinity (no protein)}
+   \label{fig:dist_response}
+\end{figure}
+
+We can observed how the sensitivity is affected by the distance between the 
+analyte and the sensor: the closest they are, the larger the shift. In this particular
+case we go from a shift of $0.25 \, nm$ when $d=2 nm$ to $0.75 nm$ when the 
+analytes are placed at $d=0.5 \, nm$. This result shows the potential of \pygbe 
+and the electrostaic approach to reproduce the characteristic resonance frequency
+shift in LSPR biosensors.
 
 
 
