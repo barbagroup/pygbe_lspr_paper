@@ -40,10 +40,11 @@ constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver 
 $-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. In these simulations we used $K=4$ 
 Gauss quadrature points per far-away elements, $K_{fine} = 37$ Gauss quadrature points
 per elements for near singular integrals, $Nk = 9$ Gauss quadrature points per 
-triangle edge for semi-analytical integration in the singular elements, and a GMRES
-tolerance of $10^{-5}$. We performed the simulation for meshes of 512, 
-2048, 8192 and 32768 elements. The error calculation uses the analytical solution 
-$C_{ext} = 1854.4765 \; nm^2$ obtained using equation \eqref{eq:an_sol}.
+triangle edge for semi-analytical integration in the singular elements, $P=15$ for 
+the order of expansion in treecode, and a GMRES tolerance of $10^{-5}$. We
+performed the simulation for meshes of 512, 2048, 8192 and 32768 elements. The 
+error calculation uses the analytical solution $C_{ext} = 1854.4765 \; nm^2$ 
+obtained using equation \eqref{eq:an_sol}.
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -119,8 +120,7 @@ Since we compute the extinction cross section over the sphere nanoparticle, we
 set a fixed mesh density for the protein and varied the refinement over the
 sphere (meshes of 512, 2048, 8192 and 32768 elements). After studying different 
 cases we decide to use a mesh of density two triangles per ${\AA}^2$ for 
-the protein. 
-
+the protein, resulting in a mesh of $N_{prot} = 98116$. 
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -147,10 +147,40 @@ reference, $C_{ext}= 1778.7259 \, nm^2$
    \label{fig:error_sphere-bsa}
 \end{figure}
 
-We can see in Figure \ref{fig:error_sphere-bsa} the error decays with number
-of boundary elements ($\frac{1}{N}$), which is consistent with our verification 
-results showed in Section \ref{sec:verification}. This proves that the
+The computed order of convergence in this case is $0.99$, and we can see in 
+Figure \ref{fig:error_sphere-bsa} that the error decays with the number
+of boundary elements ($1/N$), which is consistent with our verification 
+results of Section \ref{sec:verification}. This proves that the
 numerical solutions computed with \pygbe are correctly resolved by the meshes.
+
+The percentage errors for the different meshes are presented in Table. \ref{table:err_bsa_sensor}.
+
+\begin{table}[h]
+    \centering
+    \caption{\label{table:err_bsa_sensor} Percentage error of BSA-sensor sytem Fig. \ref{setup_conv}.} 
+    \begin{tabular}{c c}
+    \hline%\toprule
+    N & \% error \\
+    \hline%\midrule
+     $512$ & $29.39$ \\
+     $2048$ & $7.13$ \\
+     $8192$ & $1.82$ \\
+     $32768$ & $0.46$ \\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
+Before the study of the LSPR response to the to the BSA protein, we performed a 
+relaxation of parameters to optimize run time without compromising our small
+percentage error. We reduced the density of the protein mesh to one element per
+${\AA}^2$ ($N_{prot}=45140$) and fixed the sphere mesh to $N_{sensor}=32768$. We
+set $K=4$ Gauss quadrature points per far-away elements, $K_{fine} = 19$ Gauss
+quadrature points per elements for near singular integrals, $Nk = 9$ Gauss 
+quadrature points per triangle edge for semi-analytical integration in the 
+singular elements, $P=6$ for the order of expansion in treecode, and a GMRES 
+tolerance of $10^{-3}$. These choices result in a percentage error of $\sim\%0.6$
+and the time of each computation is approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
+card. 
 
 
 
