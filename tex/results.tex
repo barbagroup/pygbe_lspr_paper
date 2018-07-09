@@ -186,15 +186,17 @@ card.
 We study the LSPR response as a function of the wavelength in the presence 
 of the BSA. We performed simulations on the system presented in Figure 
 \ref{fig:display_z}. We decided to use two BSA located at $d=1 \, nm$ of distance
-along the z-axis to appreciate better the effect of the BSA. The location of $+z$
+along the z-axis to appreciate better the effect of the BSA. The distance between
+two wavelengths points is $0.25 \, nm$ and the range explored goes from $382 \, nm$
+to $387 \, nm$, giving a total of 21 wavelength points. The location of $+z$
 protein is the same used for converge analysis, while the protein in the $-z$ 
 position was located there by performing a solid rotation respect to y-axis of the 
-$+z$ BSA.
+$+z$ BSA. 
 
 
 \begin{figure*}[h] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.7\textwidth]{2prot_1nm_z_R8nm.pdf} 
+   \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
    \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the 
             nanoparticle in the z-direction}
    \label{fig:display_z}
@@ -225,40 +227,59 @@ resonance frequency shift in LSPR biosensors.
 \end{figure}
 
 
+To study the effect of location of the analyte, we rearange the analytes in 
+different locations and run the simulation with the same parameters used before. 
+We perform two different cases, one with the analytes located at $\pm 1 \; nm$
+of the surface along x-axis, and the other along the y-axis. See Figure \ref{fig:display_xy}
+to visualize displays.
 
 
 \begin{figure*}[h]
 
    \centering
-   \subfloat{\includegraphics[width=0.7\textwidth]{2prot_1nm_x_R8nm.pdf}} 
+   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} 
 %   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
 %            x-direction}
    %\label{fig:display_x}
-    \quad
-   \subfloat{\includegraphics[width=0.7\textwidth]{2prot_1nm_y_R8nm.pdf}} 
+    \,
+   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_y_R8nm.pdf}} 
 %   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
 %            y-direction}
-    \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+    \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the nanoparticle in the
             x-direction (top) and y-direction (bottom)}
     \label{fig:display_xy}
 \end{figure*}
 
-
-
+Figures \ref{fig:2px_response} and \ref{fig:2py_response} show the results 
+obtained for x-axis and y-axis display respectively. 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{{2px_00_ef-0.0037_R8nm}.pdf} 
-   \caption{}
+   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
+            silver sphere immersed in water with two BSA proteins placed at
+            $\pm 1 \; nm$ away from the surface in the x-direction, and at
+            infinity (no protein).}
    \label{fig:2px_response}
 \end{figure}
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{{2py_00_ef-0.0037_R8nm}.pdf} 
-   \caption{}
+   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
+            silver sphere immersed in water with two BSA proteins placed at
+            $\pm 1 \; nm$ away from the surface in the y-direction, and at
+            infinity (no protein).}
    \label{fig:2py_response}
 \end{figure}
+
+In both cases we can observed that the shift is negligible. According to 
+computed values the shift is smaller than the distance between two wavelengths 
+points ($< 0.25 nm $) which results in zero. These results are consistent with 
+the fact that we have a z-polarized electric field. Having a z-polarized electric
+field implies that the cloud of electrons will be smaller in the x and y direction.
+Therefore, the effect of the analyte in those locations is insignificant. 
+
 
 Experiments suggests that the distance between the nanoparticle and the analyte 
 affects the sensitivity of the sensor \cite{HaesETal2004}. The sensitivity of 
@@ -277,7 +298,7 @@ the peak varies with the distance at which the analytes are placed.
    \label{fig:dist_response}
 \end{figure}
 
-We can observed how the sensitivity is affected by the distance between the 
+We can observe how the sensitivity is affected by the distance between the 
 analyte and the sensor: the closest they are, the larger the shift. In this particular
 case we go from a shift of $0.25 \, nm$ when $d=2 nm$ to $0.75 nm$ when the 
 analytes are placed at $d=0.5 \, nm$. This result shows the potential of \pygbe 
