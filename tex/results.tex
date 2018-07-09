@@ -1,6 +1,6 @@
 %!TEX root = ClementiCooperBarba2018.tex
 
-\subsection{Isolated particle} \label{sec:verification}
+\subsection{Isolated nanoparticle} \label{sec:verification}
 
 In this section we present the results of performing a verification exercise. We
 compare our numerical calculations of the extinction cross-section using boundary
@@ -88,7 +88,7 @@ experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{silver_NP_verification.pdf} 
-   \caption{Extinction cross-section as a function of wavelength fo a $8 \, nm$
+   \caption{Extinction cross-section as a function of wavelength for a $8 \, nm$
             silver sphere immersed in water}
    \label{fig:verif_sphere}
 \end{figure}
@@ -113,7 +113,14 @@ was generated using the open source software Nanoshaper (missing how to cite - n
 reported in their webpage). Nanoshaper takes as input the coordinates and radius
 of the atoms in the crystal structure, whcih were extracted from the the van der
 Waals radii and charges of the atoms file (\texttt{pqr}) generated using 
-\texttt{pdb2pqr} \cite{Dolinsky04}
+\texttt{pdb2pqr} \cite{Dolinsky04}, with the built-in \texttt{amber} force field.
+
+Since we compute the extinction cross section over the sphere nanoparticle, we 
+set a fixed mesh density for the protein and varied the refinement over the
+sphere (meshes of 512, 2048, 8192 and 32768 elements). After studying different 
+cases we decide to use a mesh of density two triangles per ${\AA}^2$ for 
+the protein. 
+
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -123,30 +130,27 @@ Waals radii and charges of the atoms file (\texttt{pqr}) generated using
    \label{fig:setup_conv}
 \end{figure}
 
-
+We repeated the conditions and parameters for the simulations used in the isolated
+sphere presented in Section \ref{sec:verification}. In this case we added the 
+dielectric constant for the protein $2.7514 + 0.2860i$ extracted from the 
+functional relationship provided by Pahn, et al. \cite{PahnETal2013}, and the 
+distance between the sensor and the analyte is $d=1 \, nm$. The error calculation
+uses the Richardson extrapolation value of the extinction cross-section as a
+reference, $C_{ext}= 1778.7259 \, nm^2$
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{convergence_bsa_sensor_R8_d=1_w=380.pdf} 
-   \caption{Grid-convergence study for the silver spherical nanoparticle 
-            response to Bovine Serum Albumina (BSA). We performed the 
-            mesh-refinement on the sensor (silver nanoparticle) since this is 
-            the surface where the extinction cross section is computed. We run
-            the case presented in \ref{fig:display_z} for radius of
-            the sphere of 8nm, a wavelength of  380 nm and a distance $d=1nm$
-            along the z-axis, for sensor-meshes of 512, 2048, 8192 and 32768 
-            elements. The error calculation uses the Richardson extrapolation 
-            value of the extinction cross section as a reference 
-            $C_{ext} = 1778.7259 \; nm^2$, computed using the 3 finner meshes.}
+   \caption{Grid-convergence study of extinction cross-section of a spherical silver
+            nanoparticle with a BSA protein at $d=1 \, nm$.}
    \label{fig:error_sphere-bsa}
 \end{figure}
 
-
 We can see in Figure \ref{fig:error_sphere-bsa} the error decays with number
 of boundary elements ($\frac{1}{N}$), which is consistent with our verification 
-results (reference verification convergence figure). This proves that the
-numerical solutions computed with \pygbe are correctly resolved by the meshes. 
+results showed in Section \ref{sec:verification}. This proves that the
+numerical solutions computed with \pygbe are correctly resolved by the meshes.
 
 
 
