@@ -1,0 +1,42 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{Mishchenko2007}
+M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
+  in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
+
+\bibitem{JohnsonChristy1972}
+P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
+  12~(6) (1972) 4370--4379.
+
+\bibitem{HaleQuerry1972}
+G.~M. Hale, M.~R. Querry, Optical constants of water in the 200-nm to
+  200-$\mu$m wavelength region, Appl. Opt. 12~(3) (1972) 555--563.
+
+\bibitem{Dolinsky04}
+T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
+  automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
+  calculations, Nucleic Acids Research 32 (2004) W665--W667.
+
+\bibitem{PahnETal2013}
+A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
+  resonances of protein-conjugated gold nanoparticles on graphitic substrates,
+  Applied Physics Letters 103~(16) (2013) 163702.
+
+\bibitem{TangETal2010}
+B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
+  localized surface plasmon resonance spectroscopy for analysis of the
+  interaction between metal nanoparticles and bovine serum albumin, The Journal
+  of Physical Chemistry C 114~(49) (2010) 20990--20996.
+
+\bibitem{HaesETal2004}
+A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
+  biosensor: The long range distance dependence of the localized surface
+  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
+  109--116.
+
+\end{thebibliography}
