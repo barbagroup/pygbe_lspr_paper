@@ -2,49 +2,43 @@
 
 \subsection{Isolated nanoparticle} \label{sec:verification}
 
-In this section we present the results of performing a verification exercise. We
-compare our numerical calculations of the extinction cross-section using boundary
+We compare our numerical calculations of the extinction cross-section using a boundary
 elements method (BEM), with analytical solutions available for spherical geometries. 
-
-The analytical expression for the extinction cross-section of spherical geometries
-provided by Mishenko \cite{Mishchenko2007} applies for all mediums. In the presence
-of a lossy medium, $k^\prime$ represents the real part of the complex wave number,
-otherwise $k$ is a real-valued and we take $k^\prime = k$. 
-
-
+This expression was derived by Mishchenko \cite{Mishchenko2007}, and is valid for lossy mediums:
+%
 \begin{equation} 
     C_\text{ext} = \frac{4\pi a^3}{k^\prime} \operatorname{Im}\left(k^2 
-                    \frac{\epsilon_p/\epsilon_m -1}{\epsilon_p/\epsilon_m +2}\right)
+                    \frac{\epsilon_p/\epsilon_m -1}{\epsilon_p/\epsilon_m +2}\right),
     \label{eq:an_sol}
 \end{equation}
-
+%
 where $a$ is the radius of the sphere, $k$ the complex wave number ($k=k^\prime +i k^{\prime\prime}$), $\epsilon_p$ 
 the dielectric constant of the particle, and $\epsilon_m$ the dielectric constant
-of the host medium. 
+of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$, and we would take $k=k^\prime$.
 
-When we applied the electrostatic approximation, the simulation reduces to a 
-sphere under a constant electric field, like presented in Fig. \ref{fig:np_elec_field}.
-
+We use the electrostatic approximation which reduces the model to a 
+sphere under a constant electric field, like it is presented in Figure \ref{fig:np_elec_field}.
+%
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.3\textwidth]{sphere_field_8nm.pdf} 
    \caption{Spherical nanoparticle in a constant electric field.}
    \label{fig:np_elec_field}
 \end{figure}
-
-Figure \ref{fig:error_sphere_Ag} shows a grid convergence study of the extinction
-cross-section of a silver spherical nanoparticle of radius $8 \, nm$ immersed in water
+%
+Figure \ref{fig:error_sphere_Ag} shows the result of a grid convergence study of the extinction
+cross-section for a silver spherical nanoparticle of radius $8 \, nm$, immersed in water
 under a z-polarized electric field with a wavelength of $380 nm$ and intensity of 
-$-0.0037 e/({\AA}^2 \, \epsilon_0)$. Under these conditions water has a dielectric
+$-0.0037 e/({\AA}^2 \, \epsilon_0)$. In such conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
-$-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. In these simulations we used $K=4$ 
+$-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. These simulations use $K=4$ 
 Gauss quadrature points per far-away elements, $K_{fine} = 37$ Gauss quadrature points
 per elements for near singular integrals, $Nk = 9$ Gauss quadrature points per 
 triangle edge for semi-analytical integration in the singular elements, $P=15$ for 
 the order of expansion in treecode, and a GMRES tolerance of $10^{-5}$. We
-performed the simulation for meshes of 512, 2048, 8192 and 32768 elements. The 
-error calculation uses the analytical solution $C_{ext} = 1854.4765 \; nm^2$ 
-obtained using equation \eqref{eq:an_sol}.
+performed the calculations using meshes with 512, 2048, 8192 and 32768 elements. For this case, the 
+analytical solution in equation \eqref{eq:an_sol} yields $C_{ext} = 1854.4765 \; nm^2$.
+Errors are also presented in Table \ref{table:err_iso_sphere}.
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -54,11 +48,8 @@ obtained using equation \eqref{eq:an_sol}.
    \label{fig:error_sphere_Ag}
 \end{figure}
 
-The computed order of convergence is $0.98$ and the $1/N$ slope in Fig.\ref{fig:error_sphere_Ag}
-shows that the numerical solutions computed with \pygbe for isolated spheres are
-correctly resolved by the meshes.
-
-The percentage errors for the different meshes are presented in Table. \ref{table:err_iso_sphere}.
+The observed order of convergence is $0.98$, and the $1/N$ slope in Figure \ref{fig:error_sphere_Ag}
+is an indication that the meshes are correctly resolving the numerical solutions with \pygbe. 
 
 \begin{table}[h]
     \centering
@@ -75,16 +66,12 @@ The percentage errors for the different meshes are presented in Table. \ref{tabl
     \end{tabular}
 \end{table}
 
-
-To complete the process of verification we performed simulations of the extinction 
-cross-section of the isolated sphere for a spectrum of wavelengths. To ensure 
-errors $<2\%$ we use the mesh of $N=32768$ elements. 
-
-Figure \ref{fig:verif_sphere} shows the extinction cross-section of the isolated
-sphere of Fig.\ref{fig:np_elec_field} as a function of the wavelength. The values of 
-the dielectric constants for each wavelength were obtained by interpolation of 
+We further verified our implementation computing the extinction cross-section of the 
+isolated sphere for a range of wavelengths, presented in Figure \ref{fig:verif_sphere}. 
+The mesh in these simulations had $N=32768$, which yields errors below $2\%$ in Table \ref{table:err_iso_sphere}.
+The values of dielectric constants for each wavelength were obtained by interpolation of 
 experimental data \cite{JohnsonChristy1972, HaleQuerry1972}. \textcolor{red}{(see how to add
-reference to notebooks that generate these values)}
+reference to notebooks that generate these values)} \textcolor{blue}{(don't think it is necessary)}
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -95,32 +82,31 @@ reference to notebooks that generate these values)}
    \label{fig:verif_sphere}
 \end{figure}
 
-We can see good agreement between simulations and analytical results, proving
-that we are achieving an accurate numerical solution of the mathematical model. The 
+Figure \ref{fig:verif_sphere} shows good agreement between simulations and analytical results, proving
+that \pygbe is accurately representing the mathematical model. The 
 peak in the extinction cross-section indicates that the plasmons of the metallic
 nanoparticle are resonating with the incoming electric field.
 
 
 \subsection{LSPR response to BSA} \label{sec:lspr_response}
 
-Localized Surface Plasmon Resonance biosensors detect a target molecule by monitoring
-plasmon resonance frequency changes due to the proximity of the target to the metallic
-nanoparticle. In this section we perform simulations that show how our BEM approach
-can be used to model the response of LSPR biosensors.
+Localized Surface Plasmon Resonance (LSPR) biosensors detect a target molecule by monitoring
+plasmon resonance frequency shifts due to the presence of the analyte.
+In this section, we use our BEM approach to
+to model the response of LSPR biosensors.
 
-To ensure that we are achieving an accurate numerical solution, we did a grid 
-convergence analysis of the system showed in Figure \ref{fig:setup_conv} . Where
-we used as analyte a Bovine Serum Albumina (PDB code 4FS5) protein. The BSA mesh
+To guarantee an accurate numerical solution, we performed a grid 
+convergence analysis of the system sketched by Figure \ref{fig:setup_conv}, with
+the Bovine Serum Albumina (BSA, PDB code 4FS5) protein as analyte. The BSA mesh
 was generated using the open source software Nanoshaper \textcolor{red}{(missing how to cite - not
-reported in their webpage)}. Nanoshaper takes as input the coordinates and radius
-of the atoms in the crystal structure, which were extracted from the the van der
-Waals radii and charges of the atoms file (\texttt{pqr}) generated using 
-\texttt{pdb2pqr} \cite{Dolinsky04}, with the built-in \texttt{amber} force field.
+reported in their webpage)}. Nanoshaper takes as input the atomic coordinates and radii, 
+which were extracted from a \texttt{pqr} file generated with 
+\texttt{pdb2pqr} \cite{Dolinsky04}, using the built-in \texttt{amber} force field.
 
 Since we compute the extinction cross section over the sphere nanoparticle, we 
 set a fixed mesh density for the protein and refined the mesh of the
 sphere (meshes of 512, 2048, 8192 and 32768 elements). After studying different 
-cases we decided to use a mesh of density of two triangles per ${\AA}^2$ for 
+cases we decided to use a mesh with density of two triangles per ${\AA}^2$ for 
 the protein, resulting in $N_{prot} = 98116$ elements. 
 
 
