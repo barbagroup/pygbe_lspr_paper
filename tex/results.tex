@@ -160,11 +160,11 @@ We studied the LSPR response as a function of the wavelength in the presence
 of the BSA. To optimize run-times without compromising accuracy, we used a relaxed
 set of parameters, where the protein mesh density was one element per
 ${\AA}^2$ ($N_{prot}=45140$) and the sphere mesh had $N_{sensor}=32768$. Integrals used
-$K=4$ \textcolor{blue}{(really? not just 1?)} Gauss quadrature points for far-away elements, 
+$K=4$ Gauss quadrature points for far-away elements, 
 $K_{fine} = 19$ Gauss quadrature points in elements with near singular integrals,
 and $Nk = 9$ Gauss quadrature points per triangle edge for the semi-analytical integration in the 
 singular elements. The treecode used a Taylor expansion of order $P=6$ and a multipole-acceptance
-criterion of $\theta=0.5$ \textcolor{blue}{(check)}. The GMRES tolerance was set to $10^{-3}$. 
+criterion of $\theta=0.5$ . The GMRES tolerance was set to $10^{-3}$. 
 This parameter choice resulted in a percentage error of $\sim\%0.6$
 and the time of each computation was approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
 card. 
@@ -216,16 +216,18 @@ y-axis display, respectively.
 
 \subsubsection{Sensitivity calculations} \label{sec:bsa_sensitivity}
 
-The sensitivity of an LSPR biosensor corresponds to the relation between the size of the resonance frequency shift 
-and the number of analytes bound to the sensor (through a ligand).
+The sensitivity of an LSPR biosensor corresponds to the relation between the size of the resonance frequency shift and the number of analytes bound to the sensor (through a ligand).
 Experiments show that the distance between the nanoparticle and the analyte largely
 affects the sensitivity of the sensor, to the point that
 targets placed $15nm$ away from the surface are very hard to detect \cite{HaesETal2004}.
 This is a critical issue, considering that common ligands (for example, antibodies) are
 larger than $15nm$. Figure \ref{fig:dist_response} 
-shows how the peak varies with the distance at which the analytes are placed.  
+shows how the peak varies with the distance at which the analytes ($+z$ and $-z$) are placed.  
 In particular, we see a shift of $0.25 \, nm$ when $d=2 nm$ to $0.75 nm$ when the 
-analytes are placed at $d=0.5 \, nm$.
+analytes are placed at $d=0.5 \, nm$. The parameters used in this case remain 
+the same as the ones used in Figures \ref{fig:2pz_response} and \ref{fig:2pxy_response} .
+
+
 \textcolor{blue}{(parameters for these runs?, here we have 1 or 2 BSAs?)}
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
