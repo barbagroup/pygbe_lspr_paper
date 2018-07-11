@@ -91,23 +91,23 @@ nanoparticle are resonating with the incoming electric field.
 \subsection{LSPR response to BSA} \label{sec:lspr_response}
 
 Localized Surface Plasmon Resonance (LSPR) biosensors detect a target molecule by monitoring
-plasmon resonance frequency shifts due to the presence of the analyte.
-In this section, we use our BEM approach to
-to model the response of LSPR biosensors.
-
-To guarantee an accurate numerical solution, we performed a grid 
-convergence analysis of the system sketched by Figure \ref{fig:setup_conv}, with
-the Bovine Serum Albumina (BSA, PDB code 4FS5) protein as analyte. The BSA mesh
-was generated using the open source software Nanoshaper \textcolor{red}{(missing how to cite - not
-reported in their webpage)}. Nanoshaper takes as input the atomic coordinates and radii, 
+plasmon resonance frequency shifts of metallic nanoparticles, in presence of an analyte \cite{WilletsVandyune2007}.
+In this section, we use our BEM approach to model the response of LSPR biosensors.
+We consider a spherical silver nanoparticle, and compute the extinction cross-section placing 
+bovine serum albumina (BSA) proteins (PDB code: 4FS5) in different locations.
+The BSA mesh was generated using the open source software Nanoshaper 
+\textcolor{red}{(missing how to cite - not reported in their webpage)}. 
+Nanoshaper takes as inputs the atomic coordinates and radii, 
 which were extracted from a \texttt{pqr} file generated with 
 \texttt{pdb2pqr} \cite{Dolinsky04}, using the built-in \texttt{amber} force field.
 
-Since we compute the extinction cross section over the sphere nanoparticle, we 
+\subsubsection{Grid-convergence study} \label{sec:bsa_convergence}
+To guarantee an accurate numerical solution, we performed a grid-convergence 
+analysis of the system sketched by Figure \ref{fig:setup_conv}. 
+Since we compute the extinction cross-section of the spherical nanoparticle only, we 
 set a fixed mesh density for the protein and refined the mesh of the
-sphere (meshes of 512, 2048, 8192 and 32768 elements). After studying different 
-cases we decided to use a mesh with density of two triangles per ${\AA}^2$ for 
-the protein, resulting in $N_{prot} = 98116$ elements. 
+sphere (meshes of 512, 2048, 8192 and 32768 elements). We found that the protein meshed with two
+triangles per ${\AA}^2$ was fine enough for the convergence analysis, resulting in $N_{prot} = 98116$ elements. 
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -117,14 +117,14 @@ the protein, resulting in $N_{prot} = 98116$ elements.
    \label{fig:setup_conv}
 \end{figure}
 
-We repeated the conditions and parameters for the isolated sphere simulation
-presented in Section \ref{sec:verification}. In this case we added the 
-dielectric constant of the protein $2.7514 + 0.2860i$ extracted from the 
-functional relationship provided by Pahn, et al. \cite{PahnETal2013}, and the 
-distance between the sensor and the analyte was $d=1 \, nm$.  The dipole moment 
-of the protein was aligned with the y-axis. The error calculations
-use the Richardson extrapolation value of the extinction cross-section as a
-reference, $C_{ext}= 1778.7259 \, nm^2$
+These tests used the conditions and parameters for the isolated sphere simulation
+presented in Section \ref{sec:verification}. The protein dielectric constant was
+$2.7514 + 0.2860i$, which we extracted from the 
+functional relationship provided by Phan, et al. \cite{PahnETal2013}, and the 
+distance between the sensor and the analyte was $d=1 \, nm$. BSA was oriented such that
+its dipole moment was aligned with the y-axis. The error calculations for Figure \ref{fig:error_sphere-bsa}
+and Table \ref{table:err_bsa_sensor} use the Richardson extrapolated value of extinction cross-section as a
+reference, $C_{ext}= 1778.7259 \, nm^2$.
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -135,13 +135,12 @@ reference, $C_{ext}= 1778.7259 \, nm^2$
    \label{fig:error_sphere-bsa}
 \end{figure}
 
-The computed order of convergence is $0.99$, and we can see in 
-Figure \ref{fig:error_sphere-bsa} that the error decays with the number
+The observed order of convergence is $0.99$, and 
+Figure \ref{fig:error_sphere-bsa} shows that the error decays with the number
 of boundary elements ($1/N$), which is consistent with our verification 
-results of Section \ref{sec:verification}. This proves that the
+results in Section \ref{sec:verification}. This proves that the
 numerical solutions computed with \pygbe are correctly resolved by the meshes.
-
-The percentage errors for the different meshes are presented in Table. \ref{table:err_bsa_sensor}.
+Also, the percentage errors for the different meshes are presented in Table. \ref{table:err_bsa_sensor}.
 
 \begin{table}[h]
     \centering
@@ -158,39 +157,34 @@ The percentage errors for the different meshes are presented in Table. \ref{tabl
     \end{tabular}
 \end{table}
 
-We performed a relaxation of parameters study before we computed the LSPR 
-response to the BSA protein. To optimize run time without compromising our small
-percentage error, we reduced the density of the protein mesh to one element per
-${\AA}^2$ ($N_{prot}=45140$) and fixed the sphere mesh to $N_{sensor}=32768$. We
-set $K=4$ Gauss quadrature points per far-away elements, $K_{fine} = 19$ Gauss
-quadrature points per elements for near singular integrals, $Nk = 9$ Gauss 
-quadrature points per triangle edge for semi-analytical integration in the 
-singular elements, $P=6$ for the order of expansion in treecode, and a GMRES 
-tolerance of $10^{-3}$. These choices result in a percentage error of $\sim\%0.6$
-and the time of each computation is approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
-card. 
+\subsubsection{Resonance frequency shift calculations} \label{sec:bsa_shift}
 
 We studied the LSPR response as a function of the wavelength in the presence 
-of the BSA. We run simulations on the system presented in Figure 
-\ref{fig:display_z}. As you can see we used two BSA located at $d=1 \, nm$ of distance
-along the z-axis. By using two proteins we can appreciate better the effect 
-of the BSA. The distance between two wavelengths points is $0.25 \, nm$ and the 
-range explored goes from $382 \, nm$ to $387 \, nm$, giving a total of 21 
-wavelength points. The location of $+z$ protein is the same used for converge 
-analysis, while the protein in the $-z$  position was located there by performing
-a solid rotation respect to y-axis of the $+z$ BSA. 
+of the BSA. To optimize run-times without compromising accuracy, we used a relaxed
+set of parameters, where the protein mesh density was one element per
+${\AA}^2$ ($N_{prot}=45140$) and the sphere mesh had $N_{sensor}=32768$. Integrals used
+$K=4$ \textcolor{blue}{(really? not just 1?)} Gauss quadrature points for far-away elements, 
+$K_{fine} = 19$ Gauss quadrature points in elements with near singular integrals,
+and $Nk = 9$ Gauss quadrature points per triangle edge for the semi-analytical integration in the 
+singular elements. The treecode used a Taylor expansion of order $P=6$ and a multipole-acceptance
+criterion of $\theta=0.5$ \textcolor{blue}{(check)}. The GMRES tolerance was set to $10^{-3}$. 
+This parameter choice resulted in a percentage error of $\sim\%0.6$
+and the time of each computation was approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
+card. 
 
+Figure \ref{fig:display_z} sketches the setup of the simulations, with two proteins placed 
+$d=1 \, nm$ away from a spherical silver nanoparticle, along the z-axis.
+The position of the BSA in the $+z$ axis was the same as the convergence analysis in 
+Section \ref{sec:base_convergence}, whereas the BSA in the $-z$ position comes from a 180$^\circ$ 
+solid rotation of the BSA in $+z$ about the y-axis.
+We performed calculations for wavelengths between $382 \, nm$ and $387 \, nm$, every $0.25 \, nm$,
+which are around the peak seen in Figure \ref{fig:verif_sphere}.
 
 Figure \ref{fig:2pz_response} shows the variation of the extinction cross-section
-with respect to wavelength in a near-range around the resonance peak. We can observe
-that there is a red-shift ($0.5 \, nm$) in the resonance frequency due to the
-presence of the BSA analytes. This result agrees with experimental observations
-\cite{TangETal2010, RaphaelETal2013}. Particularly, we observed a decrement of 
-the peak which is also present in the results of Tang, et al. \cite{TangETal2010}.
-Both results, the red-shift and the decrement of the peak in the presence of 
-the proteins, indicate that our boundary element method approach using electrostatic
-approximation, is capable of reproducing the characteristic resonance frequency 
-shift in LSPR biosensors.
+with respect to wavelength for the isolated nanoparticle ($d=\infty$) and with
+BSA proteins placed $d=1 \, nm$ away. 
+Results present a red-shift ($0.5 \, nm$) in the resonance frequency due to the
+presence of the BSA analytes.
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -206,14 +200,9 @@ shift in LSPR biosensors.
 \end{figure}
 
 
-To study the effect of location of the analytes, we rearange them in 
-different locations and run the simulation with the same parameters used before. 
-We studied two different cases, one with the analytes located at $\pm 1 \; nm$
-of the surface along x-axis, and the other along the y-axis. See Figure \ref{fig:display_xy}
-to visualize displays.
-
-
-Figure \ref{fig:2pxy_response} show the results obtained for x-axis and
+To study the effect of location of the analytes, we reran simulations placing the 
+BSA proteins along the x- and y-axis, at $\pm 1 \; nm$, as sketched by Figure \ref{fig:display_xy}.
+Figure \ref{fig:2pxy_response} shows the results obtained for x-axis and
 y-axis display, respectively. 
 
 \begin{figure}[!h] %  figure placement: here, top, bottom, or page
@@ -228,20 +217,19 @@ y-axis display, respectively.
    \label{fig:2pxy_response}
 \end{figure}
 
-In both cases we can observe that the shift is negligible. According to 
-calculations, the shift is smaller than the distance between two wavelengths 
-points ($< 0.25 nm $) which results in zero-shift. These findings are consistent with 
-the fact that we have a z-polarized electric field. Having a z-polarized electric
-field implies that the cloud of electrons will be smaller in the x and y direction.
-Therefore, the effect of the analyte in those locations results insignificant. 
+\subsubsection{Sensitivity calculations} \label{sec:bsa_sensitivity}
 
-
-Experiments suggests that the distance between the nanoparticle and the analyte 
-affects the sensitivity of the sensor \cite{HaesETal2004}. The sensitivity of 
-the biosensor is the relation between the size of the shift and the number of 
-analytes bound to the ligand molecule. Figure \ref{fig:dist_response} shows how
-the peak varies with the distance at which the analytes are placed.  
-
+The sensitivity of an LSPR biosensor corresponds to the relation between the size of the resonance frequency shift 
+and the number of analytes bound to the sensor (through a ligand).
+Experiments show that the distance between the nanoparticle and the analyte largely
+affects the sensitivity of the sensor, to the point that
+targets placed $15nm$ away from the surface are very hard to detect \cite{HaesETal2004}.
+This is a critical issue, considering that common ligands (for example, antibodies) are
+larger than $15nm$. Figure \ref{fig:dist_response} 
+shows how the peak varies with the distance at which the analytes are placed.  
+In particular, we see a shift of $0.25 \, nm$ when $d=2 nm$ to $0.75 nm$ when the 
+analytes are placed at $d=0.5 \, nm$.
+\textcolor{blue}{(parameters for these runs?, here we have 1 or 2 BSAs?)}
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -252,12 +240,6 @@ the peak varies with the distance at which the analytes are placed.
             z-direction, and at infinity (no protein)}
    \label{fig:dist_response}
 \end{figure}
-
-We can observe how the sensitivity is affected by the distance between the 
-analyte and the sensor: the closest they are, the larger the shift. In this particular
-case we go from a shift of $0.25 \, nm$ when $d=2 nm$ to $0.75 nm$ when the 
-analytes are placed at $d=0.5 \, nm$. This result shows the potential of \pygbe 
-and the electrostatic approach to study sensitivity versus distance.
 
 \begin{figure*}[] %  figure placement: here, top, bottom, or page
    \centering
