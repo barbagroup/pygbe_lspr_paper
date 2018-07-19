@@ -26,13 +26,52 @@ where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf
 is a unit vector in the direction of the observation point, and $\mathbf{p}$ is
 the dipole moment.
 
-We can also obtain the scattered field with the forward-scattering amplitude \cite{Jackson}:
+We can also obtain the scattered field with the forward-scattering amplitude 
+\cite{Jackson}:
 
 \begin{equation*}
     \mathbf{E}_{2s}(\mathbf{r})_{r\to\infty} = \frac{e^{ikr}}{r} \mathbf{F}(\mathbf{k},\mathbf{k}_0),
 \end{equation*}
 
-where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the wave vector of the incident field. 
+where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the 
+scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
+wave vector of the incident field. 
 
 Via these two equations, we use \pygbe to compute the scattered electric field 
 and then solve for the forward-scattering amplitude. 
+
+\subsection{Extinction cross-section and Optical theorem} \label{sec:cext_ot}
+
+The extinction cross-section quatifies how much extinction (scattered + absorbed) 
+is caused by a particle when this one is shinned with light. It is defined as the
+ratio between the extinct energy and the intensity of the incoming wave. 
+
+The optical theorem relates the extinction cross-section with the forward-scattering amplitude. The traditional expression for this relationship applies for non-absorbing media \cite{MayergoyzZhang2007, Jackson}. The expression for absorbing media \cite{BohrenGilra1979, VideenSun2003} was corrected by Mishchenko \cite{Mishchenko2007}, giving the following expression:
+
+\begin{equation*}
+    C_\text{ext} = \frac{4\pi}{k^\prime} \operatorname{Im} \left[ \frac{\mathbf{\hat{e}}_i}{|\mathbf{E}_i|}\mathbf{F}(\mathbf{k}=\mathbf{k}_0, \mathbf{k}_0) \right].
+\end{equation*}
+
+Here, $k^\prime$ is the real part of the complex wave number. 
+
+\begin{equation*}
+    k = k^\prime + ik^{\prime\prime} = \frac{2\pi}{\lambda} n,
+\end{equation*}
+
+and $n$ is the refraction index of the host medium.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
