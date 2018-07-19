@@ -3,7 +3,7 @@
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
-   \includegraphics[width=0.49\textwidth]{particle_wave.pdf} 
+   \includegraphics[width=0.45\textwidth]{particle_wave.pdf} 
    \caption{Nanoparticle under electromagnetic wave.}
    \label{fig:part_wave}
 \end{figure}
@@ -18,9 +18,9 @@ geometry, and the material constants. In the quasistatic approximation, we only
 neglected \cite{MayergoyzZhang2007}. In the far-field limit, the scattered field
 in the outside region ($\Omega_2$) is given by: 
 
-\begin{equation*}
+\begin{equation}
     \mathbf{E}_{2s} = \frac{1}{4\pi\epsilon_2}k^2\frac{e^{ikr}}{r} (\mathbf{\hat{r}} \times \mathbf{p})\times\mathbf{\hat{r}}.
-\end{equation*} 
+\end{equation} 
 
 where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf{\hat{r}}$ 
 is a unit vector in the direction of the observation point, and $\mathbf{p}$ is
@@ -29,9 +29,9 @@ the dipole moment.
 We can also obtain the scattered field with the forward-scattering amplitude 
 \cite{Jackson}:
 
-\begin{equation*}
+\begin{equation}
     \mathbf{E}_{2s}(\mathbf{r})_{r\to\infty} = \frac{e^{ikr}}{r} \mathbf{F}(\mathbf{k},\mathbf{k}_0),
-\end{equation*}
+\end{equation}
 
 where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the 
 scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
@@ -48,20 +48,28 @@ ratio between the extinct energy and the intensity of the incoming wave.
 
 The optical theorem relates the extinction cross-section with the forward-scattering amplitude. The traditional expression for this relationship applies for non-absorbing media \cite{MayergoyzZhang2007, Jackson}. The expression for absorbing media \cite{BohrenGilra1979, VideenSun2003} was corrected by Mishchenko \cite{Mishchenko2007}, giving the following expression:
 
-\begin{equation*}
+\begin{equation}
     C_\text{ext} = \frac{4\pi}{k^\prime} \operatorname{Im} \left[ \frac{\mathbf{\hat{e}}_i}{|\mathbf{E}_i|}\mathbf{F}(\mathbf{k}=\mathbf{k}_0, \mathbf{k}_0) \right].
-\end{equation*}
+\end{equation}
+
+
+\color{red}{Chris in Mishenko 2007 paper the equation is not exactly the same 
+(look eq 87 in paper), do you have that derivation? How you got to the eq 7.22 
+ in your thesis?}
 
 Here, $k^\prime$ is the real part of the complex wave number. 
 
-\begin{equation*}
+\begin{equation}
     k = k^\prime + ik^{\prime\prime} = \frac{2\pi}{\lambda} n,
-\end{equation*}
+\end{equation}
 
 and $n$ is the refraction index of the host medium.
 
 
+\subsection{Boundary integral formulation} \label{sec:lspr_bem}
 
+
+\subsection{Acceleration startegies} \label{sec:acc_strategies}
 
 
 
