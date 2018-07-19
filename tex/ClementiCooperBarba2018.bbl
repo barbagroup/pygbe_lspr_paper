@@ -5,6 +5,22 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{MayergoyzZhang2007}
+I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
+  resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
+  Magn. 43~(4) (2007) 1681--1684.
+
+\bibitem{Jackson}
+J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
+
+\bibitem{BohrenGilra1979}
+C.~F. Bohren, D.~P. Gilra, Extinction by a spherical particle in an absorbing
+  medium, Journal of Colloid and Interface Science 72~(2) (1979) 215--221.
+
+\bibitem{VideenSun2003}
+G.~Videen, W.~Sun, Yet another look at light scattering from particles in
+  absorbing media, Applied optics 42~(33) (2003) 6724--6727.
+
 \bibitem{Mishchenko2007}
 M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
   in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
