@@ -18,7 +18,7 @@ geometry, and the material constants. In the quasistatic approximation, we only
 neglected \cite{MayergoyzZhang2007}. In the far-field limit, the scattered field
 in the outside region ($\Omega_2$) is given by: 
 
-\begin{equation}
+\begin{equation} \label{eq:scat_efield_long_range}
     \mathbf{E}_{2s} = \frac{1}{4\pi\epsilon_2}k^2\frac{e^{ikr}}{r} (\mathbf{\hat{r}} \times \mathbf{p})\times\mathbf{\hat{r}}.
 \end{equation} 
 
@@ -29,7 +29,7 @@ the dipole moment.
 We can also obtain the scattered field with the forward-scattering amplitude 
 \cite{Jackson}:
 
-\begin{equation}
+\begin{equation} \label{eq:scat_efield_fwa}
     \mathbf{E}_{2s}(\mathbf{r})_{r\to\infty} = \frac{e^{ikr}}{r} \mathbf{F}(\mathbf{k},\mathbf{k}_0),
 \end{equation}
 
@@ -48,14 +48,15 @@ ratio between the extinct energy and the intensity of the incoming wave.
 
 The optical theorem relates the extinction cross-section with the forward-scattering amplitude. The traditional expression for this relationship applies for non-absorbing media \cite{MayergoyzZhang2007, Jackson}. The expression for absorbing media \cite{BohrenGilra1979, VideenSun2003} was corrected by Mishchenko \cite{Mishchenko2007}, giving the following expression:
 
-\begin{equation}
+\begin{equation} \label{eq:cext_fwa}
     C_\text{ext} = \frac{4\pi}{k^\prime} \operatorname{Im} \left[ \frac{\mathbf{\hat{e}}_i}{|\mathbf{E}_i|}\mathbf{F}(\mathbf{k}=\mathbf{k}_0, \mathbf{k}_0) \right].
 \end{equation}
 
 
-\color{red}{Chris in Mishenko 2007 paper the equation is not exactly the same 
+{\color{red}{Chris in Mishenko 2007 paper the equation is not exactly the same 
 (look eq 87 in paper), do you have that derivation? How you got to the eq 7.22 
- in your thesis?}
+ in your thesis?.}}
+
 
 Here, $k^\prime$ is the real part of the complex wave number. 
 
@@ -68,6 +69,21 @@ and $n$ is the refraction index of the host medium.
 
 \subsection{Boundary integral formulation} \label{sec:lspr_bem}
 
+From the electrostatic approximation from Mayergoyz and Zhang (2007) 
+\cite{MayergoyzZhang2007} we know that the zeroth order term of the magnetic 
+field is zero everywhere. Resulting in the following Maxwell equations. 
+
+\begin{align} \label{eq:electrostatic_scatter_E}
+\nabla \cdot \mathbf{E}^{(0)}_{1s} &= 0 \qquad \nabla \times \mathbf{E}^{(0)}_{1s} = 0 \nonumber \\
+\nabla \cdot \mathbf{E}^{(0)}_{2s} &= 0 \qquad \nabla \times \mathbf{E}^{(0)}_{2s} = 0 \nonumber \\
+(\epsilon_1\mathbf{E}^{(0)}_{1s} - \epsilon_2\mathbf{E}^{(0)}_{2s})\cdot\mathbf{n} &= (\epsilon_2-\epsilon_1)\mathbf{E}_i\cdot \mathbf{n}.
+\end{align}
+
+
+\subsubsection{Electrostatic potential under an incoming electric field}
+
+
+\subsubsection{Boundary integral expression of the dipole moment}
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
