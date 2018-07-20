@@ -79,6 +79,34 @@ field is zero everywhere. Resulting in the following Maxwell equations.
 (\epsilon_1\mathbf{E}^{(0)}_{1s} - \epsilon_2\mathbf{E}^{(0)}_{2s})\cdot\mathbf{n} &= (\epsilon_2-\epsilon_1)\mathbf{E}_i\cdot \mathbf{n}.
 \end{align}
 
+Where the subscript $s$ ($i$) stands for scattered (incident) field. The curl of
+$\mathbf{E}^{(0)}_{js}$ for $j=1,2$ is zero, therefore, there is a scalar potential
+such that $-\nabla \phi_js = \mathbf{E}^{(0)}_js$. Using this, we can rewrite 
+equation \ref{eq:electrostatic_scatter_E} as:
+
+\begin{align} \label{eq:electrostatic_scatter}
+\nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber \\
+\epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \qquad \phi_{1s} = \phi_{2s} \qquad\text{on the boundary $\Gamma$}.
+\end{align}
+
+
+Recalling the weak formulation of Laplace equation with test function $w$:
+
+\begin{equation} \label{eq:lap_weak}
+\int_\Omega \nabla^2 \phi(\mathbf{r}_\Omega') w(\mathbf{r}_\Omega') \text{d} \Omega^\prime= 0.
+\end{equation}
+
+where the evaluation point is $\mathbf{r}_\Omega$ a location in the domain $\Omega$.
+
+If we use the Laplace's free-space Green's function as the test function $w$ we
+get:
+
+\begin{equation} \label{eq:lap_weak2}
+\int_\Omega \nabla^2 \phi(\mathbf{r}'_\Omega) G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Omega) \text{d} \Omega^\prime= 0.
+\end{equation}
+
+
+
 
 \subsubsection{Electrostatic potential under an incoming electric field}
 
