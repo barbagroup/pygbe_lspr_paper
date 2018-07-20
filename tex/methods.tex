@@ -22,7 +22,7 @@ in the outside region ($\Omega_2$) is given by:
     \mathbf{E}_{2s} = \frac{1}{4\pi\epsilon_2}k^2\frac{e^{ikr}}{r} (\mathbf{\hat{r}} \times \mathbf{p})\times\mathbf{\hat{r}}.
 \end{equation} 
 
-where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf{\hat{r}}$ 
+\noindent where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf{\hat{r}}$ 
 is a unit vector in the direction of the observation point, and $\mathbf{p}$ is
 the dipole moment.
 
@@ -33,7 +33,7 @@ We can also obtain the scattered field with the forward-scattering amplitude
     \mathbf{E}_{2s}(\mathbf{r})_{r\to\infty} = \frac{e^{ikr}}{r} \mathbf{F}(\mathbf{k},\mathbf{k}_0),
 \end{equation}
 
-where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the 
+\noindent where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the 
 scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
 wave vector of the incident field. 
 
@@ -69,6 +69,8 @@ and $n$ is the refraction index of the host medium.
 
 \subsection{Boundary integral formulation} \label{sec:lspr_bem}
 
+\subsubsection{Electrostatic potential under an incoming electric field}
+
 From the electrostatic approximation from Mayergoyz and Zhang (2007) 
 \cite{MayergoyzZhang2007} we know that the zeroth order term of the magnetic 
 field is zero everywhere. Resulting in the following Maxwell equations. 
@@ -82,7 +84,7 @@ field is zero everywhere. Resulting in the following Maxwell equations.
 Where the subscript $s$ ($i$) stands for scattered (incident) field. The curl of
 $\mathbf{E}^{(0)}_{js}$ for $j=1,2$ is zero, therefore, there is a scalar potential
 such that $-\nabla \phi_js = \mathbf{E}^{(0)}_js$. Using this, we can rewrite 
-equation \ref{eq:electrostatic_scatter_E} as:
+equation \eqref{eq:electrostatic_scatter_E} as:
 
 \begin{align} \label{eq:electrostatic_scatter}
 \nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber \\
@@ -96,7 +98,7 @@ Recalling the weak formulation of Laplace equation with test function $w$:
 \int_\Omega \nabla^2 \phi(\mathbf{r}_\Omega') w(\mathbf{r}_\Omega') \text{d} \Omega^\prime= 0.
 \end{equation}
 
-where the evaluation point is $\mathbf{r}_\Omega$ a location in the domain $\Omega$.
+\noindent where the evaluation point is $\mathbf{r}_\Omega$ a location in the domain $\Omega$.
 
 If we use the Laplace's free-space Green's function as the test function $w$ we
 get:
@@ -105,13 +107,96 @@ get:
 \int_\Omega \nabla^2 \phi(\mathbf{r}'_\Omega) G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Omega) \text{d} \Omega^\prime= 0.
 \end{equation}
 
+Manipulating the integrand using the product rule and later the divergence 
+theorem, we get:
+
+\begin{equation} \label{eq:lap_bie_dom}
+\phi(\mathbf{r}_\Omega) = \int_\Gamma G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime - \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime
+\end{equation}
+
+\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
+and $\mathbf{r}'$ runs only on the boundary $\Gamma$. This equation has a 
+singularity when $\mathbf{r}=\mathbf{r}'$. To handle thisproblem, we perform the
+integral on a surface $\Gamma'$ that is like $\Gamma$ but with a hemisphere of 
+radius $\varepsilon$ center at $\mathbf{r}$. We split the integrals into the part
+that we have no singularity and the part that has the hemisphere. After solving these
+equations when $\varepsilon \to 0$, equation \eqref{eq:lap_bie_dom} results in:
+
+\begin{equation} \label{eq:lap_bie}
+\frac{\phi(\mathbf{r}_\Gamma)}{2} +  \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime = \int_\Gamma G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime,
+\end{equation}
+
+\noindent where these are Cauchy principal value integrals.
+
+Using the single and double layer operators:
+
+{\color{red} Chris, V is single layer operator but is it K the double layer one? 
+In your thesis you have that the double layer is W and you refers as K as
+"an operator" eq 2.108 and 2.112 in your thesis}
+
+\begin{equation}\label{eq:single_layer}
+V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+\end{equation}
+
+\begin{equation}\label{eq:double_layer}
+K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+\end{equation}
+
+We can rewrite equation \eqref{eq:lap_bie} using the operator notation, as:
+
+\begin{equation} \label{eq:lap_operator}
+\left[ \frac{\mathbb{I}}{2} + K_L^{\mathbf{r}_\Gamma} \right] \left( \phi_\Gamma \right) = V_L^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_\Gamma \right),
+\end{equation}
+
+\noindent where $\mathbb{I}$ is the identity operator.
+
+Following the same stepps, we can rewrite the Laplace equations in eqaution
+\eqref{eq:electrostatic_scatter} as:
+
+%
+\begin{align} \label{eq:integral_eq_lspr_nobc}
+\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
+\frac{\phi_{2s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{2s,\Gamma}) + V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{2s,\Gamma} \right) = 0& \quad \text{on $\Gamma$,}
+\end{align}
+
+Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
+we get:
+
+\begin{align} \label{eq:integral_eq_lspr}
+\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
+\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
+\end{align}
+
+In matrix form,
+%
+ \begin{equation} \label{eq:matrix_lspr}
+ \left[
+    \begin{matrix} 
+       \frac{1}{2} + K_{L}^{\Gamma} & -V_{L}^{\Gamma}  \vspace{0.2cm} \\
+       \frac{1}{2} - K_{L}^{\Gamma} &  \frac{\epsilon_1}{\epsilon_2} V_{L}^{\Gamma}  \vspace{0.2cm} 
+    \end{matrix}
+    \right] \left[ 
+    \begin{matrix} 
+       \phi_{1s,\Gamma} \vspace{0.2cm} \\
+       \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} \vspace{0.2cm}
+    \end{matrix} 
+     \right] =   
+    \left[
+    \begin{matrix} 
+       0 \\
+       V_{L}^{\Gamma} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\right) \frac{\partial\phi_i}{\partial\mathbf{n}} \vspace{0.2cm} 
+    \end{matrix}
+    \right]
+ \end{equation}
 
 
 
-\subsubsection{Electrostatic potential under an incoming electric field}
+
 
 
 \subsubsection{Boundary integral expression of the dipole moment}
+
+
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
