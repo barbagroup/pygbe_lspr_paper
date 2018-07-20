@@ -91,8 +91,9 @@ equation \eqref{eq:electrostatic_scatter_E} as:
 \epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma$}.
 \end{align}
 
+\subsubsubsection{Week formulation and layer operators}
 
-Recalling the weak formulation of Laplace equation with test function $w$:
+The weak formulation of Laplace equation with test function $w$:
 
 \begin{equation} \label{eq:lap_weak}
 \int_\Omega \nabla^2 \phi(\mathbf{r}_\Omega') w(\mathbf{r}_\Omega') \text{d} \Omega^\prime= 0.
@@ -167,7 +168,25 @@ we get:
 \frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
 \end{align}
 
-In matrix form,
+
+\subsubsubsection{Discretization and Linear system}
+
+We discretize the surface into flat triangles, and assume that  $\phi$ and 
+$\partial \phi/\partial \mathbf{n}$ are constant within each panel. Then, we can
+write the layer operators in their discretized form:
+
+\begin{align} \label{eq:layers_disc}
+V_{L,\text{disc}}^{\mathbf{r}_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) &= \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j  \nonumber \\
+K_{L,\text{disc}}^{\mathbf{r}_i}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
+\end{align}
+
+\noindent where $N_p$ is the number of discretization elements of $\Gamma$, 
+and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} 
+\phi(\mathbf{r}_{\Gamma_j})$ are the values of $\phi$ and 
+$\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$.
+
+
+Then we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
 %
  \begin{equation} \label{eq:matrix_lspr}
  \left[
@@ -189,9 +208,14 @@ In matrix form,
     \right]
  \end{equation}
 
+\noindent where the elements of the matrices are
+%
+\begin{align} \label{eq:layers_element}
+V_{L,ij}^{\Gamma} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j \nonumber \\
+K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
+\end{align}
 
-
-
+\noindent with $\mathbf{r}_{\Gamma_i}$ at the center of $\Gamma_i$.
 
 
 \subsubsection{Boundary integral expression of the dipole moment}
