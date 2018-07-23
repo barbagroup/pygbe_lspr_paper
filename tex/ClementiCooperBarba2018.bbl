@@ -25,6 +25,20 @@ G.~Videen, W.~Sun, Yet another look at light scattering from particles in
 M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
   in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
 
+\bibitem{BarnesHut1986}
+J.~Barnes, P.~Hut, A hierarchical {$O(N \log N)$} force-calculation algorithm,
+  Nature 324 (1986) 446--449.
+\newblock \href {http://dx.doi.org/10.1038/324446a0}
+  {\path{doi:10.1038/324446a0}}.
+
+\bibitem{CooperBardhanBarba2013}
+C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
+  using {Python}, {GPU}s and boundary elements that can handle solvent-filled
+  cavities and {S}tern layers., Comput. Phys. Commun. 185~(3) (2014) 720--729,
+  preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
+\newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
+  {\path{doi:10.1016/j.cpc.2013.10.028}}.
+
 \bibitem{JohnsonChristy1972}
 P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
   12~(6) (1972) 4370--4379.

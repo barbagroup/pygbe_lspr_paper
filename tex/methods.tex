@@ -223,9 +223,66 @@ K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[
 
 \subsubsection{Boundary integral expression of the dipole moment}
 
+As shown in Equation \eqref{eq:scat_efield_long_range}, the scattered electric 
+field in the far-away limit depends on the dipole moment. The dipole moment is 
+defined as 
+
+%
+\begin{equation} \label{eq:dipole_def}
+\mathbf{p} = \int_\Omega \mathbf{r} \rho \text{d}\Omega,
+\end{equation}
+
+Rewriting this equation using Gauss's law we obtain
+%
+\begin{equation} \label{eq:dipole_def_gauss}
+\mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega.
+\end{equation}
+
+
+{\color{red} Here is where we need to sort out the sign problem in equations and 
+how we write the derivation. Will fix when we talk with Chris}
 
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
+
+One downside of the Boundary Elements Method (\bem) is that the resulting matrix obtained
+after discretization, is dense. Solving the linear system using the traditional 
+Gaussian elimination requires $\O{N^3}$ computations and $\O{N^2}$ storage. Using
+an iterative solver, like the Generalized Minimal Residual Method (\gmres),
+scaling drops to $\O{N^2}$ since computations are dominated by the matrix-vector 
+product. This makes \bem a good approach for only few thousands boundary elements,
+which is far from the mesh sizes required for real applications. Fortunately, there
+are acceleration methods, like Barnes and Hut Treecode \cite{BarnesHut1986} that
+make the computations scale as $\O{N \log N}$, that allows us to use \bem for 
+larger problems. 
+
+
+The Barnes-Hut Treecode is a fast-summation algorithm capable of reducing $\O{N^2}$
+computational patterns 
+
+\begin{equation} \label{eq:summation}
+V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j) 
+\end{equation}
+
+\noindent to a computational complexity of $\O{N \log N}$. Where $q_j$ is the 
+weight, $\psi$ the kernel, $\mathbf{y}_j$ the location of sources and 
+$\mathbf{x}_i$ the location of targets.
+
+\pygbe uses the treecode to accelerate the \bem solver by aggregating the
+far-away sources to a center of expansion that interacts with the target location. 
+In the treecode, we group the sources $\mathbf{y}_j$ depending on their positions
+in cells or boxes of an octree. Then, we compute the nearby contributions directly,
+and approximate the further contributions using series expansions representing
+the sources around the box centers  $\mathbf{y}_c$. In this work we use Taylor 
+series for the expansions of order $P$ (parameter picked depending on the siumlation).
+To decide if a box of sources is distant enough of each target point for the Taylor
+expansion approximation, we use the multiple-acceptance criterion $\theta$ (MAC). This
+must be larger than the ratio of the box's size to the distance between the target
+and box's center $\frac{r_b}{r}<\theta$. Common values for $\theta$ are
+$\frac{1}{2}$ and $\frac{2}{3}$.  
+
+You can finde further detail on the Treecode implementation in \pygbe in Cooper, 
+et al (2013) \cite{CooperBardhanBarba2013}. 
 
 
 
