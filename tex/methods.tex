@@ -220,6 +220,31 @@ K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[
 
 \noindent with $\mathbf{r}_{\Gamma_i}$ at the center of $\Gamma_i$.
 
+\paragraph{Integral evaluation}
+
+To evaluate the integrals in Equation \eqref{eq:layers_element} we use quadrature
+rules. However, the Green's function of the Laplace equation has a $1/r$
+singularity, which is a problem to obtain good accuracy when the integral is 
+singular or near-singular. Therefore, we define three different regions:
+
+\emph{Far-away integrals:} The collocation point and the integration panel are 
+dar away. We can obtain good accuracy with a low order integration, for example 
+$K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element. To define a 
+threshold from which collocation points are considered to be far away, we use a
+representative length of the integrated triangle, $L = \sqrt{2\cdot\text{Area}}$.
+
+\emph{Near-singular integrals:} The collocation point is closer than the far-away
+region threshold, but it's not in the same integration panel, we use high order 
+Gauss quadrature rules $K_{fine}=19, 25 \; or \; 37$ points per triangle. 
+
+\emph{Singular integrals:} Having the collocation point in the integrated panel
+introduces a singularity that keeps us from computing theintegral with standard
+Gauss integration schemes. In this case, we use a semi-analytical technique from
+Zhe and co-workers \cite{ZhuHuangSongWhite2001} which gives us an accurate
+integration of the Laplace potential.
+{\color{red}Chris I can't find an explanation on how is it that the Nk parameter
+applies here. I know it is "number of Gauss points per triangle edge for
+semi-analytical integration" but where is that explained? can you add that part?}
 
 \subsubsection{Boundary integral expression of the dipole moment}
 
@@ -256,7 +281,6 @@ are acceleration methods, like Barnes and Hut Treecode \cite{BarnesHut1986} that
 make the computations scale as $\O{N \log N}$, that allows us to use \bem for 
 larger problems. 
 
-
 The Barnes-Hut Treecode is a fast-summation algorithm capable of reducing $\O{N^2}$
 computational patterns 
 
@@ -281,7 +305,7 @@ must be larger than the ratio of the box's size to the distance between the targ
 and box's center $\frac{r_b}{r}<\theta$. Common values for $\theta$ are
 $\frac{1}{2}$ and $\frac{2}{3}$.  
 
-You can finde further detail on the Treecode implementation in \pygbe in Cooper, 
+You can find further detail on the Treecode implementation in \pygbe in Cooper, 
 et al (2013) \cite{CooperBardhanBarba2013}. 
 
 

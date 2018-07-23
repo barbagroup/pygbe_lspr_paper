@@ -25,6 +25,12 @@ G.~Videen, W.~Sun, Yet another look at light scattering from particles in
 M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
   in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
 
+\bibitem{ZhuHuangSongWhite2001}
+Z.~Zhu, J.~Huang, B.~Song, J.~White, Improving the robustness of a surface
+  integral formulation for wideband impedance extraction of {3D} structures,
+  in: Proceedings of the 2001 IEEE/ACM Int.\ Conf.\ on Computer-Aided Design,
+  2001, pp. 592--597.
+
 \bibitem{BarnesHut1986}
 J.~Barnes, P.~Hut, A hierarchical {$O(N \log N)$} force-calculation algorithm,
   Nature 324 (1986) 446--449.
