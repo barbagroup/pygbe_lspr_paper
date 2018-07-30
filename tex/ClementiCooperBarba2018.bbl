@@ -13,17 +13,13 @@ I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
 \bibitem{Jackson}
 J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
 
-\bibitem{BohrenGilra1979}
-C.~F. Bohren, D.~P. Gilra, Extinction by a spherical particle in an absorbing
-  medium, Journal of Colloid and Interface Science 72~(2) (1979) 215--221.
-
-\bibitem{VideenSun2003}
-G.~Videen, W.~Sun, Yet another look at light scattering from particles in
-  absorbing media, Applied optics 42~(33) (2003) 6724--6727.
-
 \bibitem{Mishchenko2007}
 M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
   in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
+
+\bibitem{HessSmith1967}
+J.~L. Hess, A.~Smith, Calculation of potential flow about arbitrary bodies,
+  Progress in Aerospace Sciences 8 (1967) 1--138.
 
 \bibitem{ZhuHuangSongWhite2001}
 Z.~Zhu, J.~Huang, B.~Song, J.~White, Improving the robustness of a surface
@@ -36,6 +32,18 @@ J.~Barnes, P.~Hut, A hierarchical {$O(N \log N)$} force-calculation algorithm,
   Nature 324 (1986) 446--449.
 \newblock \href {http://dx.doi.org/10.1038/324446a0}
   {\path{doi:10.1038/324446a0}}.
+
+\bibitem{DuanKrasny2001}
+Z.-H. Duan, R.~Krasny, An adaptive treecode for computing nonbonded potential
+  energy in classical molecular systems, J. Comp.\ Chem. 22~(2) (2001)
+  184--195.
+
+\bibitem{CooperBarba-share154331}
+C.~D. Cooper, L.~A. Barba, Validation of the \texttt{{PyGBe}} code for
+  {P}oisson-{B}oltzmann equation with boundary element methods, Technical
+  Report on \textbf{figshare}, CC-BY license (January 25 2013).
+\newblock \href {http://dx.doi.org/10.6084/m9.figshare.154331}
+  {\path{doi:10.6084/m9.figshare.154331}}.
 
 \bibitem{CooperBardhanBarba2013}
 C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver

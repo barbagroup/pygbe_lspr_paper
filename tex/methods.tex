@@ -1,5 +1,34 @@
-\subsection{Far-field scattering} \label{sec:ff_scattering}
+\subsection{Scattering of small particles} \label{sec:scattering_small}
 
+Electromagnetic scattering is usually modelled with Maxwell's equations.
+However, when the wavelength of the incoming wave is much larger than the
+scatterer, these can be reduced to a \emph{quasi-static} 
+first-order approximation \cite{MayergoyzZhang2007}:
+%
+\begin{align} \label{eq:electrostatic_scatter_E}
+\nabla \cdot \mathbf{E}_{1s} &= 0 \qquad \nabla \times \mathbf{E}_{1s} = 0, \nonumber \\
+\nabla \cdot \mathbf{E}_{2s} &= 0 \qquad \nabla \times \mathbf{E}_{2s} = 0, \nonumber \\
+\text{with interface conditions, } \nonumber \\
+(\epsilon_1\mathbf{E}_{1s} - \epsilon_2\mathbf{E}_{2s})\cdot\mathbf{n} &= (\epsilon_2-\epsilon_1)\mathbf{E}_i\cdot \mathbf{n}.
+\end{align}
+%
+In Equation \eqref{eq:electrostatic_scatter_E}, $\mathbf{E}_{1s}$ and $\mathbf{E}_{2s}$ 
+are the electric fields of the scattered wave in the nanoparticle and host regions, respectively 
+(see Figure \ref{fig:part_wave}), 
+$\mathbf{E}_{i}$ is the field of the incoming wave, and $\epsilon_1$ 
+and $\epsilon_2$ are the permittivities.
+This approximation decouples the electric and magnetic fields, neglects the magnetic field, 
+and describes the electric field as a curl-free vector field.
+Hence, we can reformulate Equation \eqref{eq:electrostatic_scatter_E} with a scalar potential
+($-\nabla \phi_{js} = \mathbf{E}_{js}$), as follows:
+%
+\begin{align} \label{eq:electrostatic_scatter}
+\nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber \\
+\epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma$}.
+\end{align}
+%
+Equation \eqref{eq:electrostatic_scatter} is an electrostatic equation 
+with an imposed electric field $\mathbf{E}_i$.
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -8,14 +37,11 @@
    \label{fig:part_wave}
 \end{figure}
 
-In LSPR computations, we measure the scattered electromagnetic field on a detector
-that is located far away from the nanoparticle. When light shines on an object 
-like in Figure \ref{fig:part_wave}, the incident wave ($\mathbf{E}_i$,  $\mathbf{B}_i$)
-is scattered along the domain, resulting in a total electromagnetic field 
-($\mathbf{E}$,  $\mathbf{B}$) that depends on the incoming wave, the particle's 
-geometry, and the material constants. In the quasistatic approximation, we only
- need to compute the electric field and the magnetic contribution can be 
-neglected \cite{MayergoyzZhang2007}. In the far-field limit, the scattered field
+\subsection{Far-field scattering} \label{sec:ff_scattering}
+
+In LSPR, the scattered electromagnetic wave is measured by a detector located far away 
+from the scatterer (nanoparticle), and plasmon resonance is identified when the energy 
+detected is minimum. In the far-field limit, the scattered field
 in the outside region ($\Omega_2$) is given by: 
 
 \begin{equation} \label{eq:scat_efield_long_range}
@@ -25,8 +51,7 @@ in the outside region ($\Omega_2$) is given by:
 \noindent where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf{\hat{r}}$ 
 is a unit vector in the direction of the observation point, and $\mathbf{p}$ is
 the dipole moment.
-
-We can also obtain the scattered field with the forward-scattering amplitude 
+From a different approach, we can also obtain the scattered field using the forward-scattering amplitude 
 \cite{Jackson}:
 
 \begin{equation} \label{eq:scat_efield_fwa}
@@ -37,16 +62,19 @@ We can also obtain the scattered field with the forward-scattering amplitude
 scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
 wave vector of the incident field. 
 
-Via these two equations, we use \pygbe to compute the scattered electric field 
-and then solve for the forward-scattering amplitude. 
-
 \subsection{Extinction cross-section and Optical theorem} \label{sec:cext_ot}
 
-The extinction cross-section quatifies how much extinction (scattered + absorbed) 
-is caused by a particle when this one is shinned with light. It is defined as the
-ratio between the extinct energy and the intensity of the incoming wave. 
+The extinction cross-section ($C_\text{ext}$) is a measure of the energy that 
+does not reach the detector, either because of scattering in other directions,
+or absorption. This quantity is defined as the ratio of the lost energy and 
+the intensity of the incoming wave, and has units of area. When there is 
+resonance of plasmons, the extinction cross-section should peak.
 
-The optical theorem relates the extinction cross-section with the forward-scattering amplitude. The traditional expression for this relationship applies for non-absorbing media \cite{MayergoyzZhang2007, Jackson}. The expression for absorbing media \cite{BohrenGilra1979, VideenSun2003} was corrected by Mishchenko \cite{Mishchenko2007}, giving the following expression:
+On the other hand, the optical theorem relates the extinction cross-section with 
+the forward-scattering amplitude. 
+The traditional expression for this relationship applies for non-absorbing media 
+\cite{MayergoyzZhang2007, Jackson}, however, it was corrected for absorbing media 
+by Mishchenko \cite{Mishchenko2007}, giving the following expression:
 
 \begin{equation} \label{eq:cext_fwa}
     C_\text{ext} = \frac{4\pi}{k^\prime} \operatorname{Im} \left[ \frac{\mathbf{\hat{e}}_i}{|\mathbf{E}_i|}\mathbf{F}(\mathbf{k}=\mathbf{k}_0, \mathbf{k}_0) \right].
@@ -55,7 +83,7 @@ The optical theorem relates the extinction cross-section with the forward-scatte
 
 {\color{red}{Chris in Mishenko 2007 paper the equation is not exactly the same 
 (look eq 87 in paper), do you have that derivation? How you got to the eq 7.22 
- in your thesis?.}}
+ in your thesis?.}\textcolor{blue}{I'll check this}}
 
 
 Here, $k^\prime$ is the real part of the complex wave number. 
@@ -66,77 +94,29 @@ Here, $k^\prime$ is the real part of the complex wave number.
 
 and $n$ is the refraction index of the host medium.
 
+Combining Equations \eqref{eq:scat_efield_long_range} and \eqref{eq:scat_efield_fwa},
+we can compute the forward-scattering amplitude to then obtain the extinction cross-section 
+with Equation \eqref{eq:cext_fwa}
 
-\subsection{Boundary integral formulation} \label{sec:lspr_bem}
 
-\subsubsection{Electrostatic potential under an incoming electric field}
+\subsection{The boundary element method} \label{sec:lspr_bem}
 
-From the electrostatic approximation from Mayergoyz and Zhang (2007) 
-\cite{MayergoyzZhang2007} we know that the zeroth order term of the magnetic 
-field is zero everywhere. Resulting in the following Maxwell equations. 
+\subsubsection{Electrostatic potential under an electric field}
 
-\begin{align} \label{eq:electrostatic_scatter_E}
-\nabla \cdot \mathbf{E}^{(0)}_{1s} &= 0 \qquad \nabla \times \mathbf{E}^{(0)}_{1s} = 0 \nonumber \\
-\nabla \cdot \mathbf{E}^{(0)}_{2s} &= 0 \qquad \nabla \times \mathbf{E}^{(0)}_{2s} = 0 \nonumber \\
-(\epsilon_1\mathbf{E}^{(0)}_{1s} - \epsilon_2\mathbf{E}^{(0)}_{2s})\cdot\mathbf{n} &= (\epsilon_2-\epsilon_1)\mathbf{E}_i\cdot \mathbf{n}.
+\paragraph{Integral formulation}
+
+Using Green's second identity, the system of partial differential equations 
+in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
+of boundary integral equations. Evaluating on the surface $\Gamma$, the system
+becomes
+%
+\begin{align} \label{eq:integral_eq_lspr_nobc}
+\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
+\frac{\phi_{2s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{2s,\Gamma}) + V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{2s,\Gamma} \right) = 0&,
 \end{align}
-
-Where the subscript $s$ ($i$) stands for scattered (incident) field. The curl of
-$\mathbf{E}^{(0)}_{js}$ for $j=1,2$ is zero, therefore, there is a scalar potential
-such that $-\nabla \phi_js = \mathbf{E}^{(0)}_js$. Using this, we can rewrite 
-equation \eqref{eq:electrostatic_scatter_E} as:
-
-\begin{align} \label{eq:electrostatic_scatter}
-\nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber \\
-\epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma$}.
-\end{align}
-
-\paragraph{Week formulation and layer operators}
-
-
-The weak formulation of Laplace equation with test function $w$:
-
-\begin{equation} \label{eq:lap_weak}
-\int_\Omega \nabla^2 \phi(\mathbf{r}_\Omega') w(\mathbf{r}_\Omega') \text{d} \Omega^\prime= 0.
-\end{equation}
-
-\noindent where the evaluation point is $\mathbf{r}_\Omega$ a location in the domain $\Omega$.
-
-If we use the Laplace's free-space Green's function as the test function $w$ we
-get:
-
-\begin{equation} \label{eq:lap_weak2}
-\int_\Omega \nabla^2 \phi(\mathbf{r}'_\Omega) G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Omega) \text{d} \Omega^\prime= 0.
-\end{equation}
-
-Manipulating the integrand using the product rule and later the divergence 
-theorem, we get:
-
-\begin{equation} \label{eq:lap_bie_dom}
-\phi(\mathbf{r}_\Omega) = \int_\Gamma G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime - \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime
-\end{equation}
-
-\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
-and $\mathbf{r}'$ runs only on the boundary $\Gamma$. This equation has a 
-singularity when $\mathbf{r}=\mathbf{r}'$. To handle thisproblem, we perform the
-integral on a surface $\Gamma'$ that is like $\Gamma$ but with a hemisphere of 
-radius $\varepsilon$ center at $\mathbf{r}$. We split the integrals into the part
-that we have no singularity and the part that has the hemisphere. After solving these
-equations when $\varepsilon \to 0$, equation \eqref{eq:lap_bie_dom} results in:
-
-\begin{equation} \label{eq:lap_bie}
-\frac{\phi(\mathbf{r}_\Gamma)}{2} +  \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime = \int_\Gamma G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime,
-\end{equation}
-
-\noindent where these are Cauchy principal value integrals.
-
-Using the single and double layer operators:
-
-{\color{red} Chris, V is single layer operator but is it K the double layer one? 
-In your thesis you have that the double layer is W and you refers as K as
-"an operator" eq 2.108 and 2.112 in your thesis. Also shouldn't the $\text{d} \Gamma$
-be $\text{d} \Gamma'$? }
-
+%
+where $V$ and $K$ are the single and double layer operators, respectively:
+%
 \begin{equation}\label{eq:single_layer}
 V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 \end{equation}
@@ -144,52 +124,115 @@ V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'
 \begin{equation}\label{eq:double_layer}
 K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 \end{equation}
-
-We can rewrite equation \eqref{eq:lap_bie} using the operator notation, as:
-
-\begin{equation} \label{eq:lap_operator}
-\left[ \frac{\mathbb{I}}{2} + K_L^{\mathbf{r}_\Gamma} \right] \left( \phi_\Gamma \right) = V_L^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_\Gamma \right),
+%
+Here, $G_L$ is the free space Green's function of the Laplace equation
+%
+\begin{equation}
+G_L(\mathbf{r},\mathbf{r}') = \frac{1}{4\pi|\mathbf{r}-\mathbf{r}'|}
 \end{equation}
 
-\noindent where $\mathbb{I}$ is the identity operator.
-
-Following the same stepps, we can rewrite the Laplace equations in eqaution
-\eqref{eq:electrostatic_scatter} as:
-
-%
-\begin{align} \label{eq:integral_eq_lspr_nobc}
-\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
-\frac{\phi_{2s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{2s,\Gamma}) + V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{2s,\Gamma} \right) = 0& \quad \text{on $\Gamma$,}
-\end{align}
-
 Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
-we get:
-
+leads to:
+%
 \begin{align} \label{eq:integral_eq_lspr}
 \frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
 \frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
 \end{align}
 
+%The weak formulation of Laplace equation with test function $w$:
 
-\paragraph{Discretization and Linear system}
+%\begin{equation} \label{eq:lap_weak}
+%\int_\Omega \nabla^2 \phi(\mathbf{r}_\Omega') w(\mathbf{r}_\Omega') \text{d} \Omega^\prime= 0.
+%\end{equation}
+
+%\noindent where the evaluation point is $\mathbf{r}_\Omega$ a location in the domain $\Omega$.
+
+%If we use the Laplace's free-space Green's function as the test function $w$ we
+%get:
+
+%\begin{equation} \label{eq:lap_weak2}
+%\int_\Omega \nabla^2 \phi(\mathbf{r}'_\Omega) G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Omega) \text{d} \Omega^\prime= 0.
+%\end{equation}
+
+%Manipulating the integrand using the product rule and later the divergence 
+%theorem, we get:
+
+%\begin{equation} \label{eq:lap_bie_dom}
+%\phi(\mathbf{r}_\Omega) = \int_\Gamma G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime - \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime
+%\end{equation}
+
+%\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
+%and $\mathbf{r}'$ runs only on the boundary $\Gamma$. This equation has a 
+%singularity when $\mathbf{r}=\mathbf{r}'$. To handle thisproblem, we perform the
+%integral on a surface $\Gamma'$ that is like $\Gamma$ but with a hemisphere of 
+%radius $\varepsilon$ center at $\mathbf{r}$. We split the integrals into the part
+%that we have no singularity and the part that has the hemisphere. After solving these
+%equations when $\varepsilon \to 0$, equation \eqref{eq:lap_bie_dom} results in:
+
+%\begin{equation} \label{eq:lap_bie}
+%\frac{\phi(\mathbf{r}_\Gamma)}{2} +  \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime = \int_\Gamma G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime,
+%\end{equation}
+
+%\noindent where these are Cauchy principal value integrals.
+
+%Using the single and double layer operators:
+
+%{\color{red} Chris, V is single layer operator but is it K the double layer one? 
+%In your thesis you have that the double layer is W and you refers as K as
+%"an operator" eq 2.108 and 2.112 in your thesis. Also shouldn't the $\text{d} \Gamma$
+%be $\text{d} \Gamma'$? }
+
+%\begin{equation}\label{eq:single_layer}
+%V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+%\end{equation}
+
+%\begin{equation}\label{eq:double_layer}
+%K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+%\end{equation}
+
+%We can rewrite equation \eqref{eq:lap_bie} using the operator notation, as:
+
+%\begin{equation} \label{eq:lap_operator}
+%\left[ \frac{\mathbb{I}}{2} + K_L^{\mathbf{r}_\Gamma} \right] \left( \phi_\Gamma \right) = V_L^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_\Gamma \right),
+%\end{equation}
+
+%\noindent where $\mathbb{I}$ is the identity operator.
+
+%Following the same stepps, we can rewrite the Laplace equations in eqaution
+%\eqref{eq:electrostatic_scatter} as:
+
+%
+%\begin{align} \label{eq:integral_eq_lspr_nobc}
+%\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
+%\frac{\phi_{2s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{2s,\Gamma}) + V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{2s,\Gamma} \right) = 0& \quad \text{on $\Gamma$,}
+%\end{align}
+
+%Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
+%we get:
+
+%\begin{align} \label{eq:integral_eq_lspr}
+%\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
+%\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
+%\end{align}
+
+
+\paragraph{Discretization and linear system}
 
 
 We discretize the surface into flat triangles, and assume that  $\phi$ and 
 $\partial \phi/\partial \mathbf{n}$ are constant within each panel. Then, we can
 write the layer operators in their discretized form:
-
+%
 \begin{align} \label{eq:layers_disc}
-V_{L,\text{disc}}^{\mathbf{r}_i} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) &= \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j  \nonumber \\
-K_{L,\text{disc}}^{\mathbf{r}_i}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
+V_{L,\text{disc}}^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) &= \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_\Gamma,\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j  \nonumber \\
+K_{L,\text{disc}}^{\mathbf{r}_\Gamma}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_\Gamma,\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
 \end{align}
-
+%
 \noindent where $N_p$ is the number of discretization elements of $\Gamma$, 
 and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} 
 \phi(\mathbf{r}_{\Gamma_j})$ are the values of $\phi$ and 
 $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$.
-
-
-Then we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
+Then, using centroid collocation, we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
 %
  \begin{equation} \label{eq:matrix_lspr}
  \left[
@@ -210,41 +253,45 @@ Then we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
     \end{matrix}
     \right]
  \end{equation}
-
-\noindent where the elements of the matrices are
+%
+\noindent where the elements of the matrix are
 %
 \begin{align} \label{eq:layers_element}
 V_{L,ij}^{\Gamma} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j \nonumber \\
 K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
 \end{align}
-
-\noindent with $\mathbf{r}_{\Gamma_i}$ at the center of $\Gamma_i$.
+%
+\noindent with $\mathbf{r}_{\Gamma_i}$ being at the center of panel $\Gamma_i$.
 
 \paragraph{Integral evaluation}
 
-To evaluate the integrals in Equation \eqref{eq:layers_element} we use quadrature
-rules. However, the Green's function of the Laplace equation has a $1/r$
-singularity, which is a problem to obtain good accuracy when the integral is 
+We evaluate the integrals in Equation \eqref{eq:layers_element} with Gauss quadrature
+rules. However, the $1/r$ singularity of the Green's function is a
+problem to obtain good accuracy when the integral is 
 singular or near-singular. Therefore, we define three different regions:
 
-\emph{Far-away integrals:} The collocation point and the integration panel are 
-dar away. We can obtain good accuracy with a low order integration, for example 
-$K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element. To define a 
-threshold from which collocation points are considered to be far away, we use a
-representative length of the integrated triangle, $L = \sqrt{2\cdot\text{Area}}$.
-
-\emph{Near-singular integrals:} The collocation point is closer than the far-away
-region threshold, but it's not in the same integration panel, we use high order 
-Gauss quadrature rules $K_{fine}=19, 25 \; or \; 37$ points per triangle. 
-
-\emph{Singular integrals:} Having the collocation point in the integrated panel
-introduces a singularity that keeps us from computing theintegral with standard
-Gauss integration schemes. In this case, we use a semi-analytical technique from
-Zhe and co-workers \cite{ZhuHuangSongWhite2001} which gives us an accurate
-integration of the Laplace potential.
+\emph{Singular integrals:} If the collocation point is in the integrated panel,
+there is a singularity that is difficult to resolve with standard
+Gauss integration schemes. In this case, we use a semi-analytical technique 
+\cite{HessSmith1967,ZhuHuangSongWhite2001} that places quadrature nodes on the 
+edges of the triangle.
 {\color{red}Chris I can't find an explanation on how is it that the Nk parameter
 applies here. I know it is "number of Gauss points per triangle edge for
-semi-analytical integration" but where is that explained? can you add that part?}
+semi-analytical integration" but where is that explained? can you add that part?
+\textcolor{blue}{do you think that this explanation is enough?}}
+
+\emph{Near-singular integrals:} If the collocation point is close to the integration panel,
+the integrand has a high gradient, and high-order quadrature rules are required. 
+We use the representative length of the integrated triangle ($L = \sqrt{2\cdot\text{Area}}$)
+to define a threshold of the \emph{close-by} region, for example, when the integration panel 
+is $2L$ or less away from the collocation point. For near-singular integrals, we use 
+$K_{fine}=19, 25 \; or \; 37$ points per triangle. 
+
+\emph{Far-away integrals:} When the distance between the collocation point and the integration
+panel is beyond the threshold, they are considered to be far-away. 
+At this point, the integrand is smooth enough that we obtain good 
+accuracy with low order integration, for example, with 
+$K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element. 
 
 \subsubsection{Boundary integral expression of the dipole moment}
 
@@ -266,57 +313,50 @@ Rewriting this equation using Gauss's law we obtain
 
 {\color{red} Here is where we need to sort out the sign problem in equations and 
 how we write the derivation. Will fix when we talk with Chris}
-
+\textcolor{blue}{need to check this, and include the whole derivation}
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
-One downside of the Boundary Elements Method (\bem) is that the resulting matrix obtained
-after discretization, is dense. Solving the linear system using the traditional 
-Gaussian elimination requires $\O{N^3}$ computations and $\O{N^2}$ storage. Using
-an iterative solver, like the Generalized Minimal Residual Method (\gmres),
-scaling drops to $\O{N^2}$ since computations are dominated by the matrix-vector 
-product. This makes \bem a good approach for only few thousands boundary elements,
-which is far from the mesh sizes required for real applications. Fortunately, there
-are acceleration methods, like Barnes and Hut Treecode \cite{BarnesHut1986} that
-make the computations scale as $\O{N \log N}$, that allows us to use \bem for 
-larger problems. 
+The main downside of the Boundary Element Method (\bem) is that it generates dense matrices
+after discretization. Solving the linear system using
+Gaussian elimination requires $\O{N^3}$ computations and $\O{N^2}$ storage, whereas for a
+Krylov-subspace iterative solver, like the Generalized Minimal Residual Method (\gmres),
+computations drop to $\O{N^2}$ because they are dominated by a matrix-vector 
+product. This makes \bem a good approach for problems with no more than a few thousand boundary elements,
+which is far from the mesh sizes required for real applications. 
 
-The Barnes-Hut Treecode is a fast-summation algorithm capable of reducing $\O{N^2}$
+Since we are using Gaussian quadrature and collocation, the matrix-vector product
+becomes an N-body problem, where the Gauss nodes act as centers of mass (\emph{sources}), and we evaluate
+the potential at the collocation points (\emph{targets}).
+To overcome the $\O{N^2}$ scaling,
+we accelerate the matrix-vector product using a Treecode algorithm \cite{BarnesHut1986,DuanKrasny2001}, 
+which is a fast-summation algorithm capable of reducing $\O{N^2}$
 computational patterns 
-
+%
 \begin{equation} \label{eq:summation}
 V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j) 
 \end{equation}
+%
+\noindent to a computational complexity of $\O{N \log N}$. In Equation \eqref{eq:summation} 
+$q_j$ is the weight, $\psi$ the kernel, $\mathbf{y}_j$ the locations of sources and 
+$\mathbf{x}_i$ the locations of targets.
 
-\noindent to a computational complexity of $\O{N \log N}$. Where $q_j$ is the 
-weight, $\psi$ the kernel, $\mathbf{y}_j$ the location of sources and 
-$\mathbf{x}_i$ the location of targets.
-
-\pygbe uses the treecode to accelerate the \bem solver by aggregating the
-far-away sources to a center of expansion that interacts with the target location. 
-In the treecode, we group the sources $\mathbf{y}_j$ depending on their positions
-in cells or boxes of an octree. Then, we compute the nearby contributions directly,
-and approximate the further contributions using series expansions representing
-the sources around the box centers  $\mathbf{y}_c$. In this work we use Taylor 
-series for the expansions of order $P$ (parameter picked depending on the siumlation).
-To decide if a box of sources is distant enough of each target point for the Taylor
-expansion approximation, we use the multiple-acceptance criterion $\theta$ (MAC). This
-must be larger than the ratio of the box's size to the distance between the target
-and box's center $\frac{r_b}{r}<\theta$. Common values for $\theta$ are
-$\frac{1}{2}$ and $\frac{2}{3}$.  
-
-You can find further detail on the Treecode implementation in \pygbe in Cooper, 
-et al (2013) \cite{CooperBardhanBarba2013}. 
-
-
-
-
-
-
-
-
-
-
-
-
-
+The Treecode groups sources geometrically in boxes of an octtree, which is built making
+sure that no box in the lowest level has more than $N_\text{crit}$ sources. Then, if a group of
+sources is far away from a target, their influence is aggregated in an expansion center,
+and the target interacts with the box, rather than with each source independently.
+On the other hand, if the group of targets is too close, the Treecode queries the child
+boxes. If the box has no children and still is not far enough, the interaction is 
+performed directly. The threshold to decide if a box is far enough is called the multipole-
+acceptance criterion (MAC):
+%
+\begin{equation}
+\theta > \frac{r_b}{r},
+\end{equation}
+%
+where $r_b$ is the box size and $r$ the distance between the box center and the target.
+Common values of $\theta$ are $1/2$ and $2/3$.
+To approximate the contribution of the sources, we use Taylor expansions
+of order $P$.
+The Treecode allows us to control accuracy of the approximation by modifying $\theta$ and $P$.
+Further details of the Treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
