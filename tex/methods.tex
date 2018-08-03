@@ -107,7 +107,8 @@ with Equation \eqref{eq:cext_fwa}
 
 Using Green's second identity, the system of partial differential equations 
 in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
-of boundary integral equations\textcolor{red}{insert reference here, Brebbia unless we found a better book}. Evaluating on the surface $\Gamma$, the system
+of boundary integral equations\textcolor{red}{insert reference here, Brebbia 
+unless we found a better book}. Evaluating on the surface $\Gamma$, the system
 becomes
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc}
@@ -118,11 +119,11 @@ becomes
 where $V$ and $K$ are the single and double layer operators, respectively:
 %
 \begin{equation}\label{eq:single_layer}
-V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 \end{equation}
 
 \begin{equation}\label{eq:double_layer}
-K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 \end{equation}
 %
 
@@ -161,7 +162,7 @@ leads to:
 %theorem, we get:
 
 %\begin{equation} \label{eq:lap_bie_dom}
-%\phi(\mathbf{r}_\Omega) = \int_\Gamma G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime - \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime
+%\phi(\mathbf{r}_\Omega) = \oint_\Gamma G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime - \oint_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Omega,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime
 %\end{equation}
 
 %\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
@@ -173,7 +174,7 @@ leads to:
 %equations when $\varepsilon \to 0$, equation \eqref{eq:lap_bie_dom} results in:
 
 %\begin{equation} \label{eq:lap_bie}
-%\frac{\phi(\mathbf{r}_\Gamma)}{2} +  \int_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime = \int_\Gamma G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime,
+%\frac{\phi(\mathbf{r}_\Gamma)}{2} +  \oint_\Gamma \phi(\mathbf{r}'_\Gamma)  \frac{\partial}{\partial \mathbf{n}} G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma) \text{d} \Gamma^\prime = \oint_\Gamma G_L(\mathbf{r}_\Gamma,\mathbf{r}'_\Gamma)  \frac{\partial} {\partial \mathbf{n}} \phi(\mathbf{r}'_\Gamma)  \text{d} \Gamma^\prime,
 %\end{equation}
 
 %\noindent where these are Cauchy principal value integrals.
@@ -186,11 +187,11 @@ leads to:
 %be $\text{d} \Gamma'$? }
 
 %\begin{equation}\label{eq:single_layer}
-%V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+%V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 %\end{equation}
 
 %\begin{equation}\label{eq:double_layer}
-%K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \int_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+%K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
 %\end{equation}
 
 %We can rewrite equation \eqref{eq:lap_bie} using the operator notation, as:
@@ -306,13 +307,50 @@ defined as
 Rewriting this equation using Gauss's law we obtain
 %
 \begin{equation} \label{eq:dipole_def_gauss}
-\mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega.
+\mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega
+\end{equation}
+
+If we write one component, let's say $p_i$,
+
+\begin{equation} \label{eq:dipole_def_gauss_i}
+{p_i} = -\epsilon_2\int_\Omega {x_i} \nabla^2 \phi_{2s} \text{d}\Omega
+\end{equation}
+
+Using the following identity:
+
+\begin{equation} \label{eq:identity_grad}
+\nabla \cdot \left(f \mathbf{v}\right) = \left( \nabla f \right)\cdot \mathbf{v} + f\left(\nabla \cdot \mathbf{v}\right)
+\end{equation}
+
+taking $f=x_i$ and $\mathbf{v} = \nabla\phi_{2s}$ we can rewrite equation \eqref{eq:dipole_def_gauss_i}
+as 
+
+\begin{align} \label{eq:dip_gauss_interm_1}
+- \frac{\mathbf{p_i}}{\epsilon_2} = \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \nonumber& \\
+\text{applying Divergence theorem} \qquad \qquad \qquad \qquad & \nonumber \\
+= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \quad & \nonumber\\
+\end{align}
+
+Using identity \eqref{eq:identity_grad} in equation \eqref{eq:dip_gauss_interm_1}, by selecting
+taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$ we get:
+
+\begin{align} \label{eq:dip_gauss_interm_1}
+ = \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] & \nonumber\\
+\text{applying Divergence theorem} \qquad \qquad \qquad \qquad & \nonumber \\
+= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \qquad \qquad \qquad \qquad & \nonumber \\
+= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma \qquad \qquad \qquad \qquad \qquad
+\end{align}
+
+All this normal vectors in the above derivation point from $\Omega_2$ to $\Omega_1$, in other 
+words, they point inside $\Omega_1$. Since the code implementation requires all normal vectors
+pointing outwards the final equation for the boundary integral formulation of one component of 
+the dipole reduces to:
+
+\begin{equation} \label{eq:dipole_def_gauss_i_final}
+{p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right]
 \end{equation}
 
 
-{\color{red} Here is where we need to sort out the sign problem in equations and 
-how we write the derivation. Will fix when we talk with Chris}
-\textcolor{blue}{need to check this, and include the whole derivation}
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
