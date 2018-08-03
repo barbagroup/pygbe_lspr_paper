@@ -1,22 +1,37 @@
+# 1 - What is known
 
-open source ones, matlab toolkit, with its latest implementation
+In the biosensor's community most findings and desicions in designed are achived 
+through experimental analyses, trial and error procedures. Using
+software to advice the design and manufacturing process can play a key role. In 
+the world of plasmonics there are few softwares that are used to study Localized
+Surface Plasmon Resonance. Among the most known softwares are COMSOL Multiphysics
+a proprietary finite-element platform ({\color{red}cite COMSOL Multiphysics® v. 5.2. www.comsol.com. COMSOL AB, Stockholm, Sweden.}), 
+BEM++ ({\color{red}Not sure how to cite}) an open-source Boundary element method library to solve time-harmonic Maxwell equations in 3D, and 
+MNPBEM, an open-source Matlab toolbox for the simulation of metallic nanoparticles that
+uses BEM. Besides, on the biosensing approach, the biomolecular electrostatic 
+implementation of \pygbe \cite{CooperETal2016}} allowed the study of ligand 
+molecule orientation sensor \cite{CooperClementiBarba2015}.
 
-Talk about ligand molecule orientation sensor, cite pygbe
-
-\item{\textit{Ligand molecule orientation} Where the ligand molecule absorption is dominated
-by electrostatic effects, was study in previous work \cite{CooperClementiBarba2015}
-using the biomolecular electrostatics \pygbe application \cite{CooperETal2016}}
 
 
 # 2 - What is UNknown, limitations and gaps
 
+Experiments suggests that the distance between the nanoparticle and the analyte 
+affects the sensitivity of the sensor (Haes, A. J., Zou, S., Schantz, G. C., and
+Van Duyne, R. P. (2004). A nanoscale optical biosensor: The long range distance
+dependence of the localized surface plasmon resonance of noble metal nanoparticles.
+ J. Phys. Chem B, 108:109–116.)
+
 Unkown: relation between high dependance on sensitivity on distance in LSPR biosensors.
 Find structural details of analyte and nanoparticle, and the relative position between them.
+Studies that deal with real protein geometry. 
 
-Gap: study this using fast, free-software dependencies and open source computer
-simulations. 
+Limitation: 
+            - Software only study plasmonic assuming a non-lossy medium. 
 
-limitations - private are expensible and not accessible, 
+
+limitations - BEM++ Chris any input in this, limitations?  
+              private are expensive and not accessible, 
               matlab not free, 
               no grid convergence analysis or error study, 
               no reproducible framework 
@@ -24,10 +39,16 @@ limitations - private are expensible and not accessible,
 
 
 
+Gap: study this using fast, free-software dependencies and open source computer
+simulations. 
+
+
+
+
 
 # 3 - Burning question, experimental approach, why ours is new and diff (fill the gap)
 
-SOlve this problem with pygbe? yes
+Solve this problem with pygbe? yes
 
 long wavelength limit we don't need full Maxwell eq, we can approach it using
 electrostatics.
@@ -53,6 +74,11 @@ Mentions that uses treecode, gmres and GPU.
 The software \footnote{\url{https://github.com/barbagroup/pygbe}} is shared 
 under the BSD 3-clause license and the development repository is available on 
 Github.
+
+
+
+
+
 
 
 
