@@ -58,7 +58,7 @@ From a different approach, we can also obtain the scattered field using the forw
     \mathbf{E}_{2s}(\mathbf{r})_{r\to\infty} = \frac{e^{ikr}}{r} \mathbf{F}(\mathbf{k},\mathbf{k}_0),
 \end{equation}
 
-\noindent where $\mathbf{F}$ is the forward-scattering amplitude, $\mathbf{k}$ is the 
+\noindent where $\mathbf{F}$ is the scattering amplitude, $\mathbf{k}$ is the 
 scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
 wave vector of the incident field. 
 
@@ -350,7 +350,12 @@ the dipole reduces to:
 {p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right]
 \end{equation}
 
-
+Using BEM we obtain the electrostatic potential on the surface of the nanoparticle, 
+and we use it in equation \eqref{eq:dipole_def_gauss_i_final} to get the dipole 
+moment, and in equation \eqref{eq:scat_efield_long_range} to obtain the scattered
+electric field. Then, we can use the scattered electric field to get scattering 
+amplitud using equation \eqref{eq:scat_efield_fwa} which we plugged into \eqref{eq:cext_fwa}
+to get the extinction cross-section.
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
