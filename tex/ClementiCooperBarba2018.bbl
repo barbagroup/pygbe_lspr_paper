@@ -5,6 +5,41 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{Hohenester2018}
+U.~Hohenester, Making simulations with the mnpbem toolbox big: Hierarchical
+  matrices and iterative solvers, Computer Physics Communications 222 (2018)
+  209--228.
+
+\bibitem{CooperETal2016}
+C.~D. Cooper$\, \star$, N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, L.~A.
+  Barba, \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs}
+  and boundary elements for biomolecular electrostatics}, J. Open Source
+  Software 1~(4),
+  \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
+\newblock \href {http://dx.doi.org/10.21105/joss.00043}
+  {\path{doi:10.21105/joss.00043}}.
+\newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
+
+\bibitem{CooperClementiBarba2015}
+C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
+  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
+  143~(12) (2015) 124709, preprint on
+  \href{arxiv:1503.08150}{arxiv:1503.08150}.
+
+\bibitem{HaesETal2004}
+A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
+  biosensor: The long range distance dependence of the localized surface
+  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
+  109--116.
+
+\bibitem{ClementiETal2017}
+N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
+  Barba, {PyGBe-LSPR}: Python and gpu boundary-integral solver for
+  electrostatics, J. Open Source Software 2~(19) (2017) 306,
+  \href{https://doi.org/10.21105/joss.00306}{10.21105/joss.00306}.
+\newblock \href {http://dx.doi.org/10.21105/joss.00306}
+  {\path{doi:10.21105/joss.00306}}.
+
 \bibitem{MayergoyzZhang2007}
 I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
   resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
@@ -78,12 +113,6 @@ T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
 A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
   resonances of protein-conjugated gold nanoparticles on graphitic substrates,
   Applied Physics Letters 103~(16) (2013) 163702.
-
-\bibitem{HaesETal2004}
-A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
-  biosensor: The long range distance dependence of the localized surface
-  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
-  109--116.
 
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
