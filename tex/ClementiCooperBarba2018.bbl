@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
@@ -17,15 +17,29 @@ P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
 G.~M. Hale, M.~R. Querry, Optical constants of water in the 200-nm to
   200-$\mu$m wavelength region, Appl. Opt. 12~(3) (1972) 555--563.
 
+\bibitem{WilletsVandyune2007}
+K.~A. Willets, R.~P. Van~Dyune, Localized surface plasmon resonance
+  spectroscopy and sensing, Annu. Rev. Phys. Chem. 58 (2007) 267--297.
+
+\bibitem{Nanoshaper}
+S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
+  triangulating surfaces at the nanoscale, PloS one 8~(4) (2013) e59744.
+
 \bibitem{Dolinsky04}
 T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
   automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
   calculations, Nucleic Acids Research 32 (2004) W665--W667.
 
-\bibitem{PahnETal2013}
+\bibitem{PhanETal2013}
 A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
   resonances of protein-conjugated gold nanoparticles on graphitic substrates,
   Applied Physics Letters 103~(16) (2013) 163702.
+
+\bibitem{HaesETal2004}
+A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
+  biosensor: The long range distance dependence of the localized surface
+  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
+  109--116.
 
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
@@ -37,11 +51,5 @@ B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
 M.~P. Raphael, J.~A. Christodoulides, J.~B. Delehanty, J.~P. Long, P.~E.
   Pehrsson, J.~M. Byers, Quantitative {LSPR} imaging for biosensing with single
   nanostructure resolution, Biophys.\ J. 104 (2013) 30--36.
-
-\bibitem{HaesETal2004}
-A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
-  biosensor: The long range distance dependence of the localized surface
-  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
-  109--116.
 
 \end{thebibliography}
