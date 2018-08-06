@@ -1,4 +1,4 @@
-1 - What is known
+%1 - What is known
 
 In the biosensor's community most findings and desicions in designed are achived 
 through experimental analyses, trial and error procedures. Using
@@ -16,73 +16,68 @@ biosensing approach, the biomolecular electrostatic implementation of
 sensor \cite{CooperClementiBarba2015}.
 
 
+%2 - What is UNknown, limitations and gaps
 
-2 - What is UNknown, limitations and gaps
+
+Most of these softwares solve full Maxwell equations which under certain
+circumstances is no needed (long wave range limit), causing computational and 
+memory expensive runs. Solving full maxwell equations when it is no necessary, 
+limits also the problem-size that you can run as a user. Another caveat is the
+ lack of open-source softwares that do not rely on licensed
+languages. MNPBEM the open-source Matlab toolbox has recently evolved to a hierarchical
+matrices and iterative solver approach reducing the computation time and memory
+needs; however this software relies on a licensed language (Matlab) making its
+accesibility restricted. Even though they are able to solve problems in teh order
+of ten thousands, we can ensure that this amount of elements is good enough for 
+the geometry sized. The lack of grid convergence analysis and error study in most of the 
+softwares in the palsmonic community,
+{\color{red}(I haven't find any of this in their papers, Chris what do you know about BEM++)}
+force the user to believe in the obtained results without knowing their uncertainty. These
+limitations prevent the development of a reproducible approach of any results obtained
+with these softwares. 
+
+
+
+%Limitation: 
+%           - Software only study plasmonic assuming a non-lossy medium. 
+
+
+%limitations - BEM++ {\color{red}Chris any input in this, limitations?}  
+%              private are expensive and not accessible, 
+%             matlab not free, 
+%             no grid convergence analysis or error study, 
+%             no reproducible framework 
+%             problem size, geometry, and computation time
+
+
+%Find structural details of analyte and nanoparticle, and the relative position between them.
+%Studies that deal with real protein geometry.
+%Gap: study this using fast, free-software dependencies and open source computer
+%simulations. 
+
+
+
+%3 - Burning question, experimental approach, why ours is new and diff (fill the gap)
 
 Experiments suggests that the distance between the nanoparticle and the analyte 
-affects the sensitivity of the sensor \cite{HaesETal2004}. 
-
-Unkown: relation between high dependance on sensitivity on distance in LSPR biosensors.
-Find structural details of analyte and nanoparticle, and the relative position between them.
-Studies that deal with real protein geometry. 
-
-Limitation: 
-            - Software only study plasmonic assuming a non-lossy medium. 
-
-
-limitations - BEM++ Chris any input in this, limitations?  
-              private are expensive and not accessible, 
-              matlab not free, 
-              no grid convergence analysis or error study, 
-              no reproducible framework 
-              problem size, geometry, and computation time
-
-
-
-Gap: study this using fast, free-software dependencies and open source computer
-simulations. 
-
-
-
-
-
-3 - Burning question, experimental approach, why ours is new and diff (fill the gap)
-
-Solve this problem with pygbe? yes
-
-long wavelength limit we don't need full Maxwell eq, we can approach it using
-electrostatics.
-
-\textit{Localized surface plasmon resonance} (LSPR) biosensor This type
-of biosensors measure the shift of plasmon resonace frequency in metallic nanoparticles
-when a target molecules binds to it. LSPR is an optical effect, but electrostatics 
+affects the sensitivity of the sensor \cite{HaesETal2004}. However, this conclusions
+are achived by a trial an error process, which leads to not enough understanding
+on what is the relation between high dependance on sensitivity on distance in LSPR
+biosensors. \pygbe most recent application \cite{ClementiETal2017} tends to 
+bridge that gap providing via simulations, insights to guide the reasearch process.
+The latest release of \pygbe extends the software to nanoplasmonics treating 
+localized surface plasmon resonance (LSPR) quasi-statically \cite{MayergoyzZhang2007}.
+Localized surface plasmon resonance (LSPR) biosensors measure the shift of 
+plasmon resonace frequency in metallic nanoparticles when a target molecules 
+binds to it. LSPR is an optical effect see Figure \ref{fig:lspr}, but electrostatics 
 makes a good approximation in the long-wavelength limit. In this work we use
 PyGBe's approach to study how the LSPR response changes in the presence of a 
-biomolecule.
-
-
-\pygbe most recent 
-application \cite{ClementiETal2017} tends to bridge that gap providing via
-simulations, insights to guide the reasearch process. 
-
-The latest release of \pygbe
-extends the software to nanoplasmonics treating localized surface plasmon 
-resonance (LSPR) quasi-statically \cite{MayergoyzZhang2007}.
-
-Mentions that uses treecode, gmres and GPU. 
-
-The software \footnote{\url{https://github.com/barbagroup/pygbe}} is shared 
+biomolecule. To our knowledge, \pygbe is the only open-source software that uses a Tree code 
+fast algorithm—O(N logN), for N unknowns, GMRES iterative solver; and hardware 
+acceleration on GPUs to compute the extinction cross-sections of arbitrary 
+geometries. The software \footnote{\url{https://github.com/barbagroup/pygbe}} is shared 
 under the BSD 3-clause license and the development repository is available on 
 Github.
-
-
-
-
-
-
-
-
-
 
 
 
