@@ -16,25 +16,26 @@ not rely on plasmonics, the biomolecular electrostatic implementation of
 sensor \cite{CooperClementiBarba2015}.
 
 
-%2 - What is UNknown, limitations and gaps
+%2 - What is Unknown, limitations and gaps
 
-
-Most of these softwares solve full Maxwell equations which under certain
-circumstances is no needed (long wave range limit), causing computational and 
-memory expensive runs. Solving full maxwell equations when it is no necessary, 
+Most of these softwares solve full Maxwell equations, causing computational and 
+memory expensive runs. Solving full maxwell equations when it is no necessary (long wave range), 
 limits also the problem-size that you can run as a user. Another caveat is the
- lack of open-source softwares that do not rely on licensed
-languages. MNPBEM the open-source Matlab toolbox has recently evolved to a hierarchical
+lack of open-source softwares that do not rely on licensed languages. MNPBEM the
+open-source Matlab toolbox has recently evolved to a hierarchical
 matrices and iterative solver approach reducing the computation time and memory
-needs; however this software relies on a licensed language (Matlab) making its
-accesibility restricted. Even though they are able to solve problems in teh order
-of ten thousands, we can ensure that this amount of elements is good enough for 
-the geometry sized. The lack of grid convergence analysis and error study in most of the 
-softwares in the palsmonic community,
+needs; however, this software relies on a licensed language (Matlab) making its
+accesibility restricted. Even though they are able to solve problems in the order
+of ten thousands, we cannot ensure that this amount of elements is good enough for 
+the geometry size. The lack of grid convergence analysis and error study in most of the 
+softwares in the plasmonic community,
 {\color{red}(I haven't find any of this in their papers, Chris what do you know about BEM++)}
 force the user to believe in the obtained results without knowing their uncertainty. These
 limitations prevent the development of a reproducible approach of any results obtained
 with these softwares. 
+
+{\color{red} Another limitation that I don't know how to mention is that most softwares
+treat the outside medium as a non-lossy medium}
 
 %Limitation: 
 %           - Software only study plasmonic assuming a non-lossy medium. 
