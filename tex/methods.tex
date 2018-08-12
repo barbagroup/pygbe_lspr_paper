@@ -119,15 +119,13 @@ becomes
 where $V$ and $K$ are the single and double layer operators, respectively:
 %
 \begin{equation}\label{eq:single_layer}
-V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma'.
 \end{equation}
 
 \begin{equation}\label{eq:double_layer}
-K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma.
+K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma'.
 \end{equation}
 %
-
-\textcolor{red}{Chris shouldn't the $d\Gamma$ have a prime?}
 
 Here, $G_L$ is the free space Green's function of the Laplace equation
 %
@@ -298,64 +296,60 @@ $K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element.
 As shown in Equation \eqref{eq:scat_efield_long_range}, the scattered electric 
 field in the far-away limit depends on the dipole moment. The dipole moment is 
 defined as 
-
 %
 \begin{equation} \label{eq:dipole_def}
 \mathbf{p} = \int_\Omega \mathbf{r} \rho \text{d}\Omega,
 \end{equation}
-
-Rewriting this equation using Gauss's law we obtain
+%
+and rewriting this equation using Gauss's law we obtain
 %
 \begin{equation} \label{eq:dipole_def_gauss}
-\mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega
+\mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega.
 \end{equation}
-
-If we write one component, let's say $p_i$,
-
+%
+For component $i$, this becomes:
+%
 \begin{equation} \label{eq:dipole_def_gauss_i}
-{p_i} = -\epsilon_2\int_\Omega {x_i} \nabla^2 \phi_{2s} \text{d}\Omega
+{p_i} = -\epsilon_2\int_\Omega {x_i} \nabla^2 \phi_{2s} \text{d}\Omega.
 \end{equation}
-
-Using the following identity:
-
+%
+From the identity
+%
 \begin{equation} \label{eq:identity_grad}
 \nabla \cdot \left(f \mathbf{v}\right) = \left( \nabla f \right)\cdot \mathbf{v} + f\left(\nabla \cdot \mathbf{v}\right)
 \end{equation}
-
-taking $f=x_i$ and $\mathbf{v} = \nabla\phi_{2s}$ we can rewrite equation \eqref{eq:dipole_def_gauss_i}
+%
+with $f=x_i$ and $\mathbf{v} = \nabla\phi_{2s}$, we can rewrite Equation \eqref{eq:dipole_def_gauss_i}
 as 
-
+%
 \begin{align} \label{eq:dip_gauss_interm_1}
-- \frac{\mathbf{p_i}}{\epsilon_2} = \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \nonumber& \\
-\text{applying Divergence theorem} \qquad \qquad \qquad \qquad & \nonumber \\
-= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \quad & \nonumber\\
+- \frac{\mathbf{p_i}}{\epsilon_2} &= \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \nonumber \\
+&\text{and applying the divergence theorem} \nonumber \\
+&= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega
 \end{align}
-
-Using identity \eqref{eq:identity_grad} in equation \eqref{eq:dip_gauss_interm_1}, by selecting
+%
+Again, using the identity \eqref{eq:identity_grad} in Equation \eqref{eq:dip_gauss_interm_1}, this time, 
 taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$ we get:
-
+%
 \begin{align} \label{eq:dip_gauss_interm_2}
- = \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] & \nonumber\\
-\text{applying Divergence theorem} \qquad \qquad \qquad \qquad & \nonumber \\
-= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \qquad \qquad \qquad \qquad & \nonumber \\
-= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma \qquad \qquad \qquad \qquad \qquad
+ &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
+&\text{and applying the divergence theorem} \nonumber \\
+&= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
+&= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
 \end{align}
-
-All this normal vectors in the above derivation point from $\Omega_2$ to $\Omega_1$, in other 
-words, they point inside $\Omega_1$. Since the code implementation requires all normal vectors
-pointing outwards the final equation for the boundary integral formulation of one component of 
-the dipole reduces to:
-
+%
+Along this derivation, the normals are pointing into $\Omega_1$. However, in our implementation 
+all normals are pointing outwards, and we need to include an extra negative sign, yielding:
+%
 \begin{equation} \label{eq:dipole_def_gauss_i_final}
-{p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right]
+{p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right].
 \end{equation}
 
-Using BEM we obtain the electrostatic potential on the surface of the nanoparticle, 
-and we use it in equation \eqref{eq:dipole_def_gauss_i_final} to get the dipole 
-moment, and in equation \eqref{eq:scat_efield_long_range} to obtain the scattered
-electric field. Then, we can use the scattered electric field to get scattering 
-amplitud using equation \eqref{eq:scat_efield_fwa} which we plugged into \eqref{eq:cext_fwa}
-to get the extinction cross-section.
+Using BEM, we obtain the electrostatic potential on the surface of the nanoparticle, 
+which we use in Equation \eqref{eq:dipole_def_gauss_i_final} to get the dipole 
+moment, and in Equation \eqref{eq:scat_efield_long_range} to obtain the scattered
+electric field. From there, we can use Equation \eqref{eq:scat_efield_fwa} and Equation 
+\eqref{eq:cext_fwa} to get the extinction cross section.
 
 \subsection{Acceleration startegies} \label{sec:acc_strategies}
 
