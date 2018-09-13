@@ -10,27 +10,57 @@ U.~Hohenester, Making simulations with the mnpbem toolbox big: Hierarchical
   matrices and iterative solvers, Computer Physics Communications 222 (2018)
   209--228.
 
-\bibitem{CooperETal2016}
-C.~D. Cooper$\, \star$, N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, L.~A.
-  Barba, \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs}
-  and boundary elements for biomolecular electrostatics}, J. Open Source
-  Software 1~(4),
-  \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
-\newblock \href {http://dx.doi.org/10.21105/joss.00043}
-  {\path{doi:10.21105/joss.00043}}.
-\newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
+\bibitem{JungPedersenSondergaardPedersenLarsenNielsen2010}
+J.~Jung, T.~G. Pedersen, T.~Sondergaard, K.~Pedersen, A.~N. Larsen, B.~B.
+  Nielsen, Electrostatic plasmon resonances of metal nanospheres in layered
+  geometries, Phys.\ Rev.\ B 81~(12).
 
-\bibitem{CooperClementiBarba2015}
-C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
-  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
-  143~(12) (2015) 124709, preprint on
-  \href{arxiv:1503.08150}{arxiv:1503.08150}.
+\bibitem{VideenSun2003}
+G.~Videen, W.~Sun, Yet another look at light scattering from particles in
+  absorbing media, Applied optics 42~(33) (2003) 6724--6727.
+
+\bibitem{MayergoyzFredkinZhang2005}
+I.~D. Mayergoyz, D.~R. Fredkin, Z.~Zhang, Electrostatic (plasmon) resonances in
+  nanoparticles, Phys.\ Rev.\ B 72~(15) (2005) 155412.
+
+\bibitem{MayergoyzZhang2007}
+I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
+  resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
+  Magn. 43~(4) (2007) 1681--1684.
+
+\bibitem{GarciadeabajoAizpurua1997}
+F.~J. Garc\'{i}a~de Abajo, J.~Aizpurua, Numerical simulation of electron energy
+  loss near inhomogeneous dielectrics, Phys.\ Rev.\ B 56~(24) (1997) 15873(12).
+
+\bibitem{GarciadeabajoHowie2002}
+F.~J.~G. de~Abajo, A.~Howie, Retarded field calculation of electron energy loss
+  in inhommogeneous dielectrics, Phys.\ Rev.\ B 65~(11) (2002) 115418.
+
+\bibitem{JungCampbellChinowskyMarYee1998}
+L.~S. Jung, C.~T. Campbell, T.~M. Chinowsky, M.~N. Mar, S.~S. Yee, Quantitative
+  interpretation of the response of surface plasmon resonance sensors to
+  adsorbed fields, Langmuir 14 (1998) 5636--5648.
 
 \bibitem{HaesETal2004}
 A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
   biosensor: The long range distance dependence of the localized surface
   plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
   109--116.
+
+\bibitem{HaesVanduyne2002}
+A.~J. Haes, R.~P. Van~Duyne, A nanoscale optical biosensor: Sensitivity and
+  selectivity of an approach based on the localized surface plasmon resonance
+  spectroscopy of triangular silver nanoparticles, J. Am. Chem. Soc. 124~(35)
+  (2002) 10596--10604.
+
+\bibitem{DavisGomezVernon2010}
+T.~J. Davis, D.~E. Gomez, K.~C. Vernon, Interaction of molecules with localized
+  surface plasmons in metallic nanoparticles, Phys.\ Rev.\ B 81~(4).
+
+\bibitem{AntosiewiczApellClaudioKall2011}
+T.~J. Antosiewicz, S.~P. Apell, V.~Claudio, M.~K\"{a}ll, A simple model for the
+  resonance shift of localized plasmons due to dielectric particle adhesion,
+  Opt. Express 20~(1) (2011) 524--533.
 
 \bibitem{ClementiETal2017}
 N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
@@ -39,11 +69,6 @@ N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
   \href{https://doi.org/10.21105/joss.00306}{10.21105/joss.00306}.
 \newblock \href {http://dx.doi.org/10.21105/joss.00306}
   {\path{doi:10.21105/joss.00306}}.
-
-\bibitem{MayergoyzZhang2007}
-I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
-  resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
-  Magn. 43~(4) (2007) 1681--1684.
 
 \bibitem{Jackson}
 J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
