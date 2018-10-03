@@ -1,20 +1,31 @@
 %* what is known
-In the plasmonic community most of the simulations rely on the solution of 
-Maxwell Equations or some approximation of them. They are used to study the 
+Localized surface plasmon resonance (LSPR) is an optical effect where the electronic
+cloud around a metallic nanoparticle resonates with an incoming electromagnetic 
+field (see Figure \ref{fig:lspr}). When this happens, most of the incoming wave 
+is either absorbed by the nanoparticle, or scattered in different directions,
+generating a large shadow behind the scatterer. This principle is used to design 
+biosensors, as the resonance frequency shifts when analytes bind to the metallic
+nanoparticle \cite{HaesETal2004, HaesVanduyne2002}, resulting in highly sensitive sensors.
+
+In the LSPR application, numerical simulations are scarsely used, and they rely on the 
+solution of Maxwell's equations in some form. These simulations have been used to study the 
 optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,
 JungPedersenSondergaardPedersenLarsenNielsen2010, VideenSun2003,
-MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interaction of nanoparticles
-with electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
+MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interactions between nanoparticles
+and electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
 surface plasmon resonance sensors \cite{JungCampbellChinowskyMarYee1998} and
 biosensors \cite{HaesETal2004, HaesVanduyne2002} interaction of molecules and
-localized suraface plasmons in metallic particles \cite{DavisGomezVernon2010,
-AntosiewiczApellClaudioKall2011}.
+localized surface plasmons in metallic particles \cite{DavisGomezVernon2010,
+AntosiewiczApellClaudioKall2011}. Among the methods used in these simulations 
+we find finite difference time-domain (FDTD) and boundary elements\cite{Garciadeabajo}.
 
 {\color{red} Not sure how to talk about the different methods, any idea? should
 we talk about this? 
 
 Methods: fem (comsol), fdtd (davis and coworker), bem (garcia de abajo and 
 howie, bem ++, matlab guy). van duyne and haes? }
+{\color{blue} wrote something there, let me know what you think. My impression is that
+we shouldnt talk too much on this.}
 
 Localized surface plasmon resonace is an optical effect that is involved in the
 design of certain nanosensors due to their high sensitivity. LSPR is an 
