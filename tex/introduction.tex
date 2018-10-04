@@ -1,23 +1,31 @@
 %* what is known
-Localized surface plasmon resonance (LSPR) is an optical effect where the electronic
-cloud around a metallic nanoparticle resonates with an incoming electromagnetic 
+Localized surface plasmon resonance (LSPR) is an optical effect where an incoming 
+electromagnetic wave excites the free electrons on the surface of a metallic nanoparticle,
+generating plasmons, to the point where the electronic cloud resonates with the incoming
 field (see Figure \ref{fig:lspr}). When this happens, most of the incoming wave 
 is either absorbed by the nanoparticle, or scattered in different directions,
-generating a large shadow behind the scatterer. This principle is used to design 
-biosensors, as the resonance frequency shifts when analytes bind to the metallic
-nanoparticle \cite{HaesETal2004, HaesVanduyne2002}, resulting in highly sensitive sensors.
+generating a large shadow behind the scatterer (extinction). In the case of LSPR,
+the wavelength of the incoming wave is usually considered to be much larger than 
+then size of the nanoparticle.
 
-In the LSPR application, numerical simulations are scarsely used, and they rely on the 
-solution of Maxwell's equations in some form. These simulations have been used to study the 
+This principle is used to design 
+biosensors, as the resonance frequency is highly dependent of the dielectric environment 
+around the scatterer, resulting in very sensitive sensors \cite{HaesETal2004, HaesVanduyne2002}. 
+Then,the resonance frequency shifts when an analyte binds to the nanoparticle, detecting its presence. 
+
+In the LSPR application, numerical simulations are scarsely used. They mostly they rely on the 
+solution of Maxwell's equations in some form, solved by means of finite difference time-domain (FDTD) \cite{},
+boundary element \cite{}, or finite element \cite{} methods. 
+These simulations have been used to study the 
 optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,
 JungPedersenSondergaardPedersenLarsenNielsen2010, VideenSun2003,
 MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interactions between nanoparticles
 and electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
-surface plasmon resonance sensors \cite{JungCampbellChinowskyMarYee1998} and
-biosensors \cite{HaesETal2004, HaesVanduyne2002} interaction of molecules and
-localized surface plasmons in metallic particles \cite{DavisGomezVernon2010,
-AntosiewiczApellClaudioKall2011}. Among the methods used in these simulations 
-we find finite difference time-domain (FDTD) and boundary elements\cite{Garciadeabajo}.
+and surface plasmon resonance sensors \cite{JungCampbellChinowskyMarYee1998}.
+Among the latter application we find biosensors, where researchers have modelled the 
+interaction between the metallic nanoparticle and target molecules with highly 
+simplified methods \cite{}.
+
 
 {\color{red} Not sure how to talk about the different methods, any idea? should
 we talk about this? 
