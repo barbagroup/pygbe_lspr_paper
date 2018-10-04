@@ -5,10 +5,31 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{HaesETal2004}
+A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
+  biosensor: The long range distance dependence of the localized surface
+  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
+  109--116.
+
+\bibitem{HaesVanduyne2002}
+A.~J. Haes, R.~P. Van~Duyne, A nanoscale optical biosensor: Sensitivity and
+  selectivity of an approach based on the localized surface plasmon resonance
+  spectroscopy of triangular silver nanoparticles, J. Am. Chem. Soc. 124~(35)
+  (2002) 10596--10604.
+
+\bibitem{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}
+D.~M. Solis, J.~M. Taboada, F.~Obelleiro, L.~M. Liz-Marz\'{a}n, F.~J.
+  Garc\'{i}a~de Abajo, Toward ultimate nanoplasmonics modeling, ACS Nano 8~(8)
+  (2014) 7559--7570.
+
 \bibitem{Hohenester2018}
 U.~Hohenester, Making simulations with the mnpbem toolbox big: Hierarchical
   matrices and iterative solvers, Computer Physics Communications 222 (2018)
   209--228.
+
+\bibitem{HohenesterTrugler2012}
+U.~Hohenester, A.~Trugler, {MNPBEM} --- {A} {M}atlab toolbox for the simylation
+  of plasmonic nanoparticles, Comput. Phys. Commun. 183 (2012) 370--381.
 
 \bibitem{JungPedersenSondergaardPedersenLarsenNielsen2010}
 J.~Jung, T.~G. Pedersen, T.~Sondergaard, K.~Pedersen, A.~N. Larsen, B.~B.
@@ -41,18 +62,6 @@ L.~S. Jung, C.~T. Campbell, T.~M. Chinowsky, M.~N. Mar, S.~S. Yee, Quantitative
   interpretation of the response of surface plasmon resonance sensors to
   adsorbed fields, Langmuir 14 (1998) 5636--5648.
 
-\bibitem{HaesETal2004}
-A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
-  biosensor: The long range distance dependence of the localized surface
-  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
-  109--116.
-
-\bibitem{HaesVanduyne2002}
-A.~J. Haes, R.~P. Van~Duyne, A nanoscale optical biosensor: Sensitivity and
-  selectivity of an approach based on the localized surface plasmon resonance
-  spectroscopy of triangular silver nanoparticles, J. Am. Chem. Soc. 124~(35)
-  (2002) 10596--10604.
-
 \bibitem{DavisGomezVernon2010}
 T.~J. Davis, D.~E. Gomez, K.~C. Vernon, Interaction of molecules with localized
   surface plasmons in metallic nanoparticles, Phys.\ Rev.\ B 81~(4).
@@ -61,6 +70,21 @@ T.~J. Davis, D.~E. Gomez, K.~C. Vernon, Interaction of molecules with localized
 T.~J. Antosiewicz, S.~P. Apell, V.~Claudio, M.~K\"{a}ll, A simple model for the
   resonance shift of localized plasmons due to dielectric particle adhesion,
   Opt. Express 20~(1) (2011) 524--533.
+
+\bibitem{HallETal2011}
+W.~P. Hall, J.~Modica, J.~Anker, Y.~Lin, M.~Mrksich, R.~P. Van~Duyne, A
+  conformation-and ion-sensitive plasmonic biosensor, Nano letters 11~(3)
+  (2011) 1098--1105.
+
+\bibitem{CooperETal2016}
+C.~D. Cooper$\, \star$, N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, L.~A.
+  Barba, \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs}
+  and boundary elements for biomolecular electrostatics}, J. Open Source
+  Software 1~(4),
+  \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
+\newblock \href {http://dx.doi.org/10.21105/joss.00043}
+  {\path{doi:10.21105/joss.00043}}.
+\newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
 
 \bibitem{ClementiETal2017}
 N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.

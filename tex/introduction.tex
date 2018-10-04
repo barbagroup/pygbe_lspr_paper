@@ -1,30 +1,31 @@
 %* what is known
-Localized surface plasmon resonance (LSPR) is an optical effect where an incoming 
-electromagnetic wave excites the free electrons on the surface of a metallic nanoparticle,
-generating plasmons, to the point where the electronic cloud resonates with the incoming
-field (see Figure \ref{fig:lspr}). When this happens, most of the incoming wave 
+Localized surface plasmon resonance (LSPR) is an optical effect where an 
+electromagnetic wave excites the free electrons on the surface of a metallic nanoparticle.
+These vibrations of the electron cloud are known as plasmons, and in LSPR they resonate with the incoming
+field (see Figure \ref{fig:lspr}). When this happens, most of the incoming energy
 is either absorbed by the nanoparticle, or scattered in different directions,
 generating a large shadow behind the scatterer (extinction). In the case of LSPR,
 the wavelength of the incoming wave is usually considered to be much larger than 
-then size of the nanoparticle.
+the size of the nanoparticle.
 
 This principle is used to design 
 biosensors, as the resonance frequency is highly dependent of the dielectric environment 
-around the scatterer, resulting in very sensitive sensors \cite{HaesETal2004, HaesVanduyne2002}. 
-Then,the resonance frequency shifts when an analyte binds to the nanoparticle, detecting its presence. 
+around the scatterer. 
+Then, the resonance frequency shifts when an analyte binds to the nanoparticle, 
+resulting in a very sensitive sensor \cite{HaesETal2004, HaesVanduyne2002}.
 
-In the LSPR application, numerical simulations are scarsely used. They mostly they rely on the 
-solution of Maxwell's equations in some form, solved by means of finite difference time-domain (FDTD) \cite{},
-boundary element \cite{}, or finite element \cite{} methods. 
+A number of researchers have used numerical simulations to study LSPR \cite{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}. These mostly rely on the 
+solution of Maxwell's equations in some form, solved by means of finite difference time-domain (FDTD),
+boundary element, or finite element methods. 
 These simulations have been used to study the 
-optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,
+optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,HohenesterTrugler2012,
 JungPedersenSondergaardPedersenLarsenNielsen2010, VideenSun2003,
 MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interactions between nanoparticles
 and electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
-and surface plasmon resonance sensors \cite{JungCampbellChinowskyMarYee1998}.
+and surface plasmon resonance sensors.
 Among the latter application we find biosensors, where researchers have modelled the 
 interaction between the metallic nanoparticle and target molecules with highly 
-simplified methods \cite{}.
+simplified methods \cite{JungCampbellChinowskyMarYee1998,HaesVanduyne2002,DavisGomezVernon2010,AntosiewiczApellClaudioKall2011}.
 
 
 {\color{red} Not sure how to talk about the different methods, any idea? should
@@ -33,14 +34,7 @@ we talk about this?
 Methods: fem (comsol), fdtd (davis and coworker), bem (garcia de abajo and 
 howie, bem ++, matlab guy). van duyne and haes? }
 {\color{blue} wrote something there, let me know what you think. My impression is that
-we shouldnt talk too much on this.}
-
-Localized surface plasmon resonace is an optical effect that is involved in the
-design of certain nanosensors due to their high sensitivity. LSPR is an 
-optical phenomenon that ocurrs when light shines on conductive nanoparticles
-that are smaller than the wavelength of the incident light. The free electrons
-on the surface of the nanoparticle are excited by the incoming electric field
-oscillating with it and creating plasmons. See Figure \ref{fig:lspr}
+we shouldnt talk too much on this. We do cite everybody in the 'applications' part of the paragraph, so I dont think we nee to cite them also in the 'methods' part}
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -49,43 +43,35 @@ oscillating with it and creating plasmons. See Figure \ref{fig:lspr}
    \label{fig:lspr}
 \end{figure}
 
-When plasmons resonate with the incoming electric field we end up with high 
-levels of extinction, which is absorption plus scattering. LSPR biosensors are 
-based on this effect and use the fact that this behaviour is highly dependant
-on the dielectric of the local environment, resulting in a shift in the 
-resonance frequency as the analyte approaches the nanoparticle.  
-
 %* What is unkown, limitations and gaps
 
-In the biosensor's community most findings and desicions in designed are achived 
-through experimental analyses, trial and error procedures. Using software to 
-assit the design and manufacturing process can play a key role for the future
-of biosensors. In particular, experiments suggest that the distance between the
-nanoparticle and the analyte affects the sensitivity of the sensor
-\cite{HaesETal2004}. However, the processes to lead to this conclusions, were 
-trial an error processes. Therefore, there is not enough understanding on what 
-is the relation between high dependance on sensitivity on distance in 
-biosensors, specifically LSPR biosensors.Most of the softwares that are used to 
-approach this phenomenon use models of 
-the nanoparticle and the analyte that are extremely simplistic. Moreover, the 
-lack of grid convergence analysis and error study in most of the softwares in 
-the plasmonic community, {\color{red}(I haven't find any of this in 
-their papers, Chris what do you know about BEM++)} force the user to believe 
-in the obtained results without knowing their uncertainty.
+In the biosensor community most progress is achieved 
+through experimental analysis, trial and error procedures {\color{blue} I also have this impression, but do we have a reference to support it? If not, I'd rather avoid it}. 
+Using software to assist the design process can play a key role for the manufacture and optimization
+of biosensors, as we have access to details that are not available in experimental tests.
+For example, empirical studies suggest that the sensitivity of the sensor
+is highly dependent on the distance between the nanoparticle and the analyte \cite{HaesETal2004};
+these results were modeled with a simplified discrete dipole approximation (DDA), however, 
+the analyte was nos considered in the analysis. Moreover, experiments show that 
+LSPR sensors are sensitive enough to detect conformational changes of the analytes \cite{HallETal2011}, 
+but current simplified models of LSPR are not able to consider such details.
 
 %* Fill the gap
 
-Even though LSPR is an optical effect see Figure \ref{fig:lspr}, electrostatics 
+Even though LSPR is an optical effect, electrostatics 
 makes a good approximation in the long-wavelength limit. In this work we use
-\pygbe to study how the LSPR response changes in the presence
-of a biomolecule. \pygbe most recent application \cite{ClementiETal2017} aims 
-to guide the reasearch process in the design of biosensors. We treat localized 
-surface plasmon resonance (LSPR) quasi-statically \cite{MayergoyzZhang2007} and
-using an accurate representation of the biomolecule obtained thorugh the 
-crystal structure from the protein data bank. To our knowledge, \pygbe is the 
-only open-source software that uses a Tree code fast algorithm—O(N logN), for 
-N unknowns, GMRES iterative solver; and hardware acceleration on GPUs to compute
-the extinction cross-sections of arbitrary geometries. The software
+the boundary integral electrostatics solver \pygbe \cite{CooperETal2016} 
+to compute the extinction cross-section of metallic nanoparticles, and study how LSPR 
+response changes in the presence
+of a biomolecule. \pygbe was recently extended to account for complex dielectric constants 
+\cite{ClementiETal2017} aiming towards the LSPR biosensing application. We treat Maxwell's
+equations quasi-statically \cite{MayergoyzZhang2007} and
+uses an accurate continuum representation of the biomolecule obtained from the 
+crystal structure. 
+
+The boundary element solver in \pygbe
+is accelerated with a treecode (an $\mathcal{O}(N\log N)$ fast solver), and runs on
+graphic processing units (GPUs). The software
 \footnote{\url{https://github.com/barbagroup/pygbe}} is shared under the 
 BSD 3-clause license and the development repository is available on Github.
 
