@@ -1,3 +1,14 @@
+Previous implementations of \pygbe use continuum electrostatic to compute the
+solvation energy of proteins with multiple dielectric regions, and the
+interaction between a protein and a charged surface. We solved the Poisson-Boltzmann
+equation of the implicit-solvent model in its integral for obtained by following
+matehmatical formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
+extends \pygbe to a new application, where we re-use and adapt the boundary
+integral formulation to explore the interaction of a protein with a
+nanoparticle in the presence of an external electric field. We adapted the code
+to accept complex numbers, introduced by the usage of complex permittivities and
+implemented the necessary functions to solve the new physics. 
+
 \subsection{Scattering of small particles} \label{sec:scattering_small}
 
 Electromagnetic scattering is usually modelled with Maxwell's equations.
@@ -396,3 +407,24 @@ To approximate the contribution of the sources, we use Taylor expansions
 of order $P$.
 The Treecode allows us to control accuracy of the approximation by modifying $\theta$ and $P$.
 Further details of the Treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
+
+\subsection{Code implementation details} \label{sec:code_imp}
+
+As we mentioned at the beginning of this section, the original \pygbe code was 
+adapted to suit the needs of the nano-plasmonic implementation. The main changes
+are:
+
+\begin{itemize}
+    \item Re-write of the Generalized minimal residual method (GMRES) to accept complex numbers. 
+    \item Split Treecode calculations into real and imaginary part.
+    \item New format of config file that includes electric field intensity and  wavelength.
+    \item Functions added:
+        \item read_electric_field : Reads the electric field intensity and its wavelength from config files.
+        \item dipole_moment : Computes numerically the dipole moment (Eq. \eqref{eq:dipole_def_gauss_i_final})
+        \item extinction_cross_section: Computes the the extinction cross section.
+    \item Organize LSPR computations on a different main-script called lspr.py.
+\end{itemize}
+
+For more information regarding how to use the code, run examples and tests check
+\pygbe documentation \url{http://barbagroup.github.io/pygbe/docs/}
+
