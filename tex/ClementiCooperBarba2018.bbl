@@ -5,6 +5,11 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{YoonLenhoff1990}
+B.~J. Yoon, A.~M. Lenhoff, A boundary element method for molecular
+  electrostatics with electrolyte effects, J. Comput.\ Chem. 11~(9) (1990)
+  1080--1086.
+
 \bibitem{MayergoyzZhang2007}
 I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
   resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
