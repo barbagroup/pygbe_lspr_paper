@@ -211,7 +211,7 @@ leads to:
 
 %\noindent where $\mathbb{I}$ is the identity operator.
 
-%Following the same stepps, we can rewrite the Laplace equations in eqaution
+%Following the same steps, we can rewrite the Laplace equations in equation
 %\eqref{eq:electrostatic_scatter} as:
 
 %
@@ -228,6 +228,18 @@ leads to:
 %\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
 %\end{align}
 
+\subsubsection{Analyte-sensor electrostatic potential under an electric field}
+
+For the system in Figure \ref{fig:analyte-sensor} the potential formulation
+
+
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=0.45\textwidth]{protein_sensor_regions.pdf} 
+    \caption{Analyte-sensor system under electric field.}
+    \label{fig:analyte-sensor}
+ \end{figure}
 
 \paragraph{Discretization and linear system}
 
@@ -275,6 +287,7 @@ K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[
 \end{align}
 %
 \noindent with $\mathbf{r}_{\Gamma_i}$ being at the center of panel $\Gamma_i$.
+
 
 \paragraph{Integral evaluation}
 
