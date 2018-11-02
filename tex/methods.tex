@@ -283,7 +283,6 @@ leads to:
 
 \paragraph{Discretization and linear system}
 
-
 We discretize the surface into flat triangles, and assume that  $\phi$ and 
 $\partial \phi/\partial \mathbf{n}$ are constant within each panel. Then, we can
 write the layer operators in their discretized form:
@@ -319,6 +318,43 @@ Then, using centroid collocation, we can write equation \eqref{eq:integral_eq_ls
     \right]
  \end{equation}
 %
+
+and equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
+
+\begin{align} \label{eq:matrix_multi}
+ \left[
+    \begin{matrix} 
+       \frac{1}{2}+K_{L, \Gamma_1}^{\Gamma_1} & -V_{L, \Gamma_1}^{\Gamma_1} & 0 &  0   \vspace{0.2cm} \\
+       \frac{1}{2}-K_{L, \Gamma_1}^{\Gamma_1} & \frac{\epsilon_1}{\epsilon_2} V_{L, \Gamma_1}^{\Gamma_1} & -K_{L, \Gamma_2}^{\Gamma_1} & \frac{\epsilon_3}{\epsilon_2} V_{L, \Gamma_2}^{\Gamma_1} \vspace{0.2cm}  \\
+        -K_{L, \Gamma_1}^{\Gamma_2}&\frac{\epsilon_1}{\epsilon_2} V_{L, \Gamma_1}^{\Gamma_2} & \frac{1}{2}-K_{L, \Gamma_2}^{\Gamma_2}  &  \frac{\epsilon_3}{\epsilon_2} V_{L, \Gamma_2}^{\Gamma_2} \vspace{0.2cm} \\
+       0 & 0 & \frac{1}{2}+K_{L, \Gamma_2}^{\Gamma_2}&  - V_{L, \Gamma_2}^{\Gamma_2}   \vspace{0.2cm} \\
+    \end{matrix}
+    \right] 
+\cdot
+ \left[
+    \begin{matrix}
+    \phi_{1,\Gamma_1} \vspace{0.2cm} \\
+    \frac{\partial}{\partial \mathbf{n}} \phi_{1,\Gamma_1} \vspace{0.2cm} \\
+    \phi_{3,\Gamma_2} \vspace{0.2cm} \\
+    \frac{\partial}{\partial \mathbf{n}} \phi_{3,\Gamma_2} \vspace{0.2cm} \\
+    \end{matrix}
+\right]&
+ \nonumber \\
+ = \left[
+    \begin{matrix}
+    0 \vspace{0.2cm} \\
+    V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right)
+    + V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right)
+    \vspace{0.2cm}\\
+    V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right)
+    + V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right)
+    \vspace{0.2cm}\\
+    \sum_{k=0}^{N_q} \frac{q_k}{4\pi|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} \vspace{0.2cm}  \\
+    \end{matrix}
+\right]&
+\end{align}
+
+
 \noindent where the elements of the matrix are
 %
 \begin{align} \label{eq:layers_element}
