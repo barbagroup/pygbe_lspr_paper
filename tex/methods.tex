@@ -1,17 +1,22 @@
 Previous implementations of \pygbe use continuum electrostatic to compute the
-solvation energy of proteins with multiple dielectric regions, and the
-interaction between a protein and a charged surface. We solved the Poisson-Boltzmann
-equation of the implicit-solvent model in its integral for obtained by following
-mathematical formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
+solvation energy of proteins with multiple dielectric regions \cite{CooperBardhanBarba2013}, and the
+interaction between a protein and a charged surface \cite{CooperClementiBarba2015}. We solved the Poisson-Boltzmann
+equation of the implicit-solvent model in its integral form obtained by following
+mathematical the formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
 extends \pygbe to a new application, where we re-use and adapt the boundary
 integral formulation to explore the interaction of a protein with a
 nanoparticle in the presence of an external electric field. We adapted the code
-to accept complex numbers, introduced by the usage of complex permittivities and
+to accept complex numbers, introduced by the usage of complex permittivities, and
 implemented the necessary functions to solve the new physics. 
+
+To perform response calculations of LSPR biosensors using our electrostatics we
+re-wrote our Maxwell equations to include the effect of an incoming electric 
+field, their potential formulation and finally derived an integral formulation 
+that is appropriate for the new physics. 
 
 \subsection{Scattering of small particles} \label{sec:scattering_small}
 
-Electromagnetic scattering is usually modelled with Maxwell's equations.
+Electromagnetic scattering is usually modeled with Maxwell's equations.
 However, when the wavelength of the incoming wave is much larger than the
 scatterer, these can be reduced to a \emph{quasi-static} 
 first-order approximation \cite{MayergoyzZhang2007}:
@@ -229,7 +234,8 @@ leads to:
 
 \subsubsection{Analyte-sensor electrostatic potential under an electric field}
 
-For the system in Figure \ref{fig:analyte-sensor} the potential formulation
+For the system in Figure \ref{fig:analyte-sensor} the potential formulation, can
+be written as:
 
 %
 \begin{align} \label{eq:electrostatic_scatter_prot_sen}
@@ -500,7 +506,7 @@ Further details of the Treecode implementation in \pygbe can be found in \cite{C
 
 As we mentioned at the beginning of this section, the original \pygbe code was 
 adapted to suit the needs of the nano-plasmonic implementation. The main changes
-are:
+were:
 
 \begin{itemize}
     \item Re-write of the Generalized minimal residual method (GMRES) to accept complex numbers. 
