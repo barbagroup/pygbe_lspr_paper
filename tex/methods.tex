@@ -2,7 +2,7 @@ Previous implementations of \pygbe use continuum electrostatic to compute the
 solvation energy of proteins with multiple dielectric regions, and the
 interaction between a protein and a charged surface. We solved the Poisson-Boltzmann
 equation of the implicit-solvent model in its integral for obtained by following
-matehmatical formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
+mathematical formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
 extends \pygbe to a new application, where we re-use and adapt the boundary
 integral formulation to explore the interaction of a protein with a
 nanoparticle in the presence of an external electric field. We adapted the code
@@ -118,7 +118,7 @@ with Equation \eqref{eq:cext_fwa}
 
 Using Green's second identity, the system of partial differential equations 
 in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
-of boundary integral equations \ref{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, the system
+of boundary integral equations \cite{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, the system
 becomes
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc}
@@ -175,7 +175,7 @@ leads to:
 
 %\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
 %and $\mathbf{r}'$ runs only on the boundary $\Gamma$. This equation has a 
-%singularity when $\mathbf{r}=\mathbf{r}'$. To handle thisproblem, we perform the
+%singularity when $\mathbf{r}=\mathbf{r}'$. To handle this problem, we perform the
 %integral on a surface $\Gamma'$ that is like $\Gamma$ but with a hemisphere of 
 %radius $\varepsilon$ center at $\mathbf{r}$. We split the integrals into the part
 %that we have no singularity and the part that has the hemisphere. After solving these
@@ -450,7 +450,7 @@ moment, and in Equation \eqref{eq:scat_efield_long_range} to obtain the scattere
 electric field. From there, we can use Equation \eqref{eq:scat_efield_fwa} and Equation 
 \eqref{eq:cext_fwa} to get the extinction cross section.
 
-\subsection{Acceleration startegies} \label{sec:acc_strategies}
+\subsection{Acceleration strategies} \label{sec:acc_strategies}
 
 The main downside of the Boundary Element Method (\bem) is that it generates dense matrices
 after discretization. Solving the linear system using
@@ -476,7 +476,7 @@ V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j)
 $q_j$ is the weight, $\psi$ the kernel, $\mathbf{y}_j$ the locations of sources and 
 $\mathbf{x}_i$ the locations of targets.
 
-The Treecode groups sources geometrically in boxes of an octtree, which is built making
+The Treecode groups sources geometrically in boxes of an octree, which is built making
 sure that no box in the lowest level has more than $N_\text{crit}$ sources. Then, if a group of
 sources is far away from a target, their influence is aggregated in an expansion center,
 and the target interacts with the box, rather than with each source independently.
