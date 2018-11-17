@@ -1,18 +1,12 @@
-Previous implementations of \pygbe use continuum electrostatic to compute the
-solvation energy of proteins with multiple dielectric regions \cite{CooperBardhanBarba2013}, and the
-interaction between a protein and a charged surface \cite{CooperClementiBarba2015}. We solved the Poisson-Boltzmann
-equation of the implicit-solvent model in its integral form obtained by following
-mathematical the formulation of Yoon and Lenhoff \cite{YoonLenhoff1990}. This paper
-extends \pygbe to a new application, where we re-use and adapt the boundary
-integral formulation to explore the interaction of a protein with a
-nanoparticle in the presence of an external electric field. We adapted the code
-to accept complex numbers, introduced by the usage of complex permittivities, and
-implemented the necessary functions to solve the new physics. 
+The original implementation of \pygbe used continuum electrotatic theory to compute
+the solvation energy of biomolecular systems. In that context, biomolecules were modeled as 
+dielectric cavities inside an infinite continuum solvent, and the resulting partial differential
+equations were solved using a boundary integral approach \cite{CooperBardhanBarba2013,CooperClementiBarba2015}.
 
-To perform response calculations of LSPR biosensors using our electrostatics we
-re-wrote our Maxwell equations to include the effect of an incoming electric 
-field, their potential formulation and finally derived an integral formulation 
-that is appropriate for the new physics. 
+The present work extends \pygbe to the LSPR biosensing application. Here, we write Maxwell's equations as a Laplace
+equation, which is a valid approximation in the long-wavelength limit.
+Modifications to \pygbe were required to allow for complex-valued permittivities, and to include the
+effect of an external electric field.
 
 \subsection{Scattering of small particles} \label{sec:scattering_small}
 
@@ -117,13 +111,13 @@ with Equation \eqref{eq:cext_fwa}
 
 \subsection{The boundary element method} \label{sec:lspr_bem}
 
-\subsubsection{Electrostatic potential under an electric field} \label{sec:pot_elec_field}
+\subsubsection{Electrostatic potential of a nanoparticle under an electric field} \label{sec:pot_elec_field}
 
 \paragraph{Integral formulation}
 
 Using Green's second identity, the system of partial differential equations 
 in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
-of boundary integral equations \cite{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, the system
+of boundary integral equations \cite{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, this
 becomes
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc}
@@ -152,8 +146,8 @@ Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
 leads to:
 %
 \begin{align} \label{eq:integral_eq_lspr}
-\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
-\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
+\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) &= 0  \nonumber \\
+\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{\epsilon_1}{\epsilon_2}V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma}  \right) &= \frac{\epsilon_2-\epsilon_1}{\epsilon_2}V_{L}^{\Gamma}\left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right)\quad \text{on $\Gamma$.}
 \end{align}
 
 %The weak formulation of Laplace equation with test function $w$:
@@ -234,9 +228,9 @@ leads to:
 
 \subsubsection{Analyte-sensor electrostatic potential under an electric field}
 
-For the system in Figure \ref{fig:analyte-sensor} the potential formulation, can
-be written as:
-
+\textcolor{blue}{Might be a good idea to put most of this seciton on a appendix, but we should discuss this}
+The sketch in Figure \ref{fig:analyte-sensor} shows a metallic nanoparticle ($\Omega_1$) interacting with an analyte ($\Omega_3$), under an external electric field.
+Mathematically, this can be modeled as
 %
 \begin{align} \label{eq:electrostatic_scatter_prot_sen}
 \nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber\\
@@ -249,15 +243,13 @@ be written as:
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
     \centering
     \includegraphics[width=0.20\textwidth]{protein_sensor_regions.pdf} 
-    \caption{Analyte-sensor system under electric field.}
+    \caption{Analyte-sensor system under electric field.\textcolor{blue}{I think we should draw arrows representing the E field}}
     \label{fig:analyte-sensor}
  \end{figure}
 
 \paragraph{Integral formulation}
 
-Writing euqations \eqref{eq:electrostatic_scatter_prot_sen} as a system 
-of boundary integral equations and evaluating on the surface $\Gamma_1$ and
-$\Gamma_2$, the system becomes
+Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of partial differential equations from \eqref{eq:electrostatic_scatter_prot_sen} as
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc_system}
 \frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) &= 0  \nonumber \\
@@ -269,9 +261,8 @@ $\Gamma_2$, the system becomes
 \end{align}
 %
 Where $V$ and $K$ are the single and double layer operators from equations 
-\eqref{eq:single_layer} and \eqref{eq:double_layer} with the subindex indicating
-the surface where the integrals run while the superindex indicates the surface of
-evaluation. 
+\eqref{eq:single_layer} and \eqref{eq:double_layer}. In this case, we distinct between the
+surface where the integrals run (subindex), and the surface that contains the evaluation point (superindex).
 
 Applying the interface condition of equation \eqref{eq:electrostatic_scatter_prot_sen},
 leads to: 
@@ -297,7 +288,7 @@ V_{L,\text{disc}}^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}
 K_{L,\text{disc}}^{\mathbf{r}_\Gamma}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_\Gamma,\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
 \end{align}
 %
-\noindent where $N_p$ is the number of discretization elements of $\Gamma$, 
+\noindent where $N_p$ is the number of discretization elements on $\Gamma$, 
 and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} 
 \phi(\mathbf{r}_{\Gamma_j})$ are the values of $\phi$ and 
 $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$.
@@ -323,9 +314,8 @@ Then, using centroid collocation, we can write equation \eqref{eq:integral_eq_ls
     \right]
  \end{equation}
 %
-
-and equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
-
+Also, Equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
+%
 \begin{align} \label{eq:matrix_multi}
  \left[
     \begin{matrix} 
@@ -358,8 +348,7 @@ and equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
     \end{matrix}
 \right]&
 \end{align}
-
-
+%
 \noindent where the elements of the matrix are
 %
 \begin{align} \label{eq:layers_element}
