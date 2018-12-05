@@ -1,6 +1,16 @@
+The original implementation of \pygbe used continuum electrostatic theory to compute
+the solvation energy of biomolecular systems. In that context, biomolecules were modeled as 
+dielectric cavities inside an infinite continuum solvent, and the resulting partial differential
+equations were solved using a boundary integral approach \cite{CooperBardhanBarba2013,CooperClementiBarba2015}.
+
+The present work extends \pygbe to the LSPR biosensing application. Here, we write Maxwell's equations as a Laplace
+equation, which is a valid approximation in the long-wavelength limit.
+Modifications to \pygbe were required to allow for complex-valued permittivities, and to include the
+effect of an external electric field.
+
 \subsection{Scattering of small particles} \label{sec:scattering_small}
 
-Electromagnetic scattering is usually modelled with Maxwell's equations.
+Electromagnetic scattering is usually modeled with Maxwell's equations.
 However, when the wavelength of the incoming wave is much larger than the
 scatterer, these can be reduced to a \emph{quasi-static} 
 first-order approximation \cite{MayergoyzZhang2007}:
@@ -101,14 +111,13 @@ with Equation \eqref{eq:cext_fwa}
 
 \subsection{The boundary element method} \label{sec:lspr_bem}
 
-\subsubsection{Electrostatic potential under an electric field}
+\subsubsection{Electrostatic potential of a nanoparticle under an electric field} \label{sec:pot_elec_field}
 
 \paragraph{Integral formulation}
 
 Using Green's second identity, the system of partial differential equations 
 in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
-of boundary integral equations\textcolor{red}{insert reference here, Brebbia 
-unless we found a better book}. Evaluating on the surface $\Gamma$, the system
+of boundary integral equations \cite{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, this
 becomes
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc}
@@ -137,8 +146,8 @@ Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
 leads to:
 %
 \begin{align} \label{eq:integral_eq_lspr}
-\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) = 0&  \nonumber \\
-\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
+\frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) &= 0  \nonumber \\
+\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{\epsilon_1}{\epsilon_2}V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma}  \right) &= \frac{\epsilon_2-\epsilon_1}{\epsilon_2}V_{L}^{\Gamma}\left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right)\quad \text{on $\Gamma$.}
 \end{align}
 
 %The weak formulation of Laplace equation with test function $w$:
@@ -165,7 +174,7 @@ leads to:
 
 %\noindent where \eqref{eq:lap_bie_dom}, $\mathbf{r}$ can be anywhere in the domain $\Omega$, 
 %and $\mathbf{r}'$ runs only on the boundary $\Gamma$. This equation has a 
-%singularity when $\mathbf{r}=\mathbf{r}'$. To handle thisproblem, we perform the
+%singularity when $\mathbf{r}=\mathbf{r}'$. To handle this problem, we perform the
 %integral on a surface $\Gamma'$ that is like $\Gamma$ but with a hemisphere of 
 %radius $\varepsilon$ center at $\mathbf{r}$. We split the integrals into the part
 %that we have no singularity and the part that has the hemisphere. After solving these
@@ -200,7 +209,7 @@ leads to:
 
 %\noindent where $\mathbb{I}$ is the identity operator.
 
-%Following the same stepps, we can rewrite the Laplace equations in eqaution
+%Following the same steps, we can rewrite the Laplace equations in equation
 %\eqref{eq:electrostatic_scatter} as:
 
 %
@@ -217,9 +226,58 @@ leads to:
 %\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
 %\end{align}
 
+\subsubsection{Analyte-sensor electrostatic potential under an electric field}
+
+\textcolor{blue}{Might be a good idea to put most of this seciton on a appendix, but we should discuss this}
+The sketch in Figure \ref{fig:analyte-sensor} shows a metallic nanoparticle ($\Omega_1$) interacting with an analyte ($\Omega_3$), under an external electric field.
+Mathematically, this can be modeled as
+%
+\begin{align} \label{eq:electrostatic_scatter_prot_sen}
+\nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber\\
+\nabla^2 \phi_{3s} &= \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Omega_3} - \mathbf{r}_k|} \qquad\text{on $\Omega_3$} \nonumber \\
+\epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma_1$}. \nonumber\\
+\epsilon_3\frac{\partial\phi_{3s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_3)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{3s} = \phi_{2s} \quad \text{on $\Gamma_2$}.
+\end{align}
+%
+
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=0.20\textwidth]{protein_sensor_regions.pdf} 
+    \caption{Analyte-sensor system under electric field.}
+    \label{fig:analyte-sensor}
+ \end{figure}
+
+\paragraph{Integral formulation}
+
+Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of partial differential equations from \eqref{eq:electrostatic_scatter_prot_sen} as
+%
+\begin{align} \label{eq:integral_eq_lspr_nobc_system}
+\frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) &= 0  \nonumber \\
+\frac{\phi_{2s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_1}(\phi_{2s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{2s,\Gamma_1} \right) \nonumber\\
+ - K_{L,\Gamma_2}^{\Gamma_1}(\phi_{2s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{2s,\Gamma_2} \right) &= 0  \nonumber \\
+\frac{\phi_{2s,\Gamma_2}}{2} - K_{L,\Gamma_1}^{\Gamma_2}(\phi_{2s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{2s,\Gamma_1} \right) \nonumber \\ 
+- K_{L,\Gamma_2}^{\Gamma_2}(\phi_{2s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{2s,\Gamma_2} \right) &= 0  \nonumber \\
+\frac{\phi_{3s,\Gamma_2}}{2} + K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) - V_{L,\Gamma_2}^{\Gamma_2} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{3s,\Gamma_2} \right) &= \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} ,
+\end{align}
+%
+Where $V$ and $K$ are the single and double layer operators from equations 
+\eqref{eq:single_layer} and \eqref{eq:double_layer}. In this case, we distinct between the
+surface where the integrals run (subindex), and the surface that contains the evaluation point (superindex).
+
+Applying the interface condition of equation \eqref{eq:electrostatic_scatter_prot_sen},
+leads to: 
+
+\begin{align} \label{eq:integral_eq_lspr_nobc_system}
+\frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) = 0 & \nonumber \\
+\frac{\phi_{1s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) & \nonumber\\
+ - K_{L,\Gamma_2}^{\Gamma_1}(\phi_{3s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{3s,\Gamma_2} \right)  - V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right) = 0 &  \nonumber \\
+\frac{\phi_{3s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_2}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) & \nonumber\\
+ - K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{3s,\Gamma_2} \right)  - V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right) = 0 &  \nonumber \\
+\frac{\phi_{3s,\Gamma_2}}{2} + K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) - V_{L,\Gamma_2}^{\Gamma_2} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{3s,\Gamma_2} \right) = \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} &
+\end{align}
+
 
 \paragraph{Discretization and linear system}
-
 
 We discretize the surface into flat triangles, and assume that  $\phi$ and 
 $\partial \phi/\partial \mathbf{n}$ are constant within each panel. Then, we can
@@ -230,7 +288,7 @@ V_{L,\text{disc}}^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}
 K_{L,\text{disc}}^{\mathbf{r}_\Gamma}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^{N_p}\phi(\mathbf{r}_{\Gamma_j})\int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_\Gamma,\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
 \end{align}
 %
-\noindent where $N_p$ is the number of discretization elements of $\Gamma$, 
+\noindent where $N_p$ is the number of discretization elements on $\Gamma$, 
 and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} 
 \phi(\mathbf{r}_{\Gamma_j})$ are the values of $\phi$ and 
 $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$.
@@ -256,6 +314,41 @@ Then, using centroid collocation, we can write equation \eqref{eq:integral_eq_ls
     \right]
  \end{equation}
 %
+Also, Equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
+%
+\begin{align} \label{eq:matrix_multi}
+ \left[
+    \begin{matrix} 
+       \frac{1}{2}+K_{L, \Gamma_1}^{\Gamma_1} & -V_{L, \Gamma_1}^{\Gamma_1} & 0 &  0   \vspace{0.2cm} \\
+       \frac{1}{2}-K_{L, \Gamma_1}^{\Gamma_1} & \frac{\epsilon_1}{\epsilon_2} V_{L, \Gamma_1}^{\Gamma_1} & -K_{L, \Gamma_2}^{\Gamma_1} & \frac{\epsilon_3}{\epsilon_2} V_{L, \Gamma_2}^{\Gamma_1} \vspace{0.2cm}  \\
+        -K_{L, \Gamma_1}^{\Gamma_2}&\frac{\epsilon_1}{\epsilon_2} V_{L, \Gamma_1}^{\Gamma_2} & \frac{1}{2}-K_{L, \Gamma_2}^{\Gamma_2}  &  \frac{\epsilon_3}{\epsilon_2} V_{L, \Gamma_2}^{\Gamma_2} \vspace{0.2cm} \\
+       0 & 0 & \frac{1}{2}+K_{L, \Gamma_2}^{\Gamma_2}&  - V_{L, \Gamma_2}^{\Gamma_2}   \vspace{0.2cm} \\
+    \end{matrix}
+    \right] 
+\cdot
+ \left[
+    \begin{matrix}
+    \phi_{1,\Gamma_1} \vspace{0.2cm} \\
+    \frac{\partial}{\partial \mathbf{n}} \phi_{1,\Gamma_1} \vspace{0.2cm} \\
+    \phi_{3,\Gamma_2} \vspace{0.2cm} \\
+    \frac{\partial}{\partial \mathbf{n}} \phi_{3,\Gamma_2} \vspace{0.2cm} \\
+    \end{matrix}
+\right]&
+ \nonumber \\
+ = \left[
+    \begin{matrix}
+    0 \vspace{0.2cm} \\
+    V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right)
+    + V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right)
+    \vspace{0.2cm}\\
+    V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right)
+    + V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right)
+    \vspace{0.2cm}\\
+    \frac{1}{4\pi\epsilon_3}\sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} \vspace{0.2cm}  \\
+    \end{matrix}
+\right]&
+\end{align}
+%
 \noindent where the elements of the matrix are
 %
 \begin{align} \label{eq:layers_element}
@@ -264,6 +357,7 @@ K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[
 \end{align}
 %
 \noindent with $\mathbf{r}_{\Gamma_i}$ being at the center of panel $\Gamma_i$.
+
 
 \paragraph{Integral evaluation}
 
@@ -351,7 +445,7 @@ moment, and in Equation \eqref{eq:scat_efield_long_range} to obtain the scattere
 electric field. From there, we can use Equation \eqref{eq:scat_efield_fwa} and Equation 
 \eqref{eq:cext_fwa} to get the extinction cross section.
 
-\subsection{Acceleration startegies} \label{sec:acc_strategies}
+\subsection{Acceleration strategies} \label{sec:acc_strategies}
 
 The main downside of the Boundary Element Method (\bem) is that it generates dense matrices
 after discretization. Solving the linear system using
@@ -377,7 +471,7 @@ V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j)
 $q_j$ is the weight, $\psi$ the kernel, $\mathbf{y}_j$ the locations of sources and 
 $\mathbf{x}_i$ the locations of targets.
 
-The Treecode groups sources geometrically in boxes of an octtree, which is built making
+The Treecode groups sources geometrically in boxes of an octree, which is built making
 sure that no box in the lowest level has more than $N_\text{crit}$ sources. Then, if a group of
 sources is far away from a target, their influence is aggregated in an expansion center,
 and the target interacts with the box, rather than with each source independently.
@@ -396,3 +490,24 @@ To approximate the contribution of the sources, we use Taylor expansions
 of order $P$.
 The Treecode allows us to control accuracy of the approximation by modifying $\theta$ and $P$.
 Further details of the Treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
+
+\subsection{Code implementation details} \label{sec:code_imp}
+
+As we mentioned at the beginning of this section, the original \pygbe code was 
+adapted to suit the needs of the nano-plasmonic implementation. The main changes
+were:
+
+\begin{itemize}
+    \item Re-write of the Generalized minimal residual method (GMRES) to accept complex numbers. 
+    \item Split Treecode calculations into real and imaginary part.
+    \item New format of config file that includes electric field intensity and  wavelength.
+    \item Functions added:
+    \subitem $read\_electric\_field$ : Reads the electric field intensity and its wavelength from config files.
+    \subitem $dipole\_moment$ : Computes numerically the dipole moment (Eq. \eqref{eq:dipole_def_gauss_i_final})
+    \subitem $extinction\_cross\_section$: Computes the the extinction cross section.
+    \item Organize LSPR computations on a different main-script called lspr.py.
+\end{itemize}
+
+For more information regarding how to use the code, run examples and tests check
+\pygbe documentation \url{http://barbagroup.github.io/pygbe/docs/}
+
