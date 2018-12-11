@@ -5,6 +5,11 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
+\bibitem{YoonLenhoff1990}
+B.~J. Yoon, A.~M. Lenhoff, A boundary element method for molecular
+  electrostatics with electrolyte effects, J. Comput.\ Chem. 11~(9) (1990)
+  1080--1086.
+
 \bibitem{HaesETal2004}
 A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
   biosensor: The long range distance dependence of the localized surface
@@ -100,6 +105,10 @@ J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
 \bibitem{Mishchenko2007}
 M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
   in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
+
+\bibitem{BrebbiaDominguez1992}
+C.~Brebbia, I.~Dominguez, Boundary Elements An Introductory Course, 2nd
+  Edition, WIT Press, 1992.
 
 \bibitem{HessSmith1967}
 J.~L. Hess, A.~Smith, Calculation of potential flow about arbitrary bodies,
