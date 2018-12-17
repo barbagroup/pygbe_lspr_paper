@@ -1,0 +1,38 @@
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://localhost:8888/?token=3eb5eff21c828a6c38974de74d771be92e005aca45897cd0
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=3eb5eff21c828a6c38974de74d771be92e005aca45897cd0
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20181108163707 (127.0.0.1) 22.08ms referer=http://localhost:8888/notebooks/convergence_analysis/conv_analysis_380nm.ipynb
+[NotebookApp | INFO] Kernel started: d1b95a0e-ea55-4dd0-a3bc-8816d0eea6c8
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181108163707 (127.0.0.1) 4.65ms referer=http://localhost:8888/notebooks/convergence_analysis/conv_analysis_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d1b95a0e-ea55-4dd0-a3bc-8816d0eea6c8
+[NotebookApp | INFO] Starting buffering for d1b95a0e-ea55-4dd0-a3bc-8816d0eea6c8:9a9a43521c1445d893c24583a1e70080
+[NotebookApp | INFO] Kernel shutdown: d1b95a0e-ea55-4dd0-a3bc-8816d0eea6c8
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20181108163707 (127.0.0.1) 3.09ms referer=http://localhost:8888/notebooks/BSA_silver_NP_LSPR_response/LSPR_response_to_BSA.ipynb
+[NotebookApp | INFO] Kernel started: cc255fea-51b0-4e65-a121-796edd57d67a
+[NotebookApp | INFO] 302 GET /notebooks/BSA_silver_NP_LSPR_response/figures/2prot_1nm_y_R8nm.png (127.0.0.1) 2.24ms
+[NotebookApp | INFO] 302 GET /notebooks/BSA_silver_NP_LSPR_response/figures/2prot_1nm_x_R8nm.png (127.0.0.1) 1.91ms
+[NotebookApp | INFO] 302 GET /notebooks/BSA_silver_NP_LSPR_response/figures/2prot_1nm_z_R8nm.png (127.0.0.1) 1.53ms
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181108163707 (127.0.0.1) 1.88ms referer=http://localhost:8888/notebooks/BSA_silver_NP_LSPR_response/LSPR_response_to_BSA.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel cc255fea-51b0-4e65-a121-796edd57d67a
+[NotebookApp | INFO] Starting buffering for cc255fea-51b0-4e65-a121-796edd57d67a:188d4adf8aeb4eca8bbb75987a1e6315
+[NotebookApp | INFO] Kernel shutdown: cc255fea-51b0-4e65-a121-796edd57d67a
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20181108163707 (127.0.0.1) 3.45ms referer=http://localhost:8888/notebooks/silver_spherical_NP_verification/silver_spherical_NP_verification.ipynb
+[NotebookApp | INFO] Kernel started: 3e9bf702-2b74-4dd7-be77-1c761bf3c337
+[NotebookApp | INFO] 302 GET /notebooks/silver_spherical_NP_verification/sphere_field_8nm.png (127.0.0.1) 2.51ms
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20181108163707 (127.0.0.1) 2.29ms referer=http://localhost:8888/notebooks/silver_spherical_NP_verification/silver_spherical_NP_verification.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 3e9bf702-2b74-4dd7-be77-1c761bf3c337
+[NotebookApp | INFO] Starting buffering for 3e9bf702-2b74-4dd7-be77-1c761bf3c337:25b095ca7145492e85e687c92586e010
+[NotebookApp | INFO] Kernel shutdown: 3e9bf702-2b74-4dd7-be77-1c761bf3c337
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down 0 kernels

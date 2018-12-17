@@ -1,0 +1,380 @@
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/paper/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=691f7f9c3c33a19d304fd959d892a90943135d5ebd6082ba
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=691f7f9c3c33a19d304fd959d892a90943135d5ebd6082ba
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180420152354 (127.0.0.1) 10.78ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180420152354 (127.0.0.1) 2.75ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sphere.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180420152354 (127.0.0.1) 2.49ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Kernel started: c4c7643c-097c-4359-be57-8e450650abd6
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180420152354 (127.0.0.1) 3.30ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel c4c7643c-097c-4359-be57-8e450650abd6
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Kernel restarted: c4c7643c-097c-4359-be57-8e450650abd6
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel c4c7643c-097c-4359-be57-8e450650abd6
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere.ipynb
+[NotebookApp | INFO] Kernel shutdown: c4c7643c-097c-4359-be57-8e450650abd6
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/paper/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=a76920a8958a505aff6d660b6c4c6cff5166cda3113265a4
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | WARNING] No web browser found: could not locate runnable browser.
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=a76920a8958a505aff6d660b6c4c6cff5166cda3113265a4
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/naty/Documents/git/pygbe_lspr/paper/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=19f656f3003c34414d5d928f329c6452fb7abc3136b47a93
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=19f656f3003c34414d5d928f329c6452fb7abc3136b47a93
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | INFO] 302 GET / (127.0.0.1) 1.11ms
+[NotebookApp | WARNING] Notebook conv_analysis_prot_sphere_b.ipynb is not trusted
+[NotebookApp | INFO] Kernel started: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sphere_b.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sphere_b.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] Saving untrusted notebook conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | WARNING] delete /convergence_bsa_sensor_R8_d=1_w=380.png
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Kernel restarted: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] delete /convergence_bsa_sensor_R8_d=1_w=380
+[NotebookApp | INFO] Kernel shutdown: efaca658-c9f6-4e3d-aad7-e95239ac6787
+[NotebookApp | INFO] Kernel started: d122903d-e700-4c3f-866c-f4dd8bab3c4e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d122903d-e700-4c3f-866c-f4dd8bab3c4e
+[NotebookApp | INFO] Kernel restarted: d122903d-e700-4c3f-866c-f4dd8bab3c4e
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel d122903d-e700-4c3f-866c-f4dd8bab3c4e
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel shutdown: d122903d-e700-4c3f-866c-f4dd8bab3c4e
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr/paper/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=643957fab0f5b32fd38231fabecd36cdaca8470b7c85c647
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=643957fab0f5b32fd38231fabecd36cdaca8470b7c85c647
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180606160410 (127.0.0.1) 14.30ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180606160410 (127.0.0.1) 4.17ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180606160410 (127.0.0.1) 4.23ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180606160410 (127.0.0.1) 5.39ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180606160410 (127.0.0.1) 3.74ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180606160410 (127.0.0.1) 3.72ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180606160410 (127.0.0.1) 1.66ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 67be59b4-cbb4-4cbc-b477-1f77659c9877
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8888/?token=d2dea6ddac36620a971242ada094057ab2016492e5783d87
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=d2dea6ddac36620a971242ada094057ab2016492e5783d87
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180612095451 (127.0.0.1) 9.86ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180612095451 (127.0.0.1) 2.43ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180612095451 (127.0.0.1) 3.36ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel started: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180612095451 (127.0.0.1) 1.73ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Kernel restarted: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Kernel restarted: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel restarted: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Kernel restarted: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel shutdown: 0681a483-429d-4220-aed7-7c2c5f74c357
+[NotebookApp | WARNING] delete /Untitled Folder
+[NotebookApp | WARNING] Directory /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks/convergence_analysis/Untitled Folder not empty
+[NotebookApp | WARNING] 400 DELETE /api/contents/Untitled%20Folder (127.0.0.1) 6.14ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180612095451 (127.0.0.1) 2.17ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks/convergence_analysis
+[NotebookApp | INFO] 0 active kernels 
+[NotebookApp | INFO] The Jupyter Notebook is running at: http://localhost:8889/?token=9dc87b8a188bdf531fad75b2370f758df6e774a43467e0e6
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8889/?token=9dc87b8a188bdf531fad75b2370f758df6e774a43467e0e6
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180612101204 (127.0.0.1) 19.40ms referer=http://localhost:8889/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180612101204 (127.0.0.1) 3.01ms referer=http://localhost:8889/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180612101204 (127.0.0.1) 2.97ms referer=http://localhost:8889/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel started: 89d5242b-4230-4c52-8410-f68180b72b1b
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180612101204 (127.0.0.1) 3.25ms referer=http://localhost:8889/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 89d5242b-4230-4c52-8410-f68180b72b1b
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel shutdown: 89d5242b-4230-4c52-8410-f68180b72b1b
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down kernels
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks/convergence_analysis
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://localhost:8888/?token=0c409af78b017c6f5ea22f2df723d86dd4581b33465c140f
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=0c409af78b017c6f5ea22f2df723d86dd4581b33465c140f
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180705175023 (127.0.0.1) 9.85ms referer=http://localhost:8888/tree
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180705175023 (127.0.0.1) 5.99ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180705175023 (127.0.0.1) 3.15ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Kernel started: 5879304b-06c8-42da-ba51-02eb6cd9bf73
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180705175023 (127.0.0.1) 2.34ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 5879304b-06c8-42da-ba51-02eb6cd9bf73
+[NotebookApp | INFO] Starting buffering for 5879304b-06c8-42da-ba51-02eb6cd9bf73:d82e0577b9534f9e8cc9aa90c5c15942
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down 1 kernel
+[NotebookApp | INFO] Kernel shutdown: 5879304b-06c8-42da-ba51-02eb6cd9bf73
+[NotebookApp | WARNING] No nbgrader_config.py file found (rerun with --debug to see where nbgrader is looking)
+[NotebookApp | INFO] Loading the validate_assignment nbgrader serverextension
+[NotebookApp | INFO] Serving notebooks from local directory: /home/ncclementi/Documents/git/pygbe_lspr_paper/notebooks/convergence_analysis
+[NotebookApp | INFO] 0 active kernels
+[NotebookApp | INFO] The Jupyter Notebook is running at:
+[NotebookApp | INFO] http://localhost:8888/?token=a2f7ae514951045ff0abaabcfc9f157995144b9c9e233e20
+[NotebookApp | INFO] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[NotebookApp | CRITICAL] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=a2f7ae514951045ff0abaabcfc9f157995144b9c9e233e20
+[NotebookApp | INFO] Accepting one-time-token-authenticated connection from 127.0.0.1
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/tree_tab/main.js?v=20180706143447 (127.0.0.1) 12.63ms referer=http://localhost:8888/tree
+[NotebookApp | INFO] Kernel started: e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180706143447 (127.0.0.1) 5.31ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180706143447 (127.0.0.1) 4.44ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180706143447 (127.0.0.1) 3.67ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180706143447 (127.0.0.1) 2.74ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180706143447 (127.0.0.1) 3.61ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180706143447 (127.0.0.1) 6.47ms referer=http://localhost:8888/notebooks/conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Creating new notebook in 
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextension.js?v=20180706143447 (127.0.0.1) 2.51ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | WARNING] 404 GET /nbextensions/nbextensions_configurator/config_menu/main.js?v=20180706143447 (127.0.0.1) 2.07ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | INFO] Kernel started: 8186a4b1-620f-4071-a73f-b9a35a634016
+[NotebookApp | WARNING] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180706143447 (127.0.0.1) 2.98ms referer=http://localhost:8888/notebooks/Untitled.ipynb?kernel_name=python3
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel 8186a4b1-620f-4071-a73f-b9a35a634016
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /Untitled.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Starting buffering for e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a:ce7e7b04521c4a958fbfedd10232e79f
+[NotebookApp | INFO] Kernel restarted: e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | INFO] Restoring connection for e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a:ce7e7b04521c4a958fbfedd10232e79f
+[NotebookApp | INFO] Replaying 6 buffered messages
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Starting buffering for e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a:ce7e7b04521c4a958fbfedd10232e79f
+[NotebookApp | INFO] Kernel restarted: e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | INFO] Adapting to protocol v5.1 for kernel e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
+[NotebookApp | INFO] Restoring connection for e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a:ce7e7b04521c4a958fbfedd10232e79f
+[NotebookApp | INFO] Replaying 6 buffered messages
+[NotebookApp | INFO] Saving file at /conv_analysis_prot_sensor_380nm.ipynb
+[NotebookApp | INFO] Starting buffering for e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a:ce7e7b04521c4a958fbfedd10232e79f
+[NotebookApp | INFO] Starting buffering for 8186a4b1-620f-4071-a73f-b9a35a634016:5ef047f09bcf452986ae6eef02ecd88a
+[NotebookApp | INFO] Kernel shutdown: 8186a4b1-620f-4071-a73f-b9a35a634016
+[NotebookApp | WARNING] delete /Untitled.ipynb
+[NotebookApp | INFO] interrupted
+[NotebookApp | CRITICAL] Shutdown confirmed
+[NotebookApp | INFO] Shutting down 1 kernel
+[NotebookApp | INFO] Kernel shutdown: e2e1d1d4-fdef-40ea-a6ad-c0420e33a38a
