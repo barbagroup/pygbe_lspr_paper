@@ -166,8 +166,9 @@ and $Nk = 9$ Gauss quadrature points per triangle edge for the semi-analytical i
 singular elements. The treecode used a Taylor expansion of order $P=6$ and a multipole-acceptance
 criterion of $\theta=0.5$ . The GMRES tolerance was set to $10^{-3}$. 
 This parameter choice resulted in a percentage error of $\sim\%0.6$
-and the time of each computation was approximately $7.5 min$ in a \texttt{NVIDIA Tesla K40 GPU}
-card. 
+and the time of each computation was approximately $7.5 \, \text{min}$ in a \texttt{NVIDIA Tesla K40 GPU}
+card when we have only one protein (when two proteins are present the time per run
+is $\sim 15 \, \text{min}$). 
 
 Figure \ref{fig:display_z} sketches the setup of the simulations, with two proteins placed 
 $d=1 \, nm$ away from a spherical silver nanoparticle, along the z-axis.

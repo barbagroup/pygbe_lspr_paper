@@ -5,11 +5,6 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{YoonLenhoff1990}
-B.~J. Yoon, A.~M. Lenhoff, A boundary element method for molecular
-  electrostatics with electrolyte effects, J. Comput.\ Chem. 11~(9) (1990)
-  1080--1086.
-
 \bibitem{HaesETal2004}
 A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
   biosensor: The long range distance dependence of the localized surface
@@ -99,6 +94,20 @@ N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
 \newblock \href {http://dx.doi.org/10.21105/joss.00306}
   {\path{doi:10.21105/joss.00306}}.
 
+\bibitem{CooperBardhanBarba2013}
+C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
+  using {Python}, {GPU}s and boundary elements that can handle solvent-filled
+  cavities and {S}tern layers., Comput. Phys. Commun. 185~(3) (2014) 720--729,
+  preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
+\newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
+  {\path{doi:10.1016/j.cpc.2013.10.028}}.
+
+\bibitem{CooperClementiBarba2015}
+C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
+  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
+  143~(12) (2015) 124709, preprint on
+  \href{arxiv:1503.08150}{arxiv:1503.08150}.
+
 \bibitem{Jackson}
 J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
 
@@ -137,14 +146,6 @@ C.~D. Cooper, L.~A. Barba, Validation of the \texttt{{PyGBe}} code for
   Report on \textbf{figshare}, CC-BY license (January 25 2013).
 \newblock \href {http://dx.doi.org/10.6084/m9.figshare.154331}
   {\path{doi:10.6084/m9.figshare.154331}}.
-
-\bibitem{CooperBardhanBarba2013}
-C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
-  using {Python}, {GPU}s and boundary elements that can handle solvent-filled
-  cavities and {S}tern layers., Comput. Phys. Commun. 185~(3) (2014) 720--729,
-  preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
-\newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
-  {\path{doi:10.1016/j.cpc.2013.10.028}}.
 
 \bibitem{JohnsonChristy1972}
 P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
