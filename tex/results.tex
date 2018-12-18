@@ -38,12 +38,13 @@ under a z-polarized electric field with a wavelength of 380 nm and intensity of
 $-0.0037 e/({\AA}^2 \, \epsilon_0)$. In these conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
 $-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. 
-The results are shown in Figure \ref{fig:error_sphere_Ag}. 
+Table \ref{table:quadparams1} lists the Gauss quadrature points for each type of element. 
+The threshold parameter defining the near-singular region was 0.5 (refer to the \pygbe documentation, under ``Parameter file format'').
 
 \begin{table}[h]
     \centering
     \caption{\label{table:quadparams1} Isolated silver nanoparticle: Gauss quadrature points; 
-    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration).} 
+    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration). } 
     \begin{tabular}{l l}
     \hline%\toprule
      distant elements: & $K=4$ \\
@@ -54,10 +55,25 @@ The results are shown in Figure \ref{fig:error_sphere_Ag}.
 \end{table}
 
 
-$P=15$ for the order of expansion in treecode, and a GMRES tolerance of $10^{-5}$. We
-performed the calculations using meshes with 512, 2048, 8192 and 32768 elements. For this case, the 
-analytical solution in equation \eqref{eq:an_sol} yields $C_{ext} = 1854.4765 \; nm^2$.
-Errors are also presented in Table \ref{table:err_iso_sphere}.
+\begin{table}[h]
+    \centering
+    \caption{\label{table:treeparams1} Isolated silver nanoparticle: treecode and solver parameters.} 
+    \begin{tabular}{l l}
+    \hline%\toprule
+    treecode order of expansion: & $P=15$\\
+    MAC                                         & $\theta=0.5$\\
+    GMRES tolerance                    & $10^{-5}$\\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
+The results are shown in Figure \ref{fig:error_sphere_Ag}, where the mesh sizes are
+512, 2048, 8192, and 32768 elements. 
+The analytical solution with equation \eqref{eq:an_sol} is $C_{ext} = 1854.4765$ nm$^2$, 
+and the errors are as shown in Table \ref{table:err_iso_sphere}.
+The observed order of convergence is $0.98$, and the $1/N$ slope in Figure \ref{fig:error_sphere_Ag}
+is an indication that the meshes are correctly resolving the numerical solutions with \pygbe. 
+
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -67,8 +83,7 @@ Errors are also presented in Table \ref{table:err_iso_sphere}.
    \label{fig:error_sphere_Ag}
 \end{figure}
 
-The observed order of convergence is $0.98$, and the $1/N$ slope in Figure \ref{fig:error_sphere_Ag}
-is an indication that the meshes are correctly resolving the numerical solutions with \pygbe. 
+
 
 \begin{table}[h]
     \centering
