@@ -2,6 +2,20 @@
 
 \subsection{Isolated nanoparticle} \label{sec:verification}
 
+In the long-wavelength limit, the electrostatic approximation applies and
+the electromagnetic scattering of a small spherical particle can be modeled
+by a sphere in a constant electric field. 
+Figure \ref{fig:np_elec_field} illustrates this scenario.
+
+%
+\begin{figure}[h] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.3\textwidth]{sphere_field_8nm.pdf} 
+   \caption{Spherical nanoparticle in a constant electric field.}
+   \label{fig:np_elec_field}
+\end{figure}
+%
+
 We compare our numerical calculations of the extinction cross-section using a boundary
 elements method (BEM), with analytical solutions available for spherical geometries. 
 This expression was derived by Mishchenko \cite{Mishchenko2007}, and is valid for lossy mediums:
@@ -16,16 +30,6 @@ where $a$ is the radius of the sphere, $k$ the complex wave number ($k=k^\prime 
 the dielectric constant of the particle, and $\epsilon_m$ the dielectric constant
 of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$, and we would take $k=k^\prime$.
 
-We use the electrostatic approximation which reduces the model to a 
-sphere under a constant electric field, like it is presented in Figure \ref{fig:np_elec_field}.
-%
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.3\textwidth]{sphere_field_8nm.pdf} 
-   \caption{Spherical nanoparticle in a constant electric field.}
-   \label{fig:np_elec_field}
-\end{figure}
-%
 Figure \ref{fig:error_sphere_Ag} shows the result of a grid convergence study of the extinction
 cross-section for a silver spherical nanoparticle of radius $8 \, nm$, immersed in water
 under a z-polarized electric field with a wavelength of $380 nm$ and intensity of 
