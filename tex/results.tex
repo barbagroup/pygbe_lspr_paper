@@ -1,8 +1,8 @@
 %!TEX root = ClementiCooperBarba2018.tex
 
-\subsection{Isolated nanoparticle} \label{sec:verification}
+\subsection{Grid convergence and verification with an isolated silver nanoparticle} \label{sec:verification}
 
-In the long-wavelength limit, the electrostatic approximation applies and
+\noindent In the long-wavelength limit, the electrostatic approximation applies and
 the electromagnetic scattering of a small spherical particle can be modeled
 by a sphere in a constant electric field. 
 Figure \ref{fig:np_elec_field} illustrates this scenario.
@@ -33,15 +33,28 @@ is the dielectric constant of the particle, and $\epsilon_m$ is the dielectric c
 of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$ and $k=k^\prime$.
 
 We completed a grid-convergence study of \pygbe for the extinction
-cross-section of a spherical silver nanoparticle of radius $8 \, nm$, immersed in water
-under a z-polarized electric field with a wavelength of $380 nm$ and intensity of 
-$-0.0037 e/({\AA}^2 \, \epsilon_0)$. In such conditions, water has a dielectric
+cross-section of a spherical silver nanoparticle of radius 8 nm immersed in water,
+under a z-polarized electric field with a wavelength of 380 nm and intensity of 
+$-0.0037 e/({\AA}^2 \, \epsilon_0)$. In these conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
-$-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. These simulations use $K=4$ 
-Gauss quadrature points per far-away elements, $K_{fine} = 37$ Gauss quadrature points
-per elements for near singular integrals, $Nk = 9$ Gauss quadrature points per 
-triangle edge for semi-analytical integration in the singular elements, $P=15$ for 
-the order of expansion in treecode, and a GMRES tolerance of $10^{-5}$. We
+$-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. 
+The results are shown in Figure \ref{fig:error_sphere_Ag}. 
+
+\begin{table}[h]
+    \centering
+    \caption{\label{table:quadparams1} Isolated silver nanoparticle: Gauss quadrature points; 
+    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration).} 
+    \begin{tabular}{l l}
+    \hline%\toprule
+     distant elements: & $K=4$ \\
+     near-singular integrals:   & $ K_{fine}=37$ \\
+     singular elements:  & $Nk =9$ \\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
+
+$P=15$ for the order of expansion in treecode, and a GMRES tolerance of $10^{-5}$. We
 performed the calculations using meshes with 512, 2048, 8192 and 32768 elements. For this case, the 
 analytical solution in equation \eqref{eq:an_sol} yields $C_{ext} = 1854.4765 \; nm^2$.
 Errors are also presented in Table \ref{table:err_iso_sphere}.
