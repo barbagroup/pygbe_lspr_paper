@@ -16,9 +16,11 @@ Figure \ref{fig:np_elec_field} illustrates this scenario.
 \end{figure}
 %
 
-We compare our numerical calculations of the extinction cross-section using a boundary
-elements method (BEM), with analytical solutions available for spherical geometries. 
-This expression was derived by Mishchenko \cite{Mishchenko2007}, and is valid for lossy mediums:
+This model problem has an analytical solution, which allows us to compare with
+the numerical calculations of the extinction cross-section obtained with \pygbe,
+for code verification and grid-convergence analysis.
+Mishchenko \cite{Mishchenko2007} derived the following analytical result, 
+valid for lossy mediums:
 %
 \begin{equation} 
     C_\text{ext} = \frac{4\pi a^3}{k^\prime} \operatorname{Im}\left(k^2 
@@ -26,12 +28,12 @@ This expression was derived by Mishchenko \cite{Mishchenko2007}, and is valid fo
     \label{eq:an_sol}
 \end{equation}
 %
-where $a$ is the radius of the sphere, $k$ the complex wave number ($k=k^\prime +i k^{\prime\prime}$), $\epsilon_p$ 
-the dielectric constant of the particle, and $\epsilon_m$ the dielectric constant
-of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$, and we would take $k=k^\prime$.
+Here, $a$ is the radius of the sphere, $k$ is the complex wave number ($k=k^\prime +i k^{\prime\prime}$), $\epsilon_p$ 
+is the dielectric constant of the particle, and $\epsilon_m$ is the dielectric constant
+of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$ and $k=k^\prime$.
 
-Figure \ref{fig:error_sphere_Ag} shows the result of a grid convergence study of the extinction
-cross-section for a silver spherical nanoparticle of radius $8 \, nm$, immersed in water
+We completed a grid-convergence study of \pygbe for the extinction
+cross-section of a spherical silver nanoparticle of radius $8 \, nm$, immersed in water
 under a z-polarized electric field with a wavelength of $380 nm$ and intensity of 
 $-0.0037 e/({\AA}^2 \, \epsilon_0)$. In such conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
