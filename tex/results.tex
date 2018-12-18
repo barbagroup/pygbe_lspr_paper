@@ -24,7 +24,7 @@ valid for lossy mediums:
 %
 \begin{equation} 
     C_\text{ext} = \frac{4\pi a^3}{k^\prime} \operatorname{Im}\left(k^2 
-                    \frac{\epsilon_p/\epsilon_m -1}{\epsilon_p/\epsilon_m +2}\right),
+                    \frac{\epsilon_p/\epsilon_m -1}{\epsilon_p/\epsilon_m +2}\right).
     \label{eq:an_sol}
 \end{equation}
 %
@@ -34,16 +34,18 @@ of the host medium. If the medium is not lossy, then $k^{\prime\prime}=0$ and $k
 
 We completed a grid-convergence study of \pygbe for the extinction
 cross-section of a spherical silver nanoparticle of radius 8 nm immersed in water,
-under a z-polarized electric field with a wavelength of 380 nm and intensity of 
+under a $z$-polarized electric field with a wavelength of 380 nm and intensity of 
 $-0.0037 e/({\AA}^2 \, \epsilon_0)$. In these conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
 $-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. 
-Table \ref{table:quadparams1} lists the Gauss quadrature points for each type of element. 
-The threshold parameter defining the near-singular region was 0.5 (refer to the \pygbe documentation, under ``Parameter file format'').
+Table \ref{table:quadparams1} lists the Gauss quadrature points used for each type of element. 
+The threshold parameter defining the near-singular region was 0.5 
+(refer to the \pygbe documentation, under ``Parameter file format'').
+Table \ref{table:treeparams1} shows the treecode and solver parameters for this grid-convergence study.
 
 \begin{table}[h]
     \centering
-    \caption{\label{table:quadparams1} Isolated silver nanoparticle: Gauss quadrature points; 
+    \caption{\label{table:quadparams1} Grid-convergence study: Gauss quadrature points; 
     $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration). } 
     \begin{tabular}{l l}
     \hline%\toprule
@@ -57,7 +59,7 @@ The threshold parameter defining the near-singular region was 0.5 (refer to the 
 
 \begin{table}[h]
     \centering
-    \caption{\label{table:treeparams1} Isolated silver nanoparticle: treecode and solver parameters.} 
+    \caption{\label{table:treeparams1} Grid-convergence study: treecode and solver parameters.} 
     \begin{tabular}{l l}
     \hline%\toprule
     treecode order of expansion: & $P=15$\\
@@ -69,7 +71,7 @@ The threshold parameter defining the near-singular region was 0.5 (refer to the 
 
 The results are shown in Figure \ref{fig:error_sphere_Ag}, where the mesh sizes are
 512, 2048, 8192, and 32768 elements. 
-The analytical solution with equation \eqref{eq:an_sol} is $C_{ext} = 1854.4765$ nm$^2$, 
+The analytical solution with equation \eqref{eq:an_sol} is $C_{ext} = 1854.47$ nm$^2$, 
 and the errors are as shown in Table \ref{table:err_iso_sphere}.
 The observed order of convergence is $0.98$, and the $1/N$ slope in Figure \ref{fig:error_sphere_Ag}
 is an indication that the meshes are correctly resolving the numerical solutions with \pygbe. 
@@ -78,8 +80,8 @@ is an indication that the meshes are correctly resolving the numerical solutions
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{convergence_sph_Ag_R8_w=380.pdf} 
-   \caption{Grid-convergence study of extinction cross-section of a spherical silver
-            nanoparticle.}
+   \caption{Grid-convergence study for the extinction cross-section of a spherical silver
+            nanoparticle, computed with \pygbe.}
    \label{fig:error_sphere_Ag}
 \end{figure}
 
@@ -87,7 +89,7 @@ is an indication that the meshes are correctly resolving the numerical solutions
 
 \begin{table}[h]
     \centering
-    \caption{\label{table:err_iso_sphere} Percentage error of isolated silver sphere.} 
+    \caption{\label{table:err_iso_sphere} Percentage error in the grid-convergence cases with an isolated silver nanosphere.} 
     \begin{tabular}{c c}
     \hline%\toprule
     N & \% error \\
@@ -100,11 +102,43 @@ is an indication that the meshes are correctly resolving the numerical solutions
     \end{tabular}
 \end{table}
 
-We further verified our implementation computing the extinction cross-section of the 
-isolated sphere for a range of wavelengths, presented in Figure \ref{fig:verif_sphere}. 
-The mesh in these simulations had $N=32768$, which yields errors below $2\%$ in Table \ref{table:err_iso_sphere}.
+As another verification test of \pygbe, we computed the extinction cross-section of an 
+isolated sphere for a range of wavelengths. 
+The results are shown in Figure \ref{fig:verif_sphere}, comparing with the analytical solution. 
 The values of dielectric constants for each wavelength were obtained by interpolation of 
 experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
+\textcolor{red}{CITE REPRO-PACKS WHEN READY}
+We used a mesh with $N=32768$, and relaxed some parameters compared with the grid convergence results shown previously, yielding errors below $1\%$.
+The parameters are shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
+
+
+
+\begin{table}[h]
+    \centering
+    \caption{\label{table:quadparams2} Verification: Gauss quadrature points; 
+    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration). } 
+    \begin{tabular}{l l}
+    \hline%\toprule
+     distant elements: & $K=4$ \\
+     near-singular integrals:   & $ K_{fine}=19$ \\
+     singular elements:  & $Nk =9$ \\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+    \centering
+    \caption{\label{table:treeparams2} Verification: treecode and solver parameters.} 
+    \begin{tabular}{l l}
+    \hline%\toprule
+    treecode order of expansion: & $P=6$\\
+    MAC                                         & $\theta=0.5$\\
+    GMRES tolerance                    & $10^{-3}$\\
+    \hline%\bottomrule
+    \end{tabular}
+\end{table}
+
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
@@ -148,14 +182,14 @@ triangles per ${\AA}^2$ was fine enough for the convergence analysis, resulting 
    \label{fig:setup_conv}
 \end{figure}
 
-These tests used the conditions and parameters for the isolated sphere simulation
-presented in Section \ref{sec:verification}. The protein dielectric constant was
-$2.7514 + 0.2860i$, which we extracted from the 
-functional relationship provided by Phan, et al. \cite{PhanETal2013}, and the 
-distance between the sensor and the analyte was $d=1 \, nm$. BSA was oriented such that
-its dipole moment was aligned with the y-axis. The error calculations for Figure \ref{fig:error_sphere-bsa}
-and Table \ref{table:err_bsa_sensor} use the Richardson extrapolated value of extinction cross-section as a
-reference, $C_{ext}= 1778.7259 \, nm^2$.
+We used the same physical conditions as in the grid convergence with an isolated silver nanoparticle, and the same numerical parameters, presented in Tables \ref{table:quadparams1} and \ref{table:treeparams1}
+For the protein dielectric constant, we used $2.7514 + 0.2860i$, obtained from the 
+functional relationship provided by Phan, et al. \cite{PhanETal2013}.
+The distance between the sensor and the analyte was $d=1$ nm, 
+and the BSA protein was oriented such that its dipole moment was aligned with the $y$-axis. 
+To compute the errors shown in Figure \ref{fig:error_sphere-bsa} and Table \ref{table:err_bsa_sensor},
+we used the Richardson extrapolated value of extinction cross-section as a reference, 
+$C_{ext}= 1778.73$ nm$^2$.
 
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
@@ -175,7 +209,7 @@ Also, the percentage errors for the different meshes are presented in Table. \re
 
 \begin{table}[h]
     \centering
-    \caption{\label{table:err_bsa_sensor} Percentage error of BSA-sensor sytem (Fig.\ref{fig:setup_conv}) .} 
+    \caption{\label{table:err_bsa_sensor} Percentage error of BSA-sensor sytem (Fig.\ref{fig:setup_conv}), with respect to the extrapolated value.} 
     \begin{tabular}{c c}
     \hline%\toprule
     N & \% error \\
@@ -193,16 +227,11 @@ Also, the percentage errors for the different meshes are presented in Table. \re
 We studied the LSPR response as a function of the wavelength in the presence 
 of the BSA. To optimize run-times without compromising accuracy, we used a relaxed
 set of parameters, where the protein mesh density was one element per
-${\AA}^2$ ($N_{prot}=45140$) and the sphere mesh had $N_{sensor}=32768$. Integrals used
-$K=4$ Gauss quadrature points for far-away elements, 
-$K_{fine} = 19$ Gauss quadrature points in elements with near singular integrals,
-and $Nk = 9$ Gauss quadrature points per triangle edge for the semi-analytical integration in the 
-singular elements. The treecode used a Taylor expansion of order $P=6$ and a multipole-acceptance
-criterion of $\theta=0.5$ . The GMRES tolerance was set to $10^{-3}$. 
-This parameter choice resulted in a percentage error of $\sim\%0.6$
-and the time of each computation was approximately $7.5 \, \text{min}$ in a \texttt{NVIDIA Tesla K40 GPU}
-card when we have only one protein (when two proteins are present the time per run
-is $\sim 15 \, \text{min}$). 
+${\AA}^2$ ($N_{prot}=45140$) and the sphere mesh had $N_{sensor}=32768$. 
+These calculations used the same parameters as shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
+This parameter choice resulted in a percentage error below 1\%, with respect to the Richardson-extrapolated value.
+The run time for each one of these cases was approximately $7.5$ min using one NVIDIA Tesla K40 GPU. 
+When two proteins are present, the run time per case is approximately  $15$ min. 
 
 Figure \ref{fig:display_z} sketches the setup of the simulations, with two proteins placed 
 $d=1 \, nm$ away from a spherical silver nanoparticle, along the z-axis.
