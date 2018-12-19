@@ -38,7 +38,7 @@ under a $z$-polarized electric field with a wavelength of 380 nm and intensity o
 $-0.0037 e/({\AA}^2 \, \epsilon_0)$. In these conditions, water has a dielectric
 constant of $1.7972 \, + \, 8.5048^{-09}i$ \cite{JohnsonChristy1972} and silver of
 $-3.3877 \, + \, 0.1922i$ \cite{HaleQuerry1972}. 
-Table \ref{table:quadparams1} lists the Gauss quadrature points used for each type of element. 
+Table \ref{table:quadparams1} lists the Gauss quadrature points used for each type of boundary element. 
 The threshold parameter defining the near-singular region was 0.5 
 (refer to the \pygbe documentation, under ``Parameter file format'').
 Table \ref{table:treeparams1} shows the treecode and solver parameters for this grid-convergence study.
@@ -72,7 +72,7 @@ Table \ref{table:treeparams1} shows the treecode and solver parameters for this 
 The results are shown in Figure \ref{fig:error_sphere_Ag}, where the mesh sizes are
 512, 2048, 8192, and 32768 elements. 
 The analytical solution with equation \eqref{eq:an_sol} is $C_{ext} = 1854.47$ nm$^2$, 
-and the errors are as shown in Table \ref{table:err_iso_sphere}.
+and the computed errors are as shown in Table \ref{table:err_iso_sphere}.
 The observed order of convergence is $0.98$, and the $1/N$ slope in Figure \ref{fig:error_sphere_Ag}
 is an indication that the meshes are correctly resolving the numerical solutions with \pygbe. 
 
@@ -107,9 +107,10 @@ isolated sphere for a range of wavelengths.
 The results are shown in Figure \ref{fig:verif_sphere}, comparing with the analytical solution. 
 The values of dielectric constants for each wavelength were obtained by interpolation of 
 experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
-\textcolor{red}{CITE REPRO-PACKS WHEN READY}
-We used a mesh with $N=32768$, and relaxed some parameters compared with the grid convergence results shown previously, yielding errors below $1\%$.
-The parameters are shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
+For reproducibility of these results, we provide a Jupyter notebook with the code used for this interpolation step.
+See section \ref{sec:repro} for details.
+We used a mesh with $N=32768$, and relaxed some parameters compared with the grid convergence results shown previously, still yielding errors below $1\%$.
+The parameters used are shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
 
 
 
@@ -148,23 +149,25 @@ The parameters are shown in Tables \ref{table:quadparams2} and \ref{table:treepa
    \label{fig:verif_sphere}
 \end{figure}
 
-Figure \ref{fig:verif_sphere} shows good agreement between simulations and analytical results, proving
-that \pygbe is accurately representing the mathematical model. The 
-peak in the extinction cross-section indicates that the plasmons of the metallic
-nanoparticle are resonating with the incoming electric field.
+Figure \ref{fig:verif_sphere} shows good agreement between the computed and analytical results, 
+evidence that \pygbe can accurately represent the mathematical model. The 
+peak in the values of extinction cross-section corresponds to the plasmon resonance of the metallic
+nanoparticle under the incoming electric field.
 
 
-\subsection{LSPR response to BSA} \label{sec:lspr_response}
+\subsection{LSPR response to bovine serum albumina (BSA)} \label{sec:lspr_response}
 
 Localized Surface Plasmon Resonance (LSPR) biosensors detect a target molecule by monitoring
-plasmon resonance frequency shifts of metallic nanoparticles, in presence of an analyte \cite{WilletsVandyune2007}.
-In this section, we use our BEM approach to model the response of LSPR biosensors.
+frequency shifts in the plasmon resonance of metallic nanoparticles, in presence of an analyte \cite{WilletsVandyune2007}.
+In this section, we model the response of LSPR biosensors using the expanded capacity of \pygbe.
 We consider a spherical silver nanoparticle, and compute the extinction cross-section placing 
 bovine serum albumina (BSA) proteins (PDB code: 4FS5) in different locations.
-The BSA mesh was generated using the open source software Nanoshaper \cite{Nanoshaper}. 
+The BSA surface mesh was generated using the open-source software Nanoshaper \cite{Nanoshaper}. 
 Nanoshaper takes as inputs the atomic coordinates and radii, which were 
 extracted from a \texttt{pqr} file generated with \texttt{pdb2pqr} \cite{Dolinsky04},
  using the built-in \texttt{amber} force field.
+ In support of the reproducibility of our results, we deposited the final meshes in the Zenodo data repository.
+See section \ref{sec:repro} for details.
 
 \subsubsection{Grid-convergence study} \label{sec:bsa_convergence}
 To guarantee an accurate numerical solution, we performed a grid-convergence 
