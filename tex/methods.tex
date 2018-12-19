@@ -455,18 +455,18 @@ electric field. We can then use Equation \eqref{eq:scat_efield_fwa} and Equation
 One disadvantage of the Boundary Element Method (BEM) is that it generates dense matrices
 after discretization. Solving the resulting linear system using
 Gaussian elimination would require $\O{N^3}$ computations and $\O{N^2}$ storage, whereas for a
-Krylov-subspace iterative solver, like the Generalized Minimal Residual Method (\gmres),
-computations drop to $\O{N^2}$ because they are dominated by a matrix-vector 
-product. This makes \bem a good approach for problems with no more than a few thousand boundary elements,
-which is far from the mesh sizes required for real applications. 
+Krylov-subspace iterative solver, like the Generalized Minimal Residual Method (GMRES),
+computations drop to $\O{N^2}$ because they are dominated by dense matrix-vector 
+products. This makes BEM inefficient with more than a few thousand boundary elements,
+which are the mesh sizes required for real applications. 
 
-Since we are using Gaussian quadrature and collocation, the matrix-vector product
-becomes an N-body problem, where the Gauss nodes act as centers of mass (\emph{sources}), and we evaluate
-the potential at the collocation points (\emph{targets}).
-To overcome the $\O{N^2}$ scaling,
-we accelerate the matrix-vector product using a Treecode algorithm \cite{BarnesHut1986,DuanKrasny2001}, 
+In our formulation with Gaussian quadrature and collocation, the matrix-vector product
+becomes an N-body problem, with Gauss nodes acting as centers of mass (\emph{sources}), 
+and the collocation points acting as evaluation points for the potential (\emph{targets}).
+To overcome the unfavorable scaling,
+we accelerate the matrix-vector product using a treecode algorithm \cite{BarnesHut1986,DuanKrasny2001}, 
 which is a fast-summation algorithm capable of reducing $\O{N^2}$
-computational patterns 
+computational patterns like
 %
 \begin{equation} \label{eq:summation}
 V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j) 
@@ -476,43 +476,43 @@ V(\mathbf{x}_i) = \sum_{j=1}^{N} q_j \psi(\mathbf{x}_i, \mathbf{y}_j)
 $q_j$ is the weight, $\psi$ the kernel, $\mathbf{y}_j$ the locations of sources and 
 $\mathbf{x}_i$ the locations of targets.
 
-The Treecode groups sources geometrically in boxes of an octree, which is built making
-sure that no box in the lowest level has more than $N_\text{crit}$ sources. Then, if a group of
-sources is far away from a target, their influence is aggregated in an expansion center,
+The treecode groups sources geometrically in boxes of an octree, built ensuring
+that no box in the lowest level has more than $N_\text{crit}$ sources. If a group of
+sources is far away from a target, their influence is aggregated at an expansion center,
 and the target interacts with the box, rather than with each source independently.
-On the other hand, if the group of targets is too close, the Treecode queries the child
+If the group of targets is  close, the treecode queries the child
 boxes. If the box has no children and still is not far enough, the interaction is 
-performed directly. The threshold to decide if a box is far enough is called the multipole-
-acceptance criterion (MAC):
+performed directly via \eqref{eq:summation}.
+ The threshold to decide if a box is far enough is called the multipole-
+acceptance criterion (MAC), defined as:
 %
 \begin{equation}
 \theta > \frac{r_b}{r},
 \end{equation}
 %
-where $r_b$ is the box size and $r$ the distance between the box center and the target.
+\noindent where $r_b$ is the box size and $r$ the distance between the box center and the target.
 Common values of $\theta$ are $1/2$ and $2/3$.
 To approximate the contribution of the sources, we use Taylor expansions
 of order $P$.
-The Treecode allows us to control accuracy of the approximation by modifying $\theta$ and $P$.
+The treecode allows us to control the accuracy of the approximation by modifying $\theta$ and $P$.
 Further details of the Treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
 
 \subsection{Code implementation details} \label{sec:code_imp}
 
-As we mentioned at the beginning of this section, the original \pygbe code was 
-adapted to suit the needs of the nano-plasmonic implementation. The main changes
-were:
+As mentioned at the beginning of this section, the present work extends the \pygbe code
+to allow its application to nano-plasmonics. 
+The code required the following changes:
 
 \begin{itemize}
-    \item Re-write of the Generalized minimal residual method (GMRES) to accept complex numbers. 
-    \item Split Treecode calculations into real and imaginary part.
-    \item New format of config file that includes electric field intensity and  wavelength.
-    \item Functions added:
-    \subitem $read\_electric\_field$ : Reads the electric field intensity and its wavelength from config files.
-    \subitem $dipole\_moment$ : Computes numerically the dipole moment (Eq. \eqref{eq:dipole_def_gauss_i_final})
-    \subitem $extinction\_cross\_section$: Computes the the extinction cross section.
-    \item Organize LSPR computations on a different main-script called lspr.py.
+    \item Re-writing the GMRES solver to accept complex numbers. 
+    \item Splitting treecode calculations into real and imaginary parts.
+    \item Re-formatting configuration files to includes electric field intensity and  wavelength.
+    \item Adding the new function $read\_electric\_field$, to read the electric field intensity and its wavelength from configuration files.
+    \item Adding the new function $dipole\_moment$ to compute numerically the dipole moment by Equation \eqref{eq:dipole_def_gauss_i_final}.
+    \item Adding the new function $extinction\_cross\_section$ to compute the the extinction cross section.
+    \item Organizing LSPR computations on a different main script (called \texttt{lspr.py}).
 \end{itemize}
 
-For more information regarding how to use the code, run examples and tests check
-\pygbe documentation \url{http://barbagroup.github.io/pygbe/docs/}
-
+For information about how to use the code, run examples and tests, see the
+\pygbe documentation at \url{http://barbagroup.github.io/pygbe/docs/}
+\textcolor{red}{Cite JOSS paper here.}
