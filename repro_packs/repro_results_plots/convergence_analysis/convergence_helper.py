@@ -78,7 +78,7 @@ def plot_sph_complex_convergence(N, error, file_name=None, file_ext=None, Ag=Non
     pyplot.grid(True, which="both")
     
     if (file_name and file_ext):
-        fig.savefig(file_name+'.'+file_ext, format=file_ext, dpi=80, bbox_inches='tight', pad_inches=0.04)
+        fig.savefig('results/'+file_name+'.'+file_ext, format=file_ext, dpi=80, bbox_inches='tight', pad_inches=0.04)
 
     if paper :
         pyplot.close(fig)
