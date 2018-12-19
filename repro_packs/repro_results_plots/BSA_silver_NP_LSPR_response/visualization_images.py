@@ -1,4 +1,4 @@
-'''This file contains functions that help to produce the images of the proteins
+'''This file contains functions that produce the images of the proteins
 locations respect to the sensor. 
 '''
 
