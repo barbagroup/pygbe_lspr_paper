@@ -3,3 +3,6 @@
 
 #Ignore nbgrader log
 .nbgrader.log
+
+#ignore pycache
+*/__pycache__/
