@@ -119,7 +119,7 @@ with Equation \eqref{eq:cext_fwa}
 \paragraph{Integral formulation}
 
 Using Green's second identity, the system of partial differential equations 
-in Equation \eqref{eq:electrostatic_scatter_E} can be rewritten as a system 
+in Equation \eqref{eq:electrostatic_scatter} can be rewritten as a system 
 of boundary integral equations \cite{BrebbiaDominguez1992}. Evaluating on the surface $\Gamma$, this
 becomes
 %
@@ -128,24 +128,23 @@ becomes
 \frac{\phi_{2s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{2s,\Gamma}) + V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{2s,\Gamma} \right) = 0&,
 \end{align}
 %
-where $V$ and $K$ are the single and double layer operators, respectively:
+where $V$ and $K$ are the single- and double-layer operators, respectively:
 %
 \begin{equation}\label{eq:single_layer}
-V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma'.
+V^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma',
 \end{equation}
-
+%
 \begin{equation}\label{eq:double_layer}
 K^{\mathbf{r}_\Gamma}_L (\psi(\mathbf{r}_\Gamma)) = \oint_\Gamma \psi(\mathbf{r}'_\Gamma) \frac{\partial}{\partial \mathbf{n}}G_L(\mathbf{r}_\Gamma, \mathbf{r}'_\Gamma) \text{d} \Gamma'.
 \end{equation}
 %
-
-Here, $G_L$ is the free space Green's function of the Laplace equation
+\noindent Here, $G_L$ is the free-space Green's function of the Laplace equation:
 %
 \begin{equation}
 G_L(\mathbf{r},\mathbf{r}') = \frac{1}{4\pi|\mathbf{r}-\mathbf{r}'|}
 \end{equation}
 
-Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
+\noindent Applying the interface conditions of Equation \eqref{eq:electrostatic_scatter},
 leads to:
 %
 \begin{align} \label{eq:integral_eq_lspr}
@@ -231,12 +230,11 @@ leads to:
 
 \subsubsection{Analyte-sensor electrostatic potential under an electric field}
 
-\textcolor{blue}{Might be a good idea to put most of this seciton on a appendix, but we should discuss this}
 The sketch in Figure \ref{fig:analyte-sensor} shows a metallic nanoparticle ($\Omega_1$) interacting with an analyte ($\Omega_3$), under an external electric field.
-Mathematically, this can be modeled as
+Mathematically, this situation can be modeled as
 %
 \begin{align} \label{eq:electrostatic_scatter_prot_sen}
-\nabla^2 \phi_{1s} &= 0 \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber\\
+\nabla^2 \phi_{1s} &= 0, \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber\\
 \nabla^2 \phi_{3s} &= \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Omega_3} - \mathbf{r}_k|} \qquad\text{on $\Omega_3$} \nonumber \\
 \epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma_1$}. \nonumber\\
 \epsilon_3\frac{\partial\phi_{3s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_3)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{3s} = \phi_{2s} \quad \text{on $\Gamma_2$}.
@@ -252,7 +250,7 @@ Mathematically, this can be modeled as
 
 \paragraph{Integral formulation}
 
-Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of partial differential equations from \eqref{eq:electrostatic_scatter_prot_sen} as
+Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of partial differential equations in \eqref{eq:electrostatic_scatter_prot_sen} as
 %
 \begin{align} \label{eq:integral_eq_lspr_nobc_system}
 \frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) &= 0  \nonumber \\
@@ -263,12 +261,13 @@ Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of part
 \frac{\phi_{3s,\Gamma_2}}{2} + K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) - V_{L,\Gamma_2}^{\Gamma_2} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{3s,\Gamma_2} \right) &= \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} ,
 \end{align}
 %
-Where $V$ and $K$ are the single and double layer operators from equations 
-\eqref{eq:single_layer} and \eqref{eq:double_layer}. In this case, we distinct between the
+\noindent where $V$ and $K$ are the single- and double-layer operators in equations 
+\eqref{eq:single_layer} and \eqref{eq:double_layer}. In this case, we distinguish between the
 surface where the integrals run (subindex), and the surface that contains the evaluation point (superindex).
 
 Applying the interface condition of equation \eqref{eq:electrostatic_scatter_prot_sen},
 leads to: 
+
 
 \begin{align} \label{eq:integral_eq_lspr_nobc_system}
 \frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) = 0 & \nonumber \\
@@ -283,8 +282,8 @@ leads to:
 \paragraph{Discretization and linear system}
 
 We discretize the surface into flat triangles, and assume that  $\phi$ and 
-$\partial \phi/\partial \mathbf{n}$ are constant within each panel. Then, we can
-write the layer operators in their discretized form:
+$\partial \phi/\partial \mathbf{n}$ are constant within each element. We can
+then write the layer operators in their discretized form as follows:
 %
 \begin{align} \label{eq:layers_disc}
 V_{L,\text{disc}}^{\mathbf{r}_\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma}) \right) &= \sum_{j=1}^{N_p} \frac{\partial}{\partial \mathbf{n}} \phi(\mathbf{r}_{\Gamma_j}) \int_{\Gamma_j} G_L(\mathbf{r}_\Gamma,\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j  \nonumber \\
@@ -295,7 +294,7 @@ K_{L,\text{disc}}^{\mathbf{r}_\Gamma}(\phi(\mathbf{r}_{\Gamma})) &=  \sum_{j=1}^
 and $\phi(\mathbf{r}_{\Gamma_j})$ and $\frac{\partial}{\partial \mathbf{n}} 
 \phi(\mathbf{r}_{\Gamma_j})$ are the values of $\phi$ and 
 $\frac{\partial \phi}{\partial \mathbf{n}}$ on panel $\Gamma_j$.
-Then, using centroid collocation, we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
+Using centroid collocation, we can write equation \eqref{eq:integral_eq_lspr} in matrix form as:
 %
  \begin{equation} \label{eq:matrix_lspr}
  \left[
@@ -355,8 +354,8 @@ Also, Equation \eqref{eq:integral_eq_lspr_nobc_system} can be represented as:
 \noindent where the elements of the matrix are
 %
 \begin{align} \label{eq:layers_element}
-V_{L,ij}^{\Gamma} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j \nonumber \\
-K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j
+V_{L,ij}^{\Gamma} &= \int_{\Gamma_j} G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j})  \mathrm{d} \Gamma_j, \nonumber \\
+K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[ G_L(\mathbf{r}_{\Gamma_i},\mathbf{r}_{\Gamma_j}) \right]\mathrm{d} \Gamma_j,
 \end{align}
 %
 \noindent with $\mathbf{r}_{\Gamma_i}$ being at the center of panel $\Gamma_i$.
@@ -365,28 +364,29 @@ K_{L,ij}^{\Gamma} &= \int_{\Gamma_j} \frac{\partial}{\partial \mathbf{n}} \left[
 \paragraph{Integral evaluation}
 
 We evaluate the integrals in Equation \eqref{eq:layers_element} with Gauss quadrature
-rules. However, the $1/r$ singularity of the Green's function is a
-problem to obtain good accuracy when the integral is 
-singular or near-singular. Therefore, we define three different regions:
-
-\emph{Singular integrals:} If the collocation point is in the integrated panel,
-there is a singularity that is difficult to resolve with standard
+rules. The $1/r$ singularity of the Green's function poses a
+problem to obtaining good accuracy when the integral is 
+singular or near-singular. Therefore, we define three different regions, as follows.
+\begin{description}
+\item[Singular integrals:] If the collocation point is in the integration element,
+the singularity is difficult to resolve with standard
 Gauss integration schemes. In this case, we use a semi-analytical technique 
 \cite{HessSmith1967,ZhuHuangSongWhite2001} that places $N_k$ quadrature nodes on the 
 edges of the triangle.
 
-\emph{Near-singular integrals:} If the collocation point is close to the integration panel,
+\item[Near-singular integrals:] If the collocation point is close to the integration element,
 the integrand has a high gradient, and high-order quadrature rules are required. 
 We use the representative length of the integrated triangle ($L = \sqrt{2\cdot\text{Area}}$)
-to define a threshold of the \emph{close-by} region, for example, when the integration panel 
+to define a threshold of the \emph{nearby} region, for example, when the integration panel 
 is $2L$ or less away from the collocation point. For near-singular integrals, we use 
 $K_{fine}=19, 25 \; or \; 37$ points per triangle. 
 
-\emph{Far-away integrals:} When the distance between the collocation point and the integration
-panel is beyond the threshold, they are considered to be far-away. 
+\item[Far-away integrals:] When the distance between the collocation point and the integration
+element is beyond the threshold, they are considered to be far-away. 
 At this point, the integrand is smooth enough that we obtain good 
-accuracy with low order integration, for example, with 
+accuracy with low-order integration, for example, with 
 $K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element. 
+\end{description}
 
 \subsubsection{Boundary integral expression of the dipole moment}
 
@@ -398,7 +398,7 @@ defined as
 \mathbf{p} = \int_\Omega \mathbf{r} \rho \text{d}\Omega,
 \end{equation}
 %
-and rewriting this equation using Gauss's law we obtain
+and rewriting this equation using Gauss' law, we obtain
 %
 \begin{equation} \label{eq:dipole_def_gauss}
 \mathbf{p} = -\epsilon_2\int_\Omega \mathbf{r} \nabla^2 \phi_{2s} \text{d}\Omega.
@@ -410,32 +410,34 @@ For component $i$, this becomes:
 {p_i} = -\epsilon_2\int_\Omega {x_i} \nabla^2 \phi_{2s} \text{d}\Omega.
 \end{equation}
 %
-From the identity
+Using the identity
 %
 \begin{equation} \label{eq:identity_grad}
-\nabla \cdot \left(f \mathbf{v}\right) = \left( \nabla f \right)\cdot \mathbf{v} + f\left(\nabla \cdot \mathbf{v}\right)
+  \nabla \cdot \left(f \mathbf{v}\right) = \left( \nabla f \right)\cdot \mathbf{v} + f\left(\nabla \cdot \mathbf{v}\right)
 \end{equation}
 %
 with $f=x_i$ and $\mathbf{v} = \nabla\phi_{2s}$, we can rewrite Equation \eqref{eq:dipole_def_gauss_i}
 as 
 %
-\begin{align} \label{eq:dip_gauss_interm_1}
-- \frac{\mathbf{p_i}}{\epsilon_2} &= \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega \nonumber \\
-&\text{and applying the divergence theorem} \nonumber \\
-&= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega
-\end{align}
+\begin{equation}
+- \frac{\mathbf{p_i}}{\epsilon_2} = \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega, \nonumber 
+\end{equation}
+\noindent and applying the divergence theorem
+\begin{equation} \label{eq:dip_gauss_interm_1}
+- \frac{\mathbf{p_i}}{\epsilon_2}= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega.
+\end{equation}
 %
-Again, using the identity \eqref{eq:identity_grad} in Equation \eqref{eq:dip_gauss_interm_1}, this time, 
-taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$ we get:
+Using the identity \eqref{eq:identity_grad} again in Equation \eqref{eq:dip_gauss_interm_1}, this time 
+taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$, we get:
 %
 \begin{align} \label{eq:dip_gauss_interm_2}
- &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
-&\text{and applying the divergence theorem} \nonumber \\
+ - \frac{\mathbf{p_i}}{\epsilon_2} &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
+%&\text{and applying the divergence theorem} \nonumber \\
 &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
 &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
 \end{align}
 %
-Along this derivation, the normals are pointing into $\Omega_1$. However, in our implementation 
+Throughout this derivation, the normals are pointing into $\Omega_1$. However, in our implementation 
 all normals are pointing outwards, and we need to include an extra negative sign, yielding:
 %
 \begin{equation} \label{eq:dipole_def_gauss_i_final}
@@ -445,14 +447,14 @@ all normals are pointing outwards, and we need to include an extra negative sign
 Using BEM, we obtain the electrostatic potential on the surface of the nanoparticle, 
 which we use in Equation \eqref{eq:dipole_def_gauss_i_final} to get the dipole 
 moment, and in Equation \eqref{eq:scat_efield_long_range} to obtain the scattered
-electric field. From there, we can use Equation \eqref{eq:scat_efield_fwa} and Equation 
+electric field. We can then use Equation \eqref{eq:scat_efield_fwa} and Equation 
 \eqref{eq:cext_fwa} to get the extinction cross section.
 
 \subsection{Acceleration strategies} \label{sec:acc_strategies}
 
-The main downside of the Boundary Element Method (\bem) is that it generates dense matrices
-after discretization. Solving the linear system using
-Gaussian elimination requires $\O{N^3}$ computations and $\O{N^2}$ storage, whereas for a
+One disadvantage of the Boundary Element Method (BEM) is that it generates dense matrices
+after discretization. Solving the resulting linear system using
+Gaussian elimination would require $\O{N^3}$ computations and $\O{N^2}$ storage, whereas for a
 Krylov-subspace iterative solver, like the Generalized Minimal Residual Method (\gmres),
 computations drop to $\O{N^2}$ because they are dominated by a matrix-vector 
 product. This makes \bem a good approach for problems with no more than a few thousand boundary elements,
