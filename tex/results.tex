@@ -1,5 +1,12 @@
 %!TEX root = ClementiCooperBarba2018.tex
 
+Hardware specifications: 
+\begin{itemize}
+  \item CPU: Intel Core i7-5930K Haswell-E 6-Core 3.5GHz LGA 2011-v3
+  \item RAM: G.SKILL Ripjaws 4 series 32GB (4 x 8GB)
+  \item GPU: Nvidia Tesla K40c (with 12 GB memory)
+\end{itemize}
+
 \subsection{Grid convergence and verification with an isolated silver nanoparticle} \label{sec:verification}
 
 \noindent In the long-wavelength limit, the electrostatic approximation applies and
@@ -233,7 +240,7 @@ set of parameters, where the protein mesh density was one element per
 ${\AA}^2$ ($N_{prot}=45140$) and the sphere mesh had $N_{sensor}=32768$ elements. 
 These calculations used the same parameters as shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
 This parameter choice resulted in a percentage error below 1\%, with respect to the Richardson-extrapolated value.
-The run time for each one of these cases was approximately $7.5$ min using one NVIDIA Tesla K40 GPU. 
+The run time for each one of these cases was approximately $7.5$ min using one NVIDIA Tesla K40c GPU. 
 When two proteins are present, the run time per case is approximately  $15$ min. 
 
 Figure \ref{fig:display_z} shows a visualization of the meshes for these calculations, 
