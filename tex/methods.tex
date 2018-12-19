@@ -70,7 +70,7 @@ in the outside region ($\Omega_2$) is given by:
 \noindent where $k=2\pi/\lambda$ is the wave number and $\lambda$ the wavelength, $\mathbf{\hat{r}}$ 
 is a unit vector in the direction of the observation point, and $\mathbf{p}$ is
 the dipole moment.
-From a different approach, we can also obtain the scattered field using the 
+We can also obtain the scattered field using the 
 scattering amplitude \cite{Jackson}:
 
 \begin{equation} \label{eq:scat_efield_fwa}
@@ -81,37 +81,31 @@ scattering amplitude \cite{Jackson}:
 scattered wave vector in the direction of propagation, and $\mathbf{k}_0$ the 
 wave vector of the incident field. 
 
-\subsection{Extinction cross-section and Optical theorem} \label{sec:cext_ot}
+\subsection{Extinction cross-section and optical theorem} \label{sec:cext_ot}
 
 The extinction cross-section ($C_\text{ext}$) is a measure of the energy that 
 does not reach the detector, either because of scattering in other directions,
-or absorption. This quantity is defined as the ratio of the lost energy and 
-the intensity of the incoming wave, and has units of area. When there is 
-resonance of plasmons, the extinction cross-section should peak.
+or absorption. This quantity is defined as the ratio between the lost energy and 
+the intensity of the incoming wave, and has units of area. 
+The extinction cross-section peaks at resonance of plasmons.
 
-On the other hand, the optical theorem relates the extinction cross-section with 
-the forward-scattering amplitude. 
+The extinction cross-section is related to the forward-scattering amplitude via the optical theorem. 
 The traditional expression for this relationship applies for non-absorbing media 
-\cite{MayergoyzZhang2007, Jackson}, however, it was corrected for absorbing media 
-by Mishchenko \cite{Mishchenko2007}, giving the following expression:
+\cite{MayergoyzZhang2007, Jackson}; 
+Mishchenko \cite{Mishchenko2007} corrected it for absorbing media, 
+giving an expression that can be re-written using Jackson's notation \cite{Jackson} as follows:
 
 \begin{equation} \label{eq:cext_fwa}
     C_\text{ext} = \frac{4\pi}{k^\prime} \operatorname{Im} \left[ \frac{\mathbf{\hat{e}}_i}{|\mathbf{E}_i|}\mathbf{F}(\mathbf{k}=\mathbf{k}_0, \mathbf{k}_0) \right].
 \end{equation}
 
-
-{\color{red}{Chris in Mishenko 2007 paper the equation is not exactly the same 
-(look eq 87 in paper), do you have that derivation? How you got to the eq 7.22 
- in your thesis?.}\textcolor{blue}{I'll check this}}
-
-
-Here, $k^\prime$ is the real part of the complex wave number. 
+\noindent Here, $k^\prime$ is the real part of the complex wave number, 
 
 \begin{equation}
     k = k^\prime + ik^{\prime\prime} = \frac{2\pi}{\lambda} n,
 \end{equation}
 
-and $n$ is the refraction index of the host medium.
+\noindent and $n$ is the refraction index of the host medium.
 
 Combining Equations \eqref{eq:scat_efield_long_range} and \eqref{eq:scat_efield_fwa},
 we can compute the scattering amplitude to then obtain the extinction cross-section 
