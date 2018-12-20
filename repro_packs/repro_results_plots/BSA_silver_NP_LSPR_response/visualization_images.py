@@ -132,7 +132,7 @@ def file_exist(files_list):
     return status
 
 def main(paper=False):
-    ''' Generates all the png for sphere-BSA visualizations.
+    ''' Generates all sphere-BSA visualizations.
     '''
 
     if paper:
