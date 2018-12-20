@@ -10,8 +10,9 @@ in previous work using \pygbe \cite{CooperBardhanBarba2013}.
 Further verification of \pygbe's new ability to compute extinction cross-section
 of a scatterer in the long-wavelength limit is provided in Figure \ref{fig:verif_sphere}.
 The computed extinction cross-section of a silver nanoparticle in a range of frequencies 
-was within 1\% of the analytical value, with the numerical parameters chosen.
-
+is within 1\% of the analytical value, with the numerical parameters chosen.
+This level of accuracy is likely sufficient, given that experimental uncertainty in 
+the values of the dielectric constant for silver is in the order of 1\%, also \cite{JohnsonChristy1972}.
 
 %\subsection{LSPR response to BSA}
 
@@ -21,18 +22,18 @@ This result agrees with experimental observations
 the peak which is also present in the results of Tang, et al. \cite{TangETal2010}.
 Both results, the red-shift and the decrement of the peak in the presence of 
 the proteins, indicate that our boundary element method approach using electrostatic
-approximation, is capable of reproducing the characteristic resonance frequency 
+approximation is capable of capturing the characteristic resonance-frequency 
 shift in LSPR biosensors.
 
-The effect of placing the proteins in a direction that is not aligned with the incoming electric field
-is presented by Figure \ref{fig:2pxy_response}. In both cases we can observe that the shift is negligible, 
-as the shift is smaller than the resolution between wavelengths ($< 0.25 nm$), resulting in an
-effectively zero-shift. These findings are consistent with 
-the fact that we have a z-polarized electric field. Having a z-polarized electric
-field implies that the cloud of free electrons will osicillate along the z-axis, while 
-not in the x and y direction as you can observe in Figure \ref{fig:lspr}. The
-effect of the analyte in the latter locations results insignificant since the 
-analytes have pratically no interference with the free oscillating electrons. 
+With the electric field aligned in the $z$-direction, placing the proteins at a distance
+in the $x$ or $y$ directions from the nanoparticle shows a negligible shift in the 
+resonance peak: the shifts in Figure \ref{fig:2pxy_response} 
+are smaller than the resolution between wavelengths ($< 0.25$ nm).
+This finding is consistent with the free electrons oscillating in the $z$ direction
+under a $z$-polarized electric field, and not in the $x$ and $y$ directions
+(see Figure \ref{fig:lspr}). 
+The analytes have a marked effect when placed in the $z$ direction, where
+they can interfere with the free oscillating electrons. 
 
 In Figure \ref{fig:dist_response} we can observe how the distance between the sensor 
 and the analyte affects the shift in resonance frequency. As expected, the shift decays 
