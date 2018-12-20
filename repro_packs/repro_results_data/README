@@ -1,0 +1,109 @@
+Reproducibility data package
+----------------------------
+
+This directory contains four different directories that reproduce the
+data for the article: 
+
+- To be able to run the scripts the user needs:
+
+1. Install PyGBe. 
+
+Installation can be done via docker or from source. Dockerfile and instructions for source installation are available in the Github code repository https://github.com/barbagroup/pygbe
+
+2. Download input problem folders data from zenodo
+
+Download zip file and extract in desired location. If using docker container, data should be available in the container.
+
+Important note:
+When passing input problem folder path to run scripts the path must end in /:
+
+For example: if input_problem_folders was downloaded in the directory 
+
+home/Downloads, then the path will be:
+
+home/Downloads/input_problem_folders/
+
+
+- Directories content description.
+
+Name of directory: repro_dielectrics_data
+
+This 
+
+
+
+
+Name of directory: repro_BSA_silver_NP_LSPR_response_data
+
+This folder contains the necessary scripts to reproduce all the
+results related to sensitivity calculations. 
+
+* dielectrics_data/
+
+This subdirectory contains the dielectric data needed to perform the computations. The reproducible package associated with how this data was obtained can be found in repro_dielectrics_data directory.
+
+* Cext_two_bsa_x_results/original 
+
+This subdirectory contains the original results of the LSPR response
+of the Silver nanoparticle with no proteins and with the presence of
+two BSA at a distance of 1 nm at each side of the x-axis. It also contains a txt file reporting the run-time for the problem (all times are in seconds) 
+
+To replicate this result the user should be inside the directory scripts and run the following shell command:
+
+python Cext_wave_dist_prot_sensor_x.py -if full_path_where_input_problem_folder_is_located
+
+In an Nvidia K40c GPU card the run-time is approximately 6 hours.
+
+After running the script the user results can be found in the directory
+
+Cext_two_bsa_x_results/
+
+
+* Cext_two_bsa_y_results/original 
+
+This subdirectory contains the original results of the LSPR response
+of the Silver nanoparticle with no proteins and with the presence of
+two BSA at a distance of 1 nm at each side of the y-axis. It also contains a txt file reporting the run-time for the problem (all times are in seconds) 
+
+To replicate this result the user should be inside the directory scripts and run the following shell command:
+
+python Cext_wave_dist_prot_sensor_y.py -if full_path_where_input_problem_folder_is_located
+
+In an Nvidia K40c GPU card the run-time is approximately 5.2 hours.
+
+After running the script the user results can be found in the directory
+
+Cext_two_bsa_y_results/
+
+
+* Cext_variation_with_distance_two_bsa_z_results/original 
+
+This subdirectory contains the original results of the LSPR response
+of the Silver nanoparticle with no proteins and with the presence of
+two BSA at a distances of 0.5 nm, 1 nm, and 2 nm at each side of the y-axis. It also contains a txt file reporting the run-time for the problem (all times are in seconds) 
+
+To replicate this result the user should be inside the directory scripts and run the following shell command:
+
+python Cext_wave_dist_prot_sensor_z.py -if full_path_where_input_problem_folder_is_located
+
+In an Nvidia K40c GPU card the run-time is approximately 16 hours.
+
+After running the script the user results can be found in the directory
+
+Cext_variation_with_distance_two_bsa_z_results/
+
+
+
+
+
+
+Name of directory: repro_convergence_analysis_data
+
+
+Name of directory: repro_silver_spherical_NP_verification_data
+
+
+
+
+
+
