@@ -4,16 +4,17 @@ We present results for two kinds of problems.
 The first is a model problem for which an analytical solution is available, 
 allowing for a grid-refinement study and code verification using that solution.
 It consists of a spherical nanoparticle in a constant electric field, 
-for which the extinction cross-section can be derived in closed form.
-The second set of results use a model for a biosensor detecting a large molecule, 
+where the extinction cross-section can be derived in closed form.
+The second set of results use a model for a biosensor detecting a target molecule, 
 via frequency shifts in the plasmon resonance of a metallic nanoparticle. 
 In this case, since an analytical solution is not available, we can use Richardson 
 extrapolation to estimate the errors in a grid-refinement study.
 We computed the variation of the extinction cross-section with respect to wavelength
-for the isolated nanoparticle, and in the presence of bovine serum albumina (BSA) proteins, 
+for the isolated nanoparticle, and in the presence of bovine serum albumin (BSA) proteins, 
 varying the location of the analytes.
 The final result is a sensitivity study of the biosensor model, 
-looking at how the peak in frequency response varies with distance of the protein.
+looking at how the peak in frequency response varies with distance of the protein 
+to the nanoparticle.
 
 All results were obtained on a lab workstation, built from parts.
 Hardware specifications are as follows: 
@@ -178,13 +179,13 @@ peak in the values of extinction cross-section corresponds to the plasmon resona
 nanoparticle under the incoming electric field.
 
 
-\subsection{LSPR response to bovine serum albumina (BSA)} \label{sec:lspr_response}
+\subsection{LSPR response to bovine serum albumin (BSA)} \label{sec:lspr_response}
 
 Localized Surface Plasmon Resonance (LSPR) biosensors detect a target molecule by monitoring
 frequency shifts in the plasmon resonance of metallic nanoparticles, in presence of an analyte \cite{WilletsVandyune2007}.
 In this section, we model the response of LSPR biosensors using the expanded capacity of \pygbe.
 We consider a spherical silver nanoparticle, and compute the extinction cross-section placing 
-bovine serum albumina (BSA) proteins (PDB code: 4FS5) in different locations.
+bovine serum albumin (BSA) proteins (PDB code: 4FS5) in different locations.
 The BSA surface mesh was generated using the open-source software Nanoshaper \cite{Nanoshaper}. 
 Nanoshaper takes as inputs the atomic coordinates and radii, which were 
 extracted from a \texttt{pqr} file generated with \texttt{pdb2pqr} \cite{Dolinsky04},
