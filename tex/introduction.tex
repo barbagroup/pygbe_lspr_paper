@@ -53,21 +53,29 @@ current simplified models are not able to capture such details.
 %* Fill the gap
 
 Even though LSPR is an optical effect, electrostatics theory
-provides a good approximation in the long-wavelength limit. In this work, we use
+provides a good approximation in the long-wavelength limit. This work uses
 the boundary integral electrostatics solver \pygbe \cite{CooperETal2016} 
 to compute the extinction cross-section of metallic nanoparticles, and study how LSPR 
-response changes in the presence
-of a biomolecule. \pygbe was recently extended to account for complex dielectric constants 
-\cite{ClementiETal2017} aiming towards the LSPR biosensing application. We treat Maxwell's
-equations quasi-statically \cite{MayergoyzZhang2007} and
+response changes in the presence of a biomolecule. 
+We treat Maxwell's equations quasi-statically \cite{MayergoyzZhang2007} and
 use an accurate continuum representation of the biomolecule obtained from the
 crystal structure. 
 
+\pygbe is a Python implementation of continuum electrostatic theory, used
+for computing solvation energy of biomolecular systems. 
+It has also been used to study protein orientation near charged nanosurfaces \cite{CooperClementiBarba2015}.
+The code was recently extended to allow for complex dielectric constants 
+\cite{ClementiETal2017}, aiming towards the LSPR biosensing application. 
 The boundary element solver in \pygbe
-is accelerated with a treecode (an $\mathcal{O}(N\log N)$ fast solver), and runs on
-graphic processing units (GPUs). Also, the software
+is accelerated algorithmically via a treecode (an $\mathcal{O}(N\log N)$ fast solver), 
+and accelerated on hardware by taking advantage of
+graphic processing units (GPUs). The software
 \footnote{\url{https://github.com/barbagroup/pygbe}} is shared under the 
-BSD 3-clause license and the development repository is available on Github.
+BSD 3-clause license and is openly development via its repository on Github.
+This study also follows careful reproducibility practices, and all materials necessary
+to reproduce the results are publicly available in reproducibility packages.
+We use the Figshare and Zenodo services to deposit the computational meshes,
+input and configuration files, and file bundles corresponding to the main figures in the paper.
 
 
 %{\color{red}  Keeping this structure here for reference until we polish better
