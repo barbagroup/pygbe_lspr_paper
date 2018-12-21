@@ -119,7 +119,37 @@ Cext_variation_with_distance_two_bsa_z_results/
 
 Name of directory: repro_convergence_analysis_data
 
+Under the subdirectory scripts the user can find the scripts to run convergence computations. 
 
+To compute the isolated spherical silver sphere run:
+
+$ python single_sphere_Ag.py -if full_path_where_input_problem_folder_is_located
+
+The results will go to the directory:
+
+repro_convergence_analysis_data/results/sph_sensor_Ag/
+
+It will be a pickle file. To inspect this file, in a python console run: 
+
+>>> import pickle
+>>> with open('sph_sensor_Ag_convergence.pickle', 'rb') as f:
+        res_dict = pickle.load(f)
+>>> res_dict 
+
+To compute the bsa-sensor convergence :
+
+$ python bsa_sph_sensor.py -if full_path_where_input_problem_folder_is_located
+
+The results will go to the directory:
+
+repro_convergence_analysis_data/results/sphere_bsa/
+
+It will be a pickle file. To inspect this file, in a python console run: 
+
+>>> import pickle
+>>> with open('sphere_bsa_convergence.pickle', 'rb') as f:
+        res_dict = pickle.load(f)
+>>> res_dict 
 
 
 
