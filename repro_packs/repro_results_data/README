@@ -28,9 +28,32 @@ home/Downloads/input_problem_folders/
 
 Name of directory: repro_dielectrics_data
 
-This 
 
+subdirectory noteboooks_analysis_and_diel_generation:
 
+- Contains three Jupyter notebooks with the analysis of the dielectrics data from the papers that were extracted. These notebooks allowed us to decide the interpolation strategy used to generate the data we needed. 
+
+Notebooks: - water_data_analysis.ipynb
+           - silver_data_analysis.ipynb
+           - bsa_data_analysis.ipynb
+
+- Contains a Jupyter notebook and a bash script that can both be used to generate the dielectric data used in our computations.
+
+The user can either run the bash script:
+
+$ bash generate_dielectric_data.sh
+
+or open the generate_dielectric_data.ipynb notebook and press run all.
+
+Either option the results will be saved under the directory:
+
+repro_dielectrics_data/dielectrics_data_results/
+
+The original results used in our simulations are under:
+
+repro_dielectrics_data/dielectrics_data_results/original
+
+Note: We use experimental data from Johnson and Christy, 1972 (silver) and Hale and Querry, 1972 (water) to perform the interpolation. These data is located under the directory silver_water_raw_data. 
 
 
 Name of directory: repro_BSA_silver_NP_LSPR_response_data
@@ -50,7 +73,7 @@ two BSA at a distance of 1 nm at each side of the x-axis. It also contains a txt
 
 To replicate this result the user should be inside the directory scripts and run the following shell command:
 
-python Cext_wave_dist_prot_sensor_x.py -if full_path_where_input_problem_folder_is_located
+$ python Cext_wave_dist_prot_sensor_x.py -if full_path_where_input_problem_folder_is_located
 
 In an Nvidia K40c GPU card the run-time is approximately 6 hours.
 
@@ -67,7 +90,7 @@ two BSA at a distance of 1 nm at each side of the y-axis. It also contains a txt
 
 To replicate this result the user should be inside the directory scripts and run the following shell command:
 
-python Cext_wave_dist_prot_sensor_y.py -if full_path_where_input_problem_folder_is_located
+$ python Cext_wave_dist_prot_sensor_y.py -if full_path_where_input_problem_folder_is_located
 
 In an Nvidia K40c GPU card the run-time is approximately 5.2 hours.
 
@@ -84,7 +107,7 @@ two BSA at a distances of 0.5 nm, 1 nm, and 2 nm at each side of the y-axis. It 
 
 To replicate this result the user should be inside the directory scripts and run the following shell command:
 
-python Cext_wave_dist_prot_sensor_z.py -if full_path_where_input_problem_folder_is_located
+$ python Cext_wave_dist_prot_sensor_z.py -if full_path_where_input_problem_folder_is_located
 
 In an Nvidia K40c GPU card the run-time is approximately 16 hours.
 
@@ -94,10 +117,10 @@ Cext_variation_with_distance_two_bsa_z_results/
 
 
 
-
-
-
 Name of directory: repro_convergence_analysis_data
+
+
+
 
 
 Name of directory: repro_silver_spherical_NP_verification_data
