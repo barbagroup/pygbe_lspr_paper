@@ -5,17 +5,17 @@
 \expandafter\ifx\csname href\endcsname\relax
   \def\href#1#2{#2} \def\path#1{#1}\fi
 
-\bibitem{HaesETal2004}
-A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
-  biosensor: The long range distance dependence of the localized surface
-  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
-  109--116.
-
 \bibitem{HaesVanduyne2002}
 A.~J. Haes, R.~P. Van~Duyne, A nanoscale optical biosensor: Sensitivity and
   selectivity of an approach based on the localized surface plasmon resonance
   spectroscopy of triangular silver nanoparticles, J. Am. Chem. Soc. 124~(35)
   (2002) 10596--10604.
+
+\bibitem{HaesETal2004}
+A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
+  biosensor: The long range distance dependence of the localized surface
+  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
+  109--116.
 
 \bibitem{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}
 D.~M. Solis, J.~M. Taboada, F.~Obelleiro, L.~M. Liz-Marz\'{a}n, F.~J.
@@ -61,6 +61,15 @@ F.~J.~G. de~Abajo, A.~Howie, Retarded field calculation of electron energy loss
 L.~S. Jung, C.~T. Campbell, T.~M. Chinowsky, M.~N. Mar, S.~S. Yee, Quantitative
   interpretation of the response of surface plasmon resonance sensors to
   adsorbed fields, Langmuir 14 (1998) 5636--5648.
+
+\bibitem{WilletsVandyune2007}
+K.~A. Willets, R.~P. Van~Dyune, Localized surface plasmon resonance
+  spectroscopy and sensing, Annu. Rev. Phys. Chem. 58 (2007) 267--297.
+
+\bibitem{PhanETal2013}
+A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
+  resonances of protein-conjugated gold nanoparticles on graphitic substrates,
+  Applied Physics Letters 103~(16) (2013) 163702.
 
 \bibitem{DavisGomezVernon2010}
 T.~J. Davis, D.~E. Gomez, K.~C. Vernon, Interaction of molecules with localized
@@ -165,10 +174,6 @@ P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
 G.~M. Hale, M.~R. Querry, Optical constants of water in the 200-nm to
   200-$\mu$m wavelength region, Appl. Opt. 12~(3) (1972) 555--563.
 
-\bibitem{WilletsVandyune2007}
-K.~A. Willets, R.~P. Van~Dyune, Localized surface plasmon resonance
-  spectroscopy and sensing, Annu. Rev. Phys. Chem. 58 (2007) 267--297.
-
 \bibitem{Nanoshaper}
 S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
   triangulating surfaces at the nanoscale, PloS one 8~(4) (2013) e59744.
@@ -177,11 +182,6 @@ S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
 T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
   automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
   calculations, Nucleic Acids Research 32 (2004) W665--W667.
-
-\bibitem{PhanETal2013}
-A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
-  resonances of protein-conjugated gold nanoparticles on graphitic substrates,
-  Applied Physics Letters 103~(16) (2013) 163702.
 
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
