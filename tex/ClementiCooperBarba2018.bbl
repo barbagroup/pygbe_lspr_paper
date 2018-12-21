@@ -96,6 +96,12 @@ C.~D. Cooper, N.~C. Clementi, G.~Forsyth, L.~A. Barba,
   {\path{doi:10.21105/joss.00043}}.
 \newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
 
+\bibitem{CooperClementiBarba2015}
+C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
+  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
+  143~(12) (2015) 124709, preprint on
+  \href{arxiv:1503.08150}{arxiv:1503.08150}.
+
 \bibitem{ClementiETal2017}
 N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
   Barba, {PyGBe-LSPR}: Python and gpu boundary-integral solver for
@@ -111,12 +117,6 @@ C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
   preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
 \newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
   {\path{doi:10.1016/j.cpc.2013.10.028}}.
-
-\bibitem{CooperClementiBarba2015}
-C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
-  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
-  143~(12) (2015) 124709, preprint on
-  \href{arxiv:1503.08150}{arxiv:1503.08150}.
 
 \bibitem{Jackson}
 J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
