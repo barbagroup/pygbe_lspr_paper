@@ -11,7 +11,7 @@ the wavelength of the incoming wave is often much larger than
 the size of the nanoparticle, 
 which allows for valid approximations that simplify the mathematical model.
 
-The phenomenon of LSPR is used in biosensing, 
+The phenomenon of LSPR can be used bor biosensing, 
 as the resonance frequency is highly dependent on the dielectric environment 
 around the scatterer. 
 The resonance frequency shifts whenever an analyte binds to the nanoparticle, 
@@ -55,7 +55,7 @@ current simplified models are not able to capture such details.
 Even though LSPR is an optical effect, electrostatics theory
 provides a good approximation in the long-wavelength limit. This work uses
 the boundary integral electrostatics solver \pygbe \cite{CooperETal2016} 
-to compute the extinction cross-section of metallic nanoparticles, and study how LSPR 
+to compute the extinction cross-section of metallic nanoparticles, and to study how LSPR 
 response changes in the presence of a biomolecule. 
 We treat Maxwell's equations quasi-statically \cite{MayergoyzZhang2007} and
 use an accurate continuum representation of the biomolecule obtained from the
@@ -67,11 +67,10 @@ It has also been used to study protein orientation near charged nanosurfaces \ci
 The code was recently extended to allow for complex dielectric constants 
 \cite{ClementiETal2017}, aiming towards the LSPR biosensing application. 
 The boundary element solver in \pygbe
-is accelerated algorithmically via a treecode (an $\mathcal{O}(N\log N)$ fast solver), 
+is accelerated algorithmically via a treecode---an $\mathcal{O}(N\log N)$ fast solver---
 and accelerated on hardware by taking advantage of
-graphic processing units (GPUs). The software
-\footnote{\url{https://github.com/barbagroup/pygbe}} is shared under the 
-BSD 3-clause license and is openly development via its repository on Github.
+graphic processing units (GPUs). The software is shared under the BSD 3-clause license 
+and is openly developed via its repository on Github.\footnote{\url{https://github.com/barbagroup/pygbe}}
 This study also follows careful reproducibility practices, and all materials necessary
 to reproduce the results are publicly available in reproducibility packages.
 We use the Figshare and Zenodo services to deposit the computational meshes,
