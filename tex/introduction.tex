@@ -3,56 +3,57 @@
 %* what is known
 Localized surface plasmon resonance (LSPR) is an optical effect where an 
 electromagnetic wave excites the free electrons on the surface of a metallic nanoparticle.
-These vibrations of the electron cloud are known as plasmons, and in LSPR they resonate with the incoming
+The vibrations of the electron cloud are known as plasmons, and in LSPR they resonate with the incoming
 field (see Figure \ref{fig:lspr}). When this happens, most of the incoming energy
 is either absorbed by the nanoparticle, or scattered in different directions,
-generating a large shadow behind the scatterer (extinction). In the case of LSPR,
-the wavelength of the incoming wave is usually considered to be much larger than 
-the size of the nanoparticle.
+creating a shadow behind the scatterer (a.k.a., extinction). In LSPR,
+the wavelength of the incoming wave is often much larger than 
+the size of the nanoparticle, 
+which allows for valid approximations that simplify the mathematical model.
 
-This principle is used to design 
-biosensors, as the resonance frequency is highly dependent of the dielectric environment 
+The phenomenon of LSPR is used in biosensing, 
+as the resonance frequency is highly dependent on the dielectric environment 
 around the scatterer. 
-Then, the resonance frequency shifts when an analyte binds to the nanoparticle, 
-resulting in a very sensitive sensor \cite{HaesETal2004, HaesVanduyne2002}.
+The resonance frequency shifts whenever an analyte binds to the nanoparticle, 
+resulting in a very sensitive means of detecting its presence \cite{HaesETal2004, HaesVanduyne2002}.
 
-A number of researchers have used numerical simulations to study LSPR \cite{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}. These mostly rely on the 
-solution of Maxwell's equations in some form, solved by means of finite difference time-domain (FDTD),
-boundary element, or finite element methods. 
+Researchers using numerical models to study LSPR have mostly relied on the 
+solution of Maxwell's equations in some form, using finite difference time-domain (FDTD),
+boundary element, or finite element methods \cite{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}. 
 These simulations have been used to study the 
 optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,HohenesterTrugler2012,
 JungPedersenSondergaardPedersenLarsenNielsen2010, VideenSun2003,
 MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interactions between nanoparticles
 and electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
 and surface plasmon resonance sensors.
-Among the latter application we find biosensors, where researchers have modelled the 
-interaction between the metallic nanoparticle and target molecules with highly 
+Biosensors appear among the latter application, where researchers have modeled the 
+interaction between a metallic nanoparticle and target molecules with highly 
 simplified methods \cite{JungCampbellChinowskyMarYee1998,HaesVanduyne2002,DavisGomezVernon2010,AntosiewiczApellClaudioKall2011}.
 
 \begin{figure}[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.35\textwidth]{lspr.pdf} 
-   \caption{Localized Surface Plasmon Resonance (LSPR) scheme. }
+   \caption{Illustration of the localized surface plasmon resonance (LSPR) effect of a metallic nanoparticle under an electromagnetic field. }
    \label{fig:lspr}
 \end{figure}
 
 %* What is unknown, limitations and gaps
-
-In the biosensor community most progress is achieved 
-through experimental analysis, with trial and error procedures {\color{blue} I also have this impression, but do we have a reference to support it? If not, I'd rather avoid it}. 
-Using software to assist the design process can play a key role for the manufacture and optimization
-of biosensors, as we have access to details that are not available in experimental tests.
-For example, empirical studies suggest that the sensitivity of the sensor
-is highly dependent on the distance between the nanoparticle and the analyte \cite{HaesETal2004} ---
-these results were modeled with a discrete dipole approximation (DDA) that does not consider the analyte in the analysis. 
-Beuwer et al. \cite{BeuwervanHoofZijlstra2018} and Henkel et al. \cite{HenkelETal2018} use the boundary element method (BEM) to study the sensitivity of plasmonic sensors that rely on (at least) two metallic nanoparticles (one on the sensor and one attached to the analyte), also without considering the structure of the target molecule in the analysis.
-Moreover, experimental evidence shows LSPR sensors are sensitive enough to detect conformational changes of the analytes \cite{HallETal2011}, 
-but current simplified models are not able to consider such details.
+Much of the progress in biosensor research is achieved 
+through experimental investigations, often via trial and error procedures {\color{blue} I also have this impression, but do we have a reference to support it? If not, I'd rather avoid it}. 
+Relying on software to assist the design process could play a key role for the manufacture 
+and optimization of biosensors, giving access to details that are not available in experimental tests.
+For example, empirical studies showed that the sensitivity of the sensor
+is highly dependent on the distance between the nanoparticle and the analyte \cite{HaesETal2004}.
+These results were modeled with a discrete dipole approximation (DDA) that does not consider the analyte in the analysis. 
+Beuwer et al.~\cite{BeuwervanHoofZijlstra2018} and Henkel et al.~\cite{HenkelETal2018} used the boundary element method (BEM) to study the sensitivity of plasmonic sensors that rely on (at least) two metallic nanoparticles (one on the sensor and one attached to the analyte), also without considering the structure of the target molecule in the analysis.
+While experimental evidence shows LSPR sensors are sensitive enough to detect 
+conformational changes of the analytes \cite{HallETal2011}, 
+current simplified models are not able to capture such details.
 
 %* Fill the gap
 
-Even though LSPR is an optical effect, electrostatics 
-makes a good approximation in the long-wavelength limit. In this work we use
+Even though LSPR is an optical effect, electrostatics theory
+provides a good approximation in the long-wavelength limit. In this work, we use
 the boundary integral electrostatics solver \pygbe \cite{CooperETal2016} 
 to compute the extinction cross-section of metallic nanoparticles, and study how LSPR 
 response changes in the presence
