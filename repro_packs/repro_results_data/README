@@ -136,6 +136,11 @@ It will be a pickle file. To inspect this file, in a python console run:
         res_dict = pickle.load(f)
 >>> res_dict 
 
+The original results are under:
+
+repro_convergence_analysis_data/results/sph_sensor_Ag/original
+
+
 To compute the bsa-sensor convergence :
 
 $ python bsa_sph_sensor.py -if full_path_where_input_problem_folder_is_located
@@ -151,11 +156,28 @@ It will be a pickle file. To inspect this file, in a python console run:
         res_dict = pickle.load(f)
 >>> res_dict 
 
+The original results are under:
+
+repro_convergence_analysis_data/results/sphere_bsa/original
 
 
 Name of directory: repro_silver_spherical_NP_verification_data
 
+Under the subdirectory scripts the user can find the scripts to run verification. To perform this computation:
 
+$ python Cext_wave.py -if full_path_where_input_problem_folder_is_located
+
+The results will go to the directory:
+
+repro_silver_spherical_NP_verification_data/results/
+
+and under 
+
+repro_silver_spherical_NP_verification_data/results/original 
+
+the user can find the original results of this run.
+
+The directory data/ contains necessary dielectric data to perform the verification runs. 
 
 
 
