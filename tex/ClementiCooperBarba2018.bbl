@@ -88,11 +88,10 @@ W.~P. Hall, J.~Modica, J.~Anker, Y.~Lin, M.~Mrksich, R.~P. Van~Duyne, A
   (2011) 1098--1105.
 
 \bibitem{CooperETal2016}
-C.~D. Cooper$\, \star$, N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, L.~A.
-  Barba, \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs}
-  and boundary elements for biomolecular electrostatics}, J. Open Source
-  Software 1~(4),
-  \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
+C.~D. Cooper, N.~C. Clementi, G.~Forsyth, L.~A. Barba,
+  \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs} and
+  boundary elements for biomolecular electrostatics}, J. Open Source Software
+  1~(4), \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
 \newblock \href {http://dx.doi.org/10.21105/joss.00043}
   {\path{doi:10.21105/joss.00043}}.
 \newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
