@@ -74,8 +74,11 @@ The code was recently extended to allow for complex dielectric constants
 \cite{ClementiETal2017}, aiming towards the LSPR biosensing application. 
 The boundary element solver in \pygbe
 is accelerated algorithmically via a treecode---an $\mathcal{O}(N\log N)$ fast summation method---
-and on hardware by taking advantage of
-graphic processing units (GPUs). The software is shared under the BSD 3-clause license 
+and on hardware by taking advantage of graphic processing units (GPUs). 
+With these features, \pygbe is able to easily handle problems with in the order of 
+half a million boundary elements, or more, 
+allowing for the explicit representation of the biomolecular surface.
+The software is shared under the BSD 3-clause license 
 and is openly developed via its repository on Github.\footnote{\url{https://github.com/barbagroup/pygbe}}
 This study also follows careful reproducibility practices, and all materials necessary
 to reproduce the results are publicly available in reproducibility packages.
