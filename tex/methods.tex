@@ -49,10 +49,10 @@ Hence, we can reformulate Equation \eqref{eq:electrostatic_scatter_E} with a sca
 Equation \eqref{eq:electrostatic_scatter} is an electrostatic equation 
 with an imposed electric field $\mathbf{E}_i=-\nabla\phi_i$.
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
+\begin{figure}%[h] %  figure placement: here, top, bottom, or page
    \centering
    \includegraphics[width=0.45\textwidth]{particle_wave.pdf} 
-   \caption{Nanoparticle under electromagnetic wave.}
+   \caption{Nanoparticle interacting with an electromagnetic wave.}
    \label{fig:part_wave}
 \end{figure}
 
@@ -228,7 +228,9 @@ leads to:
 %\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{1}{\epsilon_2}V_{L}^{\Gamma} \left( \epsilon_1 \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma} - (\epsilon_2-\epsilon_1) \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right) = 0& \quad \text{on $\Gamma$.}
 %\end{align}
 
+
 \subsubsection{Analyte-sensor electrostatic potential under an electric field}
+
 
 The sketch in Figure \ref{fig:analyte-sensor} shows a metallic nanoparticle ($\Omega_1$) interacting with an analyte ($\Omega_3$), under an external electric field.
 Mathematically, this situation can be modeled as
@@ -241,12 +243,7 @@ Mathematically, this situation can be modeled as
 \end{align}
 %
 
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-    \centering
-    \includegraphics[width=0.20\textwidth]{protein_sensor_regions.pdf} 
-    \caption{Analyte-sensor system under electric field.}
-    \label{fig:analyte-sensor}
- \end{figure}
+
 
 \paragraph{Integral formulation}
 
@@ -267,17 +264,25 @@ surface where the integrals run (subindex), and the surface that contains the ev
 
 Applying the interface condition of equation \eqref{eq:electrostatic_scatter_prot_sen},
 leads to: 
-
-
+\vspace{-0.5cm}
+\begin{strip} % to get the full-pagewidth equations in the two-column layout
 \begin{align} \label{eq:integral_eq_lspr_system}
 \frac{\phi_{1s,\Gamma_1}}{2}+ K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) = 0 & \nonumber \\
-\frac{\phi_{1s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) & \nonumber\\
+\frac{\phi_{1s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_1}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_1} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) 
  - K_{L,\Gamma_2}^{\Gamma_1}(\phi_{3s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{3s,\Gamma_2} \right)  - V_{L,\Gamma_2}^{\Gamma_1} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right) = 0 &  \nonumber \\
-\frac{\phi_{3s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_2}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) & \nonumber\\
+\frac{\phi_{3s,\Gamma_1}}{2} - K_{L,\Gamma_1}^{\Gamma_2}(\phi_{1s,\Gamma_1}) + V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma_1} \right) - V_{L,\Gamma_1}^{\Gamma_2} \left(\frac{\epsilon_2-\epsilon_1}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_1} \right) 
  - K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) + V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{3s,\Gamma_2} \right)  - V_{L,\Gamma_2}^{\Gamma_2} \left(\frac{\epsilon_2 -\epsilon_3}{\epsilon_2}\frac{\partial}{\partial \mathbf{n}}\phi_{i,\Gamma_2} \right) = 0 &  \nonumber \\
 \frac{\phi_{3s,\Gamma_2}}{2} + K_{L,\Gamma_2}^{\Gamma_2}(\phi_{3s,\Gamma_2}) - V_{L,\Gamma_2}^{\Gamma_2} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{3s,\Gamma_2} \right) = \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Gamma_2} - \mathbf{r}_k|} &
 \end{align}
+\end{strip}
 
+
+\begin{figure}%[b] %  figure placement: here, top, bottom, or page
+    \centering
+    \includegraphics[width=0.25\textwidth]{protein_sensor_regions.pdf} 
+    \caption{Analyte-sensor system under electric field.}
+    \label{fig:analyte-sensor}
+ \end{figure}
 
 \paragraph{Discretization and linear system}
 
