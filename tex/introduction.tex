@@ -17,19 +17,19 @@ around the scatterer.
 The resonance frequency shifts whenever an analyte binds to the nanoparticle, 
 resulting in a very sensitive means of detecting its presence \cite{HaesVanduyne2002,HaesETal2004}.
 
-Researchers using numerical models to study LSPR have mostly relied on the 
+Numerical models for LSPR generally rely on the 
 solution of Maxwell's equations in some form, using finite difference time-domain (FDTD),
 boundary element, or finite element methods \cite{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}. 
-These simulations have been used to study the 
+These methods have been used to study the 
 optical properties of dielectric or metallic nanoparticles \cite{Hohenester2018,HohenesterTrugler2012,
 JungPedersenSondergaardPedersenLarsenNielsen2010, VideenSun2003,
 MayergoyzFredkinZhang2005, MayergoyzZhang2007}, interactions between nanoparticles
 and electron beams \cite{GarciadeabajoAizpurua1997, GarciadeabajoHowie2002},
 and surface plasmon resonance sensors.
 In the latter application, researchers have used simple mathematical models for the 
-interaction between a metallic nanoparticle and molecules,
+interaction between a metallic nanoparticle and biomolecules,
 like representing the medium and the dissolved analytes with an effective permittivity \cite{JungCampbellChinowskyMarYee1998,WilletsVandyune2007,PhanETal2013}, 
-or representing the target molecules as spherical 
+or representing the target molecules as spheres 
 \cite{DavisGomezVernon2010,AntosiewiczApellClaudioKall2011}.
 
 \begin{figure}%[h] %  figure placement: here, top, bottom, or page
@@ -40,7 +40,7 @@ or representing the target molecules as spherical
 \end{figure}
 
 %* What is unknown, limitations and gaps
-Progress in biosensor research is predominantly made
+Progress in biosensor research is still predominantly made
 through experimental investigations, which can often be costly and time consuming.
 Computational approaches could assist the design process and play a role  
 in optimizing biosensors, giving access to details that are not available in experimental settings.
@@ -48,11 +48,11 @@ For example, empirical studies showed that the sensitivity of the sensor
 is highly dependent on the distance between the nanoparticle and the analyte \cite{HaesETal2004}.
 These studies were complemented with models using a discrete dipole approximation (DDA),
 which includes the effect of the analyte through the effective permittivity. 
-Other experimental studies complemented by modeling fully ignore the presence target molecule.
+Other experimental studies complemented by modeling fully ignore the presence of the target molecules.
 For example, Beuwer et al.~\cite{BeuwervanHoofZijlstra2018} and Henkel et al.~\cite{HenkelETal2018} 
 used a boundary element method (BEM) in studies of the sensitivity of plasmonic sensors 
 relying on (at least) two metallic nanoparticles (one on the sensor and one attached to the analyte).
-Explicitly including the target molecules may be needed in some cases.
+Explicitly including the target molecules in the model may be needed in some cases.
 For instance, despite experimental evidence showing that LSPR sensors are sensitive enough to detect 
 conformational changes of the analytes \cite{HallETal2011}, 
 these simplified models are not able to capture such details.
@@ -65,8 +65,8 @@ the boundary integral electrostatics solver \pygbe \cite{CooperETal2016}
 to compute the extinction cross-section of metallic nanoparticles, and to study how LSPR 
 response changes in the presence of a biomolecule. 
 We treat Maxwell's equations quasi-statically \cite{MayergoyzZhang2007} and
-use an accurate continuum representation of the biomolecule obtained from the
-crystal structure. 
+explicitly represent the target biomolecules by a surface mesh buil from the
+crystal structures. 
 
 \pygbe is a Python implementation of continuum electrostatic theory, used
 for computing solvation energy of biomolecular systems. 
