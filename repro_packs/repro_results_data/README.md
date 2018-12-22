@@ -7,11 +7,9 @@ data for the article: PyGBe-LSPR—Computational nanoplasmonics for biosensing a
 
 1. Install PyGBe. 
 
-Installation can be done via docker or from source. Dockerfile and instructions for source installation are available in the Github code repository https://github.com/barbagroup/pygbe
+Installation can be done via Docker or from source. Dockerfile and instructions for source installation are available in the Github code repository https://github.com/barbagroup/pygbe
 
-2. Download input problem folders data from [zenodo](https://zenodo.org/record/2511600#.XB6o48tKjeQ)
-
-Download zip file and extract in desired location. If using docker container, data should be available in the container.
+2. Download input problem folders data from [zenodo](https://zenodo.org/record/2511600#.XB6o48tKjeQ) and extract in desired location. If using Docker container, data should be available in the container.
 
 **Important note**:
 When passing input problem folder path to run scripts the path must end in /:
