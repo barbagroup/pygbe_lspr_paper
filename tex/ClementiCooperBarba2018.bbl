@@ -97,13 +97,11 @@ W.~P. Hall, J.~Modica, J.~Anker, Y.~Lin, M.~Mrksich, R.~P. Van~Duyne, A
   (2011) 1098--1105.
 
 \bibitem{CooperETal2016}
-C.~D. Cooper, N.~C. Clementi, G.~Forsyth, L.~A. Barba,
-  \href{http://dx.doi.org/10.21105/joss.00043}{{PyGBe}: Python, {GPUs} and
-  boundary elements for biomolecular electrostatics}, J. Open Source Software
-  1~(4), \href{http://dx.doi.org/10.21105/joss.00043}{10.21105/joss.00043}.
+C.~D. Cooper, N.~C. Clementi, G.~Forsyth, L.~A. Barba, {PyGBe}: Python, {GPUs}
+  and boundary elements for biomolecular electrostatics, J. Open Source
+  Software 1~(4).
 \newblock \href {http://dx.doi.org/10.21105/joss.00043}
   {\path{doi:10.21105/joss.00043}}.
-\newline\urlprefix\url{http://dx.doi.org/10.21105/joss.00043}
 
 \bibitem{CooperClementiBarba2015}
 C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
@@ -112,10 +110,9 @@ C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
   \href{arxiv:1503.08150}{arxiv:1503.08150}.
 
 \bibitem{ClementiETal2017}
-N.~C. Clementi$\, \star$, G.~Forsyth$\, \star$, C.~D. Cooper$\, \star$, L.~A.
-  Barba, {PyGBe-LSPR}: Python and gpu boundary-integral solver for
-  electrostatics, J. Open Source Software 2~(19) (2017) 306,
-  \href{https://doi.org/10.21105/joss.00306}{10.21105/joss.00306}.
+N.~C. Clementi, G.~Forsyth, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}: Python and
+  {GPU} boundary-integral solver for electrostatics, J. Open Source Software
+  2~(19) (2017) 306.
 \newblock \href {http://dx.doi.org/10.21105/joss.00306}
   {\path{doi:10.21105/joss.00306}}.
 
@@ -182,6 +179,13 @@ S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
 T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
   automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
   calculations, Nucleic Acids Research 32 (2004) W665--W667.
+
+\bibitem{ClementiETal2018a}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
+  nanoplasmonics for biosensing applications (problem datasets), [Data set].
+  Zenodo (December 2018).
+\newblock \href {http://dx.doi.org/10.5281/zenodo.2511600}
+  {\path{doi:10.5281/zenodo.2511600}}.
 
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
