@@ -178,6 +178,13 @@ N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Grid convergence of {PyGBE-LSPR}
 \newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504271.v1}
   {\path{doi:10.6084/m9.figshare.7504271.v1}}.
 
+\bibitem{ClementiETal2018d}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Verification of {PyGBE-LSPR} on the
+  extinction cross-section of a single nanosphere, figshare. Fileset. (December
+  2018).
+\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504307.v1}
+  {\path{doi:10.6084/m9.figshare.7504307.v1}}.
+
 \bibitem{Nanoshaper}
 S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
   triangulating surfaces at the nanoscale, PloS one 8~(4) (2013) e59744.
