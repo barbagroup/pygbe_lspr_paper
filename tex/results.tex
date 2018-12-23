@@ -9,7 +9,7 @@ The second set of results use a model for a biosensor detecting a target molecul
 via frequency shifts in the plasmon resonance of a metallic nanoparticle. 
 In this case, since an analytical solution is not available, we can use Richardson 
 extrapolation to estimate the errors in a grid-refinement study.
-We computed the variation of the extinction cross-section with respect to wavelength
+We also computed the variation of the extinction cross-section with respect to wavelength
 for the isolated nanoparticle, and in the presence of bovine serum albumin (BSA) proteins, 
 varying the location of the analytes.
 The final result is a sensitivity study of the biosensor model, 
@@ -70,12 +70,12 @@ Table \ref{table:treeparams1} shows the treecode and solver parameters for this 
 \begin{table}[h]
     \centering
     \caption{\label{table:quadparams1} Grid-convergence study: Gauss quadrature points; 
-    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration). } 
+    $K$ and $K_{fine}$ are per element; $N_k $ is per element edge (semi-analytical integration). } 
     \begin{tabular}{l l}
     \hline%\toprule
      distant elements: & $K=4$ \\
      near-singular integrals:   & $ K_{fine}=37$ \\
-     singular elements:  & $Nk =9$ \\
+     singular elements:  & $N_k =9$ \\
     \hline%\bottomrule
     \end{tabular}
 \end{table}
@@ -141,12 +141,12 @@ The parameters used are shown in Tables \ref{table:quadparams2} and \ref{table:t
 \begin{table}[h]
     \centering
     \caption{\label{table:quadparams2} Verification: Gauss quadrature points; 
-    $K$ and $K_{fine}$ are per element; $Nk $ is per element edge (semi-analytical integration). } 
+    $K$ and $K_{fine}$ are per element; $N_k $ is per element edge (semi-analytical integration). } 
     \begin{tabular}{l l}
     \hline%\toprule
      distant elements: & $K=4$ \\
      near-singular integrals:   & $ K_{fine}=19$ \\
-     singular elements:  & $Nk =9$ \\
+     singular elements:  & $N_k =9$ \\
     \hline%\bottomrule
     \end{tabular}
 \end{table}
