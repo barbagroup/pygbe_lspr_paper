@@ -259,8 +259,18 @@ This parameter choice resulted in a percentage error below 1\%, with respect to 
 The run time for each one of these cases was approximately $7.5$ min using one NVIDIA Tesla K40c GPU. 
 When two proteins are present, the run time per case is approximately  $15$ min. 
 
+\begin{center}
+\begin{figure*}[t] %  figure placement: here, top, bottom, or page
+   \centering
+   \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
+   \caption{Sensor protein display: BSA located at $\pm 1$ nm of the 
+            nanoparticle in the $z$-direction.}
+   \label{fig:display_z}
+\end{figure*}
+\end{center}
+
 Figure \ref{fig:display_z} shows a visualization of the meshes for these calculations, 
-with two proteins placed at a distance $d=1$ nm away from a spherical silver nanoparticle, along the $z$-axis.
+with two BSA proteins placed at a distance $d=1$ nm away from a spherical silver nanoparticle, along the $z$-axis.
 The position of the BSA molecule in the $+z$ axis was the same as in the convergence analysis in 
 Section \ref{sec:bsa_convergence}, whereas the BSA in the $-z$ position is a 180$^\circ$ 
 solid rotation  about the $y$-axis of the BSA in $+z$.
@@ -329,29 +339,23 @@ the same as the ones used in Figures \ref{fig:2pz_response} and \ref{fig:2pxy_re
 \end{figure}
 
 
-\begin{center}
-\begin{figure*} %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
-   \caption{Sensor protein display: BSA located at $\pm 1$ nm of the 
-            nanoparticle in the $z$-direction.}
-   \label{fig:display_z}
-\end{figure*}
-\end{center}
+
 
 \begin{figure*}
    \centering
    \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} 
-%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-%            x-direction}
-   %\label{fig:display_x}
-    \vfill
+   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+            $x$-direction}
+   \label{fig:display_x}
+\end{figure*}
+
+\begin{figure*}
    \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_y_R8nm.pdf}} 
-%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-%            y-direction}
-    \caption{Sensor protein display: BSA located at $\pm 1 \, nm$ of the nanoparticle in the
-            x-direction (top) and y-direction (bottom)}
-    \label{fig:display_xy}
+   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+            $y$-direction}
+%    \caption{Sensor protein display: BSA located at $\pm 1$ nm of the nanoparticle in the
+ %           x-direction (top) and y-direction (bottom)}
+    \label{fig:display_y}
 \end{figure*}
 
 
