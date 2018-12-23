@@ -1,7 +1,6 @@
 # Reproducibility results-plots package
 
-This directory contains the necessary information to reproduce the results figures 
-and visualizations of the paper: PyGBe-LSPR—Computational nanoplasmonics for biosensing applications
+This directory contains the necessary information to reproduce the figures of the paper: PyGBe-LSPR—Computational nanoplasmonics for biosensing applications
 
 To be able to reproduce these results the user needs python and Jupyter notebooks. 
 
