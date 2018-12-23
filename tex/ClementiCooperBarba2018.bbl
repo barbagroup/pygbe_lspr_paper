@@ -23,12 +23,12 @@ D.~M. Solis, J.~M. Taboada, F.~Obelleiro, L.~M. Liz-Marz\'{a}n, F.~J.
   (2014) 7559--7570.
 
 \bibitem{Hohenester2018}
-U.~Hohenester, Making simulations with the mnpbem toolbox big: Hierarchical
+U.~Hohenester, Making simulations with the {MNPBEM} toolbox big: Hierarchical
   matrices and iterative solvers, Computer Physics Communications 222 (2018)
   209--228.
 
 \bibitem{HohenesterTrugler2012}
-U.~Hohenester, A.~Trugler, {MNPBEM} --- {A} {M}atlab toolbox for the simylation
+U.~Hohenester, A.~Trugler, {MNPBEM} --- {A} {M}atlab toolbox for the simulation
   of plasmonic nanoparticles, Comput. Phys. Commun. 183 (2012) 370--381.
 
 \bibitem{JungPedersenSondergaardPedersenLarsenNielsen2010}
@@ -171,6 +171,13 @@ P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
 G.~M. Hale, M.~R. Querry, Optical constants of water in the 200-nm to
   200-$\mu$m wavelength region, Appl. Opt. 12~(3) (1972) 555--563.
 
+\bibitem{ClementiETal2018c}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Grid convergence of {PyGBE-LSPR}
+  with a silver nano sphere and with {BSA} sensor system, figshare. Fileset.
+  (December 2018).
+\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504271.v1}
+  {\path{doi:10.6084/m9.figshare.7504271.v1}}.
+
 \bibitem{Nanoshaper}
 S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
   triangulating surfaces at the nanoscale, PloS one 8~(4) (2013) e59744.
@@ -187,6 +194,13 @@ N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
 \newblock \href {http://dx.doi.org/10.5281/zenodo.2511600}
   {\path{doi:10.5281/zenodo.2511600}}.
 
+\bibitem{ClementiETal2018b}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
+  nanoplasmonics for biosensing applications (execution files), Zenodo
+  (December 2018).
+\newblock \href {http://dx.doi.org/10.5281/zenodo.2513715}
+  {\path{doi:10.5281/zenodo.2513715}}.
+
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
   localized surface plasmon resonance spectroscopy for analysis of the
@@ -197,5 +211,10 @@ B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
 M.~P. Raphael, J.~A. Christodoulides, J.~B. Delehanty, J.~P. Long, P.~E.
   Pehrsson, J.~M. Byers, Quantitative {LSPR} imaging for biosensing with single
   nanostructure resolution, Biophys.\ J. 104 (2013) 30--36.
+
+\bibitem{SmigajETal2015}
+W.~{\'S}migaj, T.~Betcke, S.~Arridge, J.~Phillips, M.~Schweiger, Solving
+  boundary integral problems with {BEM++}, ACM Transactions on Mathematical
+  Software (TOMS) 41~(2) (2015) 6.
 
 \end{thebibliography}
