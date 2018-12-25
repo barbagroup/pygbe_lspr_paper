@@ -165,7 +165,19 @@ localized surface plasmon resonance \sep biosensors \sep nanoplasmonics \sep ele
 \section{Conclusion}
 %\input{conclusion}
 
-Cite BEM++ \cite{SmigajETal2015} and Matlab toolbox \cite{HohenesterTrugler2012}
+In this work, we combined the implicit-solvent model of electrostatics interactions in \pygbe 
+with a long-wavelength representation of LSPR response in nanoparticles. 
+We extended \pygbe to work with complex-valued quantities, and added functionality to 
+include an imposed electric field and compute relevant quantities 
+(dipole moment, extinction cross-section). 
+Previous work with \pygbe showed its suitability for computing 
+biomolecular electrostatics considering solvent-filled cavities and Stern layers \cite{CooperBardhanBarba2013}, 
+and for for protein-surface electrostatic interactions \cite{CooperBarba2016}.
+This latest extension can offer a valuable computational approach to study nanoplasnomics and aid in the design of LSPR biosensors. 
+Other research software that could be used in this setting includes  
+BEM++ \cite{SmigajETal2015} and a Matlab toolbox called MNPBEM \cite{HohenesterTrugler2012}. 
+We believe in both cases the size of problems that can be treated, in terms of number of boundary elements, may not be enough to resolve the details of target biomolecules from their crystal structure. 
+Thanks to algorithmic acceleration with a treecode, and hardware acceleration with GPUs, \pygbe is able to compute problems with half a million elements, or more.
 
 
 

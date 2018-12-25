@@ -233,6 +233,14 @@ M.~P. Raphael, J.~A. Christodoulides, J.~B. Delehanty, J.~P. Long, P.~E.
   Pehrsson, J.~M. Byers, Quantitative {LSPR} imaging for biosensing with single
   nanostructure resolution, Biophys.\ J. 104 (2013) 30--36.
 
+\bibitem{CooperBarba2016}
+C.~D. Cooper, L.~A. Barba, Poisson-{Boltzmann} model for protein-surface
+  electrostatic interactions and grid-convergence study using the {PyGBe} code,
+  Comput. Phys. Comm. 202 (2016) 23--32, preprint on
+  \href{http://arxiv.org/abs/1506.03745}{arXiv:1506.03745}.
+\newblock \href {http://dx.doi.org/10.1016/j.cpc.2015.12.019}
+  {\path{doi:10.1016/j.cpc.2015.12.019}}.
+
 \bibitem{SmigajETal2015}
 W.~{\'S}migaj, T.~Betcke, S.~Arridge, J.~Phillips, M.~Schweiger, Solving
   boundary integral problems with {BEM++}, ACM Transactions on Mathematical
