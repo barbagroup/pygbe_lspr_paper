@@ -194,6 +194,13 @@ T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
   automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
   calculations, Nucleic Acids Research 32 (2004) W665--W667.
 
+\bibitem{ClementiETal2018e}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Mesh visualizations for {PyGBE}
+  calculations of {LSPR} response to bovine serum albumin ({BSA}), figshare.
+  Fileset. (December 2018).
+\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504484.v1}
+  {\path{doi:10.6084/m9.figshare.7504484.v1}}.
+
 \bibitem{ClementiETal2018a}
 N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
   nanoplasmonics for biosensing applications (problem datasets), [Data set].
@@ -208,12 +215,12 @@ N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
 \newblock \href {http://dx.doi.org/10.5281/zenodo.2513715}
   {\path{doi:10.5281/zenodo.2513715}}.
 
-\bibitem{ClementiETal2018e}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Mesh visualizations for pygbe
-  calculations of lspr response to bovine serum albumin (bsa), figshare.
-  Fileset. (December 2018).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504484.v1}
-  {\path{doi:10.6084/m9.figshare.7504484.v1}}.
+\bibitem{ClementiETal2018f}
+N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {LSPR} response of a silver
+  nanosphere to bovine serum albumin ({BSA}), using {PyGBE}, figshare. Fileset.
+  (December 2018).
+\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7506167.v1}
+  {\path{doi:10.6084/m9.figshare.7506167.v1}}.
 
 \bibitem{TangETal2010}
 B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
