@@ -235,7 +235,7 @@ The percentage errors for the different meshes are presented in Table \ref{table
 
 \begin{table}%[h]
     \centering
-    \caption{\label{table:err_bsa_sensor} Percentage error of the BSA-sensor system (Fig.~\ref{fig:setup_conv}), with respect to the extrapolated value.} 
+    \caption{\label{table:err_bsa_sensor} Estimated percentage error of the BSA-sensor system (Fig.~\ref{fig:setup_conv}), with respect to the extrapolated value (using Richardson extrapolation).} 
     \begin{tabular}{c c}
     \hline%\toprule
     N & \% error \\
@@ -264,13 +264,15 @@ When two proteins are present, the run time per case is approximately  $15$ min.
    \centering
    \includegraphics[width=0.65\textwidth]{2prot_1nm_z_R8nm.pdf} 
    \caption{Sensor protein display: BSA located at $\pm 1$ nm of the 
-            nanoparticle in the $z$-direction.}
+            nanoparticle in the $z$-direction. Figure, plotting script and auxiliary files available under \textsc{cc-by} \cite{ClementiETal2018e}.}
    \label{fig:display_z}
 \end{figure*}
 \end{center}
 
 Figure \ref{fig:display_z} shows a visualization of the meshes for these calculations, 
 with two BSA proteins placed at a distance $d=1$ nm away from a spherical silver nanoparticle, along the $z$-axis.
+The surface-mesh data, plotting scripts and figure are available openly on Figshare, 
+in support of the paper's reproducibility\cite{ClementiETal2018e}.
 The position of the BSA molecule in the $+z$ axis was the same as in the convergence analysis in 
 Section \ref{sec:bsa_convergence}, whereas the BSA in the $-z$ position is a 180$^\circ$ 
 solid rotation  about the $y$-axis of the BSA in $+z$.
@@ -343,19 +345,20 @@ the same as the ones used in Figures \ref{fig:2pz_response} and \ref{fig:2pxy_re
 
 \begin{figure*}
    \centering
-   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} 
-   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-            $x$-direction}
-   \label{fig:display_x}
-\end{figure*}
-
-\begin{figure*}
+   \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_x_R8nm.pdf}} \\
+%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+%            $x$-direction}
+%   \label{fig:display_x}
+%\end{figure*}
+%
+%\begin{figure*}
+\vspace{-0.5cm}
    \subfloat{\includegraphics[width=0.65\textwidth]{2prot_1nm_y_R8nm.pdf}} 
-   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
-            $y$-direction}
-%    \caption{Sensor protein display: BSA located at $\pm 1$ nm of the nanoparticle in the
- %           x-direction (top) and y-direction (bottom)}
-    \label{fig:display_y}
+%   \caption{Sensor protein display: BSA located at 1 nm of the nanoparticle in the
+%            $y$-direction}
+    \caption{Sensor protein display: BSA located at $\pm 1$ nm of the nanoparticle in the
+           $x$-direction (top) and $y$-direction (bottom). Figure, plotting script and auxiliary files available under \textsc{cc-by} \cite{ClementiETal2018e}.}
+    \label{fig:display_xy}
 \end{figure*}
 
 
@@ -364,6 +367,7 @@ the same as the ones used in Figures \ref{fig:2pz_response} and \ref{fig:2pxy_re
 To facilitate the reproducibility and replication of our results, 
 we consistently release our research code and data with every publication. \pygbe is openly developed and 
 shared under the BSD3-clause license via its repository at \url{https://github.com/barbagroup/pygbe}.
+
 We also release all of the data and scripts needed to run the calculations reported in this work, 
 as well as the post-processing scripts to reproduce the figures in this paper. 
 All the input files necessary to reproduce the computations are available in one Zenodo data set \cite{ClementiETal2018a}. 
@@ -373,4 +377,4 @@ The scripts and auxiliary files needed to run \pygbe to re-generate every result
 After execution, the resulting data needed to re-create the figures in the paper will be saved in the running folder and the input files (the first Zenodo set) can at that point be deleted.
 (For more details, the reader can consult a README file in the Zenodo archive.)
 \emph{Reproducibility packages} to reproduce the figures in the paper are deposited on Figshare, 
-including the figures, plotting script and a Jupyter notebooks that organize and re-create the results \cite{ClementiETal2018c,ClementiETal2018d,ClementiETal2018e}.
+including the figures, plotting scripts and a Jupyter notebooks that organize and re-create the results \cite{ClementiETal2018c,ClementiETal2018d,ClementiETal2018e,ClementiETal2018f}.
