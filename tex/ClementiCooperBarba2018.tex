@@ -72,7 +72,7 @@ singlelinecheck=false
 % \biboptions{}
 
 
-\journal{Computer Physics Communications}
+%\journal{Computer Physics Communications}
 
 \begin{document}
 
@@ -120,8 +120,8 @@ singlelinecheck=false
 \begin{abstract}
 
 The phenomenon of localized surface plasmon resonance provides high sensitivity in detecting biomolecules through shifts in resonance frequency when a target is present. 
-For computational studies in this setting, one can use the full Maxwell equations with simplified models of a sensor-analyte system, 
-or one can take advantage of the long-wavelength approximation and use electrostatics with detailed representation of the sensor and analytes.
+Computational studies in this field have used the full Maxwell equations with simplified models of a sensor-analyte system, or neglected the analyte altogether. 
+In the long-wavelength limit, one can simplify the theory via an electrostatics approximation, while adding geometrical detail in the sensor and analytes (at moderate computational cost).
 This work uses the latter approach, expanding the open-source \pygbe code to compute the extinction cross-section of metallic nanoparticles in the presence of any target for sensing.
 The target molecule is represented by a surface mesh, based on its crystal structure. 
 \pygbe is research software for continuum electrostatics, written in Python with computationally expensive parts accelerated on GPU hardware, via PyCUDA.
