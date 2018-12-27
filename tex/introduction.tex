@@ -52,7 +52,7 @@ Other experimental studies complemented by modeling fully ignore the presence of
 For example, Beuwer et al.~\cite{BeuwervanHoofZijlstra2018} and Henkel et al.~\cite{HenkelETal2018} 
 used a boundary element method (BEM) in studies of the sensitivity of plasmonic sensors 
 relying on (at least) two metallic nanoparticles (one on the sensor and one attached to the analyte).
-Explicitly including the target molecules in the model may be needed in some cases.
+Explicitly including the target molecules in the model may be needed in some cases, however.
 For instance, despite experimental evidence showing that LSPR sensors are sensitive enough to detect 
 conformational changes of the analytes \cite{HallETal2011}, 
 these simplified models are not able to capture such details.
@@ -73,8 +73,7 @@ It has also been used to study protein orientation near charged nanosurfaces \ci
 The code was recently extended to allow for complex dielectric constants 
 \cite{ClementiETal2017}, aiming towards the LSPR biosensing application. 
 The boundary element solver in \pygbe
-is accelerated algorithmically via a treecode---an $\mathcal{O}(N\log N)$ fast summation method---
-and on hardware by taking advantage of graphic processing units (GPUs). 
+is accelerated algorithmically via a treecode---an $\mathcal{O}(N\log N)$ fast-summation method---and on hardware by taking advantage of graphic processing units (GPUs). 
 With these features, \pygbe is able to easily handle problems with in the order of 
 half a million boundary elements, or more, 
 allowing for the explicit representation of the biomolecular surface.
@@ -84,7 +83,7 @@ This study also follows careful reproducibility practices, and all materials nec
 to reproduce the results are publicly available in reproducibility packages.
 We use the Figshare and Zenodo services to deposit the computational meshes,
 input and configuration files, and file bundles corresponding to the main figures in the paper.
-
+See the figure captions for references to the open data artifacts.
 
 %{\color{red}  Keeping this structure here for reference until we polish better
 %the introduction.
