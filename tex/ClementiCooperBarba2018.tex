@@ -1,13 +1,5 @@
-%% Use the option review to obtain double line spacing 
-%% \documentclass[preprint,review,12pt]{elsarticle} 
-%% Use the options 1p,twocolumn; 3p; 3p,twocolumn; 5p; or 5p,twocolumn 
-%% for a journal layout: 
-%% \documentclass[final,1p,times]{elsarticle} 
-%% \documentclass[final,1p,times,twocolumn]{elsarticle} 
-%% \documentclass[final,3p,times]{elsarticle} 
-%%\documentclass[final,3p,times,twocolumn]{elsarticle} 
-%% \documentclass[final,5p,times]{elsarticle} 
- \documentclass[final,5p,times,twocolumn]{elsarticle} 
+
+ \documentclass[aps, twocolumn]{revtex4-2} 
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -45,79 +37,27 @@ singlelinecheck=false
 
 \graphicspath{{figs/}} %  PATH to figure files-- change to ./ for submission
 
-%% The lineno packages adds line numbers. Start line numbering with
-%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
-%% for the whole article with \linenumbers after \end{frontmatter}.
-%% \usepackage{lineno}
 
-%% natbib.sty is loaded by default. However, natbib options can be
-%% provided with \biboptions{...} command. Following options are
-%% valid:
-
-%%   round  -  round parentheses are used (default)
-%%   square -  square brackets are used   [option]
-%%   curly  -  curly braces are used      {option}
-%%   angle  -  angle brackets are used    <option>
-%%   semicolon  -  multiple citations separated by semi-colon
-%%   colon  - same as semicolon, an earlier confusion
-%%   comma  -  separated by comma
-%%   numbers-  selects numerical citations
-%%   super  -  numerical citations as superscripts
-%%   sort   -  sorts multiple citations according to order in ref. list
-%%   sort&compress   -  like sort, but also compresses numerical citations
-%%   compress - compresses without sorting
-%%
-%% \biboptions{comma,round}
-
-% \biboptions{}
-
-
-%\journal{Computer Physics Communications}
 
 \begin{document}
 
-\begin{frontmatter}
-
-%% Title, authors and addresses
-
-%% use the tnoteref command within \title for footnotes;
-%% use the tnotetext command for the associated footnote;
-%% use the fnref command within \author or \address for footnotes;
-%% use the fntext command for the associated footnote;
-%% use the corref command within \author for corresponding author footnotes;
-%% use the cortext command for the associated footnote;
-%% use the ead command for the email address,
-%% and the form \ead[url] for the home page:
-%%
-%% \title{Title\tnoteref{label1}}
-%% \tnotetext[label1]{}
-%% \author{Name\corref{cor1}\fnref{label2}}
-%% \ead{email address}
-%% \ead[url]{home page}
-%% \fntext[label2]{}
-%% \cortext[cor1]{}
-%% \address{Address\fnref{label3}}
-%% \fntext[label3]{}
 
 \title{PyGBe-LSPR---Computational nanoplasmonics for biosensing applications}
 
-\author[gwu]{Natalia C. Clementi\corref{ncc}}
-\ead{ncclementi@gwu.edu}
+\author{Natalia C. Clementi}
+\email{ncclementi@gwu.edu}
+\affiliation{Department of Mechanical \& Aerospace Engineering, The George Washington University, Washington, D.C.}
 
-\author[usm]{Christopher D. Cooper\corref{cdc}}
-\ead{christopher.cooper@usm.cl}
+\author{Christopher D. Cooper}
+\email{christopher.cooper@usm.cl}
+\affiliation{Department of Mechanical Engineering and Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Universidad T\'ecnica Federico Santa Mar\'ia, Valpara\'iso, Chile.}
 
-\author[gwu]{Lorena A.~Barba\corref{lab}}
-\ead{labarba@gwu.edu}
-
-
-\address[gwu]{Department of Mechanical \& Aerospace Engineering, The George Washington University, Washington, D.C.}
-\address[usm]{Department of Mechanical Engineering and Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Universidad T\'ecnica Federico Santa Mar\'ia, Valpara\'iso, Chile.}
-\cortext[lab]{Corresponding author.}
+\author{Lorena A.~Barba\corref{lab}}
+\email{labarba@gwu.edu}
 
 %\date{\today}
 
-\begin{abstract}
+\begin{abstract} % in revtex4-2, the abstract must come before the \maketitle command
 
 The phenomenon of localized surface plasmon resonance provides high sensitivity in detecting biomolecules through shifts in resonance frequency when a target is present. 
 Computational studies in this field have used the full Maxwell equations with simplified models of a sensor-analyte system, or neglected the analyte altogether. 
@@ -135,15 +75,7 @@ The final result is a sensitivity study of the biosensor model, obtaining the sh
 All results in this paper are fully reproducible, and we have deposited in archival data repositories all the materials needed to run the computations again and re-create the figures. \pygbe is open source under a permissive license and openly developed. Documentation is available at \url{http://barbagroup.github.io/pygbe/docs/}. 
 \end{abstract}
 
-\begin{keyword}
-localized surface plasmon resonance \sep biosensors \sep nanoplasmonics \sep electrostatics  \sep implicit solvent \sep boundary element method  \sep Python 
-
-%% MSC codes here, in the form: \MSC code \sep code
-%% or \MSC[2008] code \sep code (2000 is the default)
-
-\end{keyword}
-
-\end{frontmatter}
+\maketitle
 
 % Body of paper.
 
@@ -181,12 +113,13 @@ Thanks to algorithmic acceleration with a treecode, and hardware acceleration wi
 
 
 
-\section*{Acknowledgments}
+\begin{acknowledgments}
 
 CDC acknowledges the financial support from CONICYT through projects FONDECYT Iniciaci\'on 11160768 and Basal FB0821.
+\end{acknowledgments}
 
 % Create the reference section using BibTeX:
-\bibliographystyle{elsarticle-num}
+\bibliographystyle{apsrev4-2}
 \bibliography{compbio,bem,scicomp,fastmethods,biosensors} %don't leave spaces between elements, it throws error
 
 \end{document}
