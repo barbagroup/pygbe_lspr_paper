@@ -1,5 +1,5 @@
 
- \documentclass[aps, twocolumn]{revtex4-2} 
+ \documentclass[pre,twocolumn]{revtex4} 
 
 \usepackage{amsfonts}
 \usepackage{amsmath}
@@ -8,6 +8,7 @@
 \usepackage{caption}
 \usepackage{color}
 \usepackage{comment}
+\usepackage{float}
 \usepackage{graphicx}
 \usepackage{hyperref}
 \usepackage[utf8]{inputenc} % allows using accents directly in text, like ÔøΩ
@@ -52,12 +53,13 @@ singlelinecheck=false
 \email{christopher.cooper@usm.cl}
 \affiliation{Department of Mechanical Engineering and Centro Cient\'ifico Tecnol\'ogico de Valpara\'iso, Universidad T\'ecnica Federico Santa Mar\'ia, Valpara\'iso, Chile.}
 
-\author{Lorena A.~Barba\corref{lab}}
+\author{Lorena A.~Barba}
 \email{labarba@gwu.edu}
-
+\affiliation{Department of Mechanical \& Aerospace Engineering, The George Washington University, Washington, D.C.}
 %\date{\today}
 
-\begin{abstract} % in revtex4-2, the abstract must come before the \maketitle command
+
+\begin{abstract} % in revtex4, the abstract must come before the \maketitle command
 
 The phenomenon of localized surface plasmon resonance provides high sensitivity in detecting biomolecules through shifts in resonance frequency when a target is present. 
 Computational studies in this field have used the full Maxwell equations with simplified models of a sensor-analyte system, or neglected the analyte altogether. 
@@ -79,7 +81,7 @@ All results in this paper are fully reproducible, and we have deposited in archi
 
 % Body of paper.
 
-\section{Introduction}\label{sec:intro}
+\section{Introduction} \label{sec:intro}
 \input{introduction}
 
 %=============
@@ -119,7 +121,7 @@ CDC acknowledges the financial support from CONICYT through projects FONDECYT In
 \end{acknowledgments}
 
 % Create the reference section using BibTeX:
-\bibliographystyle{apsrev4-2}
+%\bibliographystyle{} % revtex ournal sub-style automatically sets this
 \bibliography{compbio,bem,scicomp,fastmethods,biosensors} %don't leave spaces between elements, it throws error
 
 \end{document}
