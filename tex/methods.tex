@@ -149,7 +149,8 @@ leads to:
 %
 \begin{align} \label{eq:integral_eq_lspr}
 \frac{\phi_{1s,\Gamma}}{2}+ K_{L}^{\Gamma}(\phi_{1s,\Gamma}) - V_{L}^{\Gamma} \left(\frac{\partial}{\partial \mathbf{n}}\phi_{1s,\Gamma} \right) &= 0  \nonumber \\
-\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{\epsilon_1}{\epsilon_2}V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma}  \right) &= \frac{\epsilon_2-\epsilon_1}{\epsilon_2}V_{L}^{\Gamma}\left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right)\quad \text{on $\Gamma$.}
+\frac{\phi_{1s,\Gamma}}{2} - K_{L}^{\Gamma}(\phi_{1s,\Gamma}) + \frac{\epsilon_1}{\epsilon_2}V_{L}^{\Gamma} \left( \frac{\partial}{\partial \mathbf{n}} \phi_{1s,\Gamma}  \right) &= \nonumber \\
+ \frac{\epsilon_2-\epsilon_1}{\epsilon_2}V_{L}^{\Gamma}\left( \frac{\partial}{\partial \mathbf{n}} \phi_{i,\Gamma} \right)\quad \text{on $\Gamma$.}
 \end{align}
 
 %The weak formulation of Laplace equation with test function $w$:
@@ -234,12 +235,12 @@ leads to:
 
 The sketch in Figure \ref{fig:analyte-sensor} shows a metallic nanoparticle ($\Omega_1$) interacting with an analyte ($\Omega_3$), under an external electric field.
 Mathematically, this situation can be modeled as
-%
+
 \begin{align*} \label{eq:electrostatic_scatter_prot_sen}
 \nabla^2 \phi_{1s} &= 0, \qquad \nabla^2 \phi_{2s} = 0 \qquad\text{on $\Omega_1$, $\Omega_2$} \nonumber\\
 \nabla^2 \phi_{3s} &= \frac{1}{4\pi\epsilon_3} \sum_{k=0}^{N_q} \frac{q_k}{|\mathbf{r}_{\Omega_3} - \mathbf{r}_k|} \qquad\text{on $\Omega_3$} \nonumber \\
 \end{align*}
-%
+
 \begin{align}
 \epsilon_1\frac{\partial\phi_{1s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_1)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{1s} = \phi_{2s} \quad \text{on $\Gamma_1$}. \nonumber\\
 \epsilon_3\frac{\partial\phi_{3s}}{\partial \mathbf{n}} - \epsilon_2\frac{\partial\phi_{2s}}{\partial\mathbf{n}} &= (\epsilon_2-\epsilon_3)\frac{\partial\phi_i}{\partial\mathbf{n}} \quad \phi_{3s} = \phi_{2s} \quad \text{on $\Gamma_2$}.
@@ -443,10 +444,11 @@ Using the identity \eqref{eq:identity_grad} again in Equation \eqref{eq:dip_gaus
 taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$, we get:
 %
 \begin{align} \label{eq:dip_gauss_interm_2}
- - \frac{\mathbf{p_i}}{\epsilon_2} &= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
+ - \frac{\mathbf{p_i}}{\epsilon_2} =& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \nonumber \\
+ & \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
 %&\text{and applying the divergence theorem} \nonumber \\
-&= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
-&= \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
+=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
+=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
 \end{align}
 %
 Throughout this derivation, the normals are pointing into $\Omega_1$. However, in our implementation 
