@@ -433,29 +433,29 @@ with $f=x_i$ and $\mathbf{v} = \nabla\phi_{2s}$, we can rewrite Equation \eqref{
 as 
 %
 \begin{equation}
-- \frac{\mathbf{p_i}}{\epsilon_2} = \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega, \nonumber 
+- \frac{p_i}{\epsilon_2} = \int_\Omega \nabla \cdot \left( x_i \nabla \phi_{2s} \right) \; \text{d}\Omega - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega, \nonumber 
 \end{equation}
 \noindent and applying the divergence theorem
 \begin{equation} \label{eq:dip_gauss_interm_1}
-- \frac{\mathbf{p_i}}{\epsilon_2}= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega.
+- \frac{p_i}{\epsilon_2}= \oint_\Gamma  x_i  \nabla \phi_{2s} \cdot \mathbf{n} \; \text{d}\Gamma - \int_\Omega \nabla x_i \cdot \nabla\phi_{2s} \; \text{d}\Omega.
 \end{equation}
 %
 Using the identity \eqref{eq:identity_grad} again in Equation \eqref{eq:dip_gauss_interm_1}, this time 
 taking $f=\phi_{2s}$ and $\mathbf{v} = \nabla x_i$, we get:
 %
 \begin{align} \label{eq:dip_gauss_interm_2}
- - \frac{\mathbf{p_i}}{\epsilon_2} =& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \nonumber \\
+ - \frac{p_i}{\epsilon_2} =& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial \mathbf{n}} \text{d}\Gamma - \nonumber \\
  & \left[ \int_\Omega \nabla \cdot \left( \phi_{2s} \nabla x_i \right)\;\text{d}\Omega - \int_\Omega  \phi_{2s} \nabla^2 x_i \;\text{d}\Omega\right] \nonumber\\
 %&\text{and applying the divergence theorem} \nonumber \\
-=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
-=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
+=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial \mathbf{n}} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} \nabla x_i \cdot \mathbf{n} \; \text{d}\Gamma \nonumber \\
+=& \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial \mathbf{n}} \; \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \;\text{d}\Gamma
 \end{align}
 %
 Throughout this derivation, the normals are pointing into $\Omega_1$. However, in our implementation 
 all normals are pointing outwards, and we need to include an extra negative sign, yielding:
 %
 \begin{equation} \label{eq:dipole_def_gauss_i_final}
-{p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial n} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right].
+{p_i} = \epsilon_2 \left[ \oint_\Gamma  x_i  \frac{\partial \phi_{2s}}{\partial \mathbf{n}} \text{d}\Gamma - \oint_\Gamma \phi_{2s} n_i \; \text{d}\Gamma \right].
 \end{equation}
 
 Using BEM, we obtain the electrostatic potential on the surface of the nanoparticle, 
