@@ -176,8 +176,6 @@ evidence that \pygbe can accurately represent the mathematical model.
 \end{figure}
 
 
-
-
 \subsection{LSPR response to bovine serum albumin (BSA)} \label{sec:lspr_response}
 
 Localized Surface Plasmon Resonance (LSPR) biosensors detect a target molecule by monitoring
@@ -194,19 +192,11 @@ See section \ref{sec:repro} for details.
 
 \subsubsection{Grid-convergence study} \label{sec:bsa_convergence}
 We performed a grid-convergence 
-analysis of the system sketched in Figure \ref{fig:setup_conv}. 
+analysis of the system sketched in Figure \ref{fig:analyte-sensor}. 
 Since we compute the extinction cross-section of the spherical nanoparticle only, we 
 set a fixed mesh density for the protein and refined the mesh of the
 sphere (meshes of 512, 2048, 8192 and 32768 elements). We found that the protein meshed with two
 triangles per ${\AA}^2$ was fine enough for the convergence analysis, resulting in $N_{prot} = 98116$ elements. 
-
-
-\begin{figure}[h] %  figure placement: here, top, bottom, or page
-   \centering
-   \includegraphics[width=0.15\textwidth]{protein_sphere_sketch.pdf} 
-   \caption{Setup for convergence analysis of the LSPR response calculations.}
-   \label{fig:setup_conv}
-\end{figure}
 
 We used the same physical conditions as in the grid convergence with an isolated silver nanoparticle, and the same numerical parameters, presented in Tables \ref{table:quadparams1} and \ref{table:treeparams1}.
 For the protein dielectric constant, we used $2.7514 + 0.2860i$, obtained from the 
@@ -235,7 +225,7 @@ The percentage errors for the different meshes are presented in Table \ref{table
 
 \begin{table}%[h]
     \centering
-    \caption{\label{table:err_bsa_sensor} Estimated percentage error of the BSA-sensor system (Fig.~\ref{fig:setup_conv}), with respect to the extrapolated value (using Richardson extrapolation).} 
+    \caption{\label{table:err_bsa_sensor} Estimated percentage error of the BSA-sensor system (Fig.~\ref{fig:analyte-sensor}), with respect to the extrapolated value (using Richardson extrapolation).} 
     \begin{tabular}{c c}
     \hline%\toprule
     N & \% error \\
