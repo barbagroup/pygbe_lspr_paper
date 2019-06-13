@@ -79,6 +79,10 @@ is accelerated algorithmically via a treecode---an $\mathcal{O}(N\log N)$ fast-s
 With these features, \pygbe is able to easily handle problems with in the order of 
 half a million boundary elements, or more, 
 allowing for the explicit representation of the biomolecular surface.
+Other research software that could be used in this setting includes  
+BEM++ \cite{SmigajETal2015} and a Matlab toolbox called MNPBEM \cite{HohenesterTrugler2012}, which have the capability to solve the full Maxwell's equation and the electrostatic approximation in the long-wavelength limit.
+We believe in both cases the size of problems that can be treated, in terms of number of boundary elements, may not be enough to resolve the details of target biomolecules from their crystal structure. 
+
 The software is shared under the BSD 3-clause license 
 and is openly developed via its repository on Github.\footnote{\url{https://github.com/barbagroup/pygbe}}
 This study also follows careful reproducibility practices, and all materials necessary
