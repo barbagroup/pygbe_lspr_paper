@@ -1,4 +1,4 @@
-\begin{thebibliography}{49}
+\begin{thebibliography}{50}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -394,6 +394,17 @@
   \bibinfo{journal}{The Journal of Physical Chemistry C}
   \textbf{\bibinfo{volume}{114}}, \bibinfo{pages}{20990}
   (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Pu et~al.}(2018)\citenamefont{Pu, Ran, Guan, Huang,
+  Ren, and Qu}}]{PuETal2018}
+\bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Pu}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Ran}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Guan}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Ren}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Qu}}, \bibinfo{journal}{Nano
+  Research} \textbf{\bibinfo{volume}{11}}, \bibinfo{pages}{3213}
+  (\bibinfo{year}{2018}).
 
 \bibitem[{\citenamefont{Raphael et~al.}(2013)\citenamefont{Raphael,
   Christodoulides, Delehanty, Long, Pehrsson, and Byers}}]{RaphaelETal2013}
