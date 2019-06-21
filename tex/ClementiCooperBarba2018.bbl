@@ -1,249 +1,420 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{48}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\expandafter\ifx\csname bibnamefont\endcsname\relax
+  \def\bibnamefont#1{#1}\fi
+\expandafter\ifx\csname bibfnamefont\endcsname\relax
+  \def\bibfnamefont#1{#1}\fi
+\expandafter\ifx\csname citenamefont\endcsname\relax
+  \def\citenamefont#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{\texttt{#1}}\fi
 \expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
-\expandafter\ifx\csname href\endcsname\relax
-  \def\href#1#2{#2} \def\path#1{#1}\fi
+\providecommand{\bibinfo}[2]{#2}
+\providecommand{\eprint}[2][]{\url{#2}}
 
-\bibitem{HaesVanduyne2002}
-A.~J. Haes, R.~P. Van~Duyne, A nanoscale optical biosensor: Sensitivity and
-  selectivity of an approach based on the localized surface plasmon resonance
-  spectroscopy of triangular silver nanoparticles, J. Am. Chem. Soc. 124~(35)
-  (2002) 10596--10604.
+\bibitem[{\citenamefont{Petryayeva and Krull}(2011)}]{PetryayevaKrull2011}
+\bibinfo{author}{\bibfnamefont{E.}~\bibnamefont{Petryayeva}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{U.~J.} \bibnamefont{Krull}},
+  \bibinfo{journal}{Anal. Chim. Acta} \textbf{\bibinfo{volume}{706}},
+  \bibinfo{pages}{8} (\bibinfo{year}{2011}).
 
-\bibitem{HaesETal2004}
-A.~J. Haes, S.~Zou, G.~C. Schantz, R.~P. Van~Duyne, A nanoscale optical
-  biosensor: The long range distance dependence of the localized surface
-  plasmon resonance of noble metal nanoparticles, J. Phys. Chem B 108 (2004)
-  109--116.
+\bibitem[{\citenamefont{Olson et~al.}(2015)\citenamefont{Olson,
+  Dominguez-Medina, Hoggard, Wang, Chang, and Link}}]{OlsonETal2015}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Olson}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Dominguez-Medina}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Hoggard}},
+  \bibinfo{author}{\bibfnamefont{L.-Y.} \bibnamefont{Wang}},
+  \bibinfo{author}{\bibfnamefont{W.-S.} \bibnamefont{Chang}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Link}},
+  \bibinfo{journal}{Chemical Society Reviews} \textbf{\bibinfo{volume}{44}},
+  \bibinfo{pages}{40} (\bibinfo{year}{2015}).
 
-\bibitem{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}
-D.~M. Solis, J.~M. Taboada, F.~Obelleiro, L.~M. Liz-Marz\'{a}n, F.~J.
-  Garc\'{i}a~de Abajo, Toward ultimate nanoplasmonics modeling, ACS Nano 8~(8)
-  (2014) 7559--7570.
+\bibitem[{\citenamefont{Haes and Van~Duyne}(2002)}]{HaesVanduyne2002}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Haes}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~P.} \bibnamefont{Van~Duyne}},
+  \bibinfo{journal}{J. Am. Chem. Soc.} \textbf{\bibinfo{volume}{124}},
+  \bibinfo{pages}{10596} (\bibinfo{year}{2002}).
 
-\bibitem{Hohenester2018}
-U.~Hohenester, Making simulations with the {MNPBEM} toolbox big: Hierarchical
-  matrices and iterative solvers, Computer Physics Communications 222 (2018)
-  209--228.
+\bibitem[{\citenamefont{Haes et~al.}(2004)\citenamefont{Haes, Zou, Schantz, and
+  Van~Duyne}}]{HaesETal2004}
+\bibinfo{author}{\bibfnamefont{A.~J.} \bibnamefont{Haes}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Zou}},
+  \bibinfo{author}{\bibfnamefont{G.~C.} \bibnamefont{Schantz}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{R.~P.}
+  \bibnamefont{Van~Duyne}}, \bibinfo{journal}{J. Phys. Chem B}
+  \textbf{\bibinfo{volume}{108}}, \bibinfo{pages}{109} (\bibinfo{year}{2004}).
 
-\bibitem{HohenesterTrugler2012}
-U.~Hohenester, A.~Trugler, {MNPBEM} --- {A} {M}atlab toolbox for the simulation
-  of plasmonic nanoparticles, Comput. Phys. Commun. 183 (2012) 370--381.
+\bibitem[{\citenamefont{Solis et~al.}(2014)\citenamefont{Solis, Taboada,
+  Obelleiro, Liz-Marz\'{a}n, and Garc\'{i}a~de
+  Abajo}}]{SolisTaboadaObelleiroLiz-MaarzanGarciadeabajo2014}
+\bibinfo{author}{\bibfnamefont{D.~M.} \bibnamefont{Solis}},
+  \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Taboada}},
+  \bibinfo{author}{\bibfnamefont{F.}~\bibnamefont{Obelleiro}},
+  \bibinfo{author}{\bibfnamefont{L.~M.} \bibnamefont{Liz-Marz\'{a}n}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{F.~J.}
+  \bibnamefont{Garc\'{i}a~de Abajo}}, \bibinfo{journal}{ACS Nano}
+  \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{7559} (\bibinfo{year}{2014}).
 
-\bibitem{JungPedersenSondergaardPedersenLarsenNielsen2010}
-J.~Jung, T.~G. Pedersen, T.~Sondergaard, K.~Pedersen, A.~N. Larsen, B.~B.
-  Nielsen, Electrostatic plasmon resonances of metal nanospheres in layered
-  geometries, Phys.\ Rev.\ B 81~(12).
+\bibitem[{\citenamefont{Hohenester}(2018)}]{Hohenester2018}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Hohenester}},
+  \bibinfo{journal}{Computer Physics Communications}
+  \textbf{\bibinfo{volume}{222}}, \bibinfo{pages}{209} (\bibinfo{year}{2018}).
 
-\bibitem{VideenSun2003}
-G.~Videen, W.~Sun, Yet another look at light scattering from particles in
-  absorbing media, Applied optics 42~(33) (2003) 6724--6727.
+\bibitem[{\citenamefont{Hohenester and Trugler}(2012)}]{HohenesterTrugler2012}
+\bibinfo{author}{\bibfnamefont{U.}~\bibnamefont{Hohenester}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Trugler}},
+  \bibinfo{journal}{Comput. Phys. Commun.} \textbf{\bibinfo{volume}{183}},
+  \bibinfo{pages}{370} (\bibinfo{year}{2012}).
 
-\bibitem{MayergoyzFredkinZhang2005}
-I.~D. Mayergoyz, D.~R. Fredkin, Z.~Zhang, Electrostatic (plasmon) resonances in
-  nanoparticles, Phys.\ Rev.\ B 72~(15) (2005) 155412.
+\bibitem[{\citenamefont{Jung et~al.}(2010)\citenamefont{Jung, Pedersen,
+  Sondergaard, Pedersen, Larsen, and
+  Nielsen}}]{JungPedersenSondergaardPedersenLarsenNielsen2010}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Jung}},
+  \bibinfo{author}{\bibfnamefont{T.~G.} \bibnamefont{Pedersen}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Sondergaard}},
+  \bibinfo{author}{\bibfnamefont{K.}~\bibnamefont{Pedersen}},
+  \bibinfo{author}{\bibfnamefont{A.~N.} \bibnamefont{Larsen}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{B.~B.}
+  \bibnamefont{Nielsen}}, \bibinfo{journal}{Phys.\ Rev.\ B}
+  \textbf{\bibinfo{volume}{81}} (\bibinfo{year}{2010}).
 
-\bibitem{MayergoyzZhang2007}
-I.~D. Mayergoyz, Z.~Zhang, The computation of extinction cross sections of
-  resonant metallic nanoparticles subject to optical radiation, IEEE Trans.\
-  Magn. 43~(4) (2007) 1681--1684.
+\bibitem[{\citenamefont{Videen and Sun}(2003)}]{VideenSun2003}
+\bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Videen}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Sun}},
+  \bibinfo{journal}{Applied optics} \textbf{\bibinfo{volume}{42}},
+  \bibinfo{pages}{6724} (\bibinfo{year}{2003}).
 
-\bibitem{GarciadeabajoAizpurua1997}
-F.~J. Garc\'{i}a~de Abajo, J.~Aizpurua, Numerical simulation of electron energy
-  loss near inhomogeneous dielectrics, Phys.\ Rev.\ B 56~(24) (1997) 15873(12).
+\bibitem[{\citenamefont{Mayergoyz et~al.}(2005)\citenamefont{Mayergoyz,
+  Fredkin, and Zhang}}]{MayergoyzFredkinZhang2005}
+\bibinfo{author}{\bibfnamefont{I.~D.} \bibnamefont{Mayergoyz}},
+  \bibinfo{author}{\bibfnamefont{D.~R.} \bibnamefont{Fredkin}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Zhang}},
+  \bibinfo{journal}{Phys.\ Rev.\ B} \textbf{\bibinfo{volume}{72}},
+  \bibinfo{pages}{155412} (\bibinfo{year}{2005}).
 
-\bibitem{GarciadeabajoHowie2002}
-F.~J.~G. de~Abajo, A.~Howie, Retarded field calculation of electron energy loss
-  in inhommogeneous dielectrics, Phys.\ Rev.\ B 65~(11) (2002) 115418.
+\bibitem[{\citenamefont{Mayergoyz and Zhang}(2007)}]{MayergoyzZhang2007}
+\bibinfo{author}{\bibfnamefont{I.~D.} \bibnamefont{Mayergoyz}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Zhang}},
+  \bibinfo{journal}{IEEE Trans.\ Magn.} \textbf{\bibinfo{volume}{43}},
+  \bibinfo{pages}{1681} (\bibinfo{year}{2007}).
 
-\bibitem{JungCampbellChinowskyMarYee1998}
-L.~S. Jung, C.~T. Campbell, T.~M. Chinowsky, M.~N. Mar, S.~S. Yee, Quantitative
-  interpretation of the response of surface plasmon resonance sensors to
-  adsorbed fields, Langmuir 14 (1998) 5636--5648.
+\bibitem[{\citenamefont{Garc\'{i}a~de Abajo and
+  Aizpurua}(1997)}]{GarciadeabajoAizpurua1997}
+\bibinfo{author}{\bibfnamefont{F.~J.} \bibnamefont{Garc\'{i}a~de Abajo}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Aizpurua}},
+  \bibinfo{journal}{Phys.\ Rev.\ B} \textbf{\bibinfo{volume}{56}},
+  \bibinfo{pages}{15873(12)} (\bibinfo{year}{1997}).
 
-\bibitem{WilletsVandyune2007}
-K.~A. Willets, R.~P. Van~Dyune, Localized surface plasmon resonance
-  spectroscopy and sensing, Annu. Rev. Phys. Chem. 58 (2007) 267--297.
+\bibitem[{\citenamefont{de~Abajo and Howie}(2002)}]{GarciadeabajoHowie2002}
+\bibinfo{author}{\bibfnamefont{F.~J.~G.} \bibnamefont{de~Abajo}}
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Howie}},
+  \bibinfo{journal}{Phys.\ Rev.\ B} \textbf{\bibinfo{volume}{65}},
+  \bibinfo{pages}{115418} (\bibinfo{year}{2002}).
 
-\bibitem{PhanETal2013}
-A.~D. Phan, T.~X. Hoang, T.~H.~L. Nghiem, L.~M. Woods, Surface plasmon
-  resonances of protein-conjugated gold nanoparticles on graphitic substrates,
-  Applied Physics Letters 103~(16) (2013) 163702.
+\bibitem[{\citenamefont{Jung et~al.}(1998)\citenamefont{Jung, Campbell,
+  Chinowsky, Mar, and Yee}}]{JungCampbellChinowskyMarYee1998}
+\bibinfo{author}{\bibfnamefont{L.~S.} \bibnamefont{Jung}},
+  \bibinfo{author}{\bibfnamefont{C.~T.} \bibnamefont{Campbell}},
+  \bibinfo{author}{\bibfnamefont{T.~M.} \bibnamefont{Chinowsky}},
+  \bibinfo{author}{\bibfnamefont{M.~N.} \bibnamefont{Mar}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{S.~S.} \bibnamefont{Yee}},
+  \bibinfo{journal}{Langmuir} \textbf{\bibinfo{volume}{14}},
+  \bibinfo{pages}{5636} (\bibinfo{year}{1998}).
 
-\bibitem{DavisGomezVernon2010}
-T.~J. Davis, D.~E. Gomez, K.~C. Vernon, Interaction of molecules with localized
-  surface plasmons in metallic nanoparticles, Phys.\ Rev.\ B 81~(4).
+\bibitem[{\citenamefont{Willets and Van~Dyune}(2007)}]{WilletsVandyune2007}
+\bibinfo{author}{\bibfnamefont{K.~A.} \bibnamefont{Willets}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~P.} \bibnamefont{Van~Dyune}},
+  \bibinfo{journal}{Annu. Rev. Phys. Chem.} \textbf{\bibinfo{volume}{58}},
+  \bibinfo{pages}{267} (\bibinfo{year}{2007}).
 
-\bibitem{AntosiewiczApellClaudioKall2011}
-T.~J. Antosiewicz, S.~P. Apell, V.~Claudio, M.~K\"{a}ll, A simple model for the
-  resonance shift of localized plasmons due to dielectric particle adhesion,
-  Opt. Express 20~(1) (2011) 524--533.
+\bibitem[{\citenamefont{Phan et~al.}(2013)\citenamefont{Phan, Hoang, Nghiem,
+  and Woods}}]{PhanETal2013}
+\bibinfo{author}{\bibfnamefont{A.~D.} \bibnamefont{Phan}},
+  \bibinfo{author}{\bibfnamefont{T.~X.} \bibnamefont{Hoang}},
+  \bibinfo{author}{\bibfnamefont{T.~H.~L.} \bibnamefont{Nghiem}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~M.} \bibnamefont{Woods}},
+  \bibinfo{journal}{Applied Physics Letters} \textbf{\bibinfo{volume}{103}},
+  \bibinfo{pages}{163702} (\bibinfo{year}{2013}).
 
-\bibitem{BeuwervanHoofZijlstra2018}
-M.~A. Beuwer, B.~Van~Hoof, P.~Zijlstra, Spatially resolved sensitivity of
-  single-particle plasmon sensors, The Journal of Physical Chemistry C 122~(8)
-  (2018) 4615--4621.
+\bibitem[{\citenamefont{Davis et~al.}(2010)\citenamefont{Davis, Gomez, and
+  Vernon}}]{DavisGomezVernon2010}
+\bibinfo{author}{\bibfnamefont{T.~J.} \bibnamefont{Davis}},
+  \bibinfo{author}{\bibfnamefont{D.~E.} \bibnamefont{Gomez}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{K.~C.} \bibnamefont{Vernon}},
+  \bibinfo{journal}{Phys.\ Rev.\ B} \textbf{\bibinfo{volume}{81}}
+  (\bibinfo{year}{2010}).
 
-\bibitem{HenkelETal2018}
-A.~Henkel, W.~Ye, Y.~Khalavka, A.~Neiser, C.~Lambertz, S.~Schmachtel,
-  R.~Ahijado-Guzm{\'a}n, C.~S{\"o}nnichsen, Narrowing the plasmonic sensitivity
-  distribution by considering the individual size of gold nanorods, The Journal
-  of Physical Chemistry C 122~(18) (2018) 10133--10137.
+\bibitem[{\citenamefont{Antosiewicz et~al.}(2011)\citenamefont{Antosiewicz,
+  Apell, Claudio, and K\"{a}ll}}]{AntosiewiczApellClaudioKall2011}
+\bibinfo{author}{\bibfnamefont{T.~J.} \bibnamefont{Antosiewicz}},
+  \bibinfo{author}{\bibfnamefont{S.~P.} \bibnamefont{Apell}},
+  \bibinfo{author}{\bibfnamefont{V.}~\bibnamefont{Claudio}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{K\"{a}ll}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{20}},
+  \bibinfo{pages}{524} (\bibinfo{year}{2011}).
 
-\bibitem{HallETal2011}
-W.~P. Hall, J.~Modica, J.~Anker, Y.~Lin, M.~Mrksich, R.~P. Van~Duyne, A
-  conformation-and ion-sensitive plasmonic biosensor, Nano letters 11~(3)
-  (2011) 1098--1105.
+\bibitem[{\citenamefont{Beuwer et~al.}(2018)\citenamefont{Beuwer, Van~Hoof, and
+  Zijlstra}}]{BeuwervanHoofZijlstra2018}
+\bibinfo{author}{\bibfnamefont{M.~A.} \bibnamefont{Beuwer}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Van~Hoof}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Zijlstra}},
+  \bibinfo{journal}{The Journal of Physical Chemistry C}
+  \textbf{\bibinfo{volume}{122}}, \bibinfo{pages}{4615} (\bibinfo{year}{2018}).
 
-\bibitem{CooperETal2016}
-C.~D. Cooper, N.~C. Clementi, G.~Forsyth, L.~A. Barba, {PyGBe}: Python, {GPUs}
-  and boundary elements for biomolecular electrostatics, J. Open Source
-  Software 1~(4).
-\newblock \href {http://dx.doi.org/10.21105/joss.00043}
-  {\path{doi:10.21105/joss.00043}}.
+\bibitem[{\citenamefont{Henkel et~al.}(2018)\citenamefont{Henkel, Ye, Khalavka,
+  Neiser, Lambertz, Schmachtel, Ahijado-Guzm{\'a}n, and
+  S{\"o}nnichsen}}]{HenkelETal2018}
+\bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Henkel}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Ye}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Khalavka}},
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Neiser}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Lambertz}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Schmachtel}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Ahijado-Guzm{\'a}n}},
+  \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{S{\"o}nnichsen}},
+  \bibinfo{journal}{The Journal of Physical Chemistry C}
+  \textbf{\bibinfo{volume}{122}}, \bibinfo{pages}{10133}
+  (\bibinfo{year}{2018}).
 
-\bibitem{CooperClementiBarba2015}
-C.~D. Cooper, N.~C. Clementi, L.~A. Barba, Probing protein orientation near
-  charged nanosurfaces for simulation-assisted biosensor design, J. Chem. Phys.
-  143~(12) (2015) 124709, preprint on
-  \href{arxiv:1503.08150}{arxiv:1503.08150}.
+\bibitem[{\citenamefont{Hall et~al.}(2011)\citenamefont{Hall, Modica, Anker,
+  Lin, Mrksich, and Van~Duyne}}]{HallETal2011}
+\bibinfo{author}{\bibfnamefont{W.~P.} \bibnamefont{Hall}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Modica}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Anker}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Lin}},
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Mrksich}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~P.} \bibnamefont{Van~Duyne}},
+  \bibinfo{journal}{Nano letters} \textbf{\bibinfo{volume}{11}},
+  \bibinfo{pages}{1098} (\bibinfo{year}{2011}).
 
-\bibitem{ClementiETal2017}
-N.~C. Clementi, G.~Forsyth, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}: Python and
-  {GPU} boundary-integral solver for electrostatics, J. Open Source Software
-  2~(19) (2017) 306.
-\newblock \href {http://dx.doi.org/10.21105/joss.00306}
-  {\path{doi:10.21105/joss.00306}}.
+\bibitem[{\citenamefont{Cooper et~al.}(2016)\citenamefont{Cooper, Clementi,
+  Forsyth, and Barba}}]{CooperETal2016}
+\bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Forsyth}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \bibinfo{journal}{J. Open Source Software} \textbf{\bibinfo{volume}{1}}
+  (\bibinfo{year}{2016}).
 
-\bibitem{CooperBardhanBarba2013}
-C.~D. Cooper, J.~P. Bardhan, L.~A. Barba, A biomolecular electrostatics solver
-  using {Python}, {GPU}s and boundary elements that can handle solvent-filled
-  cavities and {S}tern layers., Comput. Phys. Commun. 185~(3) (2014) 720--729,
-  preprint on \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}.
-\newblock \href {http://dx.doi.org/10.1016/j.cpc.2013.10.028}
-  {\path{doi:10.1016/j.cpc.2013.10.028}}.
+\bibitem[{\citenamefont{Cooper et~al.}(2015)\citenamefont{Cooper, Clementi, and
+  Barba}}]{CooperClementiBarba2015}
+\bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \bibinfo{journal}{J. Chem. Phys.} \textbf{\bibinfo{volume}{143}},
+  \bibinfo{pages}{124709} (\bibinfo{year}{2015}), \bibinfo{note}{preprint on
+  \href{arxiv:1503.08150}{arxiv:1503.08150}}.
 
-\bibitem{Jackson}
-J.~D. Jackson, Classical Electrodynamics, 3rd Edition, Wiley, 1998.
+\bibitem[{\citenamefont{Clementi et~al.}(2017)\citenamefont{Clementi, Forsyth,
+  Cooper, and Barba}}]{ClementiETal2017}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Forsyth}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \bibinfo{journal}{J. Open Source Software} \textbf{\bibinfo{volume}{2}},
+  \bibinfo{pages}{306} (\bibinfo{year}{2017}).
 
-\bibitem{Mishchenko2007}
-M.~I. Mishchenko, Electromagnetic scattering by a fixed finite object embedded
-  in an absorbing medium, Opt. Express 20~(15) (2007) 13188--13202.
+\bibitem[{\citenamefont{{\'S}migaj et~al.}(2015)\citenamefont{{\'S}migaj,
+  Betcke, Arridge, Phillips, and Schweiger}}]{SmigajETal2015}
+\bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{{\'S}migaj}},
+  \bibinfo{author}{\bibfnamefont{T.}~\bibnamefont{Betcke}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Arridge}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Phillips}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.}~\bibnamefont{Schweiger}},
+  \bibinfo{journal}{ACM Transactions on Mathematical Software (TOMS)}
+  \textbf{\bibinfo{volume}{41}}, \bibinfo{pages}{6} (\bibinfo{year}{2015}).
 
-\bibitem{BrebbiaDominguez1992}
-C.~Brebbia, I.~Dominguez, Boundary Elements An Introductory Course, 2nd
-  Edition, WIT Press, 1992.
+\bibitem[{\citenamefont{Cooper et~al.}(2014)\citenamefont{Cooper, Bardhan, and
+  Barba}}]{CooperBardhanBarba2013}
+\bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Bardhan}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \bibinfo{journal}{Comput. Phys. Commun.} \textbf{\bibinfo{volume}{185}},
+  \bibinfo{pages}{720} (\bibinfo{year}{2014}), \bibinfo{note}{preprint on
+  \href{http://arxiv.org/abs/1309.4018}{arXiv:/1309.4018}}.
 
-\bibitem{HessSmith1967}
-J.~L. Hess, A.~Smith, Calculation of potential flow about arbitrary bodies,
-  Progress in Aerospace Sciences 8 (1967) 1--138.
+\bibitem[{\citenamefont{Jackson}(1998)}]{Jackson}
+\bibinfo{author}{\bibfnamefont{J.~D.} \bibnamefont{Jackson}},
+  \emph{\bibinfo{title}{Classical Electrodynamics}}
+  (\bibinfo{publisher}{Wiley}, \bibinfo{year}{1998}), \bibinfo{edition}{3rd}
+  ed.
 
-\bibitem{ZhuHuangSongWhite2001}
-Z.~Zhu, J.~Huang, B.~Song, J.~White, Improving the robustness of a surface
-  integral formulation for wideband impedance extraction of {3D} structures,
-  in: Proceedings of the 2001 IEEE/ACM Int.\ Conf.\ on Computer-Aided Design,
-  2001, pp. 592--597.
+\bibitem[{\citenamefont{Mishchenko}(2007)}]{Mishchenko2007}
+\bibinfo{author}{\bibfnamefont{M.~I.} \bibnamefont{Mishchenko}},
+  \bibinfo{journal}{Opt. Express} \textbf{\bibinfo{volume}{20}},
+  \bibinfo{pages}{13188} (\bibinfo{year}{2007}).
 
-\bibitem{BarnesHut1986}
-J.~Barnes, P.~Hut, A hierarchical {$O(N \log N)$} force-calculation algorithm,
-  Nature 324 (1986) 446--449.
-\newblock \href {http://dx.doi.org/10.1038/324446a0}
-  {\path{doi:10.1038/324446a0}}.
+\bibitem[{\citenamefont{Brebbia and Dominguez}(1992)}]{BrebbiaDominguez1992}
+\bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Brebbia}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{I.}~\bibnamefont{Dominguez}},
+  \emph{\bibinfo{title}{Boundary Elements An Introductory Course}}
+  (\bibinfo{publisher}{WIT Press}, \bibinfo{year}{1992}),
+  \bibinfo{edition}{2nd} ed.
 
-\bibitem{DuanKrasny2001}
-Z.-H. Duan, R.~Krasny, An adaptive treecode for computing nonbonded potential
-  energy in classical molecular systems, J. Comp.\ Chem. 22~(2) (2001)
-  184--195.
+\bibitem[{\citenamefont{Hess and Smith}(1967)}]{HessSmith1967}
+\bibinfo{author}{\bibfnamefont{J.~L.} \bibnamefont{Hess}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{A.}~\bibnamefont{Smith}},
+  \bibinfo{journal}{Progress in Aerospace Sciences}
+  \textbf{\bibinfo{volume}{8}}, \bibinfo{pages}{1} (\bibinfo{year}{1967}).
 
-\bibitem{CooperBarba-share154331}
-C.~D. Cooper, L.~A. Barba, Validation of the \texttt{{PyGBe}} code for
-  {P}oisson-{B}oltzmann equation with boundary element methods, Technical
-  Report on \textbf{figshare}, CC-BY license (January 25 2013).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.154331}
-  {\path{doi:10.6084/m9.figshare.154331}}.
+\bibitem[{\citenamefont{Zhu et~al.}(2001)\citenamefont{Zhu, Huang, Song, and
+  White}}]{ZhuHuangSongWhite2001}
+\bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Zhu}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Song}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{White}}, in
+  \emph{\bibinfo{booktitle}{Proceedings of the 2001 IEEE/ACM Int.\ Conf.\ on
+  Computer-Aided Design}} (\bibinfo{year}{2001}), pp.
+  \bibinfo{pages}{592--597}.
 
-\bibitem{JohnsonChristy1972}
-P.~B. Johnson, R.~W. Christy, Optical constants of nobble metals, Phys. Rev. B
-  12~(6) (1972) 4370--4379.
+\bibitem[{\citenamefont{Barnes and Hut}(1986)}]{BarnesHut1986}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Barnes}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Hut}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{324}},
+  \bibinfo{pages}{446} (\bibinfo{year}{1986}).
 
-\bibitem{HaleQuerry1972}
-G.~M. Hale, M.~R. Querry, Optical constants of water in the 200-nm to
-  200-$\mu$m wavelength region, Appl. Opt. 12~(3) (1972) 555--563.
+\bibitem[{\citenamefont{Duan and Krasny}(2001)}]{DuanKrasny2001}
+\bibinfo{author}{\bibfnamefont{Z.-H.} \bibnamefont{Duan}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Krasny}},
+  \bibinfo{journal}{J. Comp.\ Chem.} \textbf{\bibinfo{volume}{22}},
+  \bibinfo{pages}{184} (\bibinfo{year}{2001}).
 
-\bibitem{ClementiETal2018c}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Grid convergence of {PyGBE-LSPR}
-  with a silver nano sphere and with {BSA} sensor system, figshare. Fileset.
-  (December 2018).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504271.v1}
-  {\path{doi:10.6084/m9.figshare.7504271.v1}}.
+\bibitem[{\citenamefont{Cooper and Barba}(2013)}]{CooperBarba-share154331}
+\bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{Validation of the \texttt{{PyGBe}} code for
+  {P}oisson-{B}oltzmann equation with boundary element methods}},
+  \bibinfo{howpublished}{Technical Report on \textbf{figshare}, CC-BY license}
+  (\bibinfo{year}{2013}).
 
-\bibitem{ClementiETal2018d}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Verification of {PyGBE-LSPR} on the
-  extinction cross-section of a single nanosphere, figshare. Fileset. (December
-  2018).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504307.v1}
-  {\path{doi:10.6084/m9.figshare.7504307.v1}}.
+\bibitem[{\citenamefont{Decherchi and Rocchia}(2013)}]{Nanoshaper}
+\bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Decherchi}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Rocchia}},
+  \bibinfo{journal}{PloS one} \textbf{\bibinfo{volume}{8}},
+  \bibinfo{pages}{e59744} (\bibinfo{year}{2013}).
 
-\bibitem{Nanoshaper}
-S.~Decherchi, W.~Rocchia, A general and robust ray-casting-based algorithm for
-  triangulating surfaces at the nanoscale, PloS one 8~(4) (2013) e59744.
+\bibitem[{\citenamefont{Dolinsky et~al.}(2004)\citenamefont{Dolinsky, Nielsen,
+  {McCammon}, and Baker}}]{Dolinsky04}
+\bibinfo{author}{\bibfnamefont{T.~J.} \bibnamefont{Dolinsky}},
+  \bibinfo{author}{\bibfnamefont{J.~E.} \bibnamefont{Nielsen}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{{McCammon}}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{N.~A.} \bibnamefont{Baker}},
+  \bibinfo{journal}{Nucleic Acids Research} \textbf{\bibinfo{volume}{32}},
+  \bibinfo{pages}{W665} (\bibinfo{year}{2004}).
 
-\bibitem{Dolinsky04}
-T.~J. Dolinsky, J.~E. Nielsen, J.~A. {McCammon}, N.~A. Baker, {PDB2PQR}: an
-  automated pipeline for the setup of {Poisson}--{Boltzmann} electrostatics
-  calculations, Nucleic Acids Research 32 (2004) W665--W667.
+\bibitem[{\citenamefont{Johnson and Christy}(1972)}]{JohnsonChristy1972}
+\bibinfo{author}{\bibfnamefont{P.~B.} \bibnamefont{Johnson}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{R.~W.} \bibnamefont{Christy}},
+  \bibinfo{journal}{Phys. Rev. B} \textbf{\bibinfo{volume}{12}},
+  \bibinfo{pages}{4370} (\bibinfo{year}{1972}).
 
-\bibitem{ClementiETal2018e}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, Mesh visualizations for {PyGBE}
-  calculations of {LSPR} response to bovine serum albumin ({BSA}), figshare.
-  Fileset. (December 2018).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7504484.v1}
-  {\path{doi:10.6084/m9.figshare.7504484.v1}}.
+\bibitem[{\citenamefont{Hale and Querry}(1972)}]{HaleQuerry1972}
+\bibinfo{author}{\bibfnamefont{G.~M.} \bibnamefont{Hale}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{M.~R.} \bibnamefont{Querry}},
+  \bibinfo{journal}{Appl. Opt.} \textbf{\bibinfo{volume}{12}},
+  \bibinfo{pages}{555} (\bibinfo{year}{1972}).
 
-\bibitem{ClementiETal2018a}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
-  nanoplasmonics for biosensing applications (problem datasets), [Data set].
-  Zenodo (December 2018).
-\newblock \href {http://dx.doi.org/10.5281/zenodo.2511600}
-  {\path{doi:10.5281/zenodo.2511600}}.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{a}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018c}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{Grid convergence of {PyGBE-LSPR} with a silver nano
+  sphere and with {BSA} sensor system}}, \bibinfo{howpublished}{figshare.
+  Fileset.} (\bibinfo{year}{2018}{\natexlab{a}}).
 
-\bibitem{ClementiETal2018b}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {PyGBe-LSPR}---computational
-  nanoplasmonics for biosensing applications (execution files), Zenodo
-  (December 2018).
-\newblock \href {http://dx.doi.org/10.5281/zenodo.2513715}
-  {\path{doi:10.5281/zenodo.2513715}}.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{b}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018d}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{Verification of {PyGBE-LSPR} on the extinction
+  cross-section of a single nanosphere}}, \bibinfo{howpublished}{figshare.
+  Fileset.} (\bibinfo{year}{2018}{\natexlab{b}}).
 
-\bibitem{ClementiETal2018f}
-N.~C. Clementi, C.~D. Cooper, L.~A. Barba, {LSPR} response of a silver
-  nanosphere to bovine serum albumin ({BSA}), using {PyGBE}, figshare. Fileset.
-  (December 2018).
-\newblock \href {http://dx.doi.org/10.6084/m9.figshare.7506167.v1}
-  {\path{doi:10.6084/m9.figshare.7506167.v1}}.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{c}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018e}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{Mesh visualizations for {PyGBE} calculations of {LSPR}
+  response to bovine serum albumin ({BSA})}}, \bibinfo{howpublished}{figshare.
+  Fileset.} (\bibinfo{year}{2018}{\natexlab{c}}).
 
-\bibitem{TangETal2010}
-B.~Tang, S.~Xu, J.~Tao, Y.~Wu, W.~Xu, Y.~Ozaki, Two-dimensional correlation
-  localized surface plasmon resonance spectroscopy for analysis of the
-  interaction between metal nanoparticles and bovine serum albumin, The Journal
-  of Physical Chemistry C 114~(49) (2010) 20990--20996.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{d}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018a}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{{PyGBe-LSPR}---computational nanoplasmonics for
+  biosensing applications (problem datasets)}}, \bibinfo{howpublished}{[Data
+  set]. Zenodo} (\bibinfo{year}{2018}{\natexlab{d}}).
 
-\bibitem{RaphaelETal2013}
-M.~P. Raphael, J.~A. Christodoulides, J.~B. Delehanty, J.~P. Long, P.~E.
-  Pehrsson, J.~M. Byers, Quantitative {LSPR} imaging for biosensing with single
-  nanostructure resolution, Biophys.\ J. 104 (2013) 30--36.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{e}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018b}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{{PyGBe-LSPR}---computational nanoplasmonics for
+  biosensing applications (execution files)}}, \bibinfo{howpublished}{Zenodo}
+  (\bibinfo{year}{2018}{\natexlab{e}}).
 
-\bibitem{CooperBarba2016}
-C.~D. Cooper, L.~A. Barba, Poisson-{Boltzmann} model for protein-surface
-  electrostatic interactions and grid-convergence study using the {PyGBe} code,
-  Comput. Phys. Comm. 202 (2016) 23--32, preprint on
-  \href{http://arxiv.org/abs/1506.03745}{arXiv:1506.03745}.
-\newblock \href {http://dx.doi.org/10.1016/j.cpc.2015.12.019}
-  {\path{doi:10.1016/j.cpc.2015.12.019}}.
+\bibitem[{\citenamefont{Clementi
+  et~al.}(2018{\natexlab{f}})\citenamefont{Clementi, Cooper, and
+  Barba}}]{ClementiETal2018f}
+\bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
+  \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \emph{\bibinfo{title}{{LSPR} response of a silver nanosphere to bovine serum
+  albumin ({BSA}), using {PyGBE}}}, \bibinfo{howpublished}{figshare. Fileset.}
+  (\bibinfo{year}{2018}{\natexlab{f}}).
 
-\bibitem{SmigajETal2015}
-W.~{\'S}migaj, T.~Betcke, S.~Arridge, J.~Phillips, M.~Schweiger, Solving
-  boundary integral problems with {BEM++}, ACM Transactions on Mathematical
-  Software (TOMS) 41~(2) (2015) 6.
+\bibitem[{\citenamefont{Tang et~al.}(2010)\citenamefont{Tang, Xu, Tao, Wu, Xu,
+  and Ozaki}}]{TangETal2010}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Tang}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Xu}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Tao}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Wu}},
+  \bibinfo{author}{\bibfnamefont{W.}~\bibnamefont{Xu}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Ozaki}},
+  \bibinfo{journal}{The Journal of Physical Chemistry C}
+  \textbf{\bibinfo{volume}{114}}, \bibinfo{pages}{20990}
+  (\bibinfo{year}{2010}).
+
+\bibitem[{\citenamefont{Raphael et~al.}(2013)\citenamefont{Raphael,
+  Christodoulides, Delehanty, Long, Pehrsson, and Byers}}]{RaphaelETal2013}
+\bibinfo{author}{\bibfnamefont{M.~P.} \bibnamefont{Raphael}},
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{Christodoulides}},
+  \bibinfo{author}{\bibfnamefont{J.~B.} \bibnamefont{Delehanty}},
+  \bibinfo{author}{\bibfnamefont{J.~P.} \bibnamefont{Long}},
+  \bibinfo{author}{\bibfnamefont{P.~E.} \bibnamefont{Pehrsson}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Byers}},
+  \bibinfo{journal}{Biophys.\ J.} \textbf{\bibinfo{volume}{104}},
+  \bibinfo{pages}{30} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{Zhang et~al.}(2013)\citenamefont{Zhang, Lu, Cheng,
+  Huang, Pitsianis, Sun, and McCammon}}]{ZhangETal2013}
+\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Lu}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Cheng}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Huang}},
+  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Pitsianis}},
+  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Sun}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{McCammon}},
+  \bibinfo{journal}{Commun.\ Comput.\ Phys.} \textbf{\bibinfo{volume}{13}},
+  \bibinfo{pages}{107} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{Cooper and Barba}(2016)}]{CooperBarba2016}
+\bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}} \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
+  \bibinfo{journal}{Comput. Phys. Comm.} \textbf{\bibinfo{volume}{202}},
+  \bibinfo{pages}{23} (\bibinfo{year}{2016}), \bibinfo{note}{preprint on
+  \href{http://arxiv.org/abs/1506.03745}{arXiv:1506.03745}}.
 
 \end{thebibliography}
