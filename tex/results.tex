@@ -134,7 +134,8 @@ The values of the dielectric constant for each wavelength were obtained by inter
 experimental data \cite{JohnsonChristy1972, HaleQuerry1972}.
 For reproducibility of these results, we provide a Jupyter notebook with the code used for this interpolation step.
 See section \ref{sec:repro} for details.
-We used a mesh with $N=32768$, and relaxed some parameters compared with the grid convergence results shown previously, still yielding errors below $1\%$ at all frequencies.
+We used a mesh with $N=32,768$, and relaxed some parameters compared with the grid convergence results shown previously, still yielding errors below $1\%$ at all frequencies.
+This results in a $12\times$ decrease in the runtime for each case.
 The parameters used are shown in Tables \ref{table:quadparams2} and \ref{table:treeparams2}.
 Figure \ref{fig:verif_sphere} shows good agreement between the computed and analytical results, 
 evidence that \pygbe can accurately represent the mathematical model. 
