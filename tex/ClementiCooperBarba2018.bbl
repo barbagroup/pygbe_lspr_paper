@@ -1,4 +1,4 @@
-\begin{thebibliography}{48}
+\begin{thebibliography}{49}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -335,6 +335,14 @@
   cross-section of a single nanosphere}}, \bibinfo{howpublished}{figshare.
   Fileset.} (\bibinfo{year}{2018}{\natexlab{b}}).
 
+\bibitem[{\citenamefont{Teichroeb et~al.}(2008)\citenamefont{Teichroeb,
+  Forrest, and Jones}}]{TeichroebETal2008}
+\bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Teichroeb}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Forrest}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Jones}},
+  \bibinfo{journal}{The European Physical Journal E}
+  \textbf{\bibinfo{volume}{26}}, \bibinfo{pages}{411} (\bibinfo{year}{2008}).
+
 \bibitem[{\citenamefont{Clementi
   et~al.}(2018{\natexlab{c}})\citenamefont{Clementi, Cooper, and
   Barba}}]{ClementiETal2018e}
@@ -398,17 +406,20 @@
   \bibinfo{journal}{Biophys.\ J.} \textbf{\bibinfo{volume}{104}},
   \bibinfo{pages}{30} (\bibinfo{year}{2013}).
 
-\bibitem[{\citenamefont{Zhang et~al.}(2013)\citenamefont{Zhang, Lu, Cheng,
-  Huang, Pitsianis, Sun, and McCammon}}]{ZhangETal2013}
-\bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Zhang}},
-  \bibinfo{author}{\bibfnamefont{B.}~\bibnamefont{Lu}},
-  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Cheng}},
-  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Huang}},
-  \bibinfo{author}{\bibfnamefont{N.~P.} \bibnamefont{Pitsianis}},
-  \bibinfo{author}{\bibfnamefont{X.}~\bibnamefont{Sun}}, \bibnamefont{and}
-  \bibinfo{author}{\bibfnamefont{J.~A.} \bibnamefont{McCammon}},
-  \bibinfo{journal}{Commun.\ Comput.\ Phys.} \textbf{\bibinfo{volume}{13}},
-  \bibinfo{pages}{107} (\bibinfo{year}{2013}).
+\bibitem[{\citenamefont{Zhang et~al.}(2013)\citenamefont{Zhang, Zhang, Dong,
+  Jiang, Zhang, Chen, Zhang, Liao, Aizpurua, Luo et~al.}}]{ZhangZhangETal2013}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{Z.}~\bibnamefont{Dong}},
+  \bibinfo{author}{\bibfnamefont{S.}~\bibnamefont{Jiang}},
+  \bibinfo{author}{\bibfnamefont{C.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Chen}},
+  \bibinfo{author}{\bibfnamefont{L.}~\bibnamefont{Zhang}},
+  \bibinfo{author}{\bibfnamefont{Y.}~\bibnamefont{Liao}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Aizpurua}},
+  \bibinfo{author}{\bibfnamefont{Y.~e.} \bibnamefont{Luo}},
+  \bibnamefont{et~al.}, \bibinfo{journal}{Nature}
+  \textbf{\bibinfo{volume}{498}}, \bibinfo{pages}{82} (\bibinfo{year}{2013}).
 
 \bibitem[{\citenamefont{Cooper and Barba}(2016)}]{CooperBarba2016}
 \bibinfo{author}{\bibfnamefont{C.~D.} \bibnamefont{Cooper}} \bibnamefont{and}
