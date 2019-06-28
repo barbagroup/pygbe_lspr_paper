@@ -185,9 +185,16 @@ In this section, we model the response of LSPR biosensors using the expanded cap
 We consider a spherical silver nanoparticle, and compute the extinction cross-section placing 
 bovine serum albumin (BSA) proteins (PDB code: 4FS5, a BSA dimer) in different locations.
 We placed two BSA dimers opposite to each other in three configurations ($\pm z$, $\pm y$, and $\pm x$), as shown by figures \ref{fig:display_z} and \ref{fig:display_xy}.
-This analyte concentration is aligned with experimental results \cite{TeichroebETal2008}.
-The BSA surface mesh was generated using the open-source software Nanoshaper \cite{Nanoshaper}. 
- In support of the reproducibility of our results, we deposited the final meshes in the Zenodo data repository.
+This analyte concentration is aligned with experimental measurements from Teichroeb 
+and co-workers \cite{TeichroebETal2008}, where they report a coverage of $2x10^12 \quad \text{molecules}/cm^2$  
+or $3.3x10^12 \quad \text{molecules}/cm^2$ for a sphere of 15 nm of diameter depending 
+on type of attachment (side-on vs end-on). In their work the molecular size 
+reported is (5.5 nm x 5.5 nm x 9 nm) resulting in a number of molecules attached 
+between 4 and 6. The BSA molecule used in our work, corresponds to a dimer which 
+has approximately double the size of the work of Teichroeb et al, therefore, we 
+choose the locate two BSA-molecules in the proximity of the sensor. The BSA surface 
+mesh was generated using the open-source software Nanoshaper \cite{Nanoshaper}. 
+In support of the reproducibility of our results, we deposited the final meshes in the Zenodo data repository.
 See section \ref{sec:repro} for details.
 
 \subsubsection{Grid-convergence study} \label{sec:bsa_convergence}
