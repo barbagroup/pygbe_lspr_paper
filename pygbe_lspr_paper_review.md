@@ -179,7 +179,7 @@ calculations change for a gold particle rather than a silver one?
 3. In order to answer fully this question we would need to perform multiple calculations using gold, which is out of the scope of this paper. However, we can say that the shift magnitude would be smaller due to gold's Figure of Merit, FOM (how a nanoparticle's sensing capability is characterized). The reason we chose silver instead of gold is because the FOM  of silver is better, according to [FarooqAraujo2018](https://file.scirp.org/pdf/OJAppS_2018032115143480.pdf). 
 
 #### Modifications
-No modifications needed.
+- No modifications needed.
 
 
 ### Comment 5
@@ -192,7 +192,7 @@ reported effects?
 Simulations were performed using two BSA dimers, hence, effectively, there are four BSA molecules. The choice is supported by experimental studies (Teichroeb et al 2008, reference [41] in the paper, see Comment 6). Using fewer analytes, the red shift would indeed be smaller, and we would need to examine a finer range of wavelengths to see a shift.
 
 #### Modifications
-No modifications needed.
+- No modifications needed.
 
 
 ### Comment 6
@@ -254,11 +254,11 @@ Yes, the first appearance is on page two. We added an explanation after it is fi
 #### Modifications
 - Fixed on commit [75c74a0](https://github.com/barbagroup/pygbe_lspr_paper/commit/75c74a05f61e7eab661d30f4235ea7c88fe54219).
 
--------------------------------------------------------------------------------------------------------------
 
-# [\#11 Issue](https://github.com/barbagroup/pygbe_lspr_paper/issues/11) `open`: (PRE) Reviewer 2 comments
 
-#### <img src="https://avatars0.githubusercontent.com/u/7526622?v=4" width="50">[Naty Clementi](https://github.com/ncclementi) opened issue at [2019-05-28 19:29](https://github.com/barbagroup/pygbe_lspr_paper/issues/11):
+
+##Reviewer 2 comments
+
 
 In manuscript EC12092, Clementi et al. describe a boundary element method at the electrostatic limit to simplify the numerical calculation/analysis for bio-sensing using nanoplasmonics. Due to the conductive electrons of the metallic nano-particles (NP), the electric field/density of states will be significantly magnified at the hot spots, which in turn make the effective mode volume much smaller than the relatively more traditional optical cavities. As a result the light matter interaction is strongly enhanced when the target/matter is put around the NP, and this is the physical basis of most applications of nanoplamonics and the biosensing studied in the current manuscript. As a specific application of nanoplasmonic, the latest development in the field should be well referenced such as single molecule imaging Ref.[Nature 498, 82 (2013)] and the modal theory developed in the past few years Refs.[Phys. Rev. Lett. 110 237401 (2013); New J Phys. 16, 113048 (2014)]. With their own software (PyGBe) they could reduce the computational complexity as O(NlogN). Over all the manuscript is well presented with respect to its technical
 details. 
@@ -288,22 +288,22 @@ To summarize, the current manuscript is treating some interesting problem, but t
 
 
 #### Reply
-The reviewer points out interesting references. The first one is related to our work regarding efforts towards single-molecule detection. We included this reference in the discussion section, where the issue of experimental evidence of low analyte concentration is discussed.
+The reviewer points out interesting references. The first one is related to our work, as it is regarding efforts towards single-molecule detection. We added this reference in the discussion section, where the issue of experimental evidence of low-analyte concentration is discussed.
 
-We believe the other two references are out of the scope to our work. These focus on the modal theory of quantum effects in nanoplasmonics, without referencing biosensing applications. In our work, we focus on nanoplasmonics for biosensing, and, moreover, we use a classical approach.
+We believe the other two references are out of the scope to our work. These focus on the modal theory of quantum effects in nanoplasmonics, without referencing biosensing applications. In our work, we focus on nanoplasmonics for biosensing and use a classical approach.
 
 #### Modifications
-We added reference to Nature 498, 82 (2013) in commit 58228689
+- We added reference to Nature 498, 82 (2013) in commit [58228689](https://github.com/barbagroup/pygbe_lspr_paper/commit/582286896d96b0933244e927e2cfabe613c15d9a).
 
 
 ### Comment 0
 >  However, the manuscript is made redundant at several places such as Subsection F in Section II and Subsection C in Section III; most of them could be moved the the documented files then make a reference to them at the reference list in order to make the manuscript more compact and readable.
 
 #### Reply
-- §II.F. lists the code modifications and enhancements needed to produce the results in this paper, and we feel is necessary to include in the Methods portion of the paper. §III.C. is our standard statement on reproducibility of the results, which our group has made a pledge to always include. The sum of these two sub-sections is about one column of text, which hardly impacts the overall length. 
+§II.F. lists the code modifications and enhancements needed to produce the results in this paper, and we feel is necessary to include in the Methods portion of the paper. §III.C. is our standard statement on reproducibility of the results, which our group has made a pledge to always include. The sum of these two sub-sections is about one column of text, which hardly impacts the overall length. 
 
 #### Modifications
-No modifications needed
+- No modifications needed
 
 
 
@@ -311,7 +311,7 @@ No modifications needed
 > 1. At the end of the manuscript, the authors claimed that for a distance (between the NP and the analytes ) of d = 0.5 nm the redshift of the peak 0.75 nm; but it seems at this regime the nonlocal effect could kick in Ref.[Nature Commun. 5, 3809 (2014)].
 
 #### Reply
-According to the reference cited, the model presented by the authors has a validity domain. For the case of metallic Ag and Au nanoparticles, the authors say: "We point out that our diffusive model is valid for structural dimensions exceeding the mean-free path that in pure single crystals can be of the order of 100 nm for Ag and Au... " In our case the nanoparticles are of 8nm of radius and the interactions are between a metallic nanoparticle and a protein that doesn't generate plasmons. 
+According to the reference cited by the referee, the model presented by the authors has a validity domain. For the case of metallic Ag and Au nanoparticles, the authors say: "We point out that our diffusive model is valid for structural dimensions exceeding the mean-free path that in pure single crystals can be of the order of 100 nm for Ag and Au... " In our case the nanoparticles are of 8nm of radius and the interactions are between a metallic nanoparticle and a protein that doesn't generate plasmons. 
 
 
 #### Modifications
@@ -324,7 +324,7 @@ According to the reference cited, the model presented by the authors has a valid
 The inconsistency in the superindices from Eq 8-9 was fixed by replacing `\mathbf{r}_\Gamma` for `\Gamma` .
  
 #### Modifications
-Fixed in commit 70757e3
+- Fixed in commit [70757e3](https://github.com/barbagroup/pygbe_lspr_paper/commit/70757e38d910f2d25e81100bb3c46942127c0112).
 
 
 ### Comment 3
@@ -332,8 +332,9 @@ Fixed in commit 70757e3
 
 #### Reply
 The bold fonts for p_i were removed. 
+
 #### Modifications
-Fixed in commit 9b620d7
+- Fixed in commit [9b620d7](https://github.com/barbagroup/pygbe_lspr_paper/commit/9b620d756fce1670503f8912e6423b2278f76ea3).
 
 
 ### Comment 4
@@ -341,10 +342,10 @@ Fixed in commit 9b620d7
 
 
 #### Reply
-We are referring to the location not the orientation. We refer to the position on the x, y or z axis. The x and y configurations were obtain by performing a solid rotation of the z-configuration of 90 degrees along the x- and y-axis respectively. This statement was added in the text to clarify the point. 
+We are referring to the location not the orientation. We refer to the position on the x, y or z axis. The x and y configurations were obtained by performing a solid rotation of the z-configuration of 90 degrees along the x- and y-axis respectively. This statement was added in the text to clarify the point. 
 
 #### Modifications
-Add note on how we obtained these configurations 8180cb0
+- Added note on how we obtained these configurations in commit [8180cb0](https://github.com/barbagroup/pygbe_lspr_paper/commit/8180cb005d737a6276bb3f78a613d4af17d2dbec).
 
 
 ### Comment 5
@@ -352,13 +353,13 @@ Add note on how we obtained these configurations 8180cb0
 
 
 #### Reply
-- Respect to Figure 1 and 2 we believe that Figure one represent more the physics while Figure 2 aims to explaining the model. Therefore we will opt to leave them. 
-- Regarding Figure 3 and 7, we completely agree with the reviewer. We removed Figure 7 and adapted Figure 3. 
-- Figure 9 and 13 do not represent the same the same disposition of the proteins, to make this point clear we adapted the figures by adding the direction of the electric field. 
+- With respect to Figures 1 and 2, we believe that Figure 1 represent more the physics while Figure 2 aims to explaining the model. Therefore we prefer to leave them. 
+- Regarding Figures 3 and 7, we agree with the reviewer. We removed Figure 7 and adapted Figure 3. 
+- Figures 9 and 13 do not represent the same arrangement of the proteins; to make this point clear we adapted the figures by adding the direction of the electric field. 
 
 #### Modifications
-- We adapt Fig 3 and remove Fig 7. Changes made in e525375
-- We add Electric field direction on display figures (old 9 and 13). Changes made in 8de6810
+- We adapt Fig 3 and remove Fig 7. Changes made in commit [e525375](https://github.com/barbagroup/pygbe_lspr_paper/commit/e525375ae77105930f16eae96669f66052f3f227).
+- We add electric field direction on display figures (old 9 and 13). Changes made in [8de6810](https://github.com/barbagroup/pygbe_lspr_paper/commit/8de6810a815605e708353273abad023a49c08843).
 
 
 ### Comment 6
@@ -366,12 +367,12 @@ Add note on how we obtained these configurations 8180cb0
 
 
 #### Reply
-This is related to Comment 0 of the first reviewer. In the original manuscript, it wasn't clear how the biomolecule is modeled with boundary integrals. This has been done previously with our code (citation [24]), however, we've added a section under Methods called 'Protein mesh preparation' explaining how the biomolecule is prepared, starting from its molecular structure in the Protein Data Bank, to the parameterization and physical meaning of the molecular surface definition. We also found a mistake in  the charge representation of Equation (12), which may have led to the confusion of the Reviewer, and the charge q_k was not being introduced accordingly.
+This is related to Comment 0 of the first reviewer. In the original manuscript, it wasn't clear how the biomolecule is modeled with boundary integrals. This has been done previously with our code (citation [24]), however, we've added a section under Methods called 'Protein mesh preparation' explaining how the biomolecule is prepared, starting from its molecular structure in the Protein Data Bank, to the parameterization and physical meaning of the molecular surface definition. We also found a mistake in  the charge representation of Equation (12), which may have led to the confusion of the Reviewer, and the charge `q_k` was not being introduced accordingly.
 
 #### Modifications
-- Added 'Computational Workflow' section in commit fb1785c
-- Added introduction of q_k variable in commit f648cd1d 
-- Fixed Equation (12) in commit 4aa36fb
+- Added a subsection called 'Protein mesh preparation' in commits [fb1785c](https://github.com/barbagroup/pygbe_lspr_paper/commit/fb1785c1744b0ef318128f167a95ff25f0e737fb) and [ab38e80](https://github.com/barbagroup/pygbe_lspr_paper/commit/ab38e80996577fa273a2fbdde17fd6f6b4af01d0).
+- Added introduction of `q_k` variable in commit [f648cd1d](https://github.com/barbagroup/pygbe_lspr_paper/commit/f648cd1d25625b41b99887d1bd7def136e63404e). 
+- Fixed Equation (12) in commit [4aa36fb](https://github.com/barbagroup/pygbe_lspr_paper/commit/4aa36fb5c6f53f49d172f199942355568b08d728).
 
 
 ### Comment 7
@@ -379,10 +380,10 @@ This is related to Comment 0 of the first reviewer. In the original manuscript, 
 
 
 #### Reply
-- The reviewer claims the red shift we observe can be explained from the point of view of a two-mode model. We are not familiar with this theory, but if this relates to the references cited by the reviewer at the beginning of the report, it appears to be in a quantum-mechanics setting, which is outside the scope of our paper. The issue at hand, though, is how much the experimental results support our computational results. We remove the claim that the experimental results "agree" and simply state what they report and leave the reader to decide if they find the correspondence convincing enough.
-- We delete the language "This result agrees with experimental observations" and state only what the experimental papers report. 
-- Regarding adding other calculations with well-established software: 1) We provide evidence that our software solves correctly the mathematical model via grid convergence tests. 2) We are unable to run simulations with another open-source software because they cannot handle the amount of boundary elements we are using. The options of running with commercial software is not something we can do because we don't have access to such paid software.
+The reviewer asserts that the red shift we observe can be explained from the point of view of a two-mode model. We are not familiar with this theory, but if this relates to the references cited by the reviewer at the beginning of the report, it appears to be in a quantum-mechanics setting, which is outside the scope of our paper. The issue at hand, though, is how much the experimental results support our computational results. We removed the claim that the experimental results "agree" and simply state what they report and leave the reader to decide if they find the correspondence convincing enough.
+
+Regarding adding other calculations with well-established software: 1) We provide evidence that our software solves correctly the mathematical model via grid convergence tests. 2) We are unable to run simulations with another open-source software because they cannot handle the amount of boundary elements we are using. 3) The options of running with commercial software is not something we can do because we don't have access to such paid software.
 
 #### Modifications
 
-- Changes in 1556a72, df3c348 and b8a6e28
+- We delete the language "This result agrees with experimental observations" and state only what the experimental papers report. Changes in [1556a72](https://github.com/barbagroup/pygbe_lspr_paper/commit/1556a72913b312f3817343fd68371038540f5a04), [df3c348](https://github.com/barbagroup/pygbe_lspr_paper/commit/df3c3489d25a49705126ccdf80da0b4858d9673c) and [b8a6e28](https://github.com/barbagroup/pygbe_lspr_paper/commit/b8a6e28f29202f71463df662cd8431318f83522f).
