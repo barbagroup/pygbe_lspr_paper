@@ -48,10 +48,10 @@ potential improvements that would enhance sensitivity of LSPR biosensors, for ex
 smaller ligands. 
 
 Even though we are not aware of other LSPR simulations where the molecular details of the analyte are considered, similar calculations could be performed with other software. 
-For example, BEM++ \cite{SmigajETal2015} would also model the system as a set of boundary integral equatons, discretized in flat triangular panels. 
-However, the Galerkin approach and acceleration with hierarchical matrices produces a method that is slower and less memory efficient, which limits the accessible problem sizes.
-The Matlab toolbox MNPBEM \cite{HohenesterTrugler2012} is another alternative which was designed to simulate scattering of metallic nanoparticles.
-MNPBEM is similar to \pygbe as it uses a centroid collocation scheme on flat triangular panels, but differs in the algorithmic acceleration technique, which is also based on hierarchical matrices, rather than the treecode. 
-This results in higher memory usage compared to our code, making it hard to simulate large analytes in detail.
-Other finite-element or finite-difference based solvers could also be used in this application, for example, COMSOL. 
-These volumetric approaches, however, struggle to correctly impose the boundary condition equal to zero at infinity, which is exactly met for a BEM formulation.
+For example, BEM++ \cite{SmigajETal2015} also models the system as a set of boundary integral equations, discretized in flat triangular panels. 
+This software uses the Galerkin approach and algorithmic acceleration via hierarchical matrices, which is slower and less memory efficient than the treecode and limits the accessible problem sizes.
+The Matlab toolbox MNPBEM \cite{HohenesterTrugler2012} is another alternative software designed to simulate scattering of metallic nanoparticles.
+Its BEM implementation is similar to \pygbe as it uses a centroid collocation scheme on flat triangular panels, but differs in the algorithmic acceleration technique, which is also based on hierarchical matrices rather than a treecode. 
+This results in higher memory usage compared to our code, making it harder to simulate large analytes in detail.
+Commercial finite-element or finite-difference solvers could also be used in this application, for example, COMSOL. 
+These volumetric approaches, however, struggle to correctly impose the zero boundary condition at infinity, which is exactly met for a BEM formulation.
