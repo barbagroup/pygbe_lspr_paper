@@ -126,9 +126,8 @@ The reviewer is not requesting that we run additional computations using these o
 The request is for explaining differences and similarities with other BEM implementations in this field. We have now added new text on this topic at the end of the Discussion section.
 
 #### Modifications
-- We have moved the discussion on similar software (BEM++ and MNPBEM) to the introduction and expanded it in commit [d44c84e](https://github.com/barbagroup/pygbe_lspr_paper/commit/d44c84e11520d81d6d6b4224587c2f1aaf921212).
-
-ADD NEW COMMIT HERE
+- We have added mention of similar software (BEM++ and MNPBEM) in the introduction via commit [d44c84e](https://github.com/barbagroup/pygbe_lspr_paper/commit/d44c84e11520d81d6d6b4224587c2f1aaf921212).
+- We have added a paragraph to the Discussion addresing similarities and differences with other BEM implementations, via commits [11a93e8](https://github.com/barbagroup/pygbe_lspr_paper/commit/11a93e82391a8f7b982f99f83680ab4a6e200a88) and [53e3db8](https://github.com/barbagroup/pygbe_lspr_paper/commit/53e3db86e96b63d9da4afaa60b9fadd043484fb0).
 
 
 ### Comment 2
