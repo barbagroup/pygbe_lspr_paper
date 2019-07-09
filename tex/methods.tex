@@ -110,7 +110,7 @@ giving an expression that can be re-written using Jackson's notation \cite{Jacks
 
 Combining Equations \eqref{eq:scat_efield_long_range} and \eqref{eq:scat_efield_fwa},
 we can compute the scattering amplitude to then obtain the extinction cross-section 
-with Equation \eqref{eq:cext_fwa}
+with Equation \eqref{eq:cext_fwa}.
 
 
 \subsection{The boundary element method} \label{sec:lspr_bem}
@@ -267,7 +267,7 @@ Similar to Equation \eqref{eq:integral_eq_lspr}, we can write the system of part
 \eqref{eq:single_layer} and \eqref{eq:double_layer}. In this case, we distinguish between the
 surface where the integrals run (subindex), and the surface that contains the evaluation point (superindex).
 
-Applying the interface condition of equation \eqref{eq:electrostatic_scatter_prot_sen},
+Applying the interface conditions of equation \eqref{eq:electrostatic_scatter_prot_sen},
 leads to: 
 
 
@@ -389,13 +389,13 @@ the integrand has a high gradient, and high-order quadrature rules are required.
 We use the representative length of the integrated triangle ($L = \sqrt{2\cdot\text{Area}}$)
 to define a threshold of the \emph{nearby} region, for example, when the integration panel 
 is $2L$ or less away from the collocation point. For near-singular integrals, we use 
-$K_{fine}=19, 25 \; or \; 37$ points per triangle. 
+$K_{fine}=19, 25  \text{ or }  37$ points per triangle. 
 
 \item[Far-away integrals:] When the distance between the collocation point and the integration
 element is beyond the threshold, they are considered to be far-away. 
 At this point, the integrand is smooth enough that we obtain good 
 accuracy with low-order integration, for example, with 
-$K=1, 3 \; or \; 4$ Gauss quadrature points per boundary element. 
+$K=1, 3  \text{ or } 4$ Gauss quadrature points per boundary element. 
 \end{description}
 
 \subsubsection{Boundary integral expression of the dipole moment}
@@ -472,7 +472,7 @@ products. This makes BEM inefficient with more than a few thousand boundary elem
 which are the mesh sizes required for real applications. 
 
 In our formulation with Gaussian quadrature and collocation, the matrix-vector product
-becomes an N-body problem, with Gauss nodes acting as centers of mass (\emph{sources}), 
+becomes an $N$-body problem, with Gauss nodes acting as centers of mass (\emph{sources}), 
 and the collocation points acting as evaluation points for the potential (\emph{targets}).
 To overcome the unfavorable scaling,
 we accelerate the matrix-vector product using a treecode algorithm \cite{BarnesHut1986,DuanKrasny2001}, 
@@ -506,7 +506,7 @@ Common values of $\theta$ are $1/2$ and $2/3$.
 To approximate the contribution of the sources, we use Taylor expansions
 of order $P$.
 The treecode allows us to control the accuracy of the approximation by modifying $\theta$ and $P$.
-Further details of the Treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
+Further details of the treecode implementation in \pygbe can be found in \cite{CooperBarba-share154331,CooperBardhanBarba2013}.
 
 \subsection{Code modifications and added features} \label{sec:code_imp}
 
@@ -517,14 +517,14 @@ The code required the following modifications and added features:
 \begin{itemize}
     \item Re-writing the GMRES solver to accept complex numbers. 
     \item Splitting treecode calculations into real and imaginary parts.
-    \item Re-formatting configuration files to includes electric field intensity and  wavelength.
+    \item Re-formatting configuration files to include electric field intensity and  wavelength.
     \item Adding the new function \texttt{read\_electric\_field}, to read the electric field intensity and its wavelength from configuration files.
     \item Adding the new function \texttt{dipole\_moment} to compute numerically the dipole moment by Equation \eqref{eq:dipole_def_gauss_i_final}.
-    \item Adding the new function \texttt{extinction\_cross\_section} to compute the the extinction cross section.
+    \item Adding a new function to compute the  extinction cross section (\texttt{extinction\_cross\_section}).
     \item Organizing LSPR computations on a different main script (called \texttt{lspr.py}).
 \end{itemize}
 
-For information about how to use the code, run examples and tests, see the
+\noindent For information about how to use the code, run examples and tests, see the
 \pygbe documentation at \url{http://barbagroup.github.io/pygbe/docs/}
 
 \subsection{Protein mesh preparation}
@@ -534,4 +534,6 @@ The open-source software Nanoshaper \cite{Nanoshaper} uses the molecular structu
 In particular, Nanoshaper takes as inputs the atomic coordinates, obtained from the Protein Data Bank, and radii, which were 
 extracted from a \texttt{pqr} file generated with \texttt{pdb2pqr} \cite{Dolinsky04}.
 We obtained the charge and van der Waals parameters of the analyte from \texttt{pdb2pqr} using the built-in \texttt{amber} force field.
+In support of the reproducibility of our results, we deposited the final meshes in the Zenodo data repository.
+See section \ref{sec:repro} for details.
 
