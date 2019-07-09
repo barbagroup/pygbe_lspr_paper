@@ -126,7 +126,9 @@ The reviewer is not requesting that we run additional computations using these o
 The request is for explaining differences and similarities with other BEM implementations in this field. We have now added new text on this topic at the end of the Discussion section.
 
 #### Modifications
-We have moved the discussion on similar software (BEM++ and MNPBEM) to the introduction and expanded it in commit d44c84e
+- We have moved the discussion on similar software (BEM++ and MNPBEM) to the introduction and expanded it in commit [d44c84e](https://github.com/barbagroup/pygbe_lspr_paper/commit/d44c84e11520d81d6d6b4224587c2f1aaf921212).
+
+ADD NEW COMMIT HERE
 
 
 ### Comment 2
@@ -139,10 +141,11 @@ comparison.
 
 
 #### Reply
-- [LB] Figure 6 shows a visually undetectable error compared with the analytical solution. Repeating these calculations with a finer mesh or tighter parameters for the treecode will decrease the errors, but the figure will look the same. Currently, errors are everywhere smaller than 1%. These finer mesh and parameters, however, increase the time to solution by 12X. 
+Figure 6 shows a visually undetectable error compared with the analytical solution. Repeating these calculations with a finer mesh or tighter parameters for the treecode will decrease the errors, but the figure will look the same. Currently, errors are everywhere smaller than 1%. These finer mesh and parameters, however, increase the time to solution by 12X. 
+This justifies their use: undetectable difference in the results, with a considerable savings in compute time.
 
 #### Modifications
-- added runtime advantage of relaxed parameters in 91e73b5
+- We have added the runtime advantage of relaxed parameters in [91e73b5](https://github.com/barbagroup/pygbe_lspr_paper/commit/91e73b5cc3926c1fbc653f79364b4ddfb6382923).
 
 
 ### Comment 3
@@ -159,12 +162,11 @@ calculations reported here.
 
 #### Reply
 
-- [LB] The molecular charges that appear in the last term of Eq. (17) are considered explicitly, and their effect is not transferred to the mesh in the model. The effect of these charges on the boundary (mesh) is captured by this mathematical term. The dielectric function is a uniform complex value inside the protein, and appears as epsilon_3 in Eq. (17). Its value depends on the wavelength.
-
-[CC] Perhaps this was not clear as we didn't introduce the physical meaning of the q_k variable in the original manuscript. This is fixed in the revised version.
+The molecular charges that appear in the last term of Eq. (17) are considered explicitly, and their effect does not need to be transferred to the mesh in the model. The effect of these charges on the boundary (mesh) is captured by this term in the mathematical formulation. The dielectric function is a uniform complex value inside the protein, and appears as `\epsilon_3` in Eq. (17). Its value depends on the wavelength.
+Perhaps this was not clear as we didn't explain the physical meaning of the `q_k` variable in the original manuscript. This was fixed in the revised version.
 
 #### Modifications
-To explain how the BSA molecules is modeled, we added a subsection called 'Protein mesh preparation' in commit fb1785c and ab38e80. We also added an explanation on the meaning of q_k in commit f648cd1. The molecule contains point charges at the local partial charges from applying `pdb2pqr` with an Amber force field. This model is broadly used to represent biomolecules.
+- To explain how the BSA molecules is modeled, we added a subsection called 'Protein mesh preparation' in commits [fb1785c](https://github.com/barbagroup/pygbe_lspr_paper/commit/fb1785c1744b0ef318128f167a95ff25f0e737fb) and [ab38e80](https://github.com/barbagroup/pygbe_lspr_paper/commit/ab38e80996577fa273a2fbdde17fd6f6b4af01d0). We also added an explanation of the meaning of `q_k` in commit [f648cd1](https://github.com/barbagroup/pygbe_lspr_paper/commit/f648cd1d25625b41b99887d1bd7def136e63404e). The molecule contains point charges at the local partial charges from applying `pdb2pqr` with an Amber force field. This model is broadly used to represent biomolecules.
 
 ### Comment 4
 >4) Is a classical treatment appropriate for distances of 1 nm (or less
@@ -172,15 +174,13 @@ than 1 nm)? How do results compare with 5 nm away? And how would the
 calculations change for a gold particle rather than a silver one?
 
 #### Reply
-1. Classical treatment is appropriate for this small distances, a point of comparison is this example of coarse-grained MD (classic limit) where metallic nanoparticles are at similar distances from a membrane under an electric field. 
-In this paper (https://pubs.rsc.org/en/content/articlepdf/2016/nr/c6nr02051h)
-- "The electrostatic interactions were calculated using the particle mesh Ewald (PME) method with a real space cut off length of 1.2 nm and a  fast Fourier-transform grid spacing of 0.24 nm"
-- Fig 5 shows distances between nanoparticle and membrane and they have values smaller than 1nm, even close to 0nm. 
-2. At 5 nm we won't see the effect of the proteins on the NP, the shift will be negligible. At 2 nm we already see a smaller shift, reported in section Results-Sensitivity calculations (Fig 12).  
-3. In order to answer fully this question we would need to perform multiple calculations using gold, which is out of the scope of this paper. However, we can say that the shift magnitude would be smaller due gold Figure of Merit (how a nanoparticle's sensing capabilities is characterized). The reason why we chose silver instead of gold it is because the FOM  of silver is better Ref [FarooqAraujo2018](https://file.scirp.org/pdf/OJAppS_2018032115143480.pdf). 
+1. Classical treatment is adequate for these small distances. A point of comparison is this study of coarse-grained MD (classic limit) where metallic nanoparticles are at similar distances from a membrane under an electric field: Shimizu, K., Nakamura, H. and Watano, S., 2016. MD simulation study of direct permeation of a nanoparticle across the cell membrane under an external electric field. Nanoscale, 8(23), pp.11897-11906, doi:[10.1039/C6NR02051H](http://doi.org/10.1039/C6NR02051H).
+  - "The electrostatic interactions were calculated using the particle mesh Ewald (PME) method with a real space cut off length of 1.2 nm and a  fast Fourier-transform grid spacing of 0.24 nm." Fig. 5 shows distances between nanoparticle and membrane and they have values smaller than 1nm. 
+2. At 5 nm the shift will be negligible and we won't see the effect of the proteins on the nanoparticle. At 2 nm we already see a smaller shift, reported in section Results-Sensitivity calculations (Fig 12).  
+3. In order to answer fully this question we would need to perform multiple calculations using gold, which is out of the scope of this paper. However, we can say that the shift magnitude would be smaller due to gold's Figure of Merit, FOM (how a nanoparticle's sensing capability is characterized). The reason we chose silver instead of gold is because the FOM  of silver is better, according to [FarooqAraujo2018](https://file.scirp.org/pdf/OJAppS_2018032115143480.pdf). 
 
 #### Modifications
-no modifications needed.
+No modifications needed.
 
 
 ### Comment 5
@@ -190,10 +190,10 @@ each other selected because this relative positioning enhances the
 reported effects?
 
 ####  Reply
-- Simulations were performed using two BSA dimers, hence, effectively, there are four BSA molecules. There is experimental evidence that supports this choice (Teichroeb et al 2008, reference [41] in the paper, see Comment 6). Moreover, with less analytes the red shift would be smaller, and we would need to examine a finer range of wavelengths to see a shift.
+Simulations were performed using two BSA dimers, hence, effectively, there are four BSA molecules. The choice is supported by experimental studies (Teichroeb et al 2008, reference [41] in the paper, see Comment 6). Using fewer analytes, the red shift would indeed be smaller, and we would need to examine a finer range of wavelengths to see a shift.
 
 #### Modifications
-no modifications needed
+No modifications needed.
 
 
 ### Comment 6
@@ -207,10 +207,7 @@ Our simulations were performed under realistic conditions. Similar to our model 
 In our simulations, we looked at the resonance shift of two BSA dimers near a 16nm-diameter nanoparticle, which agrees with [Teichroeb et al 2008](https://link.springer.com/article/10.1140/epje/i2007-10342-9). This work reports nanoparticles of 15nm diameter, with a concentration per surface area of 3.2x10^12 molecules /cm^2 (0.032 molecules/ nm^2). This gives approximately 4 to 6 molecules ( BSA-monomers) per nanoparticle.
 
 #### Modifications
-- Add citation to  [Teichroeb et al 2008]
-- Corrected citation of  [Teichroeb et al 2008], since this paper only talks about concentration no distances. Commit number 0eb2637
-- Add more details on paper regarding Teichroeb results. Commit number aaa9e79, fixed wording and typos in eef190d3 and 14a5e06. Removed sentence regarding Nanoshaper in commit 789d931
-
+- Added more details regarding the experimental work of Teichroeb et al., 2008. Relevant commits to the manuscript: [0eb2637](https://github.com/barbagroup/pygbe_lspr_paper/commit/0eb2637a57f6c6096d76418a070e1db88156135c), [aaa9e79](https://github.com/barbagroup/pygbe_lspr_paper/commit/aaa9e79244de721909d15da720f9aaec599e6e68), fixed wording and typos in [eef190d3](https://github.com/barbagroup/pygbe_lspr_paper/commit/eef190d32e04dbab6b3e7f16aab46da712b3b003) and [14a5e06](https://github.com/barbagroup/pygbe_lspr_paper/commit/14a5e0661f02ea23fe21116d9af1eeb51069554f). 
 
 ### Comment 7
 > 7) Why do the authors report only the extinction cross section Cext?
@@ -222,16 +219,15 @@ these alternative outputs could be offered.
 
 #### Reply
 
-The extinction cross section is the sum of the absorption and scattering cross sections. The reason why we report the extinction cross section only is that with our model, it is not possible to separate these two components, however, for such nanoparticles smaller than `20 nm` absorption dominates over the scattering (as detailed in [Petryayeva, E., & Krull, U. J. (2011).](https://www.sciencedirect.com/science/article/pii/S0003267011011196). and [Olson et al 2015](https://pubs.rsc.org/en/content/articlehtml/2015/cs/c4cs00131a)), making Cext approximately equal to Cabs. We will mention this fact in the manuscript.
+The extinction cross section is the sum of the absorption and scattering cross sections. The reason why we report the extinction cross section only is that with our model, it is not possible to separate these two components. However, for such nanoparticles smaller than 20 nm, absorption dominates over the scattering (as detailed in [Petryayeva, E., & Krull, U. J. (2011).](https://www.sciencedirect.com/science/article/pii/S0003267011011196). and [Olson et al 2015](https://pubs.rsc.org/en/content/articlehtml/2015/cs/c4cs00131a)), making Cext approximately equal to Cabs. We will mention this fact in the manuscript.
 
-By default, the code returns a file with the values of the potential and its derivative on the surface of the scatterer. This could be used to compute the field anywhere in the domain, including the region close to the nanoparticle, however, it would include some modifications on the code.
+By default, the code returns a file with the values of the potential and its derivative on the surface of the scatterer. This could be used to compute the field anywhere in the domain, including the region close to the nanoparticle. However, it would require some modifications to the code.
 
 Also, in the computation of the extinction cross-section, we use the forward scattering amplitude, as detailed in Equation 5. This is one entry of the scattering matrix, and can be back-calculated from Equation 5. With the current status of the code, it is not possible to compute other entries of the scattering matrix.
 
 
 #### Modifications 
-@labarba This modification might need a check on the wording used.  
-Mention that absorption dominates when NP are smaller than `20 nm` on 252807e
+- We mention that absorption dominates when nanoparticles are smaller than 20 nm; added on commits [252807e](https://github.com/barbagroup/pygbe_lspr_paper/commit/252807efdb12ec616f9dacc2367c9682a2592f31) and [c7ee588](https://github.com/barbagroup/pygbe_lspr_paper/commit/c7ee588d94f347154585a4d143fde4d4b4ed205a).
 
 ### Comment 8
 
@@ -241,12 +237,11 @@ of sentence (scattering).
 
 
 #### Reply
-- The "a.k.a., extinction" refers to the "shadow," produced by the combination of absorption and scattering.
+The "a.k.a., extinction" refers to the "shadow," produced by the combination of absorption and scattering. 
 
-Rewrite as: "When this happens, most of the incoming energy is either absorbed by the nanoparticle, or scattered in different directions, both creating a shadow behind the scatterer (a.k.a., extinction)"
 
 #### Modifications
-Add modification on commit ae87a75
+- We rewrite as: "When this happens, most of the incoming energy is either absorbed by the nanoparticle, or scattered in different directions, both effects creating a shadow behind the scatterer (a.k.a., extinction)" on commit [ae87a75](https://github.com/barbagroup/pygbe_lspr_paper/commit/ae87a752fa38d56f3ae7b113ab696baf5d38f2be) and [c7ee588](https://github.com/barbagroup/pygbe_lspr_paper/commit/c7ee588d94f347154585a4d143fde4d4b4ed205a).
 
 
 ### Comment 9
@@ -258,7 +253,7 @@ Add modification on commit ae87a75
 Yes, the first appearance is on page two. We added an explanation after it is first introduced saying that it is a boundary between regions `\Omega_1` and `\Omega_2` .
 
 #### Modifications
-Fixed on commit 75c74a0
+- Fixed on commit [75c74a0](https://github.com/barbagroup/pygbe_lspr_paper/commit/75c74a05f61e7eab661d30f4235ea7c88fe54219).
 
 -------------------------------------------------------------------------------------------------------------
 
