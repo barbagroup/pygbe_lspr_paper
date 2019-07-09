@@ -194,8 +194,8 @@
   \bibinfo{author}{\bibfnamefont{N.~C.} \bibnamefont{Clementi}},
   \bibinfo{author}{\bibfnamefont{G.}~\bibnamefont{Forsyth}}, \bibnamefont{and}
   \bibinfo{author}{\bibfnamefont{L.~A.} \bibnamefont{Barba}},
-  \bibinfo{journal}{J. Open Source Software} \textbf{\bibinfo{volume}{1}}
-  (\bibinfo{year}{2016}).
+  \bibinfo{journal}{J. Open Source Software} \textbf{\bibinfo{volume}{1}},
+  \bibinfo{pages}{43} (\bibinfo{year}{2016}).
 
 \bibitem[{\citenamefont{Cooper et~al.}(2015)\citenamefont{Cooper, Clementi, and
   Barba}}]{CooperClementiBarba2015}
