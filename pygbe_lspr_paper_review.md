@@ -257,7 +257,7 @@ Yes, the first appearance is on page two. We added an explanation after it is fi
 
 
 
-##Reviewer 2 comments
+## Reviewer 2 comments
 
 
 In manuscript EC12092, Clementi et al. describe a boundary element method at the electrostatic limit to simplify the numerical calculation/analysis for bio-sensing using nanoplasmonics. Due to the conductive electrons of the metallic nano-particles (NP), the electric field/density of states will be significantly magnified at the hot spots, which in turn make the effective mode volume much smaller than the relatively more traditional optical cavities. As a result the light matter interaction is strongly enhanced when the target/matter is put around the NP, and this is the physical basis of most applications of nanoplamonics and the biosensing studied in the current manuscript. As a specific application of nanoplasmonic, the latest development in the field should be well referenced such as single molecule imaging Ref.[Nature 498, 82 (2013)] and the modal theory developed in the past few years Refs.[Phys. Rev. Lett. 110 237401 (2013); New J Phys. 16, 113048 (2014)]. With their own software (PyGBe) they could reduce the computational complexity as O(NlogN). Over all the manuscript is well presented with respect to its technical
@@ -311,7 +311,8 @@ We believe the other two references are out of the scope to our work. These focu
 > 1. At the end of the manuscript, the authors claimed that for a distance (between the NP and the analytes ) of d = 0.5 nm the redshift of the peak 0.75 nm; but it seems at this regime the nonlocal effect could kick in Ref.[Nature Commun. 5, 3809 (2014)].
 
 #### Reply
-According to the reference cited by the referee, the model presented by the authors has a validity domain. For the case of metallic Ag and Au nanoparticles, the authors say: "We point out that our diffusive model is valid for structural dimensions exceeding the mean-free path that in pure single crystals can be of the order of 100 nm for Ag and Au... " In our case the nanoparticles are of 8nm of radius and the interactions are between a metallic nanoparticle and a protein that doesn't generate plasmons. 
+The reviewer cites a reference that describes a model for non-local optical response when two metallic nanoparticles are close together. This model has a validity domain that is at a different length scale compared to our problem. For example, for Au and Ag nanpoarticles, the authors say "We point out that our diffusive model is valid for structural dimensions exceeding the mean-free path that in pure single crystals can be of the order of 100 nm for Ag and Au... ", whereas in our case the scatterer has a radius of 8nm. Moreover, the reference uses the model for interacting metallic nanoparticles, and our simulations contain only one metallic nanoparticle with biomolecules, which do not generate plasmons. 
+ 
 
 
 #### Modifications
