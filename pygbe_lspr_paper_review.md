@@ -1,7 +1,6 @@
+# Response to reviewers
 
--------------------------------------------------------------------------------
-
-# [\#10 Issue](https://github.com/barbagroup/pygbe_lspr_paper/issues/10) `open`: (PRE) Reviewer 1 comments
+## Reviewer 1 comments
 
 
 The manuscript presents a software package for boundary element method
@@ -99,11 +98,11 @@ revision to clarify the physical constraints or interpretation of the
 resulting calculations.
 
 #### Reply
-The way biomolecules are modeled with the boundary element method is not detailed the original manuscript, which led to this comment by the reviewer. This is not the main effort of the paper, and has been done previously with our code in reference [26] (Cooper, Bardhan, Barba (2014)), nonetheless, we should clarify for completion. We have added a subsection under Methods called 'Protein mesh preparation', where we explain how we start from a molecular structure from the Protein Data Bank, and represent it as a surface mesh, clarifying the physical meaning of the molecular surface,and how the biomolecule is parameterized in terms of van der Waals parameters and charges.  
+The way biomolecules are modeled with the boundary element method was not detailed in the original manuscript, which led to this comment by the reviewer. This is not the main effort of the paper, and has been done previously with our code in reference [26]—Cooper, Bardhan, Barba (2014). Nonetheless, we should clarify for completeness. We have added a subsection under Methods called 'Protein mesh preparation', where we explain how we start from a molecular structure from the Protein Data Bank, and represent it as a surface mesh, clarifying the physical meaning of the molecular surface,and how the biomolecule is parameterized in terms of van der Waals parameters and charges.  
 
 #### Modifications
 
-We added a subsection called 'Protein mesh preparation' in commit fb1785c and ab38e80
+We added a subsection called 'Protein mesh preparation' in commits [fb1785c](https://github.com/barbagroup/pygbe_lspr_paper/commit/fb1785c1744b0ef318128f167a95ff25f0e737fb) and [ab38e80](https://github.com/barbagroup/pygbe_lspr_paper/commit/ab38e80996577fa273a2fbdde17fd6f6b4af01d0).
 
 ### Comment 1
 > 1) The manuscript would be significantly improved if the BEM
@@ -119,9 +118,12 @@ quasi-static as well as full Maxwell’s equations.
 
 
 #### Reply
-There are two research software codes that could be used in this setting: BEM++ and MNPBEM. They can solve either full Maxwell's equations or the quasi-static electrostatic approximation. However, they haven't been used in the context of biomolecules, and are not able to model with all the way to hundred-thousand boundary elements, which is required to represent molecular surfaces accurately. 
+There are two research software codes that could be used in this setting: BEM++ and MNPBEM. They can solve either full Maxwell's equations or the quasi-static electrostatic approximation. However, they haven't been used in the context of biomolecules, and are not able to model with in the order of hundred-thousand boundary elements, which is required to represent molecular surfaces accurately. 
 
-Part of this discussion was present in the conclusion of the original manuscript, however, we've moved it to the introduction, and expanded it. This way, the reader will have a clearer idea of differences with similar available software.
+Part of this discussion was present in the conclusion of the original manuscript—we've now moved it to the introduction, and expanded it. This way, the reader will have a clearer idea of differences with similar available software.
+
+The reviewer is not requesting that we run additional computations using these other software packages, acknowledging that is beyond the scope of our manuscript. Thank you!
+The request is for explaining differences and similarities with other BEM implementations in this field. We have now added new text on this topic at the end of the Discussion section.
 
 #### Modifications
 We have moved the discussion on similar software (BEM++ and MNPBEM) to the introduction and expanded it in commit d44c84e
