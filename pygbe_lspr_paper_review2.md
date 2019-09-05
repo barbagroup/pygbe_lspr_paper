@@ -79,6 +79,11 @@ The reviewer suggests we should add things we said in the reply to the text. In 
 We added in the text (methods section) that we not only compute the potential on the surfaces but we also compute the normal derivative of the potential. The normal derivative of the potential allows the direct calculation of the electric field on the surface if desired.  This was included in commit number 272285e
 Regarding the other elements of the scattering matrix, we disagree with the reviewer on including on the text what modifications of the code we would need to do to include this, since it doesn't not add value to our main result.
 
+**[Chris]**
+The reviewer makes a fair point that we are not being explicit about everything that is an output of our code. The solution of the linear system we are solving is the potential and its normal derivative (electric field in the normal direction) evaluated at the surface of the molecules and nanoparticle, which may be important information to, for example, detect potential hot spots on the scatterer. We added this information in the methods section. Commit 272285e.
+
+Even though it may be desirable to output other terms of the scattering matrix, the code in its current state cannot calculate them. However, considering they are not required to compute the parameters we are presenting, we feel that including such discussion on the main text does not add more information to the paper.
+
 ------------------------------------------------------------------------------------------------------
 
 ## Reviewer 2 comments
