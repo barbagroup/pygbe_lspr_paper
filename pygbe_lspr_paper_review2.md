@@ -50,7 +50,7 @@ identify the BSA particles as dimers in the relevant figure captions (e.g. Fig. 
 - Following the reviewer's suggestion, we changed 'protein' to 'dimer'  in the captions of all the relevant figures.
 
 **Modifications** 
-- In Fig 7,8,9,10,11 and 12 I specify that BSA where dimers. Number of commit 23ceae1
+- In Fig 7,8,9,10,11 and 12, we specify that BSA where dimers. Number of commit [23ceae1](https://github.com/barbagroup/pygbe_lspr_paper/commit/23ceae16d961df5e2cd446daeb4412272bf39282)
 
 
 ## Comment 6: 
@@ -62,7 +62,7 @@ The reviewer made a good point that our reference to the experimental work of Te
 Regarding the capacity of the code to compute problems with more proteins around the nanoparticle, we report on the paper that it can handle half a million boundary elements. The cases with two dimers have around 120k, so there is ample room for bigger problems.
 
 **Modifications**
-- Modified text. Commit number 3a0a712
+- Modified text. Commit number [3a0a712](https://github.com/barbagroup/pygbe_lspr_paper/commit/3a0a71229b29e546c58fc3d8c944527693cd7498)
 
 
 ## Comment 7: 
@@ -78,27 +78,25 @@ We clarified that the code does output both the potential and its derivative (el
 
 > It is fair the authors thought that some of the references are not quite related to their current study. But it does not make sense to say that the quantum effect is beyond the scope of the research so they do not care about it. To be more specific the authors should justify why their full classical calculation at distance $d=0.5~$nm makes any sense --- namely why we should believe it is right. This is extremely important and relevant here: the authors should make it clear when their prediction is reliable since the whole research here is about an in-house numerical soft-ware/method. And I strongly doubt that at $d=0.5~$nm there will be (quantum) tunneling of electrons between the metallic particle and the molecules; if this is the case then the quantitative analysis at such a small distance does not make much sense. So there are two choices: 1) the authors could argue that the quantum effect is negligible so their result is correct; or 2) the authors delete the relevant result to make their conclusion scientifically sound.
 
-As a result I would not recommend the acceptance of current manuscript for publication until the authors address the above comment properly.
-
-
-**Comment**
-The reviewer is concerned that the case with smallest distance (d=0.5 nm) could be incorrect, due to the fact that our model does not include quantum effects. The question of whether quantum effects, e.g., quantum tunneling of electrons between the nanoparticle and the protein, are applicable in this case is not straightforward to answer. We reviewed the literature more carefully to answer the reviewer's question, and found the following:
+>As a result I would not recommend the acceptance of current manuscript for publication until the authors address the above comment properly.
 
 
 **Reply**
+
 The reviewer raises an important point in this comment. It is true that our model cannot handle quantum effects, such as tunneling, which may be present at small distances between the analyte and the nanoparticle. In particular, this may be a problem for our last test case, when that distance is 0.5nm.
 
-The literature gives some evidence that 0.5nm is within the validity domain of a classical approach:
+The literature gives some support that 0.5nm is within the validity domain of a classical approach:
+
 -  [Savage et al 2012](https://www.nature.com/articles/nature11653.pdf) studied tunneling effects in plasmonic systems. In particular, they consider two nanostructures, and look at tunneling as a function of the inter particle distance. In this paper, the authors claim that plasmon interactions are consistent with the classical approach when `d>~0.4nm`. Moreover, their results show that the quantum and classical predictions start diverging at `d=0.31nm`. 
 - [Esteban et al 2012](https://www.nature.com/articles/ncomms1806.pdf) presents a "quantum corrected model", that incorporates quantum-mechanical effects in the classical electrodynamics approach. Their results show the tunnelling transmission probability  as a function of separation between two metallic nanospheres, and state that the tunnelling regime happens between `0.1 nm < d <~0.5 nm`. However, the probability of transmission at 0.5 nm is almost zero.  
 
 These two articles support that, in systems that are similar to ours, quantum effects can be ignored for the one case we include with `d=0.5nm`. However, it is close to the limit. We are aware of articles that consider such distances inside the quantum regime, for example, [Garcia de Abajo 2008](https://pubs.acs.org/doi/pdf/10.1021/jp807345h?rand=q4g7gkca) and [Ciraci et al 2012](https://science.sciencemag.org/content/sci/337/6098/1072.full.pdf)
 
-In conclusion, we understand the reviewer's concern, however, from the literature it is not clear that for the distance `d=0.5 nm` quantum effects are significant. In response to the reviewer's concern, we added a disclaimer stating that the model does not consider quantum effects, even though they might be present in our last test case. We mention it both in the caption of Fig 11 as well as in the Discussion section, with references.
+In conclusion, we understand the reviewer's concern, however, from the literature it is not clear that for the distance `d=0.5 nm` quantum effects are significant. In response to the reviewer's concern, we added a disclaimer stating that the model does not consider quantum effects, even though they might be present in our last test case. We mention it both in the caption of Figure 11 as well as in the Discussion section, with references.
 
 **Modifications:**
-- Add note in caption of Fig 11: commit number 13878d3 and 6965bbd 
-- Add comment on discussion section: commit number 178e02f, 6998713 and 567a395
+- Add note in caption of Fig 11: commit number [13878d3](https://github.com/barbagroup/pygbe_lspr_paper/commit/13878d3c47e8d9465862d61d050dbe0e4c7b1e68) and [6965bbd](https://github.com/barbagroup/pygbe_lspr_paper/commit/6965bbd0dec6e9d7768941cf7fd3c8e13156adee) 
+- Add comment on discussion section: commit number [178e02f](https://github.com/barbagroup/pygbe_lspr_paper/commit/178e02f818430bf153f3a52927628e4ed5d17565), [6998713](https://github.com/barbagroup/pygbe_lspr_paper/commit/699871317f6bb50fa2e7328f2d6508915ac2cdc3) and [567a395](https://github.com/barbagroup/pygbe_lspr_paper/commit/567a3952159847107ea55fec53e833eae00567a6)
 
 
 
