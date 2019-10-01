@@ -68,21 +68,9 @@ Regarding the capacity of the code to compute problems with more proteins around
 ## Comment 7: 
 >I would suggest the authors note the limitations discussed in their reply in the main text. That is, explicit discussion of the fact that changes would be required to calculate the fields or other elements of the scattering matrix should be added (and could be done very briefly). Given the manuscript's focus on presenting the new code, identifying where further modifications to the code could be made would not go amiss.
 
-**Ideas**
-The reviewer suggests we should add things we said in the reply to the text. In comment 7, our reply was:
-- We are not able to separate scattering and absorption cross sections, even though absorption dominates for small nanoparticles.
-- Currently, the code only computes potential and its derivative on the surface, which allows to calculate the electric field if desired. 
-- We cannot compute other terms of the scattering S-matrix currently, only the forward scattering amplitude (which is one term of the matrix)
+We clarified that the code does output both the potential and its derivative (electric field in the normal direction) on the surfaces. The other quantities mentioned by the reviewer are not output by the code, but are also extraneous to our method of analysis. For this reason, we do not consider this a limitation: they are not required to compute the results we are presenting. We respectfully disagree here with the reviewer that it would add anything to mention quantities not computed, but also not used in our method.
 
-**[Naty's attempt to reply]**
-
-We added in the text (methods section) that we not only compute the potential on the surfaces but we also compute the normal derivative of the potential. The normal derivative of the potential allows the direct calculation of the electric field on the surface if desired.  This was included in commit number 272285e
-Regarding the other elements of the scattering matrix, we disagree with the reviewer on including on the text what modifications of the code we would need to do to include this, since it doesn't not add value to our main result.
-
-**[Chris]**
-The reviewer makes a fair point that we are not being explicit about everything that is an output of our code. The solution of the linear system we are solving is the potential and its normal derivative (electric field in the normal direction) evaluated at the surface of the molecules and nanoparticle, which may be important information to, for example, detect potential hot spots on the scatterer. We added this information in the methods section. Commit 272285e.
-
-Even though it may be desirable to output other terms of the scattering matrix, the code in its current state cannot calculate them. However, considering they are not required to compute the parameters we are presenting, we feel that including such discussion on the main text does not add more information to the paper.
+**Modification** Commit number[272285e](https://github.com/barbagroup/pygbe_lspr_paper/commit/272285e216c37cd80984d6a143a5c74aee512d6c).
 
 ------------------------------------------------------------------------------------------------------
 
