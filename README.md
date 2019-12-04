@@ -26,7 +26,11 @@ EiC replied that he sent the paper to 3 other executive editors and they all agr
 * ArXiv preprint v3 appeared on 07/10/2019.
 * Second round of referee reports received on 08/20/2019. See [Issues](https://github.com/barbagroup/pygbe_lspr_paper/issues) for full referee reports, and our working responses. 
 * Revision submitted to PRE on 10/1/2019.
-* Acceptance decision received on 11/1/2019.
+* Acceptance decision received on 11/1/2019. Journal flags issues with figures: remove grid, add sub-plot letters.
+* On 11/4/2019, requested clarification on Copyright Transfer Agreement, due to posting of repro-packs on Figshare. Reply received 11/15/2019.
+* Replaced figures flagged by production (background grid, etc.) on 11/18/2019.
+* Journal requests title change on 11/22/2019L "provide a title that may be understood by the general reader." Supplied.
+* Electronic proof received 12/3/2019. Corrections/replies submitted 12/4/2019.
 
 
 ### LICENSE
