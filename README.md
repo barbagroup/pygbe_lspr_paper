@@ -21,10 +21,10 @@ Asked EiC to have a second look, giving links to a few papers already published 
 EiC replied that he sent the paper to 3 other executive editors and they all agreed with his original assessment.
 * ArXiv preprint v2 appeared on 03/12/2019. Edited for a submission to an APS journal.
 * Third submission to _Phys. Rev. E_ on 03/20/2019.
-* First round of referee reports received on 05/23/2019. See [Issues](https://github.com/barbagroup/pygbe_lspr_paper/issues) for full referee reporst, and our working responses. 
+* First round of referee reports received on 05/23/2019. See [Issues](https://github.com/barbagroup/pygbe_lspr_paper/issues) for full referee reports, and our working responses. 
 * Revision submitted to PRE on 07/9/2019.
 * ArXiv preprint v3 appeared on 07/10/2019.
-* Second round of referee reports received on 08/20/2019. See [Issues](https://github.com/barbagroup/pygbe_lspr_paper/issues) for full referee reporst, and our working responses. 
+* Second round of referee reports received on 08/20/2019. See [Issues](https://github.com/barbagroup/pygbe_lspr_paper/issues) for full referee reports, and our working responses. 
 * Revision submitted to PRE on 10/1/2019.
 * Acceptance decision received on 11/1/2019.
 
