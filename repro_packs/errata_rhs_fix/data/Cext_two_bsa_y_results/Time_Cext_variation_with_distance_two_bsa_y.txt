@@ -1,0 +1,3 @@
+single sphere run time: 673.6596260070801
+sphere-bsa run time: 17882.263816833496
+total run time: 18555.923442840576

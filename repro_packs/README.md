@@ -14,4 +14,8 @@
   - `Jupyter notebooks` (used by author: 4.3.0)
   - `numpy` (used by author: 1.15.4)
   - `matplotlib` (used by author: 2.2.2)
+  
+ `errata_rhs_fix`: contains notebooks and data that show that the conclusions remain intact after RHS function bug-fix on `pygbe` repository.
+ 
+ 
  
