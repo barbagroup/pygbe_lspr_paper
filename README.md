@@ -6,10 +6,16 @@ Manuscript source files and reproducibility packages for all the computational r
 > In print, _Phys. Rev. E_. 
 > Preprint: https://arxiv.org/abs/1812.10722
 
-## Reproducibility packages archive
+## Reproducibility packages archives
 
-Clementi, Natalia C.; D. Cooper, Christopher; Barba, Lorena A. (2019): PyGBe-LSPR—Computational nanoplasmonics for biosensing applications (reproducibility packages). figshare. Collection.
+Clementi, Natalia C.; D. Cooper, Christopher; Barba, Lorena A. (2019): PyGBe-LS PR—Computational nanoplasmonics for biosensing applications (reproducibility packages). figshare. Collection.
 https://doi.org/10.6084/m9.figshare.c.4346156
+
+Clementi, Natalia C.; D. Cooper, Christopher; Barba, Lorena A. (2018): PyGBe-LSPR—Computational nanoplasmonics for biosensing applications (execution files). Zenodo.
+https://doi.org/10.5281/zenodo.2513715
+
+Clementi, Natalia C.; D. Cooper, Christopher; Barba, Lorena A. (2018): PyGBe-LSPR—Computational nanoplasmonics for biosensing applications (problem datasets). Zenodo.
+https://doi.org/10.5281/zenodo.2511600
 
 ## Article history
 
