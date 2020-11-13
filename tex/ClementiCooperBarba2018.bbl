@@ -1,4 +1,4 @@
-\begin{thebibliography}{50}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname bibnamefont\endcsname\relax
   \def\bibnamefont#1{#1}\fi
@@ -416,6 +416,26 @@
   \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.~M.} \bibnamefont{Byers}},
   \bibinfo{journal}{Biophys.\ J.} \textbf{\bibinfo{volume}{104}},
   \bibinfo{pages}{30} (\bibinfo{year}{2013}).
+
+\bibitem[{\citenamefont{Savage et~al.}(2012)\citenamefont{Savage, Hawkeye,
+  Esteban, Borisov, Aizpurua, and Baumberg}}]{SavageETal2012}
+\bibinfo{author}{\bibfnamefont{K.~J.} \bibnamefont{Savage}},
+  \bibinfo{author}{\bibfnamefont{M.~M.} \bibnamefont{Hawkeye}},
+  \bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Esteban}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Borisov}},
+  \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Aizpurua}}, \bibnamefont{and}
+  \bibinfo{author}{\bibfnamefont{J.~J.} \bibnamefont{Baumberg}},
+  \bibinfo{journal}{Nature} \textbf{\bibinfo{volume}{491}},
+  \bibinfo{pages}{574} (\bibinfo{year}{2012}).
+
+\bibitem[{\citenamefont{Esteban et~al.}(2012)\citenamefont{Esteban, Borisov,
+  Nordlander, and Aizpurua}}]{EstebanETal2012}
+\bibinfo{author}{\bibfnamefont{R.}~\bibnamefont{Esteban}},
+  \bibinfo{author}{\bibfnamefont{A.~G.} \bibnamefont{Borisov}},
+  \bibinfo{author}{\bibfnamefont{P.}~\bibnamefont{Nordlander}},
+  \bibnamefont{and} \bibinfo{author}{\bibfnamefont{J.}~\bibnamefont{Aizpurua}},
+  \bibinfo{journal}{Nature communications} \textbf{\bibinfo{volume}{3}},
+  \bibinfo{pages}{825} (\bibinfo{year}{2012}).
 
 \bibitem[{\citenamefont{Zhang et~al.}(2013)\citenamefont{Zhang, Zhang, Dong,
   Jiang, Zhang, Chen, Zhang, Liao, Aizpurua, Luo et~al.}}]{ZhangZhangETal2013}
