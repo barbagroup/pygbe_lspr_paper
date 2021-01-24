@@ -3,7 +3,7 @@
 
 Manuscript source files and reproducibility packages for all the computational results presented in the paper.
 
-> In print, _Phys. Rev. E_. 
+> Published in: _Phys. Rev. E_ 100, 063305 (2019), https://doi.org/10.1103/PhysRevE.100.063305
 > Preprint: https://arxiv.org/abs/1812.10722
 
 ## Reproducibility package archives
